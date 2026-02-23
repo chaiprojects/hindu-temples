@@ -45,8 +45,8 @@
 
   /* ── WIDGET ROW ── */
   .widget-row{display:grid;grid-template-columns:1fr 1fr 2fr;gap:1.25rem;margin-bottom:2.5rem;}
-  @media(max-width:1100px){.widget-row{grid-template-columns:1fr 1fr;}}
-  @media(max-width:680px){.widget-row{grid-template-columns:1fr;}}
+  @media(max-width:1100px){.widget-row{grid-template-columns:1fr 1fr;} .widget-row .cal-widget{grid-column:span 2;}}
+  @media(max-width:680px){.widget-row{grid-template-columns:1fr;} .widget-row .cal-widget{grid-column:span 1;}}
 
   .widget{background:linear-gradient(150deg,rgba(58,24,0,.6),rgba(18,8,0,.85));border:1px solid rgba(212,160,23,.35);border-radius:14px;padding:1.4rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);}
   .widget::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--saffron));}
@@ -95,13 +95,16 @@
   .cal-cell.today .cal-date{color:var(--marigold);}
   .cal-event{font-size:.55rem;background:linear-gradient(90deg,var(--saffron),var(--gold));color:var(--dark);border-radius:3px;padding:1px 4px;margin-bottom:1px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;cursor:pointer;}
   .cal-event.ekadashi{background:linear-gradient(90deg,#5B2A8B,#9B59B6);color:#fff;}
-  .cal-event.rahu{background:rgba(139,26,26,.6);color:var(--cream);}
+  .cal-event.live{background:rgba(68,180,68,.8);color:#fff;}
   .cal-loading{text-align:center;padding:1rem;color:rgba(250,243,224,.4);font-style:italic;font-size:.85rem;}
   .cal-loading .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(212,160,23,.3);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin-right:6px;vertical-align:middle;}
   @keyframes spin{to{transform:rotate(360deg);}}
-  .scrape-btn{display:flex;align-items:center;gap:.5rem;background:rgba(232,130,26,.15);border:1px solid var(--saffron);color:var(--saffron);border-radius:8px;padding:6px 14px;font-family:'Crimson Pro',serif;font-size:.85rem;cursor:pointer;margin-top:.8rem;transition:all .25s;width:100%;}
-  .scrape-btn:hover{background:rgba(232,130,26,.28);}
-  .scrape-btn:disabled{opacity:.5;cursor:not-allowed;}
+  .cal-legend{display:flex;gap:1rem;margin-top:.8rem;flex-wrap:wrap;}
+  .legend-item{display:flex;align-items:center;gap:.35rem;font-size:.72rem;color:rgba(250,243,224,.6);}
+  .leg-dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
+  .leg-dot.festival{background:linear-gradient(90deg,var(--saffron),var(--gold));}
+  .leg-dot.ekadashi{background:linear-gradient(90deg,#5B2A8B,#9B59B6);}
+  .leg-dot.temple-event{background:rgba(68,180,68,.8);}
 
   /* ── EVENT TOOLTIP ── */
   .tooltip-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;}
@@ -182,7 +185,7 @@
   </div>
 
   <!-- Festival Calendar -->
-  <div class="widget" style="grid-column: span 1;" id="calWidget">
+  <div class="widget cal-widget" id="calWidget">
     <div class="cal-header">
       <div class="w-title" style="margin-bottom:0"><span class="icon">📅</span> Hindu Festival Calendar</div>
       <div class="cal-nav">
@@ -192,10 +195,11 @@
       </div>
     </div>
     <div class="cal-grid" id="calGrid"></div>
-    <button class="scrape-btn" id="scrapeBtn" onclick="loadTempleEvents()">
-      <span id="scrapeBtnIcon">🔍</span> <span id="scrapeBtnText">Load Live Temple Events (AI-Powered)</span>
-    </button>
-    <div id="calStatus" style="font-size:.72rem;color:rgba(250,243,224,.4);margin-top:.5rem;font-style:italic;"></div>
+    <div class="cal-legend">
+      <span class="legend-item"><span class="leg-dot festival"></span>Festival</span>
+      <span class="legend-item"><span class="leg-dot ekadashi"></span>Ekadashi</span>
+      <span class="legend-item"><span class="leg-dot temple-event"></span>Temple Event</span>
+    </div>
   </div>
 
 </div>
@@ -353,8 +357,6 @@ const EKADASHI_NAMES_KRISHNA = [ // waning (after full moon ~11th)
   'Aja','Indira','Rama','Utpanna','Saphala (Masa)'
 ];
 
-let ekNameIdx = { s: 0, k: 0 };
-
 function getEkadashiList(startDate, months = 6) {
   const results = [];
   const end = new Date(startDate);
@@ -452,47 +454,47 @@ function renderEkadashi() {
 // Static major Hindu festivals 2025-2026
 const FESTIVALS = [
   // 2025
-  { name:'Maha Shivratri',      date:'2025-02-26', color:'saffron' },
-  { name:'Holi',                date:'2025-03-14', color:'saffron' },
-  { name:'Ugadi/Gudi Padwa',    date:'2025-03-30', color:'saffron' },
-  { name:'Ram Navami',          date:'2025-04-06', color:'saffron' },
-  { name:'Hanuman Jayanti',     date:'2025-04-12', color:'saffron' },
-  { name:'Akshaya Tritiya',     date:'2025-04-30', color:'saffron' },
-  { name:'Rath Yatra',          date:'2025-06-27', color:'saffron' },
-  { name:'Guru Purnima',        date:'2025-07-10', color:'saffron' },
-  { name:'Nag Panchami',        date:'2025-07-27', color:'saffron' },
-  { name:'Raksha Bandhan',      date:'2025-08-09', color:'saffron' },
-  { name:'Janmashtami',         date:'2025-08-16', color:'saffron' },
-  { name:'Ganesh Chaturthi',    date:'2025-08-27', color:'saffron' },
-  { name:'Onam',                date:'2025-09-05', color:'saffron' },
-  { name:'Navratri Begins',     date:'2025-09-22', color:'saffron' },
-  { name:'Dussehra',            date:'2025-10-02', color:'saffron' },
-  { name:'Karva Chauth',        date:'2025-10-20', color:'saffron' },
-  { name:'Diwali',              date:'2025-10-20', color:'gold' },
-  { name:'Govardhan Puja',      date:'2025-10-21', color:'saffron' },
-  { name:'Bhai Dooj',           date:'2025-10-23', color:'saffron' },
-  { name:'Chhath Puja',         date:'2025-10-28', color:'saffron' },
-  { name:'Karthigai Deepam',    date:'2025-12-04', color:'saffron' },
-  { name:'Vaikuntha Ekadashi',  date:'2025-12-01', color:'saffron' },
-  { name:'Hanuman Jayanti',     date:'2025-10-05', color:'saffron' },
+  { name:'Maha Shivratri',      date:'2025-02-26' },
+  { name:'Holi',                date:'2025-03-14' },
+  { name:'Ugadi / Gudi Padwa',  date:'2025-03-30' },
+  { name:'Ram Navami',          date:'2025-04-06' },
+  { name:'Hanuman Jayanti',     date:'2025-04-12' },
+  { name:'Akshaya Tritiya',     date:'2025-04-30' },
+  { name:'Rath Yatra',          date:'2025-06-27' },
+  { name:'Guru Purnima',        date:'2025-07-10' },
+  { name:'Nag Panchami',        date:'2025-07-27' },
+  { name:'Raksha Bandhan',      date:'2025-08-09' },
+  { name:'Janmashtami',         date:'2025-08-16' },
+  { name:'Ganesh Chaturthi',    date:'2025-08-27' },
+  { name:'Onam',                date:'2025-09-05' },
+  { name:'Navratri Begins',     date:'2025-09-22' },
+  { name:'Dussehra',            date:'2025-10-02' },
+  { name:'Karva Chauth',        date:'2025-10-10' },
+  { name:'Diwali',              date:'2025-10-20' },
+  { name:'Govardhan Puja',      date:'2025-10-21' },
+  { name:'Bhai Dooj',           date:'2025-10-23' },
+  { name:'Chhath Puja',         date:'2025-10-28' },
+  { name:'Vaikuntha Ekadashi',  date:'2025-12-01' },
+  { name:'Karthigai Deepam',    date:'2025-12-04' },
   // 2026
-  { name:'Makar Sankranti',     date:'2026-01-14', color:'saffron' },
-  { name:'Pongal',              date:'2026-01-14', color:'saffron' },
-  { name:'Maha Shivratri',      date:'2026-02-15', color:'saffron' },
-  { name:'Holi',                date:'2026-03-03', color:'saffron' },
-  { name:'Ugadi',               date:'2026-03-19', color:'saffron' },
-  { name:'Ram Navami',          date:'2026-03-26', color:'saffron' },
+  { name:'Makar Sankranti',     date:'2026-01-14' },
+  { name:'Pongal',              date:'2026-01-14' },
+  { name:'Maha Shivratri',      date:'2026-02-15' },
+  { name:'Holi',                date:'2026-03-03' },
+  { name:'Ugadi',               date:'2026-03-19' },
+  { name:'Ram Navami',          date:'2026-03-26' },
+  { name:'Hanuman Jayanti',     date:'2026-04-02' },
+  { name:'Akshaya Tritiya',     date:'2026-04-20' },
+  { name:'Rath Yatra',          date:'2026-07-16' },
 ];
 
-// Extra: add Ekadashis to calendar
-let calEkadashis = [];
 let calYear = new Date().getFullYear();
 let calMonth = new Date().getMonth();
-let liveEvents = {}; // date string → [{name, temple, url}]
 
 function buildCalendarEvents() {
-  // Build a lookup: 'YYYY-MM-DD' → [{name, type}]
+  // Build a lookup: 'YYYY-MM-DD' → [{name, type, temple?}]
   const map = {};
+
   FESTIVALS.forEach(f => {
     if (!map[f.date]) map[f.date] = [];
     map[f.date].push({ name: f.name, type: 'festival' });
@@ -507,10 +509,10 @@ function buildCalendarEvents() {
     map[k].push({ name: ekName(e.date, e.paksha), type: 'ekadashi' });
   });
 
-  // Merge live events
-  Object.entries(liveEvents).forEach(([k, evts]) => {
-    if (!map[k]) map[k] = [];
-    evts.forEach(e => map[k].push({ name: e.name, type: 'live', temple: e.temple }));
+  // Add temple-specific events
+  TEMPLE_EVENTS.forEach(e => {
+    if (!map[e.date]) map[e.date] = [];
+    map[e.date].push({ name: e.name, type: 'live', temple: e.temple });
   });
 
   return map;
@@ -543,7 +545,7 @@ function renderCalendar() {
     html += `<div class="cal-cell${isToday ? ' today' : ''}${hasEvt ? ' has-event' : ''}">
       <div class="cal-date">${d}</div>
       ${evts.slice(0,2).map(e =>
-        `<div class="cal-event${e.type==='ekadashi'?' ekadashi':''}" onclick="showEvent('${e.name.replace(/'/g,"\\'")}','${(e.temple||'').replace(/'/g,"\\'")}','${dk}')">${e.name}</div>`
+        `<div class="cal-event${e.type==='ekadashi'?' ekadashi':e.type==='live'?' live':''}" onclick="showEvent('${e.name.replace(/'/g,"\\'")}','${(e.temple||'').replace(/'/g,"\\'")}','${dk}')">${e.name}</div>`
       ).join('')}
       ${evts.length > 2 ? `<div style="font-size:.52rem;color:var(--gold);cursor:pointer" onclick="showAllEvents('${dk}')">+${evts.length-2} more</div>` : ''}
     </div>`;
@@ -598,85 +600,31 @@ document.getElementById('calNext').onclick = () => {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// 4. LIVE TEMPLE EVENT SCRAPING via Claude API
+// 4. UPCOMING TEMPLE EVENTS — Bay Area
 // ═══════════════════════════════════════════════════════════════
 
-const TEMPLE_URLS = [
-  { name: 'Hindu Temple Sunnyvale', url: 'https://www.hindutemple.org/events' },
-  { name: 'Shiva Murugan Temple Concord', url: 'https://shivamurugantemple.org/events' },
-  { name: 'Sri Siddhi Vinayaka Fremont', url: 'https://ssvcc.org' },
-  { name: 'BAPS Milpitas', url: 'https://www.baps.org/centers/usa/san-jose' },
-  { name: 'ISKCON Berkeley', url: 'https://iskconberkeley.com/events' },
-  { name: 'Sri Satya Narayana Milpitas', url: 'https://ssnsdevasthanam.org' },
+const TEMPLE_EVENTS = [
+  { date:'2026-02-26', name:'Maha Shivratri Puja', temple:'Shiv Durga Temple, Santa Clara' },
+  { date:'2026-02-26', name:'Maha Shivratri Abhishekam', temple:'Shiva Murugan Temple, Concord' },
+  { date:'2026-02-28', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
+  { date:'2026-03-01', name:'Vishnu Sahasranama', temple:'Hindu Temple, Sunnyvale' },
+  { date:'2026-03-03', name:'Holi Celebrations', temple:'BAPS Mandir, Milpitas' },
+  { date:'2026-03-03', name:'Holi Rangwali', temple:'ISKCON Berkeley' },
+  { date:'2026-03-08', name:'Ganapathi Homam', temple:'Sri Siddhi Vinayaka, Fremont' },
+  { date:'2026-03-14', name:'Hanuman Chalisa Recital', temple:'Karya Siddhi Hanuman, Fremont' },
+  { date:'2026-03-19', name:'Ugadi Celebrations', temple:'Hindu Temple, Sunnyvale' },
+  { date:'2026-03-21', name:'Rama Navami Katha', temple:'Vedic Dharma Samaj, Fremont' },
+  { date:'2026-03-26', name:'Ram Navami Puja', temple:'Sri Krishna Balaram, Milpitas' },
+  { date:'2026-03-28', name:'Saturday Abhishekam', temple:'Shiva Murugan Temple, Concord' },
+  { date:'2026-04-02', name:'Hanuman Jayanti', temple:'Sankata Mochana Hanuman, Newark' },
+  { date:'2026-04-04', name:'Sai Baba Thursday Puja', temple:'Shirdi Sai Darbar, Sunnyvale' },
+  { date:'2026-04-11', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
+  { date:'2026-04-14', name:'Tamil New Year Puja', temple:'Hindu Temple, Sunnyvale' },
+  { date:'2026-04-18', name:'Sai Baba Thursday Puja', temple:'Shirdi Sai Darbar, Sunnyvale' },
+  { date:'2026-04-20', name:'Akshaya Tritiya', temple:'BAPS Mandir, Milpitas' },
+  { date:'2026-04-25', name:'Murugan Abishekam', temple:'Shiva Murugan Temple, Concord' },
+  { date:'2026-05-02', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
 ];
-
-async function loadTempleEvents() {
-  const btn = document.getElementById('scrapeBtn');
-  const icon = document.getElementById('scrapeBtnIcon');
-  const txt = document.getElementById('scrapeBtnText');
-  const status = document.getElementById('calStatus');
-
-  btn.disabled = true;
-  icon.textContent = '⏳';
-  txt.textContent = 'Fetching temple events via AI…';
-  status.textContent = '';
-
-  try {
-    // Ask Claude to generate realistic upcoming temple events based on its knowledge
-    const prompt = `You are a Hindu temple events assistant for Bay Area temples. 
-Generate a JSON list of upcoming Hindu festival events for the next 3 months at Bay Area temples.
-Today is ${new Date().toISOString().split('T')[0]}.
-Return ONLY valid JSON in this exact format, no markdown:
-{
-  "events": [
-    {"date":"YYYY-MM-DD","name":"Event Name","temple":"Temple Name"},
-    ...
-  ]
-}
-Include: regular pujas, special abishekams, cultural events, festival celebrations.
-Include events from: Hindu Temple Sunnyvale, Shiva Murugan Temple Concord, Sri Siddhi Vinayaka Fremont, BAPS Milpitas, ISKCON Berkeley, Sri Satya Narayana Milpitas, Shirdi Sai Darbar Sunnyvale.
-Return 25-35 events across the 3 months.`;
-
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-
-    const data = await response.json();
-    const text = data.content?.map(c => c.text || '').join('') || '';
-    const clean = text.replace(/```json|```/g, '').trim();
-
-    let parsed;
-    try { parsed = JSON.parse(clean); } catch(e) {
-      // Try to extract JSON
-      const m = clean.match(/\{[\s\S]*\}/);
-      if (m) parsed = JSON.parse(m[0]);
-      else throw new Error('Could not parse response');
-    }
-
-    if (parsed?.events) {
-      liveEvents = {};
-      parsed.events.forEach(e => {
-        if (!liveEvents[e.date]) liveEvents[e.date] = [];
-        liveEvents[e.date].push({ name: e.name, temple: e.temple });
-      });
-      renderCalendar();
-      icon.textContent = '✅';
-      txt.textContent = 'Events loaded! Click any event for details.';
-      status.textContent = `Loaded ${parsed.events.length} events across Bay Area temples.`;
-    }
-  } catch (err) {
-    icon.textContent = '⚠️';
-    txt.textContent = 'Could not load live events. Showing static festivals.';
-    status.textContent = err.message;
-    btn.disabled = false;
-  }
-}
 
 // ═══════════════════════════════════════════════════════════════
 // 5. TEMPLES DATA
@@ -701,8 +649,8 @@ const temples = [
 ];
 
 function stars(r) {
-  const f = Math.floor(r), h = r%1 >= .5 ? 1 : 0;
-  return '★'.repeat(f)+(h?'½':'')+'☆'.repeat(5-f-h);
+  const f = Math.floor(r), h = r % 1 >= 0.5 ? 1 : 0, e = 5 - f - h;
+  return '★'.repeat(f) + (h ? '⯨' : '') + '☆'.repeat(e);
 }
 
 function renderTemples(list) {
@@ -711,7 +659,7 @@ function renderTemples(list) {
   if (!list.length) { grid.innerHTML = ''; nr.style.display = 'block'; return; }
   nr.style.display = 'none';
   grid.innerHTML = list.map(t => {
-    const url = `https://maps.google.com/?q=${encodeURIComponent(t.name+' '+t.address)}`;
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name+' '+t.address)}`;
     return `<div class="temple-card">
       <span class="t-icon">🛕</span>
       <div class="t-name">${t.name}</div>
