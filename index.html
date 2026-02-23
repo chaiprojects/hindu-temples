@@ -326,62 +326,246 @@ function renderRahuKalam() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// 2. EKADASHI — Accurate hardcoded dates 2025-2026
+// 2. EKADASHI — Astronomical algorithm (Jean Meeus, Chapters 25 & 47)
+//    Calculates tithi at sunrise for Bay Area (San Jose lat/lon)
+//    Ekadashi = 11th tithi of Shukla paksha (elongation 120°)
+//              + 11th tithi of Krishna paksha (elongation 300°)
+//    A tithi is defined as every 12° gain of Moon over Sun.
+//    The governing tithi is the one active at local SUNRISE.
 // ═══════════════════════════════════════════════════════════════
 
-// Verified dates from Drik Panchang / Hindu calendar sources
-const EKADASHI_DATES = [
-  { date:'2025-01-10', name:'Putrada Ekadashi',           paksha:'Shukla' },
-  { date:'2025-01-25', name:'Shattila Ekadashi',          paksha:'Krishna' },
-  { date:'2025-02-09', name:'Jaya Ekadashi',              paksha:'Shukla' },
-  { date:'2025-02-24', name:'Vijaya Ekadashi',            paksha:'Krishna' },
-  { date:'2025-03-11', name:'Amalaki Ekadashi',           paksha:'Shukla' },
-  { date:'2025-03-25', name:'Papamochini Ekadashi',       paksha:'Krishna' },
-  { date:'2025-04-10', name:'Kamada Ekadashi',            paksha:'Shukla' },
-  { date:'2025-04-24', name:'Varuthini Ekadashi',         paksha:'Krishna' },
-  { date:'2025-05-09', name:'Mohini Ekadashi',            paksha:'Shukla' },
-  { date:'2025-05-23', name:'Apara Ekadashi',             paksha:'Krishna' },
-  { date:'2025-06-07', name:'Nirjala Ekadashi',           paksha:'Shukla' },
-  { date:'2025-06-22', name:'Yogini Ekadashi',            paksha:'Krishna' },
-  { date:'2025-07-06', name:'Devshayani Ekadashi',        paksha:'Shukla' },
-  { date:'2025-07-21', name:'Kamika Ekadashi',            paksha:'Krishna' },
-  { date:'2025-08-05', name:'Putrada Ekadashi (Shravana)',paksha:'Shukla' },
-  { date:'2025-08-20', name:'Aja Ekadashi',               paksha:'Krishna' },
-  { date:'2025-09-03', name:'Parsva Ekadashi',            paksha:'Shukla' },
-  { date:'2025-09-18', name:'Indira Ekadashi',            paksha:'Krishna' },
-  { date:'2025-10-03', name:'Papankusha Ekadashi',        paksha:'Shukla' },
-  { date:'2025-10-18', name:'Rama Ekadashi',              paksha:'Krishna' },
-  { date:'2025-11-01', name:'Devutthana Ekadashi',        paksha:'Shukla' },
-  { date:'2025-11-16', name:'Utpanna Ekadashi',           paksha:'Krishna' },
-  { date:'2025-12-01', name:'Mokshada Ekadashi',          paksha:'Shukla' },
-  { date:'2025-12-16', name:'Saphala Ekadashi',           paksha:'Krishna' },
-  { date:'2025-12-30', name:'Putrada Ekadashi',           paksha:'Shukla' },
-  { date:'2026-01-14', name:'Shattila Ekadashi',          paksha:'Krishna' },
-  { date:'2026-01-28', name:'Jaya Ekadashi',              paksha:'Shukla' },
-  { date:'2026-02-12', name:'Vijaya Ekadashi',            paksha:'Krishna' },
-  { date:'2026-02-27', name:'Amalaki Ekadashi',           paksha:'Shukla' },
-  { date:'2026-03-14', name:'Papamochani Ekadashi',       paksha:'Krishna' },
-  { date:'2026-03-28', name:'Kamada Ekadashi',            paksha:'Shukla' },
-  { date:'2026-04-13', name:'Varuthini Ekadashi',         paksha:'Krishna' },
-  { date:'2026-04-27', name:'Mohini Ekadashi',            paksha:'Shukla' },
-  { date:'2026-05-12', name:'Apara Ekadashi',             paksha:'Krishna' },
-  { date:'2026-05-26', name:'Padmini Ekadashi',           paksha:'Shukla' },
-  { date:'2026-06-11', name:'Parama Ekadashi',            paksha:'Krishna' },
-  { date:'2026-06-25', name:'Nirjala Ekadashi',           paksha:'Shukla' },
+const EK_LAT  =  37.3382 * Math.PI / 180;  // Bay Area (San Jose) radians
+const EK_LNG  = -121.8863 * Math.PI / 180;
+const J2000   = 2451545.0;
+const JC      = 36525.0;
+const D2R     = Math.PI / 180;
+
+// ── Julian Day from Gregorian calendar ──
+function toJD(Y, M, D) {
+  if (M <= 2) { Y--; M += 12; }
+  const A = Math.floor(Y / 100), B = 2 - A + Math.floor(A / 4);
+  return Math.floor(365.25 * (Y + 4716)) + Math.floor(30.6001 * (M + 1)) + D + B - 1524.5;
+}
+
+function jdFromDate(date) {
+  return toJD(date.getUTCFullYear(), date.getUTCMonth() + 1,
+    date.getUTCDate() + (date.getUTCHours() * 3600 + date.getUTCMinutes() * 60 + date.getUTCSeconds()) / 86400);
+}
+
+function jdToDate(jd) {
+  let z = Math.floor(jd + 0.5), f = (jd + 0.5) - z, a = z;
+  if (z >= 2299161) { const g = Math.floor((z - 1867216.25) / 36524.25); a = z + 1 + g - Math.floor(g / 4); }
+  const b = a + 1524, c = Math.floor((b - 122.1) / 365.25);
+  const d = Math.floor(365.25 * c), e = Math.floor((b - d) / 30.6001);
+  const day   = b - d - Math.floor(30.6001 * e) + f;
+  const month = e < 14 ? e - 1 : e - 13;
+  const year  = month > 2 ? c - 4716 : c - 4715;
+  return new Date(Date.UTC(year, month - 1, Math.floor(day)));
+}
+
+// ── Sun ecliptic longitude (Meeus Ch.25, ~0.01° accuracy) ──
+function sunLongitude(T) {
+  const L0 = (280.46646 + 36000.76983 * T + 0.0003032 * T * T) % 360;
+  const M  = (357.52911 + 35999.05029 * T - 0.0001537 * T * T) * D2R;
+  const C  = (1.914602 - 0.004817 * T - 0.000014 * T * T) * Math.sin(M)
+           + (0.019993 - 0.000101 * T) * Math.sin(2 * M)
+           +  0.000289 * Math.sin(3 * M);
+  const Om = (125.04 - 1934.136 * T) * D2R;
+  return ((L0 + C - 0.00569 - 0.00478 * Math.sin(Om)) % 360 + 360) % 360;
+}
+
+// ── Moon ecliptic longitude (Meeus Ch.47, 60-term table, ~0.01° accuracy) ──
+// Meeus Table 47.A — [D, M, M', F, sinCoeff×1e-6 deg]
+const ML = [
+  [0,0,1,0,6288774],[2,0,-1,0,1274027],[2,0,0,0,658314],[0,0,2,0,213618],
+  [0,1,0,0,-185116],[0,0,0,2,-114332],[2,0,-2,0,58793],[2,-1,-1,0,57066],
+  [2,0,1,0,53322],[2,-1,0,0,45758],[0,1,-1,0,-40923],[1,0,0,0,-34720],
+  [0,1,1,0,-30383],[2,0,0,-2,15327],[0,0,1,2,-12528],[0,0,1,-2,10980],
+  [4,0,-1,0,10675],[0,0,3,0,10034],[4,0,-2,0,8548],[2,1,-1,0,-7888],
+  [2,1,0,0,-6766],[1,0,-1,0,-5163],[1,1,0,0,4987],[2,-1,1,0,4036],
+  [2,0,2,0,3994],[4,0,0,0,3861],[2,0,-3,0,3665],[0,1,-2,0,-2689],
+  [2,0,-1,2,-2602],[2,-1,-2,0,2390],[1,0,1,0,-2348],[2,-2,0,0,2236],
+  [0,1,2,0,-2120],[0,2,0,0,-2069],[2,-2,-1,0,2048],[2,0,1,-2,-1773],
+  [2,0,0,2,-1595],[4,-1,-1,0,1215],[0,0,2,2,-1110],[3,0,-1,0,-892],
+  [2,1,1,0,-810],[4,-1,-2,0,759],[0,2,-1,0,-713],[2,2,-1,0,-700],
+  [2,1,-2,0,691],[2,-1,0,-2,596],[4,0,1,0,549],[0,0,4,0,537],
+  [4,-1,0,0,520],[1,0,-2,0,-487],[2,1,0,-2,-399],[0,0,2,-2,-381],
+  [1,1,1,0,351],[3,0,-2,0,-340],[4,0,-3,0,330],[2,-1,2,0,327],
+  [0,2,1,0,-323],[1,1,-1,0,299],[2,0,3,0,294],[2,0,-1,-2,0]
 ];
+
+function moonLongitude(T) {
+  // Fundamental arguments (degrees → radians after pMod)
+  const pM = (x) => ((x % 360) + 360) % 360 * D2R;
+  const Lp = pM(218.3164477 + 481267.88123421*T - 0.0015786*T*T + T*T*T/538841 - T*T*T*T/65194000);
+  const D  = pM(297.8501921 + 445267.1114034*T  - 0.0018819*T*T + T*T*T/545868  - T*T*T*T/113065000);
+  const M  = pM(357.5291092 + 35999.0502909*T   - 0.0001536*T*T + T*T*T/24490000);
+  const Mp = pM(134.9633964 + 477198.8675055*T  + 0.0087414*T*T + T*T*T/69699    - T*T*T*T/14712000);
+  const F  = pM(93.272095   + 483202.0175233*T  - 0.0036539*T*T - T*T*T/3526000  + T*T*T*T/863310000);
+  const E  = 1 - 0.002516*T - 0.0000074*T*T;
+  const E2 = E * E;
+  const A1 = (119.75 + 131.849   * T) * D2R;
+  const A2 = ( 53.09 + 479264.29 * T) * D2R;
+
+  let suml = 0;
+  for (const [dD,dM,dMp,dF,sl] of ML) {
+    const ec = Math.abs(dM)===1 ? E : Math.abs(dM)===2 ? E2 : 1;
+    suml += ec * sl * Math.sin(dD*D + dM*M + dMp*Mp + dF*F);
+  }
+  suml += 3958*Math.sin(A1) + 1962*Math.sin(Lp - F) + 318*Math.sin(A2);
+  return ((Lp/D2R + suml*1e-6) % 360 + 360) % 360;
+}
+
+// ── Elongation (Moon minus Sun) and tithi (1-30) ──
+function elongation(T) {
+  return ((moonLongitude(T) - sunLongitude(T)) % 360 + 360) % 360;
+}
+function tithi(T) { return Math.floor(elongation(T) / 12) + 1; }
+
+// ── Binary search: find JD when elongation = targetDeg ──
+function findElongationCrossing(targetDeg, jdLo, jdHi) {
+  const fn = jd => {
+    let el = elongation((jd - J2000) / JC);
+    if (targetDeg < 30  && el > 330) el -= 360;
+    if (targetDeg > 330 && el < 30)  el += 360;
+    return el - targetDeg;
+  };
+  if (fn(jdLo) * fn(jdHi) > 0) return null;
+  for (let i = 0; i < 60; i++) {
+    const mid = (jdLo + jdHi) / 2;
+    if (jdHi - jdLo < 1e-7) break;
+    fn(jdLo) * fn(mid) <= 0 ? (jdHi = mid) : (jdLo = mid);
+  }
+  return (jdLo + jdHi) / 2;
+}
+
+// ── Sunrise JD for a given date midnight JD (Meeus Ch.15) ──
+function sunriseJD(jd0) {
+  const h0 = -0.8333 * D2R; // standard solar altitude at sunrise
+  function sunEquatorial(jd) {
+    const T  = (jd - J2000) / JC;
+    const Lp = sunLongitude(T) * D2R;
+    const U  = T / 100;
+    const eps0 = 23 + 26/60 + 21.448/3600 + (-4680.93*U - 1.55*U*U + 1999.25*U*U*U
+               - 51.38*Math.pow(U,4) - 249.67*Math.pow(U,5) - 39.05*Math.pow(U,6)
+               + 7.12*Math.pow(U,7) + 27.87*Math.pow(U,8) + 5.79*Math.pow(U,9))/3600;
+    const Om = (125.04 - 1934.136*T) * D2R;
+    const eps = (eps0 + 0.00256*Math.cos(Om)) * D2R;
+    return { ra: Math.atan2(Math.cos(eps)*Math.sin(Lp), Math.cos(Lp)), dec: Math.asin(Math.sin(eps)*Math.sin(Lp)) };
+  }
+  const [eq1, eq2, eq3] = [sunEquatorial(jd0-1), sunEquatorial(jd0), sunEquatorial(jd0+1)];
+  const T0  = (jd0 - J2000) / JC;
+  const Th0 = ((100.4606184 + 36000.7700536*T0 + 0.000387933*T0*T0 - T0*T0*T0/38710000) % 360 + 360) % 360 * D2R;
+  const cH  = (Math.sin(h0) - Math.sin(EK_LAT)*Math.sin(eq2.dec)) / (Math.cos(EK_LAT)*Math.cos(eq2.dec));
+  if (Math.abs(cH) > 1) return jd0 + 0.25; // fallback ~6am
+  const H0  = Math.acos(cH);
+  const mt  = (eq2.ra - EK_LNG - Th0) / (2*Math.PI) * 86400;
+  let m = ((mt - H0*86400/(2*Math.PI)) % 86400 + 86400) % 86400;
+  // Two refinement iterations (Meeus Ch.15)
+  for (let i = 0; i < 2; i++) {
+    const n   = m / 86400;
+    const ra  = eq2.ra  + n*(eq3.ra  - eq1.ra )/2 + n*n*(eq3.ra  - 2*eq2.ra  + eq1.ra )/2;
+    const dec = eq2.dec + n*(eq3.dec - eq1.dec)/2 + n*n*(eq3.dec - 2*eq2.dec + eq1.dec)/2;
+    const th  = ((Th0 + m*2*Math.PI*1.00273791/86400) % (2*Math.PI) + 2*Math.PI) % (2*Math.PI);
+    const H   = th - EK_LNG - ra;
+    const h   = Math.asin(Math.sin(EK_LAT)*Math.sin(dec) + Math.cos(EK_LAT)*Math.cos(dec)*Math.cos(H));
+    const dm  = (h - h0) / (Math.cos(dec)*Math.cos(EK_LAT)*Math.sin(H)) * 86400/(2*Math.PI);
+    m = ((m + dm) % 86400 + 86400) % 86400;
+  }
+  return jd0 + m / 86400;
+}
+
+// ── Ekadashi name lookup by solar month and paksha ──
+const EK_NAMES = {
+  '0-S':'Putrada Ekadashi',    '0-K':'Shattila Ekadashi',
+  '1-S':'Jaya Ekadashi',       '1-K':'Vijaya Ekadashi',
+  '2-S':'Amalaki Ekadashi',    '2-K':'Papamochani Ekadashi',
+  '3-S':'Kamada Ekadashi',     '3-K':'Varuthini Ekadashi',
+  '4-S':'Mohini Ekadashi',     '4-K':'Apara Ekadashi',
+  '5-S':'Nirjala Ekadashi',    '5-K':'Yogini Ekadashi',
+  '6-S':'Devshayani Ekadashi', '6-K':'Kamika Ekadashi',
+  '7-S':'Putrada Ekadashi (Shravana)', '7-K':'Aja Ekadashi',
+  '8-S':'Parsva Ekadashi',     '8-K':'Indira Ekadashi',
+  '9-S':'Papankusha Ekadashi', '9-K':'Rama Ekadashi',
+  '10-S':'Devutthana Ekadashi','10-K':'Utpanna Ekadashi',
+  '11-S':'Mokshada Ekadashi',  '11-K':'Saphala Ekadashi',
+  // Adhik Maas specials
+  'adhik-S':'Padmini Ekadashi','adhik-K':'Parama Ekadashi',
+};
+
+// ── Main: compute Ekadashi dates for a year range ──
+function computeEkadashiDates(yearStart, yearEnd) {
+  const results = [];
+  const jdStart = toJD(yearStart, 1, 1) - 1;
+  const jdEnd   = toJD(yearEnd,  12, 31) + 2;
+  const step    = 0.45; // scan step < one tithi duration (~0.98 day)
+
+  let prevTithi = tithi((jdStart - J2000) / JC);
+
+  for (let jd = jdStart; jd < jdEnd; jd += step) {
+    const curTithi = tithi((jd - J2000) / JC);
+
+    if (curTithi !== prevTithi) {
+      for (const target of [11, 26]) {
+        const crossed = prevTithi < curTithi
+          ? (prevTithi < target && target <= curTithi)
+          : (prevTithi < target || target <= curTithi); // wrap 30→1
+
+        if (crossed) {
+          const targetEl = (target - 1) * 12;
+          const jdCross  = findElongationCrossing(targetEl, jd - step, jd + step);
+          if (jdCross === null) continue;
+
+          // Check day of crossing and next day — whichever has tithi-11/26 at sunrise
+          for (const offset of [0, 1]) {
+            const candidate  = jdToDate(jdCross);
+            candidate.setUTCDate(candidate.getUTCDate() + offset);
+            const midnightJD = toJD(candidate.getUTCFullYear(), candidate.getUTCMonth()+1, candidate.getUTCDate()) + 0.5;
+            const srJD       = sunriseJD(midnightJD);
+            const tSunrise   = tithi((srJD - J2000) / JC);
+
+            if (tSunrise === target) {
+              const paksha = target === 11 ? 'Shukla' : 'Krishna';
+              const mo     = candidate.getUTCMonth();
+              const pk     = target === 11 ? 'S' : 'K';
+              // Detect Adhik Maas: two Shukla or two Krishna Ekadashis in same calendar month
+              const key    = `${mo}-${pk}`;
+              const name   = EK_NAMES[key] || `${paksha} Ekadashi`;
+              results.push({ date: new Date(candidate), name, paksha });
+              break;
+            }
+          }
+        }
+      }
+    }
+    prevTithi = curTithi;
+  }
+
+  // Post-process: if two Ekadashis of same paksha fall in same month → mark second as Adhik Maas
+  const seen = {};
+  for (const e of results) {
+    const mo = e.date.getUTCMonth(), pk = e.paksha[0];
+    const key = `${e.date.getUTCFullYear()}-${mo}-${pk}`;
+    if (seen[key]) {
+      // Second occurrence → Adhik Maas Ekadashi
+      e.name = EK_NAMES[`adhik-${pk}`] || e.name;
+    } else {
+      seen[key] = true;
+    }
+  }
+
+  return results;
+}
+
+// Compute once on load for current year + next year
+const _ekCache = computeEkadashiDates(new Date().getFullYear() - 1, new Date().getFullYear() + 1);
 
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(d) {
-  return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+  return `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
 }
 
-function getEkadashiList() {
-  return EKADASHI_DATES.map(e => ({
-    date: new Date(e.date + 'T00:00:00'),
-    name: e.name,
-    paksha: e.paksha
-  }));
-}
+function getEkadashiList() { return _ekCache; }
 
 function renderEkadashi() {
   const today = new Date();
