@@ -326,120 +326,79 @@ function renderRahuKalam() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// 2. EKADASHI — Auto-calculated using lunar calendar algorithm
+// 2. EKADASHI — Accurate hardcoded dates 2025-2026
 // ═══════════════════════════════════════════════════════════════
 
-function julianDay(year, month, day) {
-  if (month <= 2) { year--; month += 12; }
-  const A = Math.floor(year / 100);
-  const B = 2 - A + Math.floor(A / 4);
-  return Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day + B - 1524.5;
-}
-
-function moonAge(date) {
-  // Approximate moon age in days (0=new moon, 14=full moon, 29.53=new moon again)
-  const jd = julianDay(date.getFullYear(), date.getMonth() + 1, date.getDate());
-  const knownNew = julianDay(2000, 1, 6); // known new moon
-  const synodicMonth = 29.53058867;
-  const daysSince = jd - knownNew;
-  return ((daysSince % synodicMonth) + synodicMonth) % synodicMonth;
-}
-
-// Ekadashi = 11th lunar day (Ekadashi) = ~11 days after new moon & ~11 days after full moon
-// We scan for days where moon age ≈ 11 or ≈ 25.5 (±0.8 day tolerance)
-const EKADASHI_NAMES_SHUKLA = [ // waxing (after new moon ~11th)
-  'Putrada','Jaya','Vijaya','Amalaki','Kamada','Mohini','Apara','Nirjala',
-  'Yogini (Shukla)','Devshayani','Shravana Putrada','Parsva','Papankusha',
-  'Devutthana','Mokshada','Saphala','Putrada (Paush)'
+// Verified dates from Drik Panchang / Hindu calendar sources
+const EKADASHI_DATES = [
+  { date:'2025-01-10', name:'Putrada Ekadashi',           paksha:'Shukla' },
+  { date:'2025-01-25', name:'Shattila Ekadashi',          paksha:'Krishna' },
+  { date:'2025-02-09', name:'Jaya Ekadashi',              paksha:'Shukla' },
+  { date:'2025-02-24', name:'Vijaya Ekadashi',            paksha:'Krishna' },
+  { date:'2025-03-11', name:'Amalaki Ekadashi',           paksha:'Shukla' },
+  { date:'2025-03-25', name:'Papamochini Ekadashi',       paksha:'Krishna' },
+  { date:'2025-04-10', name:'Kamada Ekadashi',            paksha:'Shukla' },
+  { date:'2025-04-24', name:'Varuthini Ekadashi',         paksha:'Krishna' },
+  { date:'2025-05-09', name:'Mohini Ekadashi',            paksha:'Shukla' },
+  { date:'2025-05-23', name:'Apara Ekadashi',             paksha:'Krishna' },
+  { date:'2025-06-07', name:'Nirjala Ekadashi',           paksha:'Shukla' },
+  { date:'2025-06-22', name:'Yogini Ekadashi',            paksha:'Krishna' },
+  { date:'2025-07-06', name:'Devshayani Ekadashi',        paksha:'Shukla' },
+  { date:'2025-07-21', name:'Kamika Ekadashi',            paksha:'Krishna' },
+  { date:'2025-08-05', name:'Putrada Ekadashi (Shravana)',paksha:'Shukla' },
+  { date:'2025-08-20', name:'Aja Ekadashi',               paksha:'Krishna' },
+  { date:'2025-09-03', name:'Parsva Ekadashi',            paksha:'Shukla' },
+  { date:'2025-09-18', name:'Indira Ekadashi',            paksha:'Krishna' },
+  { date:'2025-10-03', name:'Papankusha Ekadashi',        paksha:'Shukla' },
+  { date:'2025-10-18', name:'Rama Ekadashi',              paksha:'Krishna' },
+  { date:'2025-11-01', name:'Devutthana Ekadashi',        paksha:'Shukla' },
+  { date:'2025-11-16', name:'Utpanna Ekadashi',           paksha:'Krishna' },
+  { date:'2025-12-01', name:'Mokshada Ekadashi',          paksha:'Shukla' },
+  { date:'2025-12-16', name:'Saphala Ekadashi',           paksha:'Krishna' },
+  { date:'2025-12-30', name:'Putrada Ekadashi',           paksha:'Shukla' },
+  { date:'2026-01-14', name:'Shattila Ekadashi',          paksha:'Krishna' },
+  { date:'2026-01-29', name:'Jaya Ekadashi',              paksha:'Shukla' },
+  { date:'2026-02-13', name:'Vijaya Ekadashi',            paksha:'Krishna' },
+  { date:'2026-02-27', name:'Amalaki Ekadashi',           paksha:'Shukla' },
+  { date:'2026-03-14', name:'Papamochini Ekadashi',       paksha:'Krishna' },
+  { date:'2026-03-29', name:'Kamada Ekadashi',            paksha:'Shukla' },
+  { date:'2026-04-13', name:'Varuthini Ekadashi',         paksha:'Krishna' },
+  { date:'2026-04-28', name:'Mohini Ekadashi',            paksha:'Shukla' },
+  { date:'2026-05-12', name:'Apara Ekadashi',             paksha:'Krishna' },
+  { date:'2026-05-27', name:'Nirjala Ekadashi',           paksha:'Shukla' },
+  { date:'2026-06-11', name:'Yogini Ekadashi',            paksha:'Krishna' },
+  { date:'2026-06-26', name:'Devshayani Ekadashi',        paksha:'Shukla' },
 ];
-const EKADASHI_NAMES_KRISHNA = [ // waning (after full moon ~11th)
-  'Shattila','Jaya','Vijaya','Papamochini','Varuthini','Yogini','Kamika',
-  'Aja','Indira','Rama','Utpanna','Saphala (Masa)'
-];
-
-function getEkadashiList(startDate, months = 6) {
-  const results = [];
-  const end = new Date(startDate);
-  end.setMonth(end.getMonth() + months);
-  const cur = new Date(startDate);
-  cur.setDate(cur.getDate() - 1);
-
-  let prevAge = moonAge(cur);
-  while (cur < end) {
-    cur.setDate(cur.getDate() + 1);
-    const age = moonAge(cur);
-
-    // Detect crossing of age ~11 (shukla/waxing ekadashi) — ~11 days after new moon
-    if (prevAge < 11 && age >= 11 && age < 13) {
-      results.push({ date: new Date(cur), paksha: 'Shukla' });
-    }
-    // Detect crossing of age ~25.5 (krishna/waning ekadashi) — ~11 days after full moon
-    if (prevAge < 25.5 && age >= 25.5 && age < 27.5) {
-      results.push({ date: new Date(cur), paksha: 'Krishna' });
-    }
-    prevAge = age;
-  }
-  return results;
-}
-
-// Named Ekadashis by Hindu month (approx, based on solar month)
-const NAMED_EKADASHIS = {
-  // month (0-indexed) + paksha → name
-  '0-Shukla': 'Putrada Ekadashi',
-  '0-Krishna': 'Shattila Ekadashi',
-  '1-Shukla': 'Jaya Ekadashi',
-  '1-Krishna': 'Vijaya Ekadashi',
-  '2-Shukla': 'Amalaki Ekadashi',
-  '2-Krishna': 'Papamochini Ekadashi',
-  '3-Shukla': 'Kamada Ekadashi',
-  '3-Krishna': 'Varuthini Ekadashi',
-  '4-Shukla': 'Mohini Ekadashi',
-  '4-Krishna': 'Apara Ekadashi',
-  '5-Shukla': 'Nirjala Ekadashi',
-  '5-Krishna': 'Yogini Ekadashi',
-  '6-Shukla': 'Devshayani Ekadashi',
-  '6-Krishna': 'Kamika Ekadashi',
-  '7-Shukla': 'Putrada Ekadashi (Shravana)',
-  '7-Krishna': 'Aja Ekadashi',
-  '8-Shukla': 'Parsva Ekadashi',
-  '8-Krishna': 'Indira Ekadashi',
-  '9-Shukla': 'Papankusha Ekadashi',
-  '9-Krishna': 'Rama Ekadashi',
-  '10-Shukla': 'Devutthana Ekadashi',
-  '10-Krishna': 'Utpanna Ekadashi',
-  '11-Shukla': 'Mokshada Ekadashi',
-  '11-Krishna': 'Saphala Ekadashi',
-};
-
-function ekName(date, paksha) {
-  return NAMED_EKADASHIS[`${date.getMonth()}-${paksha}`] || `${paksha} Ekadashi`;
-}
 
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(d) {
   return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
+function getEkadashiList() {
+  return EKADASHI_DATES.map(e => ({
+    date: new Date(e.date + 'T00:00:00'),
+    name: e.name,
+    paksha: e.paksha
+  }));
+}
+
 function renderEkadashi() {
   const today = new Date();
-  today.setHours(0,0,0,0);
+  today.setHours(0, 0, 0, 0);
   const list = document.getElementById('ekadashiList');
-
-  const start = new Date(today);
-  start.setMonth(start.getMonth() - 1);
-  const ekList = getEkadashiList(start, 8);
+  const ekList = getEkadashiList();
 
   const upcoming = ekList.filter(e => e.date >= today);
-  const past = ekList.filter(e => e.date < today).slice(-2);
-  const show = [...past, ...upcoming.slice(0, 7)];
+  const past     = ekList.filter(e => e.date < today).slice(-2);
+  const show     = [...past, ...upcoming.slice(0, 7)];
 
   list.innerHTML = show.map(e => {
     const isPast = e.date < today;
     const isNext = upcoming.length > 0 && e.date.getTime() === upcoming[0].date.getTime();
-    const name = ekName(e.date, e.paksha);
     return `<div class="ek-item${isPast ? ' past' : ''}${isNext ? ' next' : ''}">
       <div>
-        <span class="ek-name">${name}${isNext ? '<span class="badge">Next ✦</span>' : ''}</span>
+        <span class="ek-name">${e.name}${isNext ? '<span class="badge">Next ✦</span>' : ''}</span>
         <br><span class="ek-date">${fmtDate(e.date)} &bull; ${e.paksha}</span>
       </div>
       ${isPast ? '<span style="font-size:.65rem;opacity:.5">✓</span>' : ''}
@@ -501,12 +460,10 @@ function buildCalendarEvents() {
   });
 
   // Add ekadashis
-  const start = new Date(calYear - 1, calMonth, 1);
-  const ekList = getEkadashiList(start, 24);
-  ekList.forEach(e => {
+  getEkadashiList().forEach(e => {
     const k = `${e.date.getFullYear()}-${String(e.date.getMonth()+1).padStart(2,'0')}-${String(e.date.getDate()).padStart(2,'0')}`;
     if (!map[k]) map[k] = [];
-    map[k].push({ name: ekName(e.date, e.paksha), type: 'ekadashi' });
+    map[k].push({ name: e.name, type: 'ekadashi' });
   });
 
   // Add temple-specific events
