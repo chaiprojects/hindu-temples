@@ -493,6 +493,20 @@ const EK_NAMES = {
   'adhik-S':'Padmini Ekadashi','adhik-K':'Parama Ekadashi',
 };
 
+// ── DST-aware Pacific timezone offset (-7 PDT or -8 PST) ──
+// PDT: 2nd Sunday of March → 1st Sunday of November
+function getPacificTZOffset(jd) {
+  const d = jdToDate(jd);
+  const y = d.getUTCFullYear();
+  // 2nd Sunday of March
+  const mar1 = new Date(Date.UTC(y, 2, 1));
+  const dstStart = new Date(Date.UTC(y, 2, (14 - mar1.getUTCDay()) % 7 + 8));
+  // 1st Sunday of November
+  const nov1 = new Date(Date.UTC(y, 10, 1));
+  const dstEnd = new Date(Date.UTC(y, 10, (7 - nov1.getUTCDay()) % 7 + 1));
+  return (d >= dstStart && d < dstEnd) ? -7 : -8;
+}
+
 // ── Main: compute Ekadashi dates for a year range ──
 function computeEkadashiDates(yearStart, yearEnd) {
   const results = [];
@@ -516,22 +530,29 @@ function computeEkadashiDates(yearStart, yearEnd) {
           const jdCross  = findElongationCrossing(targetEl, jd - step, jd + step);
           if (jdCross === null) continue;
 
+          // Convert jdCross to LOCAL Pacific date (not UTC)
+          const tz = getPacificTZOffset(jdCross);           // -7 PDT or -8 PST
+          const localDate = jdToDate(jdCross + tz / 24);   // shift to Pacific local time
+
           // Check day of crossing and next day — whichever has tithi-11/26 at sunrise
           for (const offset of [0, 1]) {
-            const candidate  = jdToDate(jdCross);
-            candidate.setUTCDate(candidate.getUTCDate() + offset);
-            const midnightJD = toJD(candidate.getUTCFullYear(), candidate.getUTCMonth()+1, candidate.getUTCDate()) + 0.5;
-            const srJD       = sunriseJD(midnightJD);
-            const tSunrise   = tithi((srJD - J2000) / JC);
+            const checkDate = new Date(localDate);
+            checkDate.setUTCDate(checkDate.getUTCDate() + offset);
+            // Local Pacific midnight expressed in JD (e.g. PST: 08:00 UTC = midnight PT)
+            const localMidnightJD = toJD(
+              checkDate.getUTCFullYear(), checkDate.getUTCMonth() + 1, checkDate.getUTCDate()
+            ) + 0.5 - tz / 24;
+            const srJD     = sunriseJD(localMidnightJD);
+            const tSunrise = tithi((srJD - J2000) / JC);
 
             if (tSunrise === target) {
               const paksha = target === 11 ? 'Shukla' : 'Krishna';
-              const mo     = candidate.getUTCMonth();
+              const mo     = checkDate.getUTCMonth();
               const pk     = target === 11 ? 'S' : 'K';
               // Detect Adhik Maas: two Shukla or two Krishna Ekadashis in same calendar month
               const key    = `${mo}-${pk}`;
               const name   = EK_NAMES[key] || `${paksha} Ekadashi`;
-              results.push({ date: new Date(candidate), name, paksha });
+              results.push({ date: new Date(checkDate), name, paksha });
               break;
             }
           }
@@ -645,7 +666,7 @@ function buildCalendarEvents() {
 
   // Add ekadashis
   getEkadashiList().forEach(e => {
-    const k = `${e.date.getFullYear()}-${String(e.date.getMonth()+1).padStart(2,'0')}-${String(e.date.getDate()).padStart(2,'0')}`;
+    const k = `${e.date.getUTCFullYear()}-${String(e.date.getUTCMonth()+1).padStart(2,'0')}-${String(e.date.getUTCDate()).padStart(2,'0')}`;
     if (!map[k]) map[k] = [];
     map[k].push({ name: e.name, type: 'ekadashi' });
   });
