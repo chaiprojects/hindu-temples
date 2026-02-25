@@ -1,0 +1,182 @@
+[
+  {
+    "temple": "Shiva Murugan Temple",
+    "city": "Concord",
+    "title": "Maha Shivaratri Abhishekam",
+    "startDate": "2026-02-15",
+    "endDate": "2026-02-15",
+    "time": "6:00 PM – 10:00 PM",
+    "url": "https://ثshivamurugan.org"
+  },
+  {
+    "temple": "Shiv Durga Temple",
+    "city": "Santa Clara",
+    "title": "Maha Shivaratri Puja & Night Vigil",
+    "startDate": "2026-02-15",
+    "endDate": "2026-02-15",
+    "time": "6:00 PM – 6:00 AM",
+    "url": "https://shivdurgatemple.org"
+  },
+  {
+    "temple": "Hindu Temple & Community Center",
+    "city": "Sunnyvale",
+    "title": "Holi Celebrations",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-03",
+    "time": "10:00 AM – 4:00 PM",
+    "url": "https://hindutemple.org"
+  },
+  {
+    "temple": "ISKCON Berkeley",
+    "city": "Berkeley",
+    "title": "Holi Rangwali Festival",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-03",
+    "time": "11:00 AM – 5:00 PM",
+    "url": "https://iskconberkeley.com"
+  },
+  {
+    "temple": "Sri Siddhi Vinayaka Cultural Center",
+    "city": "Fremont",
+    "title": "Ganapathi Homam",
+    "startDate": "2026-03-08",
+    "endDate": "2026-03-08",
+    "time": "9:00 AM – 12:00 PM",
+    "url": "https://siddhivinayakatemple.org"
+  },
+  {
+    "temple": "Hindu Temple & Community Center",
+    "city": "Sunnyvale",
+    "title": "Ugadi Celebrations",
+    "startDate": "2026-03-19",
+    "endDate": "2026-03-19",
+    "time": "9:00 AM – 9:00 PM",
+    "url": "https://hindutemple.org"
+  },
+  {
+    "temple": "Sri Krishna Balaram Mandir",
+    "city": "Milpitas",
+    "title": "Ram Navami Grand Puja",
+    "startDate": "2026-03-26",
+    "endDate": "2026-03-26",
+    "time": "7:30 AM – 8:30 PM",
+    "url": "https://iskconmilpitas.org"
+  },
+  {
+    "temple": "Shiva Murugan Temple",
+    "city": "Concord",
+    "title": "Saturday Abhishekam Special",
+    "startDate": "2026-03-28",
+    "endDate": "2026-03-28",
+    "time": "10:00 AM – 12:00 PM",
+    "url": "https://shivamurugan.org"
+  },
+  {
+    "temple": "Karya Siddhi Hanuman Temple",
+    "city": "Fremont",
+    "title": "Hanuman Jayanti Celebrations",
+    "startDate": "2026-04-02",
+    "endDate": "2026-04-02",
+    "time": "8:30 AM – 8:00 PM",
+    "url": "https://karyasiddhihanuman.org"
+  },
+  {
+    "temple": "Hindu Temple & Community Center",
+    "city": "Sunnyvale",
+    "title": "Tamil New Year Puja",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "time": "9:00 AM – 9:00 PM",
+    "url": "https://hindutemple.org"
+  },
+  {
+    "temple": "BAPS Shri Swaminarayan Mandir",
+    "city": "Milpitas",
+    "title": "Akshaya Tritiya Celebrations",
+    "startDate": "2026-04-20",
+    "endDate": "2026-04-20",
+    "time": "7:00 AM – 8:00 PM",
+    "url": "https://baps.org"
+  },
+  {
+    "temple": "Sri Satya Narayana Swamy Devasthanam",
+    "city": "Milpitas",
+    "title": "Sathyanarayana Puja",
+    "startDate": "2026-02-28",
+    "endDate": "2026-02-28",
+    "time": "10:00 AM – 1:00 PM",
+    "url": "https://svdevasthanam.org"
+  },
+  {
+    "temple": "Shirdi Sai Darbar",
+    "city": "Sunnyvale",
+    "title": "Sai Baba Thursday Puja",
+    "startDate": "2026-04-02",
+    "endDate": "2026-04-02",
+    "time": "7:00 AM – 9:00 PM",
+    "url": "https://shirdisaidarbar.org"
+  },
+  {
+    "temple": "Vedic Dharma Samaj Hindu Temple",
+    "city": "Fremont",
+    "title": "Rama Navami Katha",
+    "startDate": "2026-03-21",
+    "endDate": "2026-03-21",
+    "time": "9:30 AM – 8:30 PM",
+    "url": "https://vedicsamaj.org"
+  },
+  {
+    "temple": "Balaji Temple",
+    "city": "San Jose",
+    "title": "Annual Brahmotsavam",
+    "startDate": "2026-05-15",
+    "endDate": "2026-05-23",
+    "time": "7:00 AM – 9:00 PM",
+    "url": "https://balajitemple.org"
+  },
+  {
+    "temple": "Shiva Murugan Temple",
+    "city": "Concord",
+    "title": "Murugan Abishekam",
+    "startDate": "2026-04-25",
+    "endDate": "2026-04-25",
+    "time": "10:00 AM – 12:00 PM",
+    "url": "https://shivamurugan.org"
+  },
+  {
+    "temple": "Sri Satya Narayana Swamy Devasthanam",
+    "city": "Milpitas",
+    "title": "Sathyanarayana Puja",
+    "startDate": "2026-05-02",
+    "endDate": "2026-05-02",
+    "time": "10:00 AM – 1:00 PM",
+    "url": "https://svdevasthanam.org"
+  },
+  {
+    "temple": "Hindu Temple & Community Center",
+    "city": "Sunnyvale",
+    "title": "Vishnu Sahasranama Recital",
+    "startDate": "2026-03-01",
+    "endDate": "2026-03-01",
+    "time": "9:00 AM – 12:00 PM",
+    "url": "https://hindutemple.org"
+  },
+  {
+    "temple": "BAPS Shri Swaminarayan Mandir",
+    "city": "Milpitas",
+    "title": "Rath Yatra Festival",
+    "startDate": "2026-07-16",
+    "endDate": "2026-07-16",
+    "time": "8:00 AM – 8:00 PM",
+    "url": "https://baps.org"
+  },
+  {
+    "temple": "Shirdi Sai Parivaar",
+    "city": "Milpitas",
+    "title": "Guru Purnima Celebrations",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-01",
+    "time": "9:00 AM – 9:00 PM",
+    "url": "https://shirdisaiparivaar.org"
+  }
+]

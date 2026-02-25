@@ -1,854 +1,212 @@
 <!DOCTYPE html>
-<!-- GitHub Pages: chaiprojects -->
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bay Area Hindu Temples · Sacred Spaces</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --saffron: #E8821A;
-    --deep-red: #8B1A1A;
-    --gold: #D4A017;
-    --cream: #FAF3E0;
-    --dark: #120800;
-    --brown: #3A1800;
-    --light-gold: #F5D98A;
-    --marigold: #FFA500;
-    --maroon: #6B0F0F;
-    --card-bg: rgba(58,24,0,0.45);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--dark);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;overflow-x:hidden;}
-  body::before{content:'';position:fixed;inset:0;background:
-    radial-gradient(ellipse 80% 60% at 10% 40%,rgba(232,130,26,.06) 0%,transparent 60%),
-    radial-gradient(ellipse 60% 80% at 90% 10%,rgba(212,160,23,.06) 0%,transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 90%,rgba(139,26,26,.06) 0%,transparent 60%);
-    pointer-events:none;z-index:0;}
-
-  /* ── BORDER ── */
-  .border-strip{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0 24px,var(--gold) 24px 48px,var(--deep-red) 48px 72px,var(--gold) 72px 96px);}
-
-  /* ── HEADER ── */
-  header{position:relative;z-index:1;text-align:center;padding:3rem 2rem 2rem;border-bottom:1px solid rgba(212,160,23,.25);}
-  .om{font-size:4.5rem;color:var(--gold);animation:glow 3s ease-in-out infinite;line-height:1;margin-bottom:.4rem;display:block;}
-  @keyframes glow{0%,100%{text-shadow:0 0 12px rgba(212,160,23,.5),0 0 35px rgba(232,130,26,.3);}50%{text-shadow:0 0 25px rgba(212,160,23,.95),0 0 70px rgba(232,130,26,.65),0 0 90px rgba(255,165,0,.3);}}
-  header h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--light-gold);letter-spacing:.05em;}
-  header p.sub{font-style:italic;color:rgba(250,243,224,.55);font-size:1.05rem;margin-top:.4rem;letter-spacing:.1em;}
-  .ruler{display:flex;align-items:center;gap:1rem;margin:1.2rem auto 0;max-width:420px;}
-  .ruler-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
-  .ruler-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;}
-
-  /* ── LAYOUT ── */
-  main{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:2rem 1.5rem;}
-
-  /* ── WIDGET ROW ── */
-  .widget-row{display:grid;grid-template-columns:1fr 1fr 2fr;gap:1.25rem;margin-bottom:2.5rem;}
-  @media(max-width:1100px){.widget-row{grid-template-columns:1fr 1fr;} .widget-row .cal-widget{grid-column:span 2;}}
-  @media(max-width:680px){.widget-row{grid-template-columns:1fr;} .widget-row .cal-widget{grid-column:span 1;}}
-
-  .widget{background:linear-gradient(150deg,rgba(58,24,0,.6),rgba(18,8,0,.85));border:1px solid rgba(212,160,23,.35);border-radius:14px;padding:1.4rem;position:relative;overflow:hidden;backdrop-filter:blur(10px);}
-  .widget::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--saffron));}
-  .w-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--gold);margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
-  .w-title .icon{font-size:1.3rem;}
-
-  /* ── RAHU KALAM ── */
-  .rahu-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;font-size:.72rem;}
-  @media(max-width:480px){.rahu-grid{grid-template-columns:repeat(4,1fr);}}
-  .rahu-day{background:rgba(139,26,26,.18);border:1px solid rgba(212,160,23,.18);border-radius:7px;padding:6px 3px;text-align:center;transition:all .3s;}
-  .rahu-day:hover{background:rgba(139,26,26,.38);border-color:var(--gold);}
-  .rahu-day.today{background:rgba(232,130,26,.22);border-color:var(--saffron);box-shadow:0 0 12px rgba(232,130,26,.28);}
-  .rdn{font-weight:600;color:var(--light-gold);display:block;margin-bottom:3px;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;}
-  .rdt{color:rgba(250,243,224,.7);font-size:.62rem;line-height:1.3;}
-  .rahu-day.today .rdn{color:var(--marigold);}
-  .rahu-callout{margin-top:.8rem;padding:8px 12px;background:rgba(232,130,26,.12);border-radius:7px;border-left:3px solid var(--saffron);font-size:.82rem;line-height:1.5;}
-  .rahu-callout strong{color:var(--marigold);}
-  .rahu-note{font-size:.68rem;color:rgba(250,243,224,.4);margin-top:.5rem;font-style:italic;}
-
-  /* ── EKADASHI ── */
-  .ekadashi-list{display:flex;flex-direction:column;gap:.5rem;max-height:320px;overflow-y:auto;padding-right:4px;}
-  .ekadashi-list::-webkit-scrollbar{width:3px;}
-  .ekadashi-list::-webkit-scrollbar-thumb{background:var(--saffron);border-radius:3px;}
-  .ek-item{display:flex;justify-content:space-between;align-items:center;padding:7px 11px;background:rgba(18,8,0,.4);border:1px solid rgba(212,160,23,.15);border-radius:8px;transition:all .3s;font-size:.87rem;}
-  .ek-item:hover{border-color:rgba(212,160,23,.4);background:rgba(58,24,0,.4);}
-  .ek-item.next{border-color:rgba(232,130,26,.5);background:rgba(232,130,26,.1);}
-  .ek-item.past{opacity:.45;}
-  .ek-name{font-weight:600;color:var(--light-gold);font-size:.82rem;}
-  .ek-date{color:rgba(250,243,224,.65);font-size:.75rem;font-style:italic;}
-  .badge{font-size:.58rem;background:var(--saffron);color:var(--dark);font-weight:700;padding:2px 6px;border-radius:10px;text-transform:uppercase;letter-spacing:.05em;margin-left:5px;vertical-align:middle;}
-
-  /* ── FESTIVAL CALENDAR ── */
-  .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.9rem;}
-  .cal-nav{display:flex;gap:.5rem;align-items:center;}
-  .cal-btn{background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.3);color:var(--gold);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:.9rem;transition:all .2s;font-family:'Crimson Pro',serif;}
-  .cal-btn:hover{background:rgba(212,160,23,.3);}
-  .cal-month-label{font-family:'Playfair Display',serif;font-size:1rem;color:var(--light-gold);min-width:140px;text-align:center;}
-  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
-  .cal-day-hdr{text-align:center;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(250,243,224,.4);padding-bottom:4px;}
-  .cal-cell{min-height:52px;background:rgba(18,8,0,.3);border:1px solid rgba(212,160,23,.1);border-radius:6px;padding:4px;font-size:.68rem;position:relative;transition:all .2s;cursor:default;}
-  .cal-cell:hover{border-color:rgba(212,160,23,.35);}
-  .cal-cell.today{border-color:var(--saffron);background:rgba(232,130,26,.1);}
-  .cal-cell.other-month{opacity:.25;}
-  .cal-cell.has-event{border-color:rgba(212,160,23,.4);background:rgba(58,24,0,.5);}
-  .cal-date{font-weight:600;color:rgba(250,243,224,.6);font-size:.65rem;margin-bottom:2px;}
-  .cal-cell.today .cal-date{color:var(--marigold);}
-  .cal-event{font-size:.55rem;background:linear-gradient(90deg,var(--saffron),var(--gold));color:var(--dark);border-radius:3px;padding:1px 4px;margin-bottom:1px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700;cursor:pointer;}
-  .cal-event.ekadashi{background:linear-gradient(90deg,#5B2A8B,#9B59B6);color:#fff;}
-  .cal-event.live{background:rgba(68,180,68,.8);color:#fff;}
-  .cal-loading{text-align:center;padding:1rem;color:rgba(250,243,224,.4);font-style:italic;font-size:.85rem;}
-  .cal-loading .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(212,160,23,.3);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin-right:6px;vertical-align:middle;}
-  @keyframes spin{to{transform:rotate(360deg);}}
-  .cal-legend{display:flex;gap:1rem;margin-top:.8rem;flex-wrap:wrap;}
-  .legend-item{display:flex;align-items:center;gap:.35rem;font-size:.72rem;color:rgba(250,243,224,.6);}
-  .leg-dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
-  .leg-dot.festival{background:linear-gradient(90deg,var(--saffron),var(--gold));}
-  .leg-dot.ekadashi{background:linear-gradient(90deg,#5B2A8B,#9B59B6);}
-  .leg-dot.temple-event{background:rgba(68,180,68,.8);}
-
-  /* ── EVENT TOOLTIP ── */
-  .tooltip-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;}
-  .tooltip-overlay.show{display:flex;}
-  .tooltip-box{background:linear-gradient(150deg,rgba(58,24,0,.97),rgba(18,8,0,.98));border:1px solid var(--gold);border-radius:14px;padding:1.5rem;max-width:420px;width:90%;position:relative;}
-  .tooltip-box h3{font-family:'Playfair Display',serif;color:var(--light-gold);margin-bottom:.5rem;}
-  .tooltip-box p{color:rgba(250,243,224,.8);font-size:.9rem;line-height:1.6;}
-  .tooltip-close{position:absolute;top:.8rem;right:1rem;background:none;border:none;color:var(--gold);font-size:1.4rem;cursor:pointer;line-height:1;}
-
-  /* ── SECTION ── */
-  .sec-hdr{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--light-gold);margin-bottom:.25rem;display:flex;align-items:center;gap:1rem;}
-  .sec-hdr::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(212,160,23,.5),transparent);}
-  .region-lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--saffron);margin-bottom:1.3rem;font-weight:600;}
-
-  /* ── SEARCH ── */
-  .search-wrap{position:relative;margin-bottom:1.5rem;}
-  .search-bar{width:100%;background:rgba(58,24,0,.4);border:1px solid rgba(212,160,23,.3);border-radius:9px;padding:10px 16px 10px 42px;color:var(--cream);font-family:'Crimson Pro',serif;font-size:1rem;outline:none;transition:border-color .3s;}
-  .search-bar::placeholder{color:rgba(250,243,224,.3);}
-  .search-bar:focus{border-color:var(--saffron);}
-  .search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.4;pointer-events:none;}
-
-  /* ── TEMPLES GRID ── */
-  .temples-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem;margin-bottom:3rem;}
-  .temple-card{background:linear-gradient(160deg,var(--card-bg),rgba(18,8,0,.75));border:1px solid rgba(212,160,23,.2);border-radius:13px;padding:1.2rem;position:relative;overflow:hidden;transition:all .35s;}
-  .temple-card:hover{border-color:rgba(212,160,23,.55);transform:translateY(-3px);box-shadow:0 10px 35px rgba(232,130,26,.14);}
-  .temple-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--deep-red),var(--gold),var(--saffron));opacity:0;transition:opacity .35s;}
-  .temple-card:hover::after{opacity:1;}
-  .t-icon{font-size:1.7rem;display:block;margin-bottom:.4rem;}
-  .t-name{font-family:'Playfair Display',serif;font-size:1rem;color:var(--light-gold);line-height:1.3;margin-bottom:.35rem;}
-  .t-addr{font-size:.8rem;color:rgba(250,243,224,.5);margin-bottom:.55rem;line-height:1.4;}
-  .t-deity{font-size:.78rem;color:var(--saffron);margin-bottom:.4rem;font-style:italic;}
-  .t-rating{display:flex;align-items:center;gap:.4rem;font-size:.8rem;margin-bottom:.55rem;}
-  .stars{color:var(--gold);letter-spacing:-1px;}
-  .rnum{color:rgba(250,243,224,.6);}
-  .t-hours{font-size:.76rem;color:rgba(250,243,224,.48);border-top:1px solid rgba(212,160,23,.13);padding-top:.55rem;line-height:1.5;}
-  .hlbl{color:var(--saffron);font-weight:600;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:1px;}
-  .maps-link{display:inline-flex;align-items:center;gap:4px;margin-top:.6rem;font-size:.76rem;color:var(--saffron);text-decoration:none;opacity:.75;transition:opacity .2s;}
-  .maps-link:hover{opacity:1;}
-  .no-results{text-align:center;color:rgba(250,243,224,.35);font-style:italic;padding:2rem;display:none;}
-
-  footer{position:relative;z-index:1;text-align:center;padding:1.8rem;border-top:1px solid rgba(212,160,23,.18);color:rgba(250,243,224,.35);font-size:.83rem;font-style:italic;}
-  footer span{color:var(--saffron);}
-
-  /* Scrollbar */
-  ::-webkit-scrollbar{width:5px;}
-  ::-webkit-scrollbar-track{background:var(--dark);}
-  ::-webkit-scrollbar-thumb{background:var(--brown);border-radius:5px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples from Concord to San Jose, with Rahukalam calculator, Ekadashi dates, and festival calendar.">
+  <title>Bay Area Hindu Temples &middot; Sacred Spaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<div class="border-strip"></div>
+<!-- Top Border Strip -->
+<div class="border-strip" aria-hidden="true"></div>
 
-<header>
-  <span class="om">ॐ</span>
+<!-- Location + Rahukalam Info Bar -->
+<div class="location-bar" role="banner">
+  <span class="loc-icon" aria-hidden="true">📍</span>
+  <span class="loc-text" id="locText"><span class="loc-spinner"></span> Detecting your location&hellip;</span>
+  <button class="loc-btn" id="locChangeBtn" style="display:none" aria-label="Change location">Change</button>
+</div>
+
+<!-- Zip Code Panel -->
+<div class="zip-panel" id="zipPanel" role="form" aria-label="Enter zip code">
+  <label for="zipInput">Enter your zip code to calculate Rahu Kalam &amp; Ekadashi for your location:</label>
+  <div class="zip-input-row">
+    <input type="text" id="zipInput" class="zip-input" placeholder="e.g. 94538"
+           maxlength="5" inputmode="numeric" pattern="\d{5}" aria-label="Zip code">
+    <button class="zip-submit" id="zipSubmitBtn">Calculate</button>
+  </div>
+  <div class="zip-error" id="zipError" role="alert"></div>
+  <div style="margin-top:.5rem;font-size:.76rem;color:var(--text-faint)">
+    Or <button class="loc-btn" id="gpsRetryBtn" aria-label="Use GPS location">📡 Use My Location</button>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Home">
+      <span class="om" aria-hidden="true">ॐ</span>
+      Bay Area Temples
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#temples">Temples</a></li>
+      <li><a href="#rahukalam">Rahukalam</a></li>
+      <li><a href="#ekadashi">Ekadashi</a></li>
+      <li><a href="#festivals">Festivals &amp; Events</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Header / Hero -->
+<header class="site-header">
+  <span class="om-symbol" aria-hidden="true">ॐ</span>
   <h1>Bay Area Hindu Temples</h1>
-  <p class="sub">From Concord to San Jose &middot; Sacred Spaces of the Bay</p>
-  <div class="ruler"><div class="ruler-line"></div><div class="ruler-dot"></div><div class="ruler-line"></div></div>
+  <p class="subtitle">From Concord to San Jose &middot; Sacred Spaces of the Bay</p>
+  <div class="ruler" aria-hidden="true">
+    <div class="ruler-line"></div>
+    <div class="ruler-dot"></div>
+    <div class="ruler-line"></div>
+  </div>
 </header>
 
 <main>
 
-<!-- ═══ WIDGETS ═══ -->
-<div class="widget-row">
+  <!-- ═══ WIDGET ROW: Rahukalam + Ekadashi + Calendar ═══ -->
+  <div class="widget-row">
 
-  <!-- Rahu Kalam -->
-  <div class="widget">
-    <div class="w-title"><span class="icon">🌑</span> Rahu Kalam &mdash; Bay Area</div>
-    <div class="rahu-grid" id="rahuGrid"></div>
-    <div class="rahu-callout" id="rahuCallout"></div>
-    <div class="rahu-note">Times based on Bay Area (UTC-8/UTC-7). Calculated daily using sunrise/sunset astronomy.</div>
+    <!-- Rahu Kalam Widget -->
+    <section class="widget content-section" id="rahukalam" aria-label="Rahu Kalam times">
+      <div class="w-title"><span class="icon" aria-hidden="true">🌑</span> Rahu Kalam &mdash; <span id="rahuLocationLabel">Bay Area</span></div>
+      <div class="rahu-grid" id="rahuGrid" role="list" aria-label="Weekly Rahu Kalam times"></div>
+      <div class="rahu-callout" id="rahuCallout" aria-live="polite"></div>
+      <div class="rahu-note" id="rahuNote">Times based on your location. Calculated using sunrise/sunset astronomy.</div>
+    </section>
+
+    <!-- Ekadashi Widget -->
+    <section class="widget content-section" id="ekadashi" aria-label="Ekadashi dates">
+      <div class="w-title"><span class="icon" aria-hidden="true">🌙</span> Ekadashi Dates</div>
+      <div class="ekadashi-list" id="ekadashiList" role="list" aria-label="Upcoming Ekadashi dates">
+        <div class="cal-loading"><span class="spinner"></span> Calculating Ekadashi dates&hellip;</div>
+      </div>
+    </section>
+
+    <!-- Festival Calendar Widget -->
+    <section class="widget cal-widget content-section" id="festivals" aria-label="Festival calendar">
+      <div class="cal-header">
+        <div class="w-title" style="margin-bottom:0"><span class="icon" aria-hidden="true">📅</span> Hindu Festival Calendar</div>
+        <div class="cal-nav">
+          <button class="cal-btn" id="calPrev" aria-label="Previous month">&#8249;</button>
+          <div class="cal-month-label" id="calLabel" aria-live="polite"></div>
+          <button class="cal-btn" id="calNext" aria-label="Next month">&#8250;</button>
+        </div>
+      </div>
+      <div class="cal-grid" id="calGrid" role="grid" aria-label="Calendar grid"></div>
+      <div class="cal-legend" aria-label="Calendar legend">
+        <span class="legend-item"><span class="leg-dot festival" aria-hidden="true"></span>Festival</span>
+        <span class="legend-item"><span class="leg-dot ekadashi" aria-hidden="true"></span>Ekadashi</span>
+        <span class="legend-item"><span class="leg-dot temple-event" aria-hidden="true"></span>Temple Event</span>
+      </div>
+
+      <!-- Upcoming Events List -->
+      <div class="upcoming-events" aria-label="Upcoming events">
+        <h3>Upcoming Events</h3>
+        <div class="upcoming-list" id="upcomingList" role="list">
+          <div class="cal-loading"><span class="spinner"></span> Loading events&hellip;</div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
-  <!-- Ekadashi -->
-  <div class="widget">
-    <div class="w-title"><span class="icon">🌙</span> Ekadashi Dates</div>
-    <div class="ekadashi-list" id="ekadashiList"></div>
-  </div>
+  <!-- ═══ TEMPLES SECTION ═══ -->
+  <section class="content-section" id="temples" aria-label="Hindu temples listing">
+    <h2 class="section-header">Hindu Temples</h2>
+    <div class="section-subtitle">Bay Area Corridor &middot; Concord &rarr; Oakland &rarr; Fremont &rarr; Milpitas &rarr; San Jose</div>
 
-  <!-- Festival Calendar -->
-  <div class="widget cal-widget" id="calWidget">
-    <div class="cal-header">
-      <div class="w-title" style="margin-bottom:0"><span class="icon">📅</span> Hindu Festival Calendar</div>
-      <div class="cal-nav">
-        <button class="cal-btn" id="calPrev">&#8249;</button>
-        <div class="cal-month-label" id="calLabel"></div>
-        <button class="cal-btn" id="calNext">&#8250;</button>
+    <div class="search-filter-row">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">🔎</span>
+        <input type="text" class="search-bar" id="searchBar"
+               placeholder="Search by temple name, city, or deity&hellip;"
+               aria-label="Search temples">
+      </div>
+      <select class="city-filter" id="cityFilter" aria-label="Filter by city">
+        <option value="">All Cities</option>
+      </select>
+    </div>
+
+    <div class="temples-grid" id="templesGrid" role="list" aria-label="Temple cards"></div>
+    <div class="no-results" id="noResults" role="status">No temples found matching your search.</div>
+  </section>
+
+  <!-- ═══ ABOUT SECTION ═══ -->
+  <section class="content-section" id="about" aria-label="About this website">
+    <h2 class="section-header">About</h2>
+    <div class="about-content">
+      <p>
+        This website serves as a centralized, convenient reference for Hindu temples in the San Francisco Bay Area,
+        covering the corridor from Concord through Oakland, Fremont, and Milpitas down to San Jose.
+        It brings together essential information for devotees: temple locations, darshan timings,
+        daily Rahu Kalam calculations, Ekadashi dates, and upcoming festivals and events &mdash;
+        all in one place.
+      </p>
+      <p>
+        Whether you are new to the Bay Area or a longtime resident, this resource helps you find
+        the right temple, plan your visits around auspicious timings, and stay informed about
+        community celebrations across the region.
+      </p>
+
+      <div class="disclaimer">
+        <strong>Disclaimer</strong>
+        <p>
+          Temple timings and festival dates can change without notice. Users should always verify
+          current information with the official temple website or by calling ahead, especially during
+          festival seasons when special schedules may apply.
+        </p>
+        <p>
+          Rahu Kalam and Ekadashi calculations are provided on a best-effort basis using astronomical
+          algorithms (NOAA solar position and Jean Meeus lunar calculations). Results may differ slightly
+          from traditional panchang calculations or regional customs. For authoritative guidance,
+          please consult your preferred priest or panchang.
+        </p>
+        <p>
+          Festival dates listed here follow commonly observed North/South Indian traditions and may
+          vary by sampradaya or region.
+        </p>
       </div>
     </div>
-    <div class="cal-grid" id="calGrid"></div>
-    <div class="cal-legend">
-      <span class="legend-item"><span class="leg-dot festival"></span>Festival</span>
-      <span class="legend-item"><span class="leg-dot ekadashi"></span>Ekadashi</span>
-      <span class="legend-item"><span class="leg-dot temple-event"></span>Temple Event</span>
-    </div>
-  </div>
-
-</div>
-
-<!-- ═══ TEMPLES LIST ═══ -->
-<div class="sec-hdr">Hindu Temples</div>
-<div class="region-lbl">Bay Area Corridor &middot; Concord &rarr; Oakland &rarr; Fremont &rarr; Milpitas &rarr; San Jose</div>
-
-<div class="search-wrap">
-  <span class="search-icon">🔎</span>
-  <input type="text" class="search-bar" id="searchBar" placeholder="Search by temple name, city, or deity…" oninput="filterTemples()">
-</div>
-
-<div class="temples-grid" id="templesGrid"></div>
-<div class="no-results" id="noResults">No temples found matching your search.</div>
+  </section>
 
 </main>
 
-<!-- Tooltip -->
-<div class="tooltip-overlay" id="tooltipOverlay" onclick="closeTooltip(event)">
+<!-- Event Tooltip/Modal -->
+<div class="tooltip-overlay" id="tooltipOverlay" role="dialog" aria-modal="true" aria-label="Event details">
   <div class="tooltip-box">
-    <button class="tooltip-close" onclick="document.getElementById('tooltipOverlay').classList.remove('show')">✕</button>
+    <button class="tooltip-close" aria-label="Close dialog"
+            onclick="document.getElementById('tooltipOverlay').classList.remove('show')">&#10005;</button>
     <h3 id="tipTitle"></h3>
     <p id="tipBody"></p>
   </div>
 </div>
 
-<footer>
-  <p>May your visits bring peace, prosperity, and divine blessings &nbsp;<span>🪔</span></p>
-  <p style="margin-top:.4rem;font-size:.73rem;opacity:.6">Hours may vary on festival days &middot; Please call ahead to confirm &middot; Updated daily</p>
+<!-- Footer -->
+<footer class="site-footer">
+  <p>May your visits bring peace, prosperity, and divine blessings &nbsp;<span aria-hidden="true">🪔</span></p>
+  <p style="margin-top:.4rem;font-size:.73rem;opacity:.6">Hours may vary on festival days &middot; Please call ahead to confirm</p>
 </footer>
 
-<div class="border-strip"></div>
+<!-- Bottom Border Strip -->
+<div class="border-strip" aria-hidden="true"></div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- Scripts (order matters: dependencies first) -->
+<script src="assets/js/rahukalam.js"></script>
+<script src="assets/js/ekadashi.js"></script>
+<script src="assets/js/temples.js"></script>
+<script src="assets/js/calendar.js"></script>
+<script src="assets/js/main.js"></script>
 
-<script>
-// ═══════════════════════════════════════════════════════════════
-// 1. RAHU KALAM — Dynamically calculated for today's date
-//    Uses actual sunrise time for Bay Area (San Jose lat/lon)
-// ═══════════════════════════════════════════════════════════════
-
-const BAY_LAT = 37.3382;  // San Jose
-const BAY_LON = -121.8863;
-const BAY_TZ_OFFSET = () => {
-  // Determine PST (-8) or PDT (-7) dynamically
-  const jan = new Date(new Date().getFullYear(), 0, 1).getTimezoneOffset();
-  const jul = new Date(new Date().getFullYear(), 6, 1).getTimezoneOffset();
-  const std = Math.max(jan, jul);
-  return new Date().getTimezoneOffset() < std ? -7 : -8;
-};
-
-function calcSunriseSunset(date) {
-  // Approximate sunrise/sunset using NOAA formulas
-  const JD = Math.floor(date.getTime() / 86400000) + 2440587.5;
-  const n = JD - 2451545.0;
-  const L = (280.46 + 0.9856474 * n) % 360;
-  const g = ((357.528 + 0.9856003 * n) % 360) * Math.PI / 180;
-  const lambda = (L + 1.915 * Math.sin(g) + 0.02 * Math.sin(2 * g)) * Math.PI / 180;
-  const eps = 23.439 * Math.PI / 180;
-  const decl = Math.asin(Math.sin(eps) * Math.sin(lambda));
-  const lat = BAY_LAT * Math.PI / 180;
-  const cosH = (Math.cos(90.833 * Math.PI / 180) - Math.sin(lat) * Math.sin(decl)) /
-               (Math.cos(lat) * Math.cos(decl));
-  if (Math.abs(cosH) > 1) return { sunrise: 6 * 60, sunset: 18 * 60 }; // fallback
-  const H = Math.acos(cosH) * 180 / Math.PI;
-  const eot = L - 0.0057183 - (Math.atan2(Math.cos(eps) * Math.sin(lambda), Math.cos(lambda)) * 180 / Math.PI);
-  const noon = 12 * 60 - (BAY_LON * 4) - (eot * 4);
-  const tz = BAY_TZ_OFFSET() * 60;
-  return {
-    sunrise: noon - H * 4 + tz,
-    sunset:  noon + H * 4 + tz
-  };
-}
-
-// Rahu Kalam portion of day (1.5hrs out of 8 equal day portions)
-// Slot index by day (0=Sun..6=Sat): Sun=8th, Mon=2nd, Tue=7th, Wed=5th, Thu=6th, Fri=4th, Sat=3rd
-const RAHU_SLOT = [7, 1, 6, 4, 5, 3, 2]; // 0-based slot index for Sun..Sat
-
-function minsToTime(mins) {
-  const h = Math.floor(mins / 60), m = Math.round(mins % 60);
-  const ap = h >= 12 ? 'PM' : 'AM';
-  const hh = h > 12 ? h - 12 : h === 0 ? 12 : h;
-  return `${hh}:${String(m).padStart(2,'0')} ${ap}`;
-}
-
-function getRahuKalamForDate(date) {
-  const { sunrise, sunset } = calcSunriseSunset(date);
-  const dayLen = (sunset - sunrise) / 8;
-  const dow = date.getDay();
-  const slot = RAHU_SLOT[dow];
-  const start = sunrise + slot * dayLen;
-  const end   = start + dayLen;
-  return { start: minsToTime(start), end: minsToTime(end), startMins: start, endMins: end };
-}
-
-const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const DAY_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-
-function renderRahuKalam() {
-  const today = new Date();
-  const todayDow = today.getDay();
-  const grid = document.getElementById('rahuGrid');
-  const callout = document.getElementById('rahuCallout');
-
-  // Calculate for this week (Sunday-Saturday)
-  const sunday = new Date(today);
-  sunday.setDate(today.getDate() - todayDow);
-
-  let html = '';
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(sunday);
-    d.setDate(sunday.getDate() + i);
-    const rk = getRahuKalamForDate(d);
-    const isToday = i === todayDow;
-    html += `<div class="rahu-day${isToday ? ' today' : ''}">
-      <span class="rdn">${DAY_SHORT[i]}</span>
-      <div class="rdt">${rk.start}&ndash;<br>${rk.end}</div>
-    </div>`;
-  }
-  grid.innerHTML = html;
-
-  const todayRk = getRahuKalamForDate(today);
-  callout.innerHTML = `<strong>Today (${DAY_NAMES[todayDow]}):</strong> ${todayRk.start} &ndash; ${todayRk.end}<br>
-    <span style="font-size:.75rem;color:rgba(250,243,224,.6)">Avoid starting important work during this time.</span>`;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// 2. EKADASHI — Astronomical algorithm (Jean Meeus, Chapters 25 & 47)
-//    Calculates tithi at sunrise for Bay Area (San Jose lat/lon)
-//    Ekadashi = 11th tithi of Shukla paksha (elongation 120°)
-//              + 11th tithi of Krishna paksha (elongation 300°)
-//    A tithi is defined as every 12° gain of Moon over Sun.
-//    The governing tithi is the one active at local SUNRISE.
-// ═══════════════════════════════════════════════════════════════
-
-const EK_LAT  =  37.3382 * Math.PI / 180;  // Bay Area (San Jose) radians
-const EK_LNG  = -121.8863 * Math.PI / 180;
-const J2000   = 2451545.0;
-const JC      = 36525.0;
-const D2R     = Math.PI / 180;
-
-// ── Julian Day from Gregorian calendar ──
-function toJD(Y, M, D) {
-  if (M <= 2) { Y--; M += 12; }
-  const A = Math.floor(Y / 100), B = 2 - A + Math.floor(A / 4);
-  return Math.floor(365.25 * (Y + 4716)) + Math.floor(30.6001 * (M + 1)) + D + B - 1524.5;
-}
-
-function jdFromDate(date) {
-  return toJD(date.getUTCFullYear(), date.getUTCMonth() + 1,
-    date.getUTCDate() + (date.getUTCHours() * 3600 + date.getUTCMinutes() * 60 + date.getUTCSeconds()) / 86400);
-}
-
-function jdToDate(jd) {
-  let z = Math.floor(jd + 0.5), f = (jd + 0.5) - z, a = z;
-  if (z >= 2299161) { const g = Math.floor((z - 1867216.25) / 36524.25); a = z + 1 + g - Math.floor(g / 4); }
-  const b = a + 1524, c = Math.floor((b - 122.1) / 365.25);
-  const d = Math.floor(365.25 * c), e = Math.floor((b - d) / 30.6001);
-  const day   = b - d - Math.floor(30.6001 * e) + f;
-  const month = e < 14 ? e - 1 : e - 13;
-  const year  = month > 2 ? c - 4716 : c - 4715;
-  return new Date(Date.UTC(year, month - 1, Math.floor(day)));
-}
-
-// ── Sun ecliptic longitude (Meeus Ch.25, ~0.01° accuracy) ──
-function sunLongitude(T) {
-  const L0 = (280.46646 + 36000.76983 * T + 0.0003032 * T * T) % 360;
-  const M  = (357.52911 + 35999.05029 * T - 0.0001537 * T * T) * D2R;
-  const C  = (1.914602 - 0.004817 * T - 0.000014 * T * T) * Math.sin(M)
-           + (0.019993 - 0.000101 * T) * Math.sin(2 * M)
-           +  0.000289 * Math.sin(3 * M);
-  const Om = (125.04 - 1934.136 * T) * D2R;
-  return ((L0 + C - 0.00569 - 0.00478 * Math.sin(Om)) % 360 + 360) % 360;
-}
-
-// ── Moon ecliptic longitude (Meeus Ch.47, 60-term table, ~0.01° accuracy) ──
-// Meeus Table 47.A — [D, M, M', F, sinCoeff×1e-6 deg]
-const ML = [
-  [0,0,1,0,6288774],[2,0,-1,0,1274027],[2,0,0,0,658314],[0,0,2,0,213618],
-  [0,1,0,0,-185116],[0,0,0,2,-114332],[2,0,-2,0,58793],[2,-1,-1,0,57066],
-  [2,0,1,0,53322],[2,-1,0,0,45758],[0,1,-1,0,-40923],[1,0,0,0,-34720],
-  [0,1,1,0,-30383],[2,0,0,-2,15327],[0,0,1,2,-12528],[0,0,1,-2,10980],
-  [4,0,-1,0,10675],[0,0,3,0,10034],[4,0,-2,0,8548],[2,1,-1,0,-7888],
-  [2,1,0,0,-6766],[1,0,-1,0,-5163],[1,1,0,0,4987],[2,-1,1,0,4036],
-  [2,0,2,0,3994],[4,0,0,0,3861],[2,0,-3,0,3665],[0,1,-2,0,-2689],
-  [2,0,-1,2,-2602],[2,-1,-2,0,2390],[1,0,1,0,-2348],[2,-2,0,0,2236],
-  [0,1,2,0,-2120],[0,2,0,0,-2069],[2,-2,-1,0,2048],[2,0,1,-2,-1773],
-  [2,0,0,2,-1595],[4,-1,-1,0,1215],[0,0,2,2,-1110],[3,0,-1,0,-892],
-  [2,1,1,0,-810],[4,-1,-2,0,759],[0,2,-1,0,-713],[2,2,-1,0,-700],
-  [2,1,-2,0,691],[2,-1,0,-2,596],[4,0,1,0,549],[0,0,4,0,537],
-  [4,-1,0,0,520],[1,0,-2,0,-487],[2,1,0,-2,-399],[0,0,2,-2,-381],
-  [1,1,1,0,351],[3,0,-2,0,-340],[4,0,-3,0,330],[2,-1,2,0,327],
-  [0,2,1,0,-323],[1,1,-1,0,299],[2,0,3,0,294],[2,0,-1,-2,0]
-];
-
-function moonLongitude(T) {
-  // Fundamental arguments (degrees → radians after pMod)
-  const pM = (x) => ((x % 360) + 360) % 360 * D2R;
-  const Lp = pM(218.3164477 + 481267.88123421*T - 0.0015786*T*T + T*T*T/538841 - T*T*T*T/65194000);
-  const D  = pM(297.8501921 + 445267.1114034*T  - 0.0018819*T*T + T*T*T/545868  - T*T*T*T/113065000);
-  const M  = pM(357.5291092 + 35999.0502909*T   - 0.0001536*T*T + T*T*T/24490000);
-  const Mp = pM(134.9633964 + 477198.8675055*T  + 0.0087414*T*T + T*T*T/69699    - T*T*T*T/14712000);
-  const F  = pM(93.272095   + 483202.0175233*T  - 0.0036539*T*T - T*T*T/3526000  + T*T*T*T/863310000);
-  const E  = 1 - 0.002516*T - 0.0000074*T*T;
-  const E2 = E * E;
-  const A1 = (119.75 + 131.849   * T) * D2R;
-  const A2 = ( 53.09 + 479264.29 * T) * D2R;
-
-  let suml = 0;
-  for (const [dD,dM,dMp,dF,sl] of ML) {
-    const ec = Math.abs(dM)===1 ? E : Math.abs(dM)===2 ? E2 : 1;
-    suml += ec * sl * Math.sin(dD*D + dM*M + dMp*Mp + dF*F);
-  }
-  suml += 3958*Math.sin(A1) + 1962*Math.sin(Lp - F) + 318*Math.sin(A2);
-  return ((Lp/D2R + suml*1e-6) % 360 + 360) % 360;
-}
-
-// ── Elongation (Moon minus Sun) and tithi (1-30) ──
-function elongation(T) {
-  return ((moonLongitude(T) - sunLongitude(T)) % 360 + 360) % 360;
-}
-function tithi(T) { return Math.floor(elongation(T) / 12) + 1; }
-
-// ── Binary search: find JD when elongation = targetDeg ──
-function findElongationCrossing(targetDeg, jdLo, jdHi) {
-  const fn = jd => {
-    let el = elongation((jd - J2000) / JC);
-    if (targetDeg < 30  && el > 330) el -= 360;
-    if (targetDeg > 330 && el < 30)  el += 360;
-    return el - targetDeg;
-  };
-  if (fn(jdLo) * fn(jdHi) > 0) return null;
-  for (let i = 0; i < 60; i++) {
-    const mid = (jdLo + jdHi) / 2;
-    if (jdHi - jdLo < 1e-7) break;
-    fn(jdLo) * fn(mid) <= 0 ? (jdHi = mid) : (jdLo = mid);
-  }
-  return (jdLo + jdHi) / 2;
-}
-
-// ── Sunrise JD for a given date midnight JD (Meeus Ch.15) ──
-function sunriseJD(jd0) {
-  const h0 = -0.8333 * D2R; // standard solar altitude at sunrise
-  function sunEquatorial(jd) {
-    const T  = (jd - J2000) / JC;
-    const Lp = sunLongitude(T) * D2R;
-    const U  = T / 100;
-    const eps0 = 23 + 26/60 + 21.448/3600 + (-4680.93*U - 1.55*U*U + 1999.25*U*U*U
-               - 51.38*Math.pow(U,4) - 249.67*Math.pow(U,5) - 39.05*Math.pow(U,6)
-               + 7.12*Math.pow(U,7) + 27.87*Math.pow(U,8) + 5.79*Math.pow(U,9))/3600;
-    const Om = (125.04 - 1934.136*T) * D2R;
-    const eps = (eps0 + 0.00256*Math.cos(Om)) * D2R;
-    return { ra: Math.atan2(Math.cos(eps)*Math.sin(Lp), Math.cos(Lp)), dec: Math.asin(Math.sin(eps)*Math.sin(Lp)) };
-  }
-  const [eq1, eq2, eq3] = [sunEquatorial(jd0-1), sunEquatorial(jd0), sunEquatorial(jd0+1)];
-  const T0  = (jd0 - J2000) / JC;
-  const Th0 = ((100.4606184 + 36000.7700536*T0 + 0.000387933*T0*T0 - T0*T0*T0/38710000) % 360 + 360) % 360 * D2R;
-  const cH  = (Math.sin(h0) - Math.sin(EK_LAT)*Math.sin(eq2.dec)) / (Math.cos(EK_LAT)*Math.cos(eq2.dec));
-  if (Math.abs(cH) > 1) return jd0 + 0.25; // fallback ~6am
-  const H0  = Math.acos(cH);
-  const mt  = (eq2.ra - EK_LNG - Th0) / (2*Math.PI) * 86400;
-  let m = ((mt - H0*86400/(2*Math.PI)) % 86400 + 86400) % 86400;
-  // Two refinement iterations (Meeus Ch.15)
-  for (let i = 0; i < 2; i++) {
-    const n   = m / 86400;
-    const ra  = eq2.ra  + n*(eq3.ra  - eq1.ra )/2 + n*n*(eq3.ra  - 2*eq2.ra  + eq1.ra )/2;
-    const dec = eq2.dec + n*(eq3.dec - eq1.dec)/2 + n*n*(eq3.dec - 2*eq2.dec + eq1.dec)/2;
-    const th  = ((Th0 + m*2*Math.PI*1.00273791/86400) % (2*Math.PI) + 2*Math.PI) % (2*Math.PI);
-    const H   = th - EK_LNG - ra;
-    const h   = Math.asin(Math.sin(EK_LAT)*Math.sin(dec) + Math.cos(EK_LAT)*Math.cos(dec)*Math.cos(H));
-    const dm  = (h - h0) / (Math.cos(dec)*Math.cos(EK_LAT)*Math.sin(H)) * 86400/(2*Math.PI);
-    m = ((m + dm) % 86400 + 86400) % 86400;
-  }
-  return jd0 + m / 86400;
-}
-
-// ── Ekadashi name lookup by solar month and paksha ──
-const EK_NAMES = {
-  '0-S':'Putrada Ekadashi',    '0-K':'Shattila Ekadashi',
-  '1-S':'Jaya Ekadashi',       '1-K':'Vijaya Ekadashi',
-  '2-S':'Amalaki Ekadashi',    '2-K':'Papamochani Ekadashi',
-  '3-S':'Kamada Ekadashi',     '3-K':'Varuthini Ekadashi',
-  '4-S':'Mohini Ekadashi',     '4-K':'Apara Ekadashi',
-  '5-S':'Nirjala Ekadashi',    '5-K':'Yogini Ekadashi',
-  '6-S':'Devshayani Ekadashi', '6-K':'Kamika Ekadashi',
-  '7-S':'Putrada Ekadashi (Shravana)', '7-K':'Aja Ekadashi',
-  '8-S':'Parsva Ekadashi',     '8-K':'Indira Ekadashi',
-  '9-S':'Papankusha Ekadashi', '9-K':'Rama Ekadashi',
-  '10-S':'Devutthana Ekadashi','10-K':'Utpanna Ekadashi',
-  '11-S':'Mokshada Ekadashi',  '11-K':'Saphala Ekadashi',
-  // Adhik Maas specials
-  'adhik-S':'Padmini Ekadashi','adhik-K':'Parama Ekadashi',
-};
-
-// ── DST-aware Pacific timezone offset (-7 PDT or -8 PST) ──
-// PDT: 2nd Sunday of March → 1st Sunday of November
-function getPacificTZOffset(jd) {
-  const d = jdToDate(jd);
-  const y = d.getUTCFullYear();
-  // 2nd Sunday of March
-  const mar1 = new Date(Date.UTC(y, 2, 1));
-  const dstStart = new Date(Date.UTC(y, 2, (14 - mar1.getUTCDay()) % 7 + 8));
-  // 1st Sunday of November
-  const nov1 = new Date(Date.UTC(y, 10, 1));
-  const dstEnd = new Date(Date.UTC(y, 10, (7 - nov1.getUTCDay()) % 7 + 1));
-  return (d >= dstStart && d < dstEnd) ? -7 : -8;
-}
-
-// ── Main: compute Ekadashi dates for a year range ──
-function computeEkadashiDates(yearStart, yearEnd) {
-  const results = [];
-  const jdStart = toJD(yearStart, 1, 1) - 1;
-  const jdEnd   = toJD(yearEnd,  12, 31) + 2;
-  const step    = 0.45; // scan step < one tithi duration (~0.98 day)
-
-  let prevTithi = tithi((jdStart - J2000) / JC);
-
-  for (let jd = jdStart; jd < jdEnd; jd += step) {
-    const curTithi = tithi((jd - J2000) / JC);
-
-    if (curTithi !== prevTithi) {
-      for (const target of [11, 26]) {
-        const crossed = prevTithi < curTithi
-          ? (prevTithi < target && target <= curTithi)
-          : (prevTithi < target || target <= curTithi); // wrap 30→1
-
-        if (crossed) {
-          const targetEl = (target - 1) * 12;
-          const jdCross  = findElongationCrossing(targetEl, jd - step, jd + step);
-          if (jdCross === null) continue;
-
-          // Convert jdCross to LOCAL Pacific date (not UTC)
-          const tz = getPacificTZOffset(jdCross);           // -7 PDT or -8 PST
-          const localDate = jdToDate(jdCross + tz / 24);   // shift to Pacific local time
-
-          // Check day of crossing and next day — whichever has tithi-11/26 at sunrise
-          for (const offset of [0, 1]) {
-            const checkDate = new Date(localDate);
-            checkDate.setUTCDate(checkDate.getUTCDate() + offset);
-            // Local Pacific midnight expressed in JD (e.g. PST: 08:00 UTC = midnight PT)
-            const localMidnightJD = toJD(
-              checkDate.getUTCFullYear(), checkDate.getUTCMonth() + 1, checkDate.getUTCDate()
-            ) + 0.5 - tz / 24;
-            const srJD     = sunriseJD(localMidnightJD);
-            const tSunrise = tithi((srJD - J2000) / JC);
-
-            if (tSunrise === target) {
-              const paksha = target === 11 ? 'Shukla' : 'Krishna';
-              const mo     = checkDate.getUTCMonth();
-              const pk     = target === 11 ? 'S' : 'K';
-              // Detect Adhik Maas: two Shukla or two Krishna Ekadashis in same calendar month
-              const key    = `${mo}-${pk}`;
-              const name   = EK_NAMES[key] || `${paksha} Ekadashi`;
-              results.push({ date: new Date(checkDate), name, paksha });
-              break;
-            }
-          }
-        }
-      }
-    }
-    prevTithi = curTithi;
-  }
-
-  // Post-process: if two Ekadashis of same paksha fall in same month → mark second as Adhik Maas
-  const seen = {};
-  for (const e of results) {
-    const mo = e.date.getUTCMonth(), pk = e.paksha[0];
-    const key = `${e.date.getUTCFullYear()}-${mo}-${pk}`;
-    if (seen[key]) {
-      // Second occurrence → Adhik Maas Ekadashi
-      e.name = EK_NAMES[`adhik-${pk}`] || e.name;
-    } else {
-      seen[key] = true;
-    }
-  }
-
-  return results;
-}
-
-// Compute once on load for current year + next year
-const _ekCache = computeEkadashiDates(new Date().getFullYear() - 1, new Date().getFullYear() + 1);
-
-const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-function fmtDate(d) {
-  return `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
-}
-
-function getEkadashiList() { return _ekCache; }
-
-function renderEkadashi() {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const list = document.getElementById('ekadashiList');
-  const ekList = getEkadashiList();
-
-  const upcoming = ekList.filter(e => e.date >= today);
-  const past     = ekList.filter(e => e.date < today).slice(-2);
-  const show     = [...past, ...upcoming.slice(0, 7)];
-
-  list.innerHTML = show.map(e => {
-    const isPast = e.date < today;
-    const isNext = upcoming.length > 0 && e.date.getTime() === upcoming[0].date.getTime();
-    return `<div class="ek-item${isPast ? ' past' : ''}${isNext ? ' next' : ''}">
-      <div>
-        <span class="ek-name">${e.name}${isNext ? '<span class="badge">Next ✦</span>' : ''}</span>
-        <br><span class="ek-date">${fmtDate(e.date)} &bull; ${e.paksha}</span>
-      </div>
-      ${isPast ? '<span style="font-size:.65rem;opacity:.5">✓</span>' : ''}
-    </div>`;
-  }).join('');
-}
-
-// ═══════════════════════════════════════════════════════════════
-// 3. FESTIVAL CALENDAR
-// ═══════════════════════════════════════════════════════════════
-
-// Static major Hindu festivals 2025-2026
-const FESTIVALS = [
-  // 2025
-  { name:'Maha Shivratri',      date:'2025-02-26' },
-  { name:'Holi',                date:'2025-03-14' },
-  { name:'Ugadi / Gudi Padwa',  date:'2025-03-30' },
-  { name:'Ram Navami',          date:'2025-04-06' },
-  { name:'Hanuman Jayanti',     date:'2025-04-12' },
-  { name:'Akshaya Tritiya',     date:'2025-04-30' },
-  { name:'Rath Yatra',          date:'2025-06-27' },
-  { name:'Guru Purnima',        date:'2025-07-10' },
-  { name:'Nag Panchami',        date:'2025-07-27' },
-  { name:'Raksha Bandhan',      date:'2025-08-09' },
-  { name:'Janmashtami',         date:'2025-08-16' },
-  { name:'Ganesh Chaturthi',    date:'2025-08-27' },
-  { name:'Onam',                date:'2025-09-05' },
-  { name:'Navratri Begins',     date:'2025-09-22' },
-  { name:'Dussehra',            date:'2025-10-02' },
-  { name:'Karva Chauth',        date:'2025-10-10' },
-  { name:'Diwali',              date:'2025-10-20' },
-  { name:'Govardhan Puja',      date:'2025-10-21' },
-  { name:'Bhai Dooj',           date:'2025-10-23' },
-  { name:'Chhath Puja',         date:'2025-10-28' },
-  { name:'Vaikuntha Ekadashi',  date:'2025-12-01' },
-  { name:'Karthigai Deepam',    date:'2025-12-04' },
-  // 2026
-  { name:'Makar Sankranti',     date:'2026-01-14' },
-  { name:'Pongal',              date:'2026-01-14' },
-  { name:'Maha Shivratri',      date:'2026-02-15' },
-  { name:'Holi',                date:'2026-03-03' },
-  { name:'Ugadi',               date:'2026-03-19' },
-  { name:'Ram Navami',          date:'2026-03-26' },
-  { name:'Hanuman Jayanti',     date:'2026-04-02' },
-  { name:'Akshaya Tritiya',     date:'2026-04-20' },
-  { name:'Rath Yatra',          date:'2026-07-16' },
-];
-
-let calYear = new Date().getFullYear();
-let calMonth = new Date().getMonth();
-
-function buildCalendarEvents() {
-  // Build a lookup: 'YYYY-MM-DD' → [{name, type, temple?}]
-  const map = {};
-
-  FESTIVALS.forEach(f => {
-    if (!map[f.date]) map[f.date] = [];
-    map[f.date].push({ name: f.name, type: 'festival' });
-  });
-
-  // Add ekadashis
-  getEkadashiList().forEach(e => {
-    const k = `${e.date.getUTCFullYear()}-${String(e.date.getUTCMonth()+1).padStart(2,'0')}-${String(e.date.getUTCDate()).padStart(2,'0')}`;
-    if (!map[k]) map[k] = [];
-    map[k].push({ name: e.name, type: 'ekadashi' });
-  });
-
-  // Add temple-specific events
-  TEMPLE_EVENTS.forEach(e => {
-    if (!map[e.date]) map[e.date] = [];
-    map[e.date].push({ name: e.name, type: 'live', temple: e.temple });
-  });
-
-  return map;
-}
-
-function renderCalendar() {
-  const evtMap = buildCalendarEvents();
-  const today = new Date();
-  const label = document.getElementById('calLabel');
-  label.textContent = `${['January','February','March','April','May','June','July','August','September','October','November','December'][calMonth]} ${calYear}`;
-
-  const grid = document.getElementById('calGrid');
-  const days = ['S','M','T','W','T','F','S'];
-  let html = days.map(d => `<div class="cal-day-hdr">${d}</div>`).join('');
-
-  const firstDay = new Date(calYear, calMonth, 1).getDay();
-  const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
-  const daysInPrev = new Date(calYear, calMonth, 0).getDate();
-
-  for (let i = 0; i < firstDay; i++) {
-    const d = daysInPrev - firstDay + 1 + i;
-    html += `<div class="cal-cell other-month"><div class="cal-date">${d}</div></div>`;
-  }
-
-  for (let d = 1; d <= daysInMonth; d++) {
-    const dk = `${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const evts = evtMap[dk] || [];
-    const isToday = today.getFullYear() === calYear && today.getMonth() === calMonth && today.getDate() === d;
-    const hasEvt = evts.length > 0;
-    html += `<div class="cal-cell${isToday ? ' today' : ''}${hasEvt ? ' has-event' : ''}">
-      <div class="cal-date">${d}</div>
-      ${evts.slice(0,2).map(e =>
-        `<div class="cal-event${e.type==='ekadashi'?' ekadashi':e.type==='live'?' live':''}" onclick="showEvent('${e.name.replace(/'/g,"\\'")}','${(e.temple||'').replace(/'/g,"\\'")}','${dk}')">${e.name}</div>`
-      ).join('')}
-      ${evts.length > 2 ? `<div style="font-size:.52rem;color:var(--gold);cursor:pointer" onclick="showAllEvents('${dk}')">+${evts.length-2} more</div>` : ''}
-    </div>`;
-  }
-
-  const remaining = 42 - firstDay - daysInMonth;
-  for (let d = 1; d <= remaining && d <= 14; d++) {
-    html += `<div class="cal-cell other-month"><div class="cal-date">${d}</div></div>`;
-  }
-
-  grid.innerHTML = html;
-}
-
-function showEvent(name, temple, date) {
-  document.getElementById('tipTitle').textContent = name;
-  document.getElementById('tipBody').innerHTML = `
-    <strong>Date:</strong> ${date}<br>
-    ${temple ? `<strong>Temple:</strong> ${temple}<br>` : ''}
-    <br><em style="color:rgba(250,243,224,.5)">Check with your local temple for exact program schedule.</em>
-  `;
-  document.getElementById('tooltipOverlay').classList.add('show');
-}
-
-function showAllEvents(date) {
-  const evtMap = buildCalendarEvents();
-  const evts = evtMap[date] || [];
-  document.getElementById('tipTitle').textContent = `Events on ${date}`;
-  document.getElementById('tipBody').innerHTML = evts.map(e =>
-    `<div style="margin-bottom:.5rem;padding:.4rem;background:rgba(58,24,0,.4);border-radius:6px">
-      <strong style="color:var(--light-gold)">${e.name}</strong>
-      ${e.temple ? `<br><span style="font-size:.8rem;color:rgba(250,243,224,.5)">${e.temple}</span>` : ''}
-    </div>`
-  ).join('');
-  document.getElementById('tooltipOverlay').classList.add('show');
-}
-
-function closeTooltip(e) {
-  if (e.target === document.getElementById('tooltipOverlay')) {
-    document.getElementById('tooltipOverlay').classList.remove('show');
-  }
-}
-
-document.getElementById('calPrev').onclick = () => {
-  calMonth--;
-  if (calMonth < 0) { calMonth = 11; calYear--; }
-  renderCalendar();
-};
-document.getElementById('calNext').onclick = () => {
-  calMonth++;
-  if (calMonth > 11) { calMonth = 0; calYear++; }
-  renderCalendar();
-};
-
-// ═══════════════════════════════════════════════════════════════
-// 4. UPCOMING TEMPLE EVENTS — Bay Area
-// ═══════════════════════════════════════════════════════════════
-
-const TEMPLE_EVENTS = [
-  { date:'2026-02-26', name:'Maha Shivratri Puja', temple:'Shiv Durga Temple, Santa Clara' },
-  { date:'2026-02-26', name:'Maha Shivratri Abhishekam', temple:'Shiva Murugan Temple, Concord' },
-  { date:'2026-02-28', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
-  { date:'2026-03-01', name:'Vishnu Sahasranama', temple:'Hindu Temple, Sunnyvale' },
-  { date:'2026-03-03', name:'Holi Celebrations', temple:'BAPS Mandir, Milpitas' },
-  { date:'2026-03-03', name:'Holi Rangwali', temple:'ISKCON Berkeley' },
-  { date:'2026-03-08', name:'Ganapathi Homam', temple:'Sri Siddhi Vinayaka, Fremont' },
-  { date:'2026-03-14', name:'Hanuman Chalisa Recital', temple:'Karya Siddhi Hanuman, Fremont' },
-  { date:'2026-03-19', name:'Ugadi Celebrations', temple:'Hindu Temple, Sunnyvale' },
-  { date:'2026-03-21', name:'Rama Navami Katha', temple:'Vedic Dharma Samaj, Fremont' },
-  { date:'2026-03-26', name:'Ram Navami Puja', temple:'Sri Krishna Balaram, Milpitas' },
-  { date:'2026-03-28', name:'Saturday Abhishekam', temple:'Shiva Murugan Temple, Concord' },
-  { date:'2026-04-02', name:'Hanuman Jayanti', temple:'Sankata Mochana Hanuman, Newark' },
-  { date:'2026-04-04', name:'Sai Baba Thursday Puja', temple:'Shirdi Sai Darbar, Sunnyvale' },
-  { date:'2026-04-11', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
-  { date:'2026-04-14', name:'Tamil New Year Puja', temple:'Hindu Temple, Sunnyvale' },
-  { date:'2026-04-18', name:'Sai Baba Thursday Puja', temple:'Shirdi Sai Darbar, Sunnyvale' },
-  { date:'2026-04-20', name:'Akshaya Tritiya', temple:'BAPS Mandir, Milpitas' },
-  { date:'2026-04-25', name:'Murugan Abishekam', temple:'Shiva Murugan Temple, Concord' },
-  { date:'2026-05-02', name:'Sathyanarayana Puja', temple:'Sri Satya Narayana Swamy, Milpitas' },
-];
-
-// ═══════════════════════════════════════════════════════════════
-// 5. TEMPLES DATA
-// ═══════════════════════════════════════════════════════════════
-const temples = [
-  { name:'Shiva Murugan Temple', address:'1803 2nd St, Concord, CA 94519', rating:4.9, reviews:957, city:'Concord', hours:'Mon–Fri: 10AM–12PM, 5:30–8:30PM | Sat–Sun: 10AM–8:30PM', deity:'Lord Shiva & Murugan' },
-  { name:'ISKCON Berkeley', address:'2334 Stuart St, Berkeley, CA 94705', rating:4.7, reviews:236, city:'Berkeley', hours:'Daily: 4:30AM–8:30PM (Sun till 9PM)', deity:'Sri Sri Jagannath Baladeva Subhadra' },
-  { name:'Badarikashrama', address:'15602 Maubert Ave, San Leandro, CA 94578', rating:4.7, reviews:63, city:'San Leandro', hours:'Mon–Wed, Fri: 8AM–12PM, 5–7:30PM | Sat–Sun: 8AM–2PM, 5–7:30PM (Closed Thu)', deity:'Multi-deity Ashrama' },
-  { name:"Vijay's Sherawali Temple", address:'20789 Garden Ave, Hayward, CA 94541', rating:4.8, reviews:22, city:'Hayward', hours:'Mon–Tue: 10:30AM–1PM, 4–8PM | Fri: 6–8PM | Sat–Sun: 10:30AM–1PM, 4–9PM', deity:'Mata Sherawali' },
-  { name:'Vedic Dharma Samaj Hindu Temple', address:'3676 Delaware Dr, Fremont, CA 94538', rating:4.6, reviews:704, city:'Fremont', hours:'Mon–Fri: 9:30AM–1PM, 5:30–8:30PM | Sat–Sun: 9:30AM–8:30PM', deity:'Multi-deity North Indian' },
-  { name:'Sri Siddhi Vinayaka Cultural Center', address:'40155 Blacow Rd, Fremont, CA 94538', rating:4.8, reviews:1728, city:'Fremont', hours:'Mon–Fri: 9AM–12PM, 5:30–8:30PM | Sat–Sun: 9AM–8PM', deity:'Lord Ganesha (Vinayaka)' },
-  { name:'Karya Siddhi Hanuman Temple', address:'4300 Hansen Ave, Fremont, CA 94536', rating:4.5, reviews:39, city:'Fremont', hours:'Mon–Fri: 8:30–10AM, 6:30–8PM | Sat–Sun: 9AM–12PM, 6–8PM', deity:'Lord Hanuman' },
-  { name:'Sankata Mochana Hanuman Temple', address:'35463 Dumbarton Ct, Newark, CA 94560', rating:4.6, reviews:169, city:'Newark', hours:'Mon–Fri: 7–9PM | Sat–Sun: 11AM–1PM, 7–9PM', deity:'Lord Hanuman' },
-  { name:'Sri Satya Narayana Swamy Devasthanam', address:'475 Los Coches St, Milpitas, CA 95035', rating:4.8, reviews:576, city:'Milpitas', hours:'Mon–Fri: 10AM–1PM, 5:30–9PM | Sat–Sun: 9AM–9PM', deity:'Sri Satya Narayana Swamy' },
-  { name:'Sri Krishna Balaram Mandir', address:'680 E Calaveras Blvd, Milpitas, CA 95035', rating:4.8, reviews:315, city:'Milpitas', hours:'Mon–Fri: 7:30AM–1PM, 5–8:30PM | Sat–Sun: 7:30AM–8:30PM', deity:'Sri Sri Krishna Balaram' },
-  { name:'BAPS Shri Swaminarayan Mandir', address:'1430 California Cir, Milpitas, CA 95035', rating:4.8, reviews:1077, city:'Milpitas', hours:'Mon–Fri: 7AM–12PM, 4–8PM | Sat–Sun: 7AM–8PM', deity:'Swaminarayan, Shiva, Krishna, Rama' },
-  { name:'Hindu Temple & Community Center', address:'450 Persian Dr, Sunnyvale, CA 94089', rating:4.7, reviews:3201, city:'Sunnyvale', hours:'Daily: 9AM–9PM', deity:'Multi-deity (North & South Indian)' },
-  { name:'Shirdi Sai Darbar', address:'255 San Geronimo Way, Sunnyvale, CA 94085', rating:4.8, reviews:1238, city:'Sunnyvale', hours:'Mon–Wed, Fri: 7–9AM, 11:30AM–1PM, 6–9PM | Thu, Sat–Sun: 7AM–9PM', deity:'Shirdi Sai Baba' },
-  { name:'Shiv Durga Temple of Bay Area', address:'3550 Flora Vista Ave, Santa Clara, CA 95051', rating:4.7, reviews:439, city:'Santa Clara', hours:'Mon–Fri: 9AM–12:30PM, 5–8:30PM | Sat–Sun: 9AM–8:30PM', deity:'Lord Shiva & Durga Mata' },
-  { name:'Mandir Shreemzaya Krishnadham', address:'175 Nortech Pkwy, San Jose, CA 95134', rating:4.7, reviews:420, city:'San Jose', hours:'Mon–Fri: 11:30AM–1:30PM, 4:30–7PM | Sat–Sun: 11:30AM–1:30PM, 4–6:30PM', deity:'Sri Krishna' },
-  { name:'Balaji Matha Temple', address:'5004 N First St, San Jose, CA 95002', rating:4.4, reviews:213, city:'San Jose', hours:'Mon–Fri: 8AM–1PM, 4–8:30PM | Sat–Sun: 7:30AM–8:30PM', deity:'Sri Venkateswara (Balaji) & Hanuman' },
-];
-
-function stars(r) {
-  const f = Math.floor(r), h = r % 1 >= 0.5 ? 1 : 0, e = 5 - f - h;
-  return '★'.repeat(f) + (h ? '⯨' : '') + '☆'.repeat(e);
-}
-
-function renderTemples(list) {
-  const grid = document.getElementById('templesGrid');
-  const nr = document.getElementById('noResults');
-  if (!list.length) { grid.innerHTML = ''; nr.style.display = 'block'; return; }
-  nr.style.display = 'none';
-  grid.innerHTML = list.map(t => {
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name+' '+t.address)}`;
-    return `<div class="temple-card">
-      <span class="t-icon">🛕</span>
-      <div class="t-name">${t.name}</div>
-      <div class="t-addr">📍 ${t.address}</div>
-      <div class="t-deity">✦ ${t.deity}</div>
-      <div class="t-rating"><span class="stars">${stars(t.rating)}</span><span class="rnum">${t.rating} (${t.reviews.toLocaleString()})</span></div>
-      <div class="t-hours"><span class="hlbl">Hours</span>${t.hours}</div>
-      <a class="maps-link" href="${url}" target="_blank" rel="noopener">🗺 Open in Google Maps →</a>
-    </div>`;
-  }).join('');
-}
-
-function filterTemples() {
-  const q = document.getElementById('searchBar').value.toLowerCase();
-  renderTemples(temples.filter(t =>
-    t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) ||
-    t.deity.toLowerCase().includes(q) || t.address.toLowerCase().includes(q)
-  ));
-}
-
-// ═══════════════════════════════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════════════════════════════
-renderRahuKalam();
-renderEkadashi();
-renderCalendar();
-renderTemples(temples);
-</script>
 </body>
 </html>
