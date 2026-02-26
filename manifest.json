@@ -1,8 +1,9 @@
 {
   "name": "Bay Area Hindu Temples",
-  "short_name": "Bay Temples",
+  "short_name": "Hindu Temples",
   "description": "Interactive guide to Hindu temples across the Bay Area — map, Rahukalam, Ekadashi calendar & more.",
-  "start_url": "/",
+  "start_url": "/hindu-temples/",
+  "scope": "/hindu-temples/",
   "display": "standalone",
   "background_color": "#7b1a0e",
   "theme_color": "#c0392b",
