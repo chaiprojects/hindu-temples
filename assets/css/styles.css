@@ -1864,134 +1864,127 @@ main {
   font-style: italic;
 }
 
-/* ── Player / thumbnail ── */
-.bhajan-player-area {
-  position: relative;
-  width: 100%;
-}
-
-.bhajan-thumb-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #111;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.bhajan-thumb-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .3s ease, filter .3s ease;
-}
-
-.bhajan-thumb-wrap:hover .bhajan-thumb-img {
-  transform: scale(1.03);
-  filter: brightness(.8);
-}
-
-/* Emoji fallback */
-.bhajan-thumb-fallback {
-  position: absolute;
-  inset: 0;
+/* ── Song bar (audio-style, no video) ── */
+.bhajan-song-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent) 0%, #7b1a0e 100%);
-}
-
-.bhajan-fb-emoji {
-  font-size: 5rem;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,.4));
-}
-
-/* Play button overlay */
-.bhajan-play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .7rem;
-  background: rgba(0, 0, 0, 0.30);
-  border: none;
-  cursor: pointer;
-  transition: background .2s;
-  padding: 0;
-}
-
-.bhajan-play-overlay:hover {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.bhajan-play-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  color: #fff;
-  box-shadow: 0 4px 24px rgba(0,0,0,.45);
-  transition: transform .2s, box-shadow .2s;
-  padding-left: 4px; /* optical centre for ▶ */
-}
-
-.bhajan-play-overlay:hover .bhajan-play-circle {
-  transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(0,0,0,.55);
-}
-
-.bhajan-song-meta {
-  text-align: center;
-  color: #fff;
-}
-
-.bhajan-song-name {
-  font-size: .9rem;
-  font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0,0,0,.7);
-}
-
-.bhajan-tap-hint {
-  font-size: .72rem;
-  opacity: .8;
-  margin-top: .15rem;
-  text-shadow: 0 1px 4px rgba(0,0,0,.7);
-}
-
-/* Embedded iframe */
-.bhajan-iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  display: block;
-}
-
-/* ── YouTube link ── */
-.bhajan-yt-link {
-  display: block;
-  text-align: center;
-  font-size: .78rem;
-  color: var(--text-muted);
-  padding: .65rem 1rem;
-  text-decoration: none;
-  transition: color .2s;
+  gap: .9rem;
+  padding: .9rem 1.3rem;
   border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
 }
 
-.bhajan-yt-link:hover {
-  color: var(--accent);
+.bhajan-music-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.bhajan-song-bar-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.bhajan-song-bar-title {
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bhajan-song-bar-hint {
+  font-size: .7rem;
+  color: var(--text-muted);
+  margin-top: .1rem;
+}
+
+.bhajan-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 700;
+  padding: .5rem 1.1rem;
+  border-radius: 99px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: filter .2s, transform .15s;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.bhajan-play-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
 }
 
 /* ── Dark mode tweaks ── */
 [data-theme="dark"] .bhajan-card {
   box-shadow: 0 6px 32px rgba(0,0,0,.4);
+}
+
+/* ============================================================
+   Rahu Kalam — Daily Deity Mini Widget
+   ============================================================ */
+
+.rahu-deity-mini {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: .7rem 0 .4rem;
+  padding: .65rem .9rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+}
+
+.rdm-emoji {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.rdm-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.rdm-deity {
+  font-size: .83rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.rdm-mantra {
+  font-size: .74rem;
+  color: var(--accent);
+  margin-top: .15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rdm-play-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .35rem .75rem;
+  border-radius: 99px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: filter .2s;
+}
+
+.rdm-play-btn:hover {
+  filter: brightness(1.15);
 }
 
 /* ============================================================

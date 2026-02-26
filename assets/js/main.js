@@ -249,9 +249,10 @@ async function initApp() {
   // Initialize interactive map
   if (window.TempleMap) window.TempleMap.init();
 
-  // Daily devotional bhajan + visit counter
+  // Daily devotional bhajan + mini Rahu Kalam widget + visit counter
   if (window.DailyBhajan) {
     window.DailyBhajan.render();
+    window.DailyBhajan.renderMiniInWidget();
     window.DailyBhajan.loadVisitCount();
   }
 

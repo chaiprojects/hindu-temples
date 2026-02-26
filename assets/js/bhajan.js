@@ -16,7 +16,6 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ सूर्याय नमः',
       blessing: 'Seek blessings of the Sun God for health & vitality',
       accentColor: '#d97706',
-      videoId: 'IxQzVoMd-rg',
       songTitle: 'Jai Jai Jai Suryadeva',
       ytSearch: 'surya+dev+aarti+jai+jai+suryadeva+bhajan'
     },
@@ -29,7 +28,6 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ नमः शिवाय',
       blessing: 'Offer milk & bilva leaves for peace and liberation',
       accentColor: '#7c3aed',
-      videoId: 'NfhqUFWtjzA',
       songTitle: 'Om Namah Shivaya',
       ytSearch: 'om+namah+shivaya+bhajan+anuradha+paudwal'
     },
@@ -42,7 +40,6 @@ window.DailyBhajan = (() => {
       mantraHi: 'जय बजरंग बली',
       blessing: 'Fast or offer sindoor to Hanuman for courage & strength',
       accentColor: '#dc2626',
-      videoId: 'AETFvQonfV8',
       songTitle: 'Hanuman Chalisa',
       ytSearch: 'hanuman+chalisa+gulshan+kumar+hariharan'
     },
@@ -55,22 +52,20 @@ window.DailyBhajan = (() => {
       mantraHi: 'हरे कृष्ण हरे राम',
       blessing: 'Offer tulsi & yellow flowers for wisdom & love',
       accentColor: '#0369a1',
-      videoId: 'dOT_w4gJAUM',
       songTitle: 'Achyutam Keshavam',
       ytSearch: 'achyutam+keshavam+krishna+damodaram+bhajan'
     },
     { // 4 – Thursday
       day: 'Thursday',
-      deity: 'Lord Vishnu & Brihaspati',
-      hindiName: 'भगवान विष्णु & बृहस्पति',
-      emoji: '🪷',
-      mantra: 'Om Namo Bhagavate Vasudevaya',
-      mantraHi: 'ॐ नमो भगवते वासुदेवाय',
-      blessing: 'Offer yellow flowers & bananas for prosperity & wisdom',
-      accentColor: '#059669',
-      videoId: 'kfejnJzZ_6s',
-      songTitle: 'Om Namo Bhagavate Vasudevaya',
-      ytSearch: 'om+namo+bhagavate+vasudevaya+vishnu+bhajan'
+      deity: 'Sai Baba & Raghavendra Swamiji',
+      hindiName: 'साईं बाबा & श्री राघवेंद्र स्वामी',
+      emoji: '🪔',
+      mantra: 'Om Sai Ram · Sri Gurubhyo Namaha',
+      mantraHi: 'ॐ साईं राम · श्री गुरुभ्यो नमः',
+      blessing: 'Seek the Guru\'s grace — offer flowers & light a diya on Guruvaar',
+      accentColor: '#b45309',
+      songTitle: 'Om Sai Ram Bhajan',
+      ytSearch: 'om+sai+ram+bhajan+guruvaar+shirdi+sai+baba'
     },
     { // 5 – Friday
       day: 'Friday',
@@ -81,7 +76,6 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ श्री महालक्ष्म्यै नमः',
       blessing: 'Light a diya with ghee & offer lotus for wealth & grace',
       accentColor: '#db2777',
-      videoId: 'SjjMJe4UNio',
       songTitle: 'Jai Laxmi Mata Aarti',
       ytSearch: 'jai+laxmi+mata+aarti+anuradha+paudwal+lakshmi'
     },
@@ -94,7 +88,6 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ शं शनिश्चराय नमः',
       blessing: 'Offer sesame oil & black sesame to Shani for protection',
       accentColor: '#374151',
-      videoId: 'sXZ5v7QLzIk',
       songTitle: 'Shani Dev Chalisa',
       ytSearch: 'shani+dev+chalisa+aarti+bhajan'
     }
@@ -104,7 +97,7 @@ window.DailyBhajan = (() => {
     return DEITIES[new Date().getDay()];
   }
 
-  // ── Render the daily devotional card ──────────────────────
+  // ── Render the full daily devotional card (bottom section) ─
   function render() {
     const d = getTodaysDeity();
     const section = document.getElementById('bhajan-card-wrap');
@@ -135,54 +128,44 @@ window.DailyBhajan = (() => {
           <div class="bhajan-blessing">${d.blessing}</div>
         </div>
 
-        <!-- Song / play area -->
-        <div class="bhajan-player-area" id="bhajanPlayerArea">
-          <div class="bhajan-thumb-wrap" id="bhajanThumbWrap">
-            <img
-              src="https://img.youtube.com/vi/${d.videoId}/hqdefault.jpg"
-              alt="${d.songTitle}"
-              class="bhajan-thumb-img"
-              onerror="this.style.display='none';document.getElementById('bhajanThumbFallback').style.display='flex'"
-            />
-            <!-- Fallback if YouTube thumbnail 404s -->
-            <div class="bhajan-thumb-fallback" id="bhajanThumbFallback" style="display:none">
-              <span class="bhajan-fb-emoji">${d.emoji}</span>
-            </div>
-            <!-- Click-to-play overlay -->
-            <button class="bhajan-play-overlay" onclick="window.DailyBhajan.loadPlayer()" aria-label="Play ${d.songTitle}">
-              <div class="bhajan-play-circle">▶</div>
-              <div class="bhajan-song-meta">
-                <div class="bhajan-song-name">${d.songTitle}</div>
-                <div class="bhajan-tap-hint">Tap to play</div>
-              </div>
-            </button>
+        <!-- Song player bar (audio-style, no video) -->
+        <div class="bhajan-song-bar">
+          <span class="bhajan-music-icon">🎵</span>
+          <div class="bhajan-song-bar-info">
+            <div class="bhajan-song-bar-title">${d.songTitle}</div>
+            <div class="bhajan-song-bar-hint">Opens in YouTube</div>
           </div>
+          <a class="bhajan-play-btn"
+             href="https://www.youtube.com/results?search_query=${d.ytSearch}"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Play ${d.songTitle} on YouTube">
+            ▶ Play
+          </a>
         </div>
-
-        <!-- YouTube link -->
-        <a class="bhajan-yt-link"
-           href="https://www.youtube.com/results?search_query=${d.ytSearch}"
-           target="_blank" rel="noopener noreferrer">
-          Search on YouTube ↗
-        </a>
 
       </div>
     `;
   }
 
-  // ── Swap thumbnail for live YouTube embed ─────────────────
-  function loadPlayer() {
+  // ── Mini widget rendered inside the Rahu Kalam callout ─────
+  function renderMiniInWidget() {
+    const el = document.getElementById('rahuDailyDeity');
+    if (!el) return;
     const d = getTodaysDeity();
-    const area = document.getElementById('bhajanPlayerArea');
-    if (!area) return;
-    area.innerHTML = `
-      <iframe
-        class="bhajan-iframe"
-        src="https://www.youtube-nocookie.com/embed/${d.videoId}?autoplay=1&rel=0&modestbranding=1&color=white"
-        title="${d.songTitle}"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    el.innerHTML = `
+      <div class="rahu-deity-mini" style="--accent:${d.accentColor}">
+        <span class="rdm-emoji">${d.emoji}</span>
+        <div class="rdm-body">
+          <div class="rdm-deity">${d.deity}</div>
+          <div class="rdm-mantra">${d.mantra}</div>
+        </div>
+        <a class="rdm-play-btn"
+           href="https://www.youtube.com/results?search_query=${d.ytSearch}"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Play ${d.songTitle}">
+          ▶ Play
+        </a>
+      </div>
     `;
   }
 
@@ -191,13 +174,12 @@ window.DailyBhajan = (() => {
     const el = document.getElementById('visitCountNum');
     if (!el) return;
 
-    // Increment visit in localStorage (per-device)
+    // Increment per-device count in localStorage
     const localKey = 'bay_temples_visits';
     const localCount = parseInt(localStorage.getItem(localKey) || '0', 10) + 1;
     localStorage.setItem(localKey, localCount);
 
     try {
-      // Try free global counter
       const r = await fetch(
         'https://api.countapi.xyz/hit/chaiprojects-hindu-temples/visits',
         { cache: 'no-store' }
@@ -220,6 +202,6 @@ window.DailyBhajan = (() => {
     return n.toLocaleString();
   }
 
-  return { render, loadPlayer, loadVisitCount };
+  return { render, renderMiniInWidget, loadVisitCount };
 
 })();
