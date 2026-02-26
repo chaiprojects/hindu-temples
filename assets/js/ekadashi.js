@@ -190,6 +190,109 @@ const EK_NAMES = {
   'adhik-S':'Padmini Ekadashi','adhik-K':'Parama Ekadashi',
 };
 
+// Verified Ekadashi dates from drikpanchang.com for Fremont, CA (Pacific timezone)
+// Format: [month(0-indexed), day, name, paksha]
+const EKADASHI_DATA = {
+  2025: [
+    [0,9,'Pausha Putrada Ekadashi','Shukla'],[0,24,'Shattila Ekadashi','Krishna'],
+    [1,7,'Jaya Ekadashi','Shukla'],[1,23,'Vijaya Ekadashi','Krishna'],
+    [2,9,'Amalaki Ekadashi','Shukla'],[2,25,'Papamochani Ekadashi','Krishna'],
+    [3,8,'Kamada Ekadashi','Shukla'],[3,23,'Varuthini Ekadashi','Krishna'],
+    [4,7,'Mohini Ekadashi','Shukla'],[4,23,'Apara Ekadashi','Krishna'],
+    [5,6,'Nirjala Ekadashi','Shukla'],[5,21,'Yogini Ekadashi','Krishna'],
+    [6,6,'Devshayani Ekadashi','Shukla'],[6,20,'Kamika Ekadashi','Krishna'],
+    [7,4,'Shravana Putrada Ekadashi','Shukla'],[7,18,'Aja Ekadashi','Krishna'],
+    [8,3,'Parsva Ekadashi','Shukla'],[8,17,'Indira Ekadashi','Krishna'],
+    [9,2,'Papankusha Ekadashi','Shukla'],[9,16,'Rama Ekadashi','Krishna'],
+    [10,1,'Devutthana Ekadashi','Shukla'],[10,15,'Utpanna Ekadashi','Krishna'],
+    [10,30,'Mokshada Ekadashi','Shukla'],[11,15,'Saphala Ekadashi','Krishna'],
+    [11,30,'Pausha Putrada Ekadashi','Shukla']
+  ],
+  2026: [
+    [0,13,'Shattila Ekadashi','Krishna'],[0,28,'Jaya Ekadashi','Shukla'],
+    [1,12,'Vijaya Ekadashi','Krishna'],[1,27,'Amalaki Ekadashi','Shukla'],
+    [2,14,'Papamochani Ekadashi','Krishna'],[2,28,'Kamada Ekadashi','Shukla'],
+    [3,13,'Varuthini Ekadashi','Krishna'],[3,26,'Mohini Ekadashi','Shukla'],
+    [4,12,'Apara Ekadashi','Krishna'],[4,26,'Padmini Ekadashi','Shukla'],
+    [5,11,'Parama Ekadashi','Krishna'],[5,25,'Nirjala Ekadashi','Shukla'],
+    [6,10,'Yogini Ekadashi','Krishna'],[6,24,'Devshayani Ekadashi','Shukla'],
+    [7,8,'Kamika Ekadashi','Krishna'],[7,23,'Shravana Putrada Ekadashi','Shukla'],
+    [8,6,'Aja Ekadashi','Krishna'],[8,22,'Parsva Ekadashi','Shukla'],
+    [9,6,'Indira Ekadashi','Krishna'],[9,21,'Papankusha Ekadashi','Shukla'],
+    [10,4,'Rama Ekadashi','Krishna'],[10,20,'Devutthana Ekadashi','Shukla'],
+    [11,4,'Utpanna Ekadashi','Krishna'],[11,19,'Mokshada Ekadashi','Shukla']
+  ],
+  2027: [
+    [0,2,'Saphala Ekadashi','Krishna'],[0,18,'Pausha Putrada Ekadashi','Shukla'],
+    [1,1,'Shattila Ekadashi','Krishna'],[1,16,'Jaya Ekadashi','Shukla'],
+    [2,3,'Vijaya Ekadashi','Krishna'],[2,18,'Amalaki Ekadashi','Shukla'],
+    [3,2,'Papamochani Ekadashi','Krishna'],[3,16,'Kamada Ekadashi','Shukla'],
+    [4,2,'Varuthini Ekadashi','Krishna'],[4,15,'Mohini Ekadashi','Shukla'],
+    [4,31,'Apara Ekadashi','Krishna'],[5,14,'Nirjala Ekadashi','Shukla'],
+    [5,29,'Yogini Ekadashi','Krishna'],[6,13,'Devshayani Ekadashi','Shukla'],
+    [6,29,'Kamika Ekadashi','Krishna'],[7,12,'Shravana Putrada Ekadashi','Shukla'],
+    [7,27,'Aja Ekadashi','Krishna'],[8,11,'Parsva Ekadashi','Shukla'],
+    [8,25,'Indira Ekadashi','Krishna'],[9,10,'Papankusha Ekadashi','Shukla'],
+    [9,25,'Rama Ekadashi','Krishna'],[10,9,'Devutthana Ekadashi','Shukla'],
+    [10,23,'Utpanna Ekadashi','Krishna'],[11,9,'Mokshada Ekadashi','Shukla'],
+    [11,23,'Saphala Ekadashi','Krishna']
+  ]
+};
+
+/**
+ * Convert JD to local time string (e.g., "6:42 AM").
+ */
+function formatJDToTime(jd, tzHours) {
+  const utcFrac = ((jd + 0.5) % 1 + 1) % 1;
+  let localHours = utcFrac * 24 + tzHours;
+  if (localHours < 0) localHours += 24;
+  if (localHours >= 24) localHours -= 24;
+  const h = Math.floor(localHours);
+  const m = Math.round((localHours - h) * 60);
+  const ap = h >= 12 ? 'PM' : 'AM';
+  const hh = h > 12 ? h - 12 : h === 0 ? 12 : h;
+  return `${hh}:${String(m).padStart(2, '0')} ${ap}`;
+}
+
+/**
+ * Calculate Parana (fast-breaking) window for an Ekadashi.
+ * Parana: sunrise on Dwadashi (day after Ekadashi) to end of Dwadashi tithi.
+ */
+function calculateParana(ekadashi, loc) {
+  const dwadashiDate = new Date(ekadashi.date);
+  dwadashiDate.setUTCDate(dwadashiDate.getUTCDate() + 1);
+
+  // Use proven NOAA sunrise from RahuKalam (returns minutes from midnight local)
+  const localDate = new Date(
+    dwadashiDate.getUTCFullYear(),
+    dwadashiDate.getUTCMonth(),
+    dwadashiDate.getUTCDate()
+  );
+  const { sunrise: srMins } = window.RahuKalam.calcSunriseSunset(localDate, loc);
+  const startTime = window.RahuKalam.minsToTime(srMins);
+
+  // End of Dwadashi tithi: 144° (Shukla) or 324° (Krishna)
+  const tz = window.RahuKalam.getTZOffsetHours(localDate, loc.tzName);
+  const jd0hUT = toJD(
+    dwadashiDate.getUTCFullYear(),
+    dwadashiDate.getUTCMonth() + 1,
+    dwadashiDate.getUTCDate()
+  );
+  const endEl = ekadashi.paksha === 'Shukla' ? 144 : 324;
+  const endJD = findElongationCrossing(endEl, jd0hUT, jd0hUT + 3);
+
+  let endTime = null;
+  if (endJD) endTime = formatJDToTime(endJD, tz);
+
+  const mo = MONTHS[dwadashiDate.getUTCMonth()];
+  const day = dwadashiDate.getUTCDate();
+  const label = endTime
+    ? `${mo} ${day}, ${startTime} \u2013 ${endTime}`
+    : `${mo} ${day}, after ${startTime}`;
+
+  return { date: dwadashiDate, startTime, endTime, label };
+}
+
 /**
  * Compute Ekadashi dates for a year range at a given location.
  * @param {number} yearStart
@@ -198,6 +301,22 @@ const EK_NAMES = {
  * @returns {Array<{ date: Date, name: string, paksha: string }>}
  */
 function computeEkadashiDates(yearStart, yearEnd, loc) {
+  // Use verified drikpanchang data for known years (Pacific timezone)
+  let allHardcoded = true;
+  for (let y = yearStart; y <= yearEnd; y++) {
+    if (!EKADASHI_DATA[y]) { allHardcoded = false; break; }
+  }
+  if (allHardcoded) {
+    const results = [];
+    for (let y = yearStart; y <= yearEnd; y++) {
+      for (const [m, d, name, paksha] of EKADASHI_DATA[y]) {
+        results.push({ date: new Date(Date.UTC(y, m, d)), name, paksha });
+      }
+    }
+    return results;
+  }
+
+  // Fallback: astronomical algorithm for years without hardcoded data
   const results = [];
   const jdStart = toJD(yearStart, 1, 1) - 1;
   const jdEnd = toJD(yearEnd, 12, 31) + 2;
@@ -225,10 +344,11 @@ function computeEkadashiDates(yearStart, yearEnd, loc) {
           for (const offset of [0, 1]) {
             const checkDate = new Date(localDate);
             checkDate.setUTCDate(checkDate.getUTCDate() + offset);
-            const localMidnightJD = toJD(
+            // sunriseJD expects JD at 0h UT — toJD returns exactly that
+            const jd0hUT = toJD(
               checkDate.getUTCFullYear(), checkDate.getUTCMonth() + 1, checkDate.getUTCDate()
-            ) + 0.5 - tz / 24;
-            const srJD = sunriseJD(localMidnightJD, loc);
+            );
+            const srJD = sunriseJD(jd0hUT, loc);
             const tSunrise = tithi((srJD - J2000) / JC);
 
             if (tSunrise === target) {
@@ -261,6 +381,130 @@ function computeEkadashiDates(yearStart, yearEnd, loc) {
   }
 
   return results;
+}
+
+// Ekadashi Katha (stories) data — keyed by Ekadashi name
+const EK_KATHAS = {
+  'Pausha Putrada Ekadashi': {
+    summary: 'King Suketumaan of Bhadravati had no heir. On Lord Vishnu\'s advice, he observed this Ekadashi with full devotion and was blessed with a worthy son. This vrat is especially recommended for those desiring virtuous progeny.',
+    scripture: 'Bhavishya Purana'
+  },
+  'Shattila Ekadashi': {
+    summary: 'Named for the six sacred uses of sesame (til) in its observance. A devoted Brahmin woman accumulated spiritual merit but neglected charity to others. Lord Vishnu taught her the importance of generous giving through this vrat.',
+    scripture: 'Bhavishya Uttara Purana'
+  },
+  'Jaya Ekadashi': {
+    summary: 'Two celestial beings, Malyavan and Pushpavati, were cursed by Indra to be born as demons after they were found lost in each other\'s company. Observing this Ekadashi freed them from the curse and restored their divine forms.',
+    scripture: 'Padma Purana'
+  },
+  'Vijaya Ekadashi': {
+    summary: 'When Lord Rama was preparing to cross the ocean to Lanka, sage Bakadalbhya advised Him to observe this Ekadashi to ensure victory. Lord Rama followed the counsel, and the vrat granted Him triumph over Ravana.',
+    scripture: 'Skanda Purana'
+  },
+  'Amalaki Ekadashi': {
+    summary: 'Named after the sacred Amla tree. King Chaitraratha worshipped Lord Vishnu beneath an Amla tree on this day. A hunter resting nearby unknowingly participated in the worship and was also liberated from his accumulated sins.',
+    scripture: 'Brahmanda Purana'
+  },
+  'Papamochani Ekadashi': {
+    summary: 'The apsara Manjughosha and sage Medhavi developed an attachment that disrupted his penance. Sage Chyavana cursed them both, but revealed that observing this Ekadashi would destroy even the gravest of sins and free them.',
+    scripture: 'Bhavishya Uttara Purana'
+  },
+  'Kamada Ekadashi': {
+    summary: 'A celestial musician named Lalit was cursed to become a fearsome demon. His devoted wife Lalita, unwavering in her love, observed this Ekadashi with complete faith. The accumulated merit freed Lalit from his terrible curse.',
+    scripture: 'Varaha Purana'
+  },
+  'Varuthini Ekadashi': {
+    summary: 'This Ekadashi bestows merit equivalent to donating elephants, horses, and gold. King Mandhata observed this sacred vrat and attained imperishable virtue that protected his kingdom and ensured prosperity for generations.',
+    scripture: 'Bhavishya Purana'
+  },
+  'Mohini Ekadashi': {
+    summary: 'Named after Lord Vishnu\'s Mohini avatar. A merchant named Dhanapala had a wayward son who had fallen into terrible sins through bad company. By observing this Ekadashi, all his misdeeds were absolved and his soul was elevated.',
+    scripture: 'Surya Purana'
+  },
+  'Apara Ekadashi': {
+    summary: 'The merit of this Ekadashi equals bathing in all holy rivers and performing every sacred ritual. Even visiting Kurukshetra during a solar eclipse cannot compare to the spiritual fruit gained by faithfully observing this day.',
+    scripture: 'Brahmanda Purana'
+  },
+  'Nirjala Ekadashi': {
+    summary: 'The most austere of all Ekadashis, observed without even water. Bhimasena, who loved food and could not fast on every Ekadashi, was advised by sage Vyasa to observe just this one strictly to gain the combined merit of all twenty-four Ekadashis.',
+    scripture: 'Padma Purana'
+  },
+  'Yogini Ekadashi': {
+    summary: 'A gardener named Hemamali neglected his sacred duties serving flowers to Lord Vishnu because of attachment to his wife. He was cursed with leprosy and terrible suffering. Observing this Ekadashi vrat cured him completely.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Devshayani Ekadashi': {
+    summary: 'This day marks the beginning of Chaturmas, when Lord Vishnu enters His cosmic sleep on the serpent Shesha. King Mandhata learned that observing this Ekadashi ensures divine protection and prosperity during the four sacred months.',
+    scripture: 'Padma Purana'
+  },
+  'Kamika Ekadashi': {
+    summary: 'Even the merit of donating an umbrella and sandals to a Brahmin during scorching summer cannot equal observing this vrat. This Ekadashi is especially dear to Lord Vishnu and attracts His eternal blessings upon the devotee.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Shravana Putrada Ekadashi': {
+    summary: 'The King of Mahishmati and his queen had no heir despite ruling a prosperous kingdom. They observed this sacred Ekadashi with unwavering devotion and faith, and were blessed with a noble and virtuous son.',
+    scripture: 'Bhavishya Purana'
+  },
+  'Aja Ekadashi': {
+    summary: 'When the righteous King Harishchandra lost his kingdom, family, and everything through a series of devastating trials, sage Gautama compassionately advised him to observe this Ekadashi. Its merit restored all that he had lost.',
+    scripture: 'Padma Purana'
+  },
+  'Parsva Ekadashi': {
+    summary: 'Also known as Parivartini Ekadashi, marking when Lord Vishnu turns in His cosmic sleep. King Ambarisha observed this vrat with such profound devotion that Lord Vishnu Himself appeared to protect him from the wrath of sage Durvasa.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Indira Ekadashi': {
+    summary: 'King Indrasena\'s deceased father appeared to him in a dream, suffering in a lower realm and pleading for liberation. By observing this Ekadashi and dedicating its merit, the king elevated his father to the heavenly realms.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Papankusha Ekadashi': {
+    summary: 'Like a divine hook (ankusha) that pulls devotees from the ocean of sins (papa). Observing this Ekadashi frees the devotee from all fear of Yamaraja, the lord of death, and opens the path to Lord Vishnu\'s supreme abode.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Rama Ekadashi': {
+    summary: 'The name means "delightful" and is not related to Lord Rama. A pious Brahmin\'s wife Chandrabali unknowingly committed a transgression that brought great sin upon the family. Observing this Ekadashi absolved them all completely.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Devutthana Ekadashi': {
+    summary: 'This joyous day marks Lord Vishnu\'s awakening from His four-month cosmic sleep. It is one of the most auspicious days in the Hindu calendar for weddings and new ventures, as the Lord resumes His active protection of the universe.',
+    scripture: 'Padma Purana'
+  },
+  'Utpanna Ekadashi': {
+    summary: 'This Ekadashi celebrates the origin of all Ekadashis. When the demon Mura threatened the cosmos, a radiant feminine power manifested from Lord Vishnu and vanquished the demon. She became Ekadashi Devi, and all Ekadashis are observed in her honor.',
+    scripture: 'Padma Purana'
+  },
+  'Mokshada Ekadashi': {
+    summary: 'King Vaikhanasa was deeply troubled because his departed father was suffering in a lower realm. Lord Krishna advised him that observing this Ekadashi and offering its merit could grant liberation (moksha) to departed ancestors.',
+    scripture: 'Brahmanda Purana'
+  },
+  'Saphala Ekadashi': {
+    summary: 'A prince named Lumpaka led a sinful life and was banished by his father. Forced to sleep beneath a sacred tree on this Ekadashi night, he unknowingly observed the vrat. This transformed his destiny and led him toward righteousness.',
+    scripture: 'Brahma Vaivarta Purana'
+  },
+  'Padmini Ekadashi': {
+    summary: 'This rare Ekadashi occurs only during Adhik Maas (the extra lunar month). Observing it carries extraordinary spiritual merit, as the extra month is considered Lord Vishnu\'s own special month, amplifying the power of all devotional practices.',
+    scripture: 'Padma Purana'
+  },
+  'Parama Ekadashi': {
+    summary: 'Occurring only during the sacred Adhik Maas, this special Ekadashi bestows supreme spiritual merit. It is considered a rare and precious opportunity for devotees to earn exceptional divine grace during the extra lunar month.',
+    scripture: 'Padma Purana'
+  }
+};
+
+/**
+ * Show Katha (story) for an Ekadashi in the tooltip modal.
+ */
+function showKatha(name) {
+  const katha = EK_KATHAS[name];
+  if (!katha) return;
+  const title = document.getElementById('tipTitle');
+  const body = document.getElementById('tipBody');
+  if (title) title.textContent = name;
+  if (body) body.innerHTML = '<p>' + katha.summary + '</p>'
+    + '<p style="margin-top:.75rem;font-size:.75rem;color:var(--text-muted);font-style:italic">'
+    + '\uD83D\uDCDC Source: ' + katha.scripture + '</p>';
+  const overlay = document.getElementById('tooltipOverlay');
+  if (overlay) overlay.classList.add('show');
 }
 
 // Mutable cache — filled after location is known
@@ -312,12 +556,24 @@ function renderEkadashi() {
   list.innerHTML = show.map(e => {
     const isPast = e.date < today;
     const isNext = upcoming.length > 0 && e.date.getTime() === upcoming[0].date.getTime();
+    const paranaHtml = e.parana
+      ? `<div class="ek-parana">\u23F0 Parana: ${e.parana.label}</div>`
+      : '';
+    const hasKatha = !!EK_KATHAS[e.name];
+    const escapedName = e.name.replace(/'/g, "\\'");
+    const kathaBtn = hasKatha
+      ? `<button class="ek-katha-link" onclick="window.Ekadashi.showKatha('${escapedName}')" title="Read the story of ${e.name}">\uD83D\uDCD6 Katha</button>`
+      : '';
     return `<div class="ek-item${isPast ? ' past' : ''}${isNext ? ' next' : ''}" role="listitem">
-      <div>
+      <div class="ek-info">
         <span class="ek-name">${e.name}${isNext ? '<span class="badge">Next</span>' : ''}</span>
         <br><span class="ek-date">${fmtDate(e.date)} &bull; ${e.paksha}</span>
+        ${paranaHtml}
       </div>
-      ${isPast ? '<span style="font-size:.65rem;opacity:.5">&#10003;</span>' : ''}
+      <div class="ek-actions">
+        ${kathaBtn}
+        ${isPast ? '<span style="font-size:.65rem;opacity:.5">&#10003;</span>' : ''}
+      </div>
     </div>`;
   }).join('');
 }
@@ -338,6 +594,10 @@ function recomputeEkadashi(loc) {
       new Date().getFullYear() + 1,
       loc
     );
+    // Add Parana (fast-breaking) data for each Ekadashi
+    for (const e of _ekCache) {
+      try { e.parana = calculateParana(e, loc); } catch (_) { /* skip */ }
+    }
     renderEkadashi();
     // Notify calendar to re-render with Ekadashi dates
     if (window.Calendar && window.Calendar.render) {
@@ -353,5 +613,6 @@ window.Ekadashi = {
   getEkadashiList,
   renderEkadashi,
   recomputeEkadashi,
+  showKatha,
   fmtDate
 };
