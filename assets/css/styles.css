@@ -1471,3 +1471,289 @@ main {
 .animate-in {
   animation: fadeInUp 0.5s ease forwards;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   HERO STATS
+   ═══════════════════════════════════════════════════════════ */
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.hero-stat {
+  text-align: center;
+  min-width: 56px;
+}
+
+.hs-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--saffron);
+  display: block;
+  line-height: 1;
+}
+
+[data-theme="dark"] .hs-num {
+  color: var(--light-gold);
+}
+
+.hs-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   INTERACTIVE TEMPLE MAP
+   ═══════════════════════════════════════════════════════════ */
+
+/* Map section wrapper */
+.map-section {
+  margin-bottom: 2.5rem;
+}
+
+.map-outer {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-card);
+}
+
+/* The Leaflet map container */
+#templeMap {
+  height: 500px;
+  width: 100%;
+  display: block;
+  background: #f0ede8;
+}
+
+[data-theme="dark"] #templeMap {
+  background: #1a1208;
+}
+
+@media (max-width: 900px) {
+  #templeMap { height: 420px; }
+}
+
+@media (max-width: 680px) {
+  #templeMap { height: 320px; }
+}
+
+/* Map footer (hint + count) */
+.map-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+[data-theme="dark"] .map-footer {
+  background: rgba(58, 24, 0, 0.3);
+}
+
+.map-hint {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.03em;
+}
+
+.map-count {
+  font-size: 0.72rem;
+  color: var(--saffron);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: rgba(232, 130, 26, 0.1);
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+[data-theme="dark"] .map-count {
+  color: var(--light-gold);
+  background: rgba(212, 160, 23, 0.12);
+}
+
+/* ── Custom Temple Marker ──────────────────────────────────── */
+.temple-marker-wrap {
+  background: transparent !important;
+  border: none !important;
+}
+
+.tm-pin {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--saffron) 0%, var(--gold) 100%);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2.5px solid #fff;
+  box-shadow: 0 3px 10px rgba(232, 130, 26, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temple-marker-wrap:hover .tm-pin {
+  box-shadow: 0 5px 18px rgba(232, 130, 26, 0.7), 0 2px 6px rgba(0,0,0,0.25);
+  transform: rotate(-45deg) scale(1.12);
+}
+
+.tm-emoji {
+  transform: rotate(45deg);
+  font-size: 17px;
+  line-height: 1;
+  display: block;
+}
+
+/* Dimmed marker (filtered out) */
+.temple-marker-dim .tm-pin {
+  background: var(--bg-secondary);
+  box-shadow: none;
+  border-color: var(--border-color);
+}
+
+/* ── Map Popup ─────────────────────────────────────────────── */
+.temple-leaflet-popup .leaflet-popup-content-wrapper {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 14px !important;
+  box-shadow: var(--shadow-lg) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.temple-leaflet-popup .leaflet-popup-tip-container {
+  display: none;
+}
+
+.temple-leaflet-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.temple-leaflet-popup .leaflet-popup-close-button {
+  color: var(--text-muted) !important;
+  font-size: 1.1rem !important;
+  top: 8px !important;
+  right: 10px !important;
+  padding: 0 !important;
+  z-index: 1;
+}
+
+.map-popup-inner {
+  padding: 14px 16px 12px;
+  min-width: 200px;
+  max-width: 240px;
+}
+
+.mp-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 4px;
+  padding-right: 20px; /* space for close btn */
+}
+
+.mp-deity {
+  font-size: 0.75rem;
+  color: var(--saffron);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.mp-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mp-city {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.mp-rating {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.mp-stars {
+  color: var(--gold);
+  letter-spacing: -1px;
+  font-size: 0.68rem;
+}
+
+.mp-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mp-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.mp-arrow {
+  transition: transform 0.2s;
+}
+
+.mp-btn:hover .mp-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Temple Card Highlight (when clicked from map) ─────────── */
+@keyframes cardPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(232, 130, 26, 0.5); }
+  50%  { box-shadow: 0 0 0 8px rgba(232, 130, 26, 0.15); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 130, 26, 0); }
+}
+
+.temple-card.map-highlight {
+  border-color: var(--saffron) !important;
+  animation: cardPulse 0.8s ease-out 2;
+}
+
+/* ── Leaflet overrides for dark mode ───────────────────────── */
+[data-theme="dark"] .leaflet-control-zoom a {
+  background-color: rgba(58, 24, 0, 0.85) !important;
+  color: var(--light-gold) !important;
+  border-color: rgba(212, 160, 23, 0.3) !important;
+}
+
+[data-theme="dark"] .leaflet-control-attribution {
+  background: rgba(18, 8, 0, 0.7) !important;
+  color: rgba(250, 243, 224, 0.5) !important;
+}
+
+[data-theme="dark"] .leaflet-control-attribution a {
+  color: rgba(212, 160, 23, 0.7) !important;
+}

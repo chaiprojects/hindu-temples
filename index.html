@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples from Concord to San Jose, with Rahukalam calculator, Ekadashi dates, and festival calendar.">
+  <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples from Concord to San Jose, with interactive map, Rahukalam calculator, Ekadashi dates, and festival calendar.">
   <title>Bay Area Hindu Temples &middot; Sacred Spaces</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Leaflet.js — free interactive maps, no API key needed -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -46,6 +48,7 @@
     <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#temples">Temples</a></li>
+      <li><a href="#map-section">Map</a></li>
       <li><a href="#rahukalam">Rahukalam</a></li>
       <li><a href="#ekadashi">Ekadashi</a></li>
       <li><a href="#festivals">Festivals &amp; Events</a></li>
@@ -66,6 +69,21 @@
     <div class="ruler-line"></div>
     <div class="ruler-dot"></div>
     <div class="ruler-line"></div>
+  </div>
+  <!-- Hero Stats -->
+  <div class="hero-stats" aria-label="Site statistics">
+    <div class="hero-stat">
+      <span class="hs-num">28</span>
+      <span class="hs-label">Temples</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num">16</span>
+      <span class="hs-label">Cities</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num">4.7<span style="font-size:.75em">★</span></span>
+      <span class="hs-label">Avg Rating</span>
+    </div>
   </div>
 </header>
 
@@ -118,6 +136,20 @@
 
   </div>
 
+  <!-- ═══ INTERACTIVE MAP SECTION ═══ -->
+  <section class="content-section map-section" id="map-section" aria-label="Interactive temple map">
+    <h2 class="section-header">Temple Map</h2>
+    <div class="section-subtitle">All 28 Temples Across the Bay Area &middot; Click a Pin for Details</div>
+
+    <div class="map-outer">
+      <div id="templeMap" aria-label="Interactive map showing Bay Area Hindu temples"></div>
+      <div class="map-footer">
+        <span class="map-hint">🛕 Click any pin &nbsp;·&nbsp; Scroll inside map to zoom &nbsp;·&nbsp; Filters sync with temple list below</span>
+        <span class="map-count" id="mapTempleCount">28 temples on map</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ TEMPLES SECTION ═══ -->
   <section class="content-section" id="temples" aria-label="Hindu temples listing">
     <h2 class="section-header">Hindu Temples</h2>
@@ -145,8 +177,8 @@
     <div class="about-content">
       <p>
         This website serves as a centralized, convenient reference for Hindu temples in the San Francisco Bay Area,
-        covering the corridor from Concord through Oakland, Fremont, and Milpitas down to San Jose.
-        It brings together essential information for devotees: temple locations, darshan timings,
+        covering the corridor from Concord through Oakland, Fremont, Tri-Valley, and Milpitas down to San Jose.
+        It brings together essential information for devotees: temple locations on an interactive map, darshan timings,
         daily Rahu Kalam calculations, Ekadashi dates, and upcoming festivals and events &mdash;
         all in one place.
       </p>
@@ -170,8 +202,8 @@
           please consult your preferred priest or panchang.
         </p>
         <p>
-          Festival dates listed here follow commonly observed North/South Indian traditions and may
-          vary by sampradaya or region.
+          Map coordinates are approximate. Festival dates listed here follow commonly observed
+          North/South Indian traditions and may vary by sampradaya or region.
         </p>
       </div>
     </div>
@@ -201,12 +233,16 @@
 <!-- Back to Top Button -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
 
+<!-- Leaflet.js (must come before map.js) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <!-- Scripts (order matters: dependencies first) -->
-<script src="assets/js/rahukalam.js"></script>
-<script src="assets/js/ekadashi.js"></script>
-<script src="assets/js/temples.js"></script>
-<script src="assets/js/calendar.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/rahukalam.js?v=3"></script>
+<script src="assets/js/ekadashi.js?v=3"></script>
+<script src="assets/js/temples.js?v=3"></script>
+<script src="assets/js/map.js?v=3"></script>
+<script src="assets/js/calendar.js?v=3"></script>
+<script src="assets/js/main.js?v=3"></script>
 
 </body>
 </html>

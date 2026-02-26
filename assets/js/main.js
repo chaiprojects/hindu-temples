@@ -26,6 +26,7 @@ function toggleTheme() {
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
   updateThemeIcon(next);
+  if (window.TempleMap) window.TempleMap.syncTheme();
 }
 
 function updateThemeIcon(theme) {
@@ -245,6 +246,9 @@ async function initApp() {
   window.Temples.renderTemples(window.Temples.TEMPLES);
   window.Temples.populateCityFilter();
 
+  // Initialize interactive map
+  if (window.TempleMap) window.TempleMap.init();
+
   // Calendar navigation
   document.getElementById('calPrev')?.addEventListener('click', window.Calendar.prevMonth);
   document.getElementById('calNext')?.addEventListener('click', window.Calendar.nextMonth);
@@ -252,9 +256,15 @@ async function initApp() {
   // Tooltip close
   document.getElementById('tooltipOverlay')?.addEventListener('click', window.Calendar.closeTooltip);
 
-  // Search & filter
-  document.getElementById('searchBar')?.addEventListener('input', window.Temples.filterTemples);
-  document.getElementById('cityFilter')?.addEventListener('change', window.Temples.filterTemples);
+  // Search & filter (sync both temple cards and map markers)
+  function syncFilters() {
+    const q = document.getElementById('searchBar')?.value || '';
+    const city = document.getElementById('cityFilter')?.value || '';
+    window.Temples.filterTemples();
+    if (window.TempleMap) window.TempleMap.filterMarkers(q, city);
+  }
+  document.getElementById('searchBar')?.addEventListener('input', syncFilters);
+  document.getElementById('cityFilter')?.addEventListener('change', syncFilters);
 
   // Theme toggle
   document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
