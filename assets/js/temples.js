@@ -97,6 +97,71 @@ const TEMPLES = [
     deity: 'Lord Hanuman',
     url: 'https://bayareahanumantemple.com'
   },
+  // ── Livermore ─────────────────────────────────────────────────
+  {
+    name: 'Shiva Vishnu Temple (HCCC)',
+    address: '1232 Arrowhead Ave, Livermore, CA 94551',
+    city: 'Livermore',
+    rating: 4.7,
+    reviews: 1847,
+    hours: 'Mon\u2013Thu: 9 AM\u201312 PM, 6\u20138 PM | Fri\u2013Sun: 9 AM\u20138 PM',
+    deity: 'Lord Shiva & Lord Vishnu',
+    url: 'https://livermoretemple.org'
+  },
+  // ── Pleasanton ────────────────────────────────────────────────
+  {
+    name: 'Sri Sai Temple',
+    address: '9875 Dublin Canyon Rd, Pleasanton, CA 94552',
+    city: 'Pleasanton',
+    rating: 4.8,
+    reviews: 312,
+    hours: 'Mon\u2013Wed: 6\u20139 PM | Thu: 7:30 AM\u20139 PM | Sat\u2013Sun: 7:30 AM\u20131 PM, 6\u20139 PM',
+    deity: 'Shirdi Sai Baba',
+    url: 'https://srisaitemple.org'
+  },
+  // ── Dublin ────────────────────────────────────────────────────
+  {
+    name: 'Sri Panchamukha Hanuman Temple',
+    address: '6930 Village Pkwy, Ste C, Dublin, CA 94568',
+    city: 'Dublin',
+    rating: 4.7,
+    reviews: 158,
+    hours: 'Mon\u2013Fri: 5:30\u20139 PM | Sat\u2013Sun: 9:30 AM\u20139 PM',
+    deity: 'Panchamukha Hanuman',
+    url: 'https://panchamukhahanuman.org'
+  },
+  // ── San Ramon ─────────────────────────────────────────────────
+  {
+    name: 'Sri Karpaga Ganapathi Temple',
+    address: '1021 Market Pl, Ste B, San Ramon, CA 94583',
+    city: 'San Ramon',
+    rating: 4.6,
+    reviews: 89,
+    hours: 'Mon\u2013Sat: 8 AM\u20139 PM',
+    deity: 'Lord Ganesha (Karpaga Vinayagar)',
+    url: 'https://skgtemple.org'
+  },
+  {
+    name: 'Sri Datta Sai Temple',
+    address: '1901 San Ramon Valley Blvd, San Ramon, CA 94583',
+    city: 'San Ramon',
+    rating: 4.7,
+    reviews: 203,
+    hours: 'Mon\u2013Wed, Fri, Sat\u2013Sun: 10:30 AM\u20131:30 PM, 5:30\u20138:30 PM | Thu: 10:30 AM\u20131:30 PM, 5:30\u20139 PM',
+    deity: 'Sri Datta Sai Baba',
+    url: 'https://sridattasaimandir.org'
+  },
+  // ── Danville ──────────────────────────────────────────────────
+  {
+    name: 'ISKCON Tri-Valley',
+    address: '101 Town and Country Dr, Ste E, Danville, CA 94526',
+    city: 'Danville',
+    rating: 4.8,
+    reviews: 94,
+    hours: 'Fri: 6\u20139 PM (program) | Sun: 3:30\u20136 PM (program) | Other times by appointment',
+    deity: 'Sri Sri Radha Govinda',
+    url: 'https://iskcontrivalley.com'
+  },
   // ── Milpitas ──────────────────────────────────────────────────
   {
     name: 'Sri Satya Narayana Swamy Devasthanam',
