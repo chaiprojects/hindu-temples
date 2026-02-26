@@ -74,6 +74,7 @@
       <li><a href="#rahukalam">Rahukalam</a></li>
       <li><a href="#ekadashi">Ekadashi</a></li>
       <li><a href="#festivals">Festivals &amp; Events</a></li>
+      <li><a href="#bhajan-section">🎵 Devotional</a></li>
       <li><a href="#about">About</a></li>
     </ul>
     <div class="nav-actions">
@@ -231,6 +232,13 @@
     </div>
   </section>
 
+  <!-- ── Daily Devotional ───────────────────────────────── -->
+  <section class="content-section" id="bhajan-section">
+    <h2 class="section-header">Daily Devotional</h2>
+    <div class="section-subtitle">Today's deity &middot; Mantra &middot; Bhajan</div>
+    <div id="bhajan-card-wrap"></div>
+  </section>
+
 </main>
 
 <!-- Event Tooltip/Modal -->
@@ -245,8 +253,32 @@
 
 <!-- Footer -->
 <footer class="site-footer">
-  <p>May your visits bring peace, prosperity, and divine blessings &nbsp;<span aria-hidden="true">🪔</span></p>
-  <p style="margin-top:.4rem;font-size:.73rem;opacity:.6">Hours may vary on festival days &middot; Please call ahead to confirm</p>
+  <div class="footer-inner">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <span class="footer-om" aria-hidden="true">ॐ</span>
+      <span class="footer-brand-name">Bay Area Hindu Temples</span>
+    </div>
+
+    <!-- Visit Counter -->
+    <div class="footer-counter" title="Total site visits">
+      <span class="footer-counter-icon" aria-hidden="true">👁</span>
+      <span id="visitCountNum" class="footer-count-num">&hellip;</span>
+      <span id="visitCountLabel" class="footer-count-label">total visits</span>
+    </div>
+
+    <!-- Blessing -->
+    <div class="footer-blessing">
+      <span aria-hidden="true">🪔</span>
+      May your visits bring peace &amp; divine blessings
+      <span aria-hidden="true">🙏</span>
+    </div>
+
+    <!-- Sub-note -->
+    <div class="footer-note">
+      Hours may vary on festival days &middot; Please call ahead to confirm
+    </div>
+  </div>
 </footer>
 
 <!-- Bottom Border Strip -->
@@ -259,12 +291,13 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <!-- Scripts (order matters: dependencies first) -->
-<script src="assets/js/rahukalam.js?v=3"></script>
-<script src="assets/js/ekadashi.js?v=3"></script>
-<script src="assets/js/temples.js?v=3"></script>
-<script src="assets/js/map.js?v=3"></script>
-<script src="assets/js/calendar.js?v=3"></script>
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/rahukalam.js?v=4"></script>
+<script src="assets/js/ekadashi.js?v=4"></script>
+<script src="assets/js/temples.js?v=4"></script>
+<script src="assets/js/map.js?v=4"></script>
+<script src="assets/js/calendar.js?v=4"></script>
+<script src="assets/js/bhajan.js?v=4"></script>
+<script src="assets/js/main.js?v=4"></script>
 
 </body>
 </html>

@@ -249,6 +249,12 @@ async function initApp() {
   // Initialize interactive map
   if (window.TempleMap) window.TempleMap.init();
 
+  // Daily devotional bhajan + visit counter
+  if (window.DailyBhajan) {
+    window.DailyBhajan.render();
+    window.DailyBhajan.loadVisitCount();
+  }
+
   // Calendar navigation
   document.getElementById('calPrev')?.addEventListener('click', window.Calendar.prevMonth);
   document.getElementById('calNext')?.addEventListener('click', window.Calendar.nextMonth);

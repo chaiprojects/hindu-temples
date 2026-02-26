@@ -1757,3 +1757,330 @@ main {
 [data-theme="dark"] .leaflet-control-attribution a {
   color: rgba(212, 160, 23, 0.7) !important;
 }
+
+/* ============================================================
+   Daily Devotional Bhajan Section
+   ============================================================ */
+
+/* ── Card wrapper ── */
+#bhajan-card-wrap {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.bhajan-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px rgba(139, 69, 12, 0.10);
+  transition: box-shadow .25s;
+}
+
+.bhajan-card:hover {
+  box-shadow: 0 10px 40px rgba(139, 69, 12, 0.16);
+}
+
+/* ── Header row ── */
+.bhajan-header {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: 1rem 1.3rem .6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bhajan-day-pill {
+  background: var(--accent);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .28rem .72rem;
+  border-radius: 99px;
+}
+
+.bhajan-title-text {
+  font-size: .85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Deity row ── */
+.bhajan-deity-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.1rem 1.3rem .7rem;
+}
+
+.bhajan-emoji-wrap {
+  font-size: 3rem;
+  line-height: 1;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.18));
+}
+
+.bhajan-deity-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+.bhajan-deity-hindi {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-top: .15rem;
+}
+
+/* ── Mantra block ── */
+.bhajan-mantra-block {
+  padding: .5rem 1.3rem 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.bhajan-mantra {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: .015em;
+}
+
+.bhajan-mantra-hi {
+  font-size: .95rem;
+  color: var(--accent);
+  margin-top: .2rem;
+  opacity: .85;
+}
+
+.bhajan-blessing {
+  font-size: .78rem;
+  color: var(--text-muted);
+  margin-top: .45rem;
+  font-style: italic;
+}
+
+/* ── Player / thumbnail ── */
+.bhajan-player-area {
+  position: relative;
+  width: 100%;
+}
+
+.bhajan-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bhajan-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.bhajan-thumb-wrap:hover .bhajan-thumb-img {
+  transform: scale(1.03);
+  filter: brightness(.8);
+}
+
+/* Emoji fallback */
+.bhajan-thumb-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent) 0%, #7b1a0e 100%);
+}
+
+.bhajan-fb-emoji {
+  font-size: 5rem;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.4));
+}
+
+/* Play button overlay */
+.bhajan-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  background: rgba(0, 0, 0, 0.30);
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+  padding: 0;
+}
+
+.bhajan-play-overlay:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.bhajan-play-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,.45);
+  transition: transform .2s, box-shadow .2s;
+  padding-left: 4px; /* optical centre for ▶ */
+}
+
+.bhajan-play-overlay:hover .bhajan-play-circle {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(0,0,0,.55);
+}
+
+.bhajan-song-meta {
+  text-align: center;
+  color: #fff;
+}
+
+.bhajan-song-name {
+  font-size: .9rem;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0,0,0,.7);
+}
+
+.bhajan-tap-hint {
+  font-size: .72rem;
+  opacity: .8;
+  margin-top: .15rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,.7);
+}
+
+/* Embedded iframe */
+.bhajan-iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* ── YouTube link ── */
+.bhajan-yt-link {
+  display: block;
+  text-align: center;
+  font-size: .78rem;
+  color: var(--text-muted);
+  padding: .65rem 1rem;
+  text-decoration: none;
+  transition: color .2s;
+  border-top: 1px solid var(--border);
+}
+
+.bhajan-yt-link:hover {
+  color: var(--accent);
+}
+
+/* ── Dark mode tweaks ── */
+[data-theme="dark"] .bhajan-card {
+  box-shadow: 0 6px 32px rgba(0,0,0,.4);
+}
+
+/* ============================================================
+   Site Footer (redesigned with visit counter)
+   ============================================================ */
+
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1.5px solid var(--border);
+  padding: 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.8rem 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .9rem;
+  text-align: center;
+}
+
+/* Brand row */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footer-om {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+/* Visit Counter */
+.footer-counter {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 99px;
+  padding: .42rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(139,69,12,.08);
+}
+
+.footer-counter-icon {
+  font-size: 1rem;
+}
+
+.footer-count-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 2.5ch;
+  text-align: right;
+}
+
+.footer-count-label {
+  font-size: .72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Blessing */
+.footer-blessing {
+  font-size: .88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+/* Sub-note */
+.footer-note {
+  font-size: .7rem;
+  color: var(--text-muted);
+  opacity: .6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .bhajan-emoji-wrap { font-size: 2.4rem; }
+  .bhajan-deity-name { font-size: 1.2rem; }
+  .bhajan-play-circle { width: 52px; height: 52px; font-size: 1.3rem; }
+}
