@@ -1770,7 +1770,7 @@ main {
 
 .bhajan-card {
   background: var(--bg-card);
-  border: 1.5px solid var(--border);
+  border: 1.5px solid var(--border-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 6px 32px rgba(139, 69, 12, 0.10);
@@ -1787,7 +1787,7 @@ main {
   align-items: center;
   gap: .7rem;
   padding: 1rem 1.3rem .6rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .bhajan-day-pill {
@@ -1839,7 +1839,7 @@ main {
 /* ── Mantra block ── */
 .bhajan-mantra-block {
   padding: .5rem 1.3rem 1rem;
-  border-bottom: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border-color);
 }
 
 .bhajan-mantra {
@@ -1870,7 +1870,7 @@ main {
   align-items: center;
   gap: .9rem;
   padding: .9rem 1.3rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-color);
   background: var(--bg-secondary);
 }
 
@@ -1937,7 +1937,7 @@ main {
   margin: .7rem 0 .4rem;
   padding: .65rem .9rem;
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-left: 3px solid var(--accent);
   border-radius: 10px;
 }
@@ -1993,7 +1993,7 @@ main {
 
 .site-footer {
   background: var(--bg-secondary);
-  border-top: 1.5px solid var(--border);
+  border-top: 1.5px solid var(--border-color);
   padding: 0;
 }
 
@@ -2029,7 +2029,7 @@ main {
   align-items: center;
   gap: .45rem;
   background: var(--bg-card);
-  border: 1.5px solid var(--border);
+  border: 1.5px solid var(--border-color);
   border-radius: 99px;
   padding: .42rem 1.1rem;
   box-shadow: 0 2px 8px rgba(139,69,12,.08);
@@ -2071,9 +2071,167 @@ main {
   opacity: .6;
 }
 
+/* ── Fix <button> play elements (were styled as <a>) ── */
+.bhajan-play-btn,
+.rdm-play-btn {
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .bhajan-emoji-wrap { font-size: 2.4rem; }
   .bhajan-deity-name { font-size: 1.2rem; }
   .bhajan-play-circle { width: 52px; height: 52px; font-size: 1.3rem; }
+}
+
+/* ============================================================
+   Floating Bhajan Mini-Player
+   (slides up from the bottom-right corner when Play is clicked)
+   ============================================================ */
+
+.bhajan-mini-player {
+  position: fixed;
+  bottom: -340px;           /* hidden below viewport */
+  right: 1.5rem;
+  z-index: 300;
+  width: 340px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(232, 130, 26, 0.12);
+  transition: bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .bhajan-mini-player {
+  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(232, 130, 26, 0.22);
+}
+
+/* Slide up when .show is added */
+.bhajan-mini-player.show {
+  bottom: 0;
+}
+
+/* ── Header bar ── */
+.bmp-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .bmp-bar {
+  background: rgba(58, 24, 0, 0.55);
+}
+
+.bmp-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.bmp-deity-label {
+  font-size: 0.68rem;
+  color: var(--saffron);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.bmp-song-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+/* "Open in YouTube" icon link */
+.bmp-yt-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.bmp-yt-link:hover {
+  background: rgba(232, 130, 26, 0.15);
+  color: var(--saffron);
+  border-color: var(--saffron);
+}
+
+/* Close button */
+.bmp-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-family: 'Inter', -apple-system, sans-serif;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.bmp-close:hover {
+  background: rgba(232, 130, 26, 0.15);
+  color: var(--text-primary);
+}
+
+/* ── YouTube iframe container ── */
+.bmp-frame-wrap {
+  width: 100%;
+  background: #000;
+  line-height: 0;
+}
+
+.bmp-frame-wrap iframe {
+  width: 100%;
+  height: 191px;  /* 340 * 9/16 = 191.25px */
+  border: none;
+  display: block;
+}
+
+/* ── Back-to-top button shifts left when player is open ── */
+.bhajan-playing .back-to-top {
+  right: calc(340px + 2rem); /* transition inherited from .back-to-top { all 0.3s } */
+}
+
+/* ── Mobile: full-width player ── */
+@media (max-width: 480px) {
+  .bhajan-mini-player {
+    width: 100%;
+    right: 0;
+    left: 0;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .bmp-frame-wrap iframe {
+    height: calc(56.25vw); /* maintain 16:9 */
+  }
+
+  /* Hide back-to-top while player is showing on mobile */
+  .bhajan-playing .back-to-top {
+    display: none;
+  }
 }

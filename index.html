@@ -288,6 +288,33 @@
 <!-- Back to Top Button -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
 
+<!-- ── Floating Bhajan Mini-Player ──────────────────────── -->
+<div id="bhajanMiniPlayer" class="bhajan-mini-player" role="complementary" aria-label="Today's bhajan player">
+  <div class="bmp-bar">
+    <div class="bmp-info">
+      <span id="bhajanPlayerDeity" class="bmp-deity-label"></span>
+      <span id="bhajanPlayerTitle" class="bmp-song-title"></span>
+    </div>
+    <a id="bhajanFallbackLink"
+       class="bmp-yt-link"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Open in YouTube">↗</a>
+    <button class="bmp-close"
+            onclick="window.DailyBhajan.closeMiniPlayer()"
+            aria-label="Close player">&#10005;</button>
+  </div>
+  <div class="bmp-frame-wrap">
+    <iframe id="bhajanYTIframe"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen
+            title="Today's Devotional Bhajan"
+            loading="lazy">
+    </iframe>
+  </div>
+</div>
+
 <!-- Leaflet.js (must come before map.js) -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -297,8 +324,8 @@
 <script src="assets/js/temples.js?v=4"></script>
 <script src="assets/js/map.js?v=4"></script>
 <script src="assets/js/calendar.js?v=4"></script>
-<script src="assets/js/bhajan.js?v=4"></script>
-<script src="assets/js/main.js?v=4"></script>
+<script src="assets/js/bhajan.js?v=5"></script>
+<script src="assets/js/main.js?v=5"></script>
 
 </body>
 </html>
