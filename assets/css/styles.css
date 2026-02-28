@@ -2114,6 +2114,16 @@ main {
   bottom: 0;
 }
 
+/* Audio-only mode: hide video frame off-screen so iframe still plays (display:none stops playback). */
+.bhajan-mini-player.audio-only .bmp-frame-wrap {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 340px;
+  height: 191px;
+  overflow: hidden;
+}
+
 /* ── Header bar ── */
 .bmp-bar {
   display: flex;

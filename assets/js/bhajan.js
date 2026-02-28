@@ -17,7 +17,7 @@ window.DailyBhajan = (() => {
       blessing: 'Seek blessings of the Sun God for health & vitality',
       accentColor: '#d97706',
       songTitle: 'Jai Jai Jai Suryadeva',
-      videoId: 'kFw6yePH_80',
+      videoId: 'opk44DquQ8A',
       ytSearch: 'surya+dev+aarti+jai+jai+suryadeva+bhajan'
     },
     { // 1 – Monday
@@ -30,7 +30,7 @@ window.DailyBhajan = (() => {
       blessing: 'Offer milk & bilva leaves for peace and liberation',
       accentColor: '#7c3aed',
       songTitle: 'Om Namah Shivaya',
-      videoId: 'b4Tt5eglNE4',
+      videoId: 'Ca4v0RI0kag',
       ytSearch: 'om+namah+shivaya+bhajan+anuradha+paudwal'
     },
     { // 2 – Tuesday
@@ -43,7 +43,7 @@ window.DailyBhajan = (() => {
       blessing: 'Fast or offer sindoor to Hanuman for courage & strength',
       accentColor: '#dc2626',
       songTitle: 'Hanuman Chalisa',
-      videoId: 'AETFvQonfV8',
+      videoId: 'o7fDt1OhDQQ',
       ytSearch: 'hanuman+chalisa+gulshan+kumar+hariharan'
     },
     { // 3 – Wednesday
@@ -55,9 +55,9 @@ window.DailyBhajan = (() => {
       mantraHi: 'हरे कृष्ण हरे राम',
       blessing: 'Offer tulsi & yellow flowers for wisdom & love',
       accentColor: '#0369a1',
-      songTitle: 'Achyutam Keshavam',
-      videoId: 'H3mIk6sR5bI',
-      ytSearch: 'achyutam+keshavam+krishna+damodaram+bhajan'
+      songTitle: 'Hare Krishna',
+      videoId: 'h2sTcbGTw30',
+      ytSearch: 'hare+krishna+bhajan+mantra'
     },
     { // 4 – Thursday
       day: 'Thursday',
@@ -68,8 +68,8 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ साईं राम · श्री गुरुभ्यो नमः',
       blessing: 'Seek the Guru\'s grace — offer flowers & light a diya on Guruvaar',
       accentColor: '#b45309',
-      songTitle: 'Om Sai Ram Bhajan',
-      videoId: 'TbJbsFEPjH8',
+      songTitle: 'Om Sai Ram',
+      videoId: '2tC9F0XaIkI',
       ytSearch: 'om+sai+ram+bhajan+guruvaar+shirdi+sai+baba'
     },
     { // 5 – Friday
@@ -81,8 +81,8 @@ window.DailyBhajan = (() => {
       mantraHi: 'ॐ श्री महालक्ष्म्यै नमः',
       blessing: 'Light a diya with ghee & offer lotus for wealth & grace',
       accentColor: '#db2777',
-      songTitle: 'Jai Laxmi Mata Aarti',
-      videoId: 'rPMD7SVTWNU',
+      songTitle: 'Jai Laxmi Mata',
+      videoId: 'gK2jD5X6pzk',
       ytSearch: 'jai+laxmi+mata+aarti+anuradha+paudwal+lakshmi'
     },
     { // 6 – Saturday
@@ -95,7 +95,7 @@ window.DailyBhajan = (() => {
       blessing: 'Offer sesame oil & black sesame to Shani for protection',
       accentColor: '#374151',
       songTitle: 'Shani Dev Chalisa',
-      videoId: 'qLG_s3JzHKw',
+      videoId: 'sLQiyA4H_qA',
       ytSearch: 'shani+dev+chalisa+aarti+bhajan'
     }
   ];
@@ -174,6 +174,16 @@ window.DailyBhajan = (() => {
     `;
   }
 
+  function syncPlayButtons(isPlaying) {
+    const d = getTodaysDeity();
+    const label = isPlaying ? '⏹ Stop' : '▶ Play';
+    // Keep both selectors in case the full card is ever re-enabled.
+    document.querySelectorAll('.rdm-play-btn, .bhajan-play-btn').forEach(btn => {
+      btn.textContent = label;
+      btn.setAttribute('aria-label', isPlaying ? 'Stop bhajan' : `Play ${d.songTitle}`);
+    });
+  }
+
   // ── In-page floating player ─────────────────────────────────
   function playBhajan() {
     const d = getTodaysDeity();
@@ -182,32 +192,43 @@ window.DailyBhajan = (() => {
     const fallback = document.getElementById('bhajanFallbackLink');
     if (!player || !iframe) return;
 
-    // Update header info
+    // Toggle behavior: clicking Play again stops playback.
+    if (document.body.classList.contains('bhajan-playing')) {
+      closeMiniPlayer();
+      return;
+    }
+
+    // Update header info (small mini-bar only)
     const deityEl = document.getElementById('bhajanPlayerDeity');
     const titleEl = document.getElementById('bhajanPlayerTitle');
     if (deityEl) deityEl.textContent = `${d.emoji} ${d.deity}`;
     if (titleEl) titleEl.textContent  = d.songTitle;
 
-    // Update fallback "Open in YouTube" link
-    if (fallback) {
-      fallback.href = `https://www.youtube.com/results?search_query=${d.ytSearch}`;
-    }
+    // Always provide a fallback link (works even if embeds are blocked).
+    if (fallback) fallback.href = `https://www.youtube.com/watch?v=${d.videoId}`;
 
-    // Set iframe src — triggered by user click, so autoplay is allowed
+    // Show player in audio-only mode (no video area) so deity song plays as audio only.
+    player.classList.add('audio-only');
+    player.classList.add('show');
+
+    // Use the direct video ID for reliable embedding. playsinline=1 helps on iOS.
     iframe.src = `https://www.youtube.com/embed/${d.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
-    // Slide the player up
-    player.classList.add('show');
     document.body.classList.add('bhajan-playing');
+    syncPlayButtons(true);
   }
 
   function closeMiniPlayer() {
     const player = document.getElementById('bhajanMiniPlayer');
     const iframe  = document.getElementById('bhajanYTIframe');
-    if (player) player.classList.remove('show');
+    if (player) {
+      player.classList.remove('show');
+      player.classList.remove('audio-only'); // reset for next open
+    }
     document.body.classList.remove('bhajan-playing');
-    // Clear src after slide-out to stop playback & free resources
-    if (iframe) setTimeout(() => { iframe.src = ''; }, 420);
+    // Stop playback & free resources
+    if (iframe) iframe.src = '';
+    syncPlayButtons(false);
   }
 
   // ── Visit Counter via countapi.xyz (free, no key needed) ──
