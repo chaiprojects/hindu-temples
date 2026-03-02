@@ -360,12 +360,12 @@ function renderTemples(list) {
 
   if (nr) nr.style.display = 'none';
 
-  grid.innerHTML = list.map(t => {
+  grid.innerHTML = list.map((t, i) => {
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name + ' ' + t.address)}`;
     const siteLink = t.url
       ? `<a class="t-link" href="${t.url}" target="_blank" rel="noopener" aria-label="Visit ${t.name} website">🔗 Official Website</a>`
       : '';
-    return `<article class="temple-card">
+    return `<article class="temple-card reveal" style="--reveal-i:${i}">
       <span class="t-icon" aria-hidden="true">🛕</span>
       <h3 class="t-name">${t.name}</h3>
       <div class="t-addr">📍 ${t.address}</div>
@@ -379,6 +379,11 @@ function renderTemples(list) {
       <a class="t-link" href="${mapsUrl}" target="_blank" rel="noopener" aria-label="Open ${t.name} in Google Maps">🗺 Open in Google Maps</a>
     </article>`;
   }).join('');
+
+  // Re-observe new cards for scroll reveal
+  if (window._revealObserver) {
+    grid.querySelectorAll('.reveal').forEach(el => window._revealObserver.observe(el));
+  }
 }
 
 /**

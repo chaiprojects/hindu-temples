@@ -82,6 +82,7 @@
     </div>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- Header / Hero -->
 <header class="site-header">
@@ -113,7 +114,7 @@
 <main>
 
   <!-- ═══ WIDGET ROW: Rahukalam + Ekadashi + Calendar ═══ -->
-  <div class="widget-row">
+  <div class="widget-row reveal">
 
     <!-- Rahu Kalam Widget -->
     <section class="widget content-section" id="rahukalam" aria-label="Rahu Kalam times">
@@ -161,7 +162,7 @@
   </div>
 
   <!-- ═══ INTERACTIVE MAP SECTION ═══ -->
-  <section class="content-section map-section" id="map-section" aria-label="Interactive temple map">
+  <section class="content-section map-section reveal" id="map-section" aria-label="Interactive temple map">
     <h2 class="section-header">Temple Map</h2>
     <div class="section-subtitle">All 28 Temples Across the Bay Area &middot; Click a Pin for Details</div>
 
@@ -175,9 +176,22 @@
   </section>
 
   <!-- ═══ TEMPLES SECTION ═══ -->
-  <section class="content-section" id="temples" aria-label="Hindu temples listing">
+  <section class="content-section reveal" id="temples" aria-label="Hindu temples listing">
     <h2 class="section-header">Hindu Temples</h2>
     <div class="section-subtitle">Bay Area Corridor &middot; Concord &rarr; Fremont &rarr; Tri-Valley &rarr; Milpitas &rarr; San Jose</div>
+
+    <!-- Featured Temple Carousel -->
+    <div class="carousel-wrap" id="carouselWrap">
+      <div class="carousel-header">
+        <h3 class="carousel-title">Featured Temples</h3>
+        <div class="carousel-nav">
+          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous temple">&#8249;</button>
+          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next temple">&#8250;</button>
+        </div>
+      </div>
+      <div class="carousel-track" id="carouselTrack" role="list" aria-label="Featured temples carousel"></div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Carousel navigation"></div>
+    </div>
 
     <div class="search-filter-row">
       <div class="search-wrap">
@@ -191,12 +205,12 @@
       </select>
     </div>
 
-    <div class="temples-grid" id="templesGrid" role="list" aria-label="Temple cards"></div>
+    <div class="temples-grid reveal-stagger" id="templesGrid" role="list" aria-label="Temple cards"></div>
     <div class="no-results" id="noResults" role="status">No temples found matching your search.</div>
   </section>
 
   <!-- ═══ ABOUT SECTION ═══ -->
-  <section class="content-section" id="about" aria-label="About this website">
+  <section class="content-section reveal" id="about" aria-label="About this website">
     <h2 class="section-header">About</h2>
     <div class="about-content">
       <p>
@@ -234,7 +248,7 @@
   </section>
 
   <!-- ── Daily Devotional ───────────────────────────────── -->
-  <section class="content-section" id="bhajan-section">
+  <section class="content-section reveal" id="bhajan-section">
     <h2 class="section-header">Daily Devotional</h2>
     <div class="section-subtitle">Today's deity &middot; Mantra &middot; Bhajan</div>
     <div id="bhajan-card-wrap"></div>

@@ -45,11 +45,25 @@ function initStickyNav() {
 
 // ── Mobile Nav ──
 function toggleMobileNav() {
-  document.getElementById('navLinks')?.classList.toggle('open');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+  const hamburger = document.getElementById('navHamburger');
+  if (!navLinks) return;
+
+  const isOpen = navLinks.classList.toggle('open');
+  overlay?.classList.toggle('active', isOpen);
+  document.body.classList.toggle('nav-open', isOpen);
+  hamburger?.setAttribute('aria-expanded', String(isOpen));
 }
 
 function closeMobileNav() {
-  document.getElementById('navLinks')?.classList.remove('open');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+  const hamburger = document.getElementById('navHamburger');
+  navLinks?.classList.remove('open');
+  overlay?.classList.remove('active');
+  document.body.classList.remove('nav-open');
+  hamburger?.setAttribute('aria-expanded', 'false');
 }
 
 // ── Back to Top ──
@@ -227,6 +241,120 @@ function retryGPS() {
   });
 }
 
+// ── Debounce Utility ──
+function debounce(fn, ms) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
+// ── Featured Temple Carousel ──
+function initCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const dotsWrap = document.getElementById('carouselDots');
+  if (!track || !dotsWrap || !window.Temples) return;
+
+  // Pick top 5 by review count
+  const top5 = [...window.Temples.TEMPLES]
+    .sort((a, b) => b.reviews - a.reviews)
+    .slice(0, 5);
+
+  track.innerHTML = top5.map((t, i) => {
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name + ' ' + t.address)}`;
+    const siteLink = t.url || mapsUrl;
+    return `<div class="carousel-slide" role="listitem">
+      <div class="carousel-slide-accent"></div>
+      <div class="carousel-slide-body">
+        <div class="carousel-rank">#${i + 1}</div>
+        <h3 class="t-name">${t.name}</h3>
+        <div class="t-deity">${t.deity}</div>
+        <div class="carousel-slide-city">${t.city}</div>
+        <div class="t-rating">
+          <span class="stars">${starsHtml(t.rating)}</span>
+          <span class="rnum">${t.rating} (${t.reviews.toLocaleString()})</span>
+        </div>
+        <div class="carousel-slide-actions">
+          <a class="carousel-action-primary" href="${mapsUrl}" target="_blank" rel="noopener">Directions</a>
+          <a class="carousel-action-secondary" href="${siteLink}" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Create dots
+  dotsWrap.innerHTML = top5.map((_, i) =>
+    `<button class="carousel-dot${i === 0 ? ' active' : ''}" role="tab" aria-label="Slide ${i + 1}" data-slide="${i}"></button>`
+  ).join('');
+
+  // Wire prev/next
+  document.getElementById('carouselPrev')?.addEventListener('click', () => {
+    track.scrollBy({ left: -350, behavior: 'smooth' });
+  });
+  document.getElementById('carouselNext')?.addEventListener('click', () => {
+    track.scrollBy({ left: 350, behavior: 'smooth' });
+  });
+
+  // Dot click
+  dotsWrap.addEventListener('click', e => {
+    const dot = e.target.closest('.carousel-dot');
+    if (!dot) return;
+    const idx = parseInt(dot.dataset.slide);
+    const slide = track.children[idx];
+    if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+  });
+
+  // Sync dots with scroll
+  const slides = track.querySelectorAll('.carousel-slide');
+  const dotObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = [...slides].indexOf(entry.target);
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === idx);
+        });
+      }
+    });
+  }, { root: track, threshold: 0.6 });
+
+  slides.forEach(s => dotObserver.observe(s));
+}
+
+// Need starsHtml for carousel
+function starsHtml(r) {
+  const f = Math.floor(r);
+  const h = r % 1 >= 0.5 ? 1 : 0;
+  const e = 5 - f - h;
+  return '\u2605'.repeat(f) + (h ? '\u2BE8' : '') + '\u2606'.repeat(e);
+}
+
+// ── Card Glow Effect ──
+function initCardGlow() {
+  document.addEventListener('mousemove', e => {
+    const card = e.target.closest('.temple-card');
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+    card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+  }, { passive: true });
+}
+
+// ── Scroll Reveal ──
+function initScrollReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  window._revealObserver = observer;
+}
+
 // ── Initialization ──
 async function initApp() {
   // Theme
@@ -256,6 +384,11 @@ async function initApp() {
     window.DailyBhajan.loadVisitCount();
   }
 
+  // Carousel, scroll reveal, card glow
+  initCarousel();
+  initScrollReveal();
+  initCardGlow();
+
   // Calendar navigation
   document.getElementById('calPrev')?.addEventListener('click', window.Calendar.prevMonth);
   document.getElementById('calNext')?.addEventListener('click', window.Calendar.nextMonth);
@@ -270,7 +403,7 @@ async function initApp() {
     window.Temples.filterTemples();
     if (window.TempleMap) window.TempleMap.filterMarkers(q, city);
   }
-  document.getElementById('searchBar')?.addEventListener('input', syncFilters);
+  document.getElementById('searchBar')?.addEventListener('input', debounce(syncFilters, 200));
   document.getElementById('cityFilter')?.addEventListener('change', syncFilters);
 
   // Theme toggle
@@ -278,6 +411,7 @@ async function initApp() {
 
   // Mobile nav
   document.getElementById('navHamburger')?.addEventListener('click', toggleMobileNav);
+  document.getElementById('navOverlay')?.addEventListener('click', closeMobileNav);
 
   // Location zip
   document.getElementById('locChangeBtn')?.addEventListener('click', toggleZipPanel);
