@@ -301,22 +301,7 @@ function calculateParana(ekadashi, loc) {
  * @returns {Array<{ date: Date, name: string, paksha: string }>}
  */
 function computeEkadashiDates(yearStart, yearEnd, loc) {
-  // Use verified drikpanchang data for known years (Pacific timezone)
-  let allHardcoded = true;
-  for (let y = yearStart; y <= yearEnd; y++) {
-    if (!EKADASHI_DATA[y]) { allHardcoded = false; break; }
-  }
-  if (allHardcoded) {
-    const results = [];
-    for (let y = yearStart; y <= yearEnd; y++) {
-      for (const [m, d, name, paksha] of EKADASHI_DATA[y]) {
-        results.push({ date: new Date(Date.UTC(y, m, d)), name, paksha });
-      }
-    }
-    return results;
-  }
-
-  // Fallback: astronomical algorithm for years without hardcoded data
+  // Always use astronomical algorithm based on user's location (sunrise-based tithi)
   const results = [];
   const jdStart = toJD(yearStart, 1, 1) - 1;
   const jdEnd = toJD(yearEnd, 12, 31) + 2;
@@ -387,107 +372,133 @@ function computeEkadashiDates(yearStart, yearEnd, loc) {
 const EK_KATHAS = {
   'Pausha Putrada Ekadashi': {
     summary: 'King Suketumaan of Bhadravati had no heir. On Lord Vishnu\'s advice, he observed this Ekadashi with full devotion and was blessed with a worthy son. This vrat is especially recommended for those desiring virtuous progeny.',
-    scripture: 'Bhavishya Purana'
+    scripture: 'Bhavishya Purana',
+    videoId: '3TPK0tftAoU'
   },
   'Shattila Ekadashi': {
     summary: 'Named for the six sacred uses of sesame (til) in its observance. A devoted Brahmin woman accumulated spiritual merit but neglected charity to others. Lord Vishnu taught her the importance of generous giving through this vrat.',
-    scripture: 'Bhavishya Uttara Purana'
+    scripture: 'Bhavishya Uttara Purana',
+    videoId: 'KtdNdecLWas'
   },
   'Jaya Ekadashi': {
     summary: 'Two celestial beings, Malyavan and Pushpavati, were cursed by Indra to be born as demons after they were found lost in each other\'s company. Observing this Ekadashi freed them from the curse and restored their divine forms.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: '7bQ8DjFAcUg'
   },
   'Vijaya Ekadashi': {
     summary: 'When Lord Rama was preparing to cross the ocean to Lanka, sage Bakadalbhya advised Him to observe this Ekadashi to ensure victory. Lord Rama followed the counsel, and the vrat granted Him triumph over Ravana.',
-    scripture: 'Skanda Purana'
+    scripture: 'Skanda Purana',
+    videoId: 'aZiukR99uH8'
   },
   'Amalaki Ekadashi': {
     summary: 'Named after the sacred Amla tree. King Chaitraratha worshipped Lord Vishnu beneath an Amla tree on this day. A hunter resting nearby unknowingly participated in the worship and was also liberated from his accumulated sins.',
-    scripture: 'Brahmanda Purana'
+    scripture: 'Brahmanda Purana',
+    videoId: 'XHIQMMnyAgw'
   },
   'Papamochani Ekadashi': {
     summary: 'The apsara Manjughosha and sage Medhavi developed an attachment that disrupted his penance. Sage Chyavana cursed them both, but revealed that observing this Ekadashi would destroy even the gravest of sins and free them.',
-    scripture: 'Bhavishya Uttara Purana'
+    scripture: 'Bhavishya Uttara Purana',
+    videoId: 'FlK1SUKlE4w'
   },
   'Kamada Ekadashi': {
     summary: 'A celestial musician named Lalit was cursed to become a fearsome demon. His devoted wife Lalita, unwavering in her love, observed this Ekadashi with complete faith. The accumulated merit freed Lalit from his terrible curse.',
-    scripture: 'Varaha Purana'
+    scripture: 'Varaha Purana',
+    videoId: 'LUJtB4K7SSA'
   },
   'Varuthini Ekadashi': {
     summary: 'This Ekadashi bestows merit equivalent to donating elephants, horses, and gold. King Mandhata observed this sacred vrat and attained imperishable virtue that protected his kingdom and ensured prosperity for generations.',
-    scripture: 'Bhavishya Purana'
+    scripture: 'Bhavishya Purana',
+    videoId: 'acHs_T1LpmE'
   },
   'Mohini Ekadashi': {
     summary: 'Named after Lord Vishnu\'s Mohini avatar. A merchant named Dhanapala had a wayward son who had fallen into terrible sins through bad company. By observing this Ekadashi, all his misdeeds were absolved and his soul was elevated.',
-    scripture: 'Surya Purana'
+    scripture: 'Surya Purana',
+    videoId: 'yTU_BWF0fsw'
   },
   'Apara Ekadashi': {
     summary: 'The merit of this Ekadashi equals bathing in all holy rivers and performing every sacred ritual. Even visiting Kurukshetra during a solar eclipse cannot compare to the spiritual fruit gained by faithfully observing this day.',
-    scripture: 'Brahmanda Purana'
+    scripture: 'Brahmanda Purana',
+    videoId: 'ZfnLUwOtgDA'
   },
   'Nirjala Ekadashi': {
     summary: 'The most austere of all Ekadashis, observed without even water. Bhimasena, who loved food and could not fast on every Ekadashi, was advised by sage Vyasa to observe just this one strictly to gain the combined merit of all twenty-four Ekadashis.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: '-sfdjS-pfFs'
   },
   'Yogini Ekadashi': {
     summary: 'A gardener named Hemamali neglected his sacred duties serving flowers to Lord Vishnu because of attachment to his wife. He was cursed with leprosy and terrible suffering. Observing this Ekadashi vrat cured him completely.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'XfuXOZJ-YwM'
   },
   'Devshayani Ekadashi': {
     summary: 'This day marks the beginning of Chaturmas, when Lord Vishnu enters His cosmic sleep on the serpent Shesha. King Mandhata learned that observing this Ekadashi ensures divine protection and prosperity during the four sacred months.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: 'RCuDAJEnGKY'
   },
   'Kamika Ekadashi': {
     summary: 'Even the merit of donating an umbrella and sandals to a Brahmin during scorching summer cannot equal observing this vrat. This Ekadashi is especially dear to Lord Vishnu and attracts His eternal blessings upon the devotee.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'ClfqEVXDC2M'
   },
   'Shravana Putrada Ekadashi': {
     summary: 'The King of Mahishmati and his queen had no heir despite ruling a prosperous kingdom. They observed this sacred Ekadashi with unwavering devotion and faith, and were blessed with a noble and virtuous son.',
-    scripture: 'Bhavishya Purana'
+    scripture: 'Bhavishya Purana',
+    videoId: 'Fs2SnHz3Cak'
   },
   'Aja Ekadashi': {
     summary: 'When the righteous King Harishchandra lost his kingdom, family, and everything through a series of devastating trials, sage Gautama compassionately advised him to observe this Ekadashi. Its merit restored all that he had lost.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: 'rrrNUx63qO4'
   },
   'Parsva Ekadashi': {
     summary: 'Also known as Parivartini Ekadashi, marking when Lord Vishnu turns in His cosmic sleep. King Ambarisha observed this vrat with such profound devotion that Lord Vishnu Himself appeared to protect him from the wrath of sage Durvasa.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'dJWP-H44-nE'
   },
   'Indira Ekadashi': {
     summary: 'King Indrasena\'s deceased father appeared to him in a dream, suffering in a lower realm and pleading for liberation. By observing this Ekadashi and dedicating its merit, the king elevated his father to the heavenly realms.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'XZGv9OD1NAo'
   },
   'Papankusha Ekadashi': {
     summary: 'Like a divine hook (ankusha) that pulls devotees from the ocean of sins (papa). Observing this Ekadashi frees the devotee from all fear of Yamaraja, the lord of death, and opens the path to Lord Vishnu\'s supreme abode.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'aRNY-6v_Hts'
   },
   'Rama Ekadashi': {
     summary: 'The name means "delightful" and is not related to Lord Rama. A pious Brahmin\'s wife Chandrabali unknowingly committed a transgression that brought great sin upon the family. Observing this Ekadashi absolved them all completely.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: 'gpm6re0R49Q'
   },
   'Devutthana Ekadashi': {
     summary: 'This joyous day marks Lord Vishnu\'s awakening from His four-month cosmic sleep. It is one of the most auspicious days in the Hindu calendar for weddings and new ventures, as the Lord resumes His active protection of the universe.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: '9GWn7EcCdQ0'
   },
   'Utpanna Ekadashi': {
     summary: 'This Ekadashi celebrates the origin of all Ekadashis. When the demon Mura threatened the cosmos, a radiant feminine power manifested from Lord Vishnu and vanquished the demon. She became Ekadashi Devi, and all Ekadashis are observed in her honor.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: '8_W8XdWzIpM'
   },
   'Mokshada Ekadashi': {
     summary: 'King Vaikhanasa was deeply troubled because his departed father was suffering in a lower realm. Lord Krishna advised him that observing this Ekadashi and offering its merit could grant liberation (moksha) to departed ancestors.',
-    scripture: 'Brahmanda Purana'
+    scripture: 'Brahmanda Purana',
+    videoId: 'BudvvUGN2Uw'
   },
   'Saphala Ekadashi': {
     summary: 'A prince named Lumpaka led a sinful life and was banished by his father. Forced to sleep beneath a sacred tree on this Ekadashi night, he unknowingly observed the vrat. This transformed his destiny and led him toward righteousness.',
-    scripture: 'Brahma Vaivarta Purana'
+    scripture: 'Brahma Vaivarta Purana',
+    videoId: '_xyCU5HgBs4'
   },
   'Padmini Ekadashi': {
     summary: 'This rare Ekadashi occurs only during Adhik Maas (the extra lunar month). Observing it carries extraordinary spiritual merit, as the extra month is considered Lord Vishnu\'s own special month, amplifying the power of all devotional practices.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: 'gH6egt2FfjE'
   },
   'Parama Ekadashi': {
     summary: 'Occurring only during the sacred Adhik Maas, this special Ekadashi bestows supreme spiritual merit. It is considered a rare and precious opportunity for devotees to earn exceptional divine grace during the extra lunar month.',
-    scripture: 'Padma Purana'
+    scripture: 'Padma Purana',
+    videoId: '-7XNU1jVMk8'
   }
 };
 
@@ -500,11 +511,88 @@ function showKatha(name) {
   const title = document.getElementById('tipTitle');
   const body = document.getElementById('tipBody');
   if (title) title.textContent = name;
+
+  const playBtn = katha.videoId
+    ? `<button class="ek-listen-btn" onclick="window.Ekadashi.playKatha('${name.replace(/'/g, "\\'")}')">`
+      + '\uD83C\uDFA7 Listen to Katha</button>'
+    : '';
+
   if (body) body.innerHTML = '<p>' + katha.summary + '</p>'
+    + playBtn
     + '<p style="margin-top:.75rem;font-size:.75rem;color:var(--text-muted);font-style:italic">'
     + '\uD83D\uDCDC Source: ' + katha.scripture + '</p>';
   const overlay = document.getElementById('tooltipOverlay');
   if (overlay) overlay.classList.add('show');
+}
+
+/**
+ * Play Ekadashi katha audio via the shared bhajan mini-player.
+ */
+function playKatha(name) {
+  const katha = EK_KATHAS[name];
+  if (!katha || !katha.videoId) return;
+
+  // Stop any currently playing bhajan first
+  if (document.body.classList.contains('bhajan-playing')) {
+    window.DailyBhajan.closeMiniPlayer();
+  }
+
+  const container = document.getElementById('bhajanMiniPlayer');
+  if (!container) return;
+
+  // Update header info
+  const deityEl = document.getElementById('bhajanPlayerDeity');
+  const titleEl = document.getElementById('bhajanPlayerTitle');
+  const fallback = document.getElementById('bhajanFallbackLink');
+  if (deityEl) deityEl.textContent = '\uD83D\uDCD6 Ekadashi Katha';
+  if (titleEl) titleEl.textContent = name;
+
+  const ytUrl = 'https://www.youtube.com/watch?v=' + katha.videoId;
+  if (fallback) fallback.href = ytUrl;
+
+  // Show the slim audio bar
+  container.classList.add('show', 'audio-only');
+  document.body.classList.add('bhajan-playing');
+
+  // Destroy previous YT player if any
+  if (window.DailyBhajan._ytPlayer) {
+    try { window.DailyBhajan._ytPlayer.destroy(); } catch (_) {}
+    window.DailyBhajan._ytPlayer = null;
+  }
+
+  const wrap = container.querySelector('.bmp-frame-wrap');
+  wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
+
+  function create() {
+    const p = new YT.Player('bhajanYTTarget', {
+      videoId: katha.videoId,
+      height: '1',
+      width: '1',
+      playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1, controls: 0, disablekb: 1 },
+      events: {
+        onReady: function (e) { e.target.playVideo(); },
+        onStateChange: function (e) { if (e.data === 0) window.DailyBhajan.closeMiniPlayer(); },
+        onError: function () { window.open(ytUrl, '_blank', 'noopener'); window.DailyBhajan.closeMiniPlayer(); }
+      }
+    });
+    window.DailyBhajan._ytPlayer = p;
+  }
+
+  if (window.YT && window.YT.Player) {
+    create();
+  } else {
+    // Load the API if not loaded yet
+    if (!document.getElementById('yt-iframe-api')) {
+      const tag = document.createElement('script');
+      tag.id = 'yt-iframe-api';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
+    const check = setInterval(() => {
+      if (window.YT && window.YT.Player) { clearInterval(check); create(); }
+    }, 100);
+    setTimeout(() => { clearInterval(check); }, 8000);
+  }
 }
 
 // Mutable cache — filled after location is known
@@ -614,5 +702,6 @@ window.Ekadashi = {
   renderEkadashi,
   recomputeEkadashi,
   showKatha,
+  playKatha,
   fmtDate
 };

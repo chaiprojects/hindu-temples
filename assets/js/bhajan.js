@@ -186,27 +186,43 @@ window.DailyBhajan = (() => {
     });
   }
 
+  // ── YouTube IFrame API loader ──────────────────────────────
+  let _ytAPIReady = false;
+  let _ytPlayer = null;
+  let _busy = false;
+
+  function loadYTAPI() {
+    if (_ytAPIReady || document.getElementById('yt-iframe-api')) return;
+    const tag = document.createElement('script');
+    tag.id = 'yt-iframe-api';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+  }
+
+  // Called automatically by the YouTube IFrame API
+  window.onYouTubeIframeAPIReady = function () {
+    _ytAPIReady = true;
+  };
+
   // ── In-page floating player ─────────────────────────────────
-  let _playing = false;
 
   function playBhajan() {
-    if (_playing) return;          // prevent double-tap
-    _playing = true;
+    if (_busy) return;
+    _busy = true;
 
-    const d = getTodaysDeity();
-    const player  = document.getElementById('bhajanMiniPlayer');
-    const iframe  = document.getElementById('bhajanYTIframe');
-    const fallback = document.getElementById('bhajanFallbackLink');
-    if (!player || !iframe) { _playing = false; return; }
-
-    // Toggle behavior: clicking Play again stops playback.
+    // Toggle: if already playing, stop
     if (document.body.classList.contains('bhajan-playing')) {
       closeMiniPlayer();
-      _playing = false;
+      _busy = false;
       return;
     }
 
-    // Add loading state to all play buttons
+    const d = getTodaysDeity();
+    const container = document.getElementById('bhajanMiniPlayer');
+    const fallback  = document.getElementById('bhajanFallbackLink');
+    if (!container) { _busy = false; return; }
+
+    // Loading state on all play buttons
     document.querySelectorAll('.rdm-play-btn, .bhajan-play-btn').forEach(btn => {
       btn.classList.add('loading');
       btn.disabled = true;
@@ -218,47 +234,92 @@ window.DailyBhajan = (() => {
     if (deityEl) deityEl.textContent = `${d.emoji} ${d.deity}`;
     if (titleEl) titleEl.textContent  = d.songTitle;
 
-    // Always provide a fallback link
     const ytFallbackUrl = `https://www.youtube.com/watch?v=${d.videoId}`;
     if (fallback) fallback.href = ytFallbackUrl;
 
-    // Handle iframe load / error
-    iframe.onload = function () {
-      syncPlayButtons(true);
-    };
-
-    // Timeout fallback — if iframe doesn't load within 8s, open YouTube directly
-    const loadTimeout = setTimeout(() => {
-      syncPlayButtons(false);
-      if (!player.classList.contains('show')) {
-        window.open(ytFallbackUrl, '_blank', 'noopener');
-      }
-    }, 8000);
-
-    iframe.addEventListener('load', () => clearTimeout(loadTimeout), { once: true });
-
-    // Set iframe src — triggered by user click, so autoplay is allowed
-    iframe.src = `https://www.youtube.com/embed/${d.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
-
-    // Show player
-    player.classList.add('show');
+    // Show the slim audio bar
+    container.classList.add('show', 'audio-only');
     document.body.classList.add('bhajan-playing');
-    syncPlayButtons(true);
 
-    // Re-enable play after brief delay
-    setTimeout(() => { _playing = false; }, 1000);
+    // Destroy previous player if any
+    if (_ytPlayer) {
+      try { _ytPlayer.destroy(); } catch (_) {}
+      _ytPlayer = null;
+    }
+
+    // Ensure the target div exists inside the frame wrapper
+    const wrap = container.querySelector('.bmp-frame-wrap');
+    wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
+
+    function createPlayer() {
+      _ytPlayer = new YT.Player('bhajanYTTarget', {
+        videoId: d.videoId,
+        height: '1',
+        width: '1',
+        playerVars: {
+          autoplay: 1,
+          playsinline: 1,
+          rel: 0,
+          modestbranding: 1,
+          controls: 0,
+          disablekb: 1
+        },
+        events: {
+          onReady: function (e) {
+            e.target.playVideo();
+            syncPlayButtons(true);
+            _busy = false;
+          },
+          onStateChange: function (e) {
+            // YT.PlayerState.ENDED === 0
+            if (e.data === 0) {
+              closeMiniPlayer();
+            }
+          },
+          onError: function () {
+            // Fallback: open YouTube in new tab
+            closeMiniPlayer();
+            window.open(ytFallbackUrl, '_blank', 'noopener');
+            _busy = false;
+          }
+        }
+      });
+    }
+
+    // If API is loaded, create player immediately; otherwise wait
+    if (_ytAPIReady) {
+      createPlayer();
+    } else {
+      loadYTAPI();
+      const check = setInterval(() => {
+        if (_ytAPIReady) {
+          clearInterval(check);
+          createPlayer();
+        }
+      }, 100);
+      // Timeout after 8s
+      setTimeout(() => {
+        if (!_ytAPIReady) {
+          clearInterval(check);
+          closeMiniPlayer();
+          window.open(ytFallbackUrl, '_blank', 'noopener');
+          _busy = false;
+        }
+      }, 8000);
+    }
   }
 
   function closeMiniPlayer() {
-    const player = document.getElementById('bhajanMiniPlayer');
-    const iframe  = document.getElementById('bhajanYTIframe');
-    if (player) {
-      player.classList.remove('show');
-      player.classList.remove('audio-only');
+    const container = document.getElementById('bhajanMiniPlayer');
+    if (container) {
+      container.classList.remove('show', 'audio-only');
     }
     document.body.classList.remove('bhajan-playing');
-    // Stop playback & free resources
-    if (iframe) iframe.src = '';
+    // Stop and destroy the YT player
+    if (_ytPlayer) {
+      try { _ytPlayer.stopVideo(); _ytPlayer.destroy(); } catch (_) {}
+      _ytPlayer = null;
+    }
     syncPlayButtons(false);
   }
 
@@ -295,6 +356,10 @@ window.DailyBhajan = (() => {
     return n.toLocaleString();
   }
 
-  return { render, renderMiniInWidget, loadVisitCount, playBhajan, closeMiniPlayer };
+  return {
+    render, renderMiniInWidget, loadVisitCount, playBhajan, closeMiniPlayer,
+    get _ytPlayer() { return _ytPlayer; },
+    set _ytPlayer(v) { _ytPlayer = v; }
+  };
 
 })();
