@@ -532,71 +532,13 @@ function playKatha(name) {
   const katha = EK_KATHAS[name];
   if (!katha || !katha.videoId) return;
 
-  // Stop any currently playing bhajan first
+  // Stop any currently playing audio first
   if (document.body.classList.contains('bhajan-playing')) {
     window.DailyBhajan.closeMiniPlayer();
   }
 
-  const container = document.getElementById('bhajanMiniPlayer');
-  if (!container) return;
-
-  // Update header info
-  const deityEl = document.getElementById('bhajanPlayerDeity');
-  const titleEl = document.getElementById('bhajanPlayerTitle');
-  const fallback = document.getElementById('bhajanFallbackLink');
-  if (deityEl) deityEl.textContent = '\uD83D\uDCD6 Ekadashi Katha';
-  if (titleEl) titleEl.textContent = name;
-
-  const ytUrl = 'https://www.youtube.com/watch?v=' + katha.videoId;
-  if (fallback) fallback.href = ytUrl;
-
-  // Show the slim audio bar
-  container.classList.add('show', 'audio-only');
-  document.body.classList.add('bhajan-playing');
-
-  // Destroy previous YT player if any
-  if (window.DailyBhajan._ytPlayer) {
-    try { window.DailyBhajan._ytPlayer.destroy(); } catch (_) {}
-    window.DailyBhajan._ytPlayer = null;
-  }
-
-  const wrap = container.querySelector('.bmp-frame-wrap');
-  const bar = container.querySelector('.bmp-bar');
-  if (bar && wrap.parentNode !== bar) {
-    bar.insertBefore(wrap, bar.firstChild);
-  }
-  wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
-
-  function create() {
-    const p = new YT.Player('bhajanYTTarget', {
-      videoId: katha.videoId,
-      height: '48',
-      width: '64',
-      playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1, controls: 0, disablekb: 1 },
-      events: {
-        onReady: function (e) { e.target.playVideo(); },
-        onStateChange: function (e) { if (e.data === 0) window.DailyBhajan.closeMiniPlayer(); },
-        onError: function () { window.open(ytUrl, '_blank', 'noopener'); window.DailyBhajan.closeMiniPlayer(); }
-      }
-    });
-    window.DailyBhajan._ytPlayer = p;
-  }
-
-  if (window.YT && window.YT.Player) {
-    create();
-  } else {
-    // Load the API if not loaded yet
-    if (!document.getElementById('yt-iframe-api')) {
-      const tag = document.createElement('script');
-      tag.id = 'yt-iframe-api';
-      tag.src = 'https://www.youtube.com/iframe_api';
-      document.head.appendChild(tag);
-    }
-    const check = setInterval(() => {
-      if (window.YT && window.YT.Player) { clearInterval(check); create(); }
-    }, 100);
-    setTimeout(() => { clearInterval(check); }, 8000);
-  }
+  // Reuse the shared player from bhajan module
+  window.DailyBhajan._startPlayer(katha.videoId, '\uD83D\uDCD6 Ekadashi Katha', name);
 }
 
 // Mutable cache — filled after location is known

@@ -186,150 +186,71 @@ window.DailyBhajan = (() => {
     });
   }
 
-  // ── YouTube IFrame API loader ──────────────────────────────
-  let _ytAPIReady = false;
-  let _ytPlayer = null;
-  let _busy = false;
-
-  function loadYTAPI() {
-    if (_ytAPIReady || document.getElementById('yt-iframe-api')) return;
-    const tag = document.createElement('script');
-    tag.id = 'yt-iframe-api';
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.head.appendChild(tag);
-  }
-
-  // Called automatically by the YouTube IFrame API
-  window.onYouTubeIframeAPIReady = function () {
-    _ytAPIReady = true;
-  };
-
-  // ── In-page floating player ─────────────────────────────────
+  // ── In-page floating player (simple iframe — no YT API, no popups) ──
 
   function playBhajan() {
-    if (_busy) return;
-    _busy = true;
-
     // Toggle: if already playing, stop
     if (document.body.classList.contains('bhajan-playing')) {
       closeMiniPlayer();
-      _busy = false;
       return;
     }
 
     const d = getTodaysDeity();
+    _startPlayer(d.videoId, `${d.emoji} ${d.deity}`, d.songTitle);
+  }
+
+  /**
+   * Shared player: creates a visible YouTube iframe inside the floating bar.
+   * Works on iOS because the iframe is visible and user-gesture-triggered.
+   */
+  function _startPlayer(videoId, deityLabel, songTitle) {
     const container = document.getElementById('bhajanMiniPlayer');
     const fallback  = document.getElementById('bhajanFallbackLink');
-    if (!container) { _busy = false; return; }
-
-    // Loading state on all play buttons
-    document.querySelectorAll('.rdm-play-btn, .bhajan-play-btn').forEach(btn => {
-      btn.classList.add('loading');
-      btn.disabled = true;
-    });
+    if (!container) return;
 
     // Update header info
     const deityEl = document.getElementById('bhajanPlayerDeity');
     const titleEl = document.getElementById('bhajanPlayerTitle');
-    if (deityEl) deityEl.textContent = `${d.emoji} ${d.deity}`;
-    if (titleEl) titleEl.textContent  = d.songTitle;
+    if (deityEl) deityEl.textContent = deityLabel;
+    if (titleEl) titleEl.textContent = songTitle;
+    if (fallback) fallback.href = `https://www.youtube.com/watch?v=${videoId}`;
 
-    const ytFallbackUrl = `https://www.youtube.com/watch?v=${d.videoId}`;
-    if (fallback) fallback.href = ytFallbackUrl;
-
-    // Show the slim audio bar
-    container.classList.add('show', 'audio-only');
-    document.body.classList.add('bhajan-playing');
-
-    // Destroy previous player if any
-    if (_ytPlayer) {
-      try { _ytPlayer.destroy(); } catch (_) {}
-      _ytPlayer = null;
-    }
-
-    // Move frame wrapper inside the bar (small thumbnail for iOS visibility)
+    // Move frame wrapper inside the bar as a small thumbnail
     const wrap = container.querySelector('.bmp-frame-wrap');
     const bar = container.querySelector('.bmp-bar');
     if (bar && wrap.parentNode !== bar) {
       bar.insertBefore(wrap, bar.firstChild);
     }
-    wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
 
-    function createPlayer() {
-      _ytPlayer = new YT.Player('bhajanYTTarget', {
-        videoId: d.videoId,
-        height: '48',
-        width: '64',
-        playerVars: {
-          autoplay: 1,
-          playsinline: 1,
-          rel: 0,
-          modestbranding: 1,
-          controls: 0,
-          disablekb: 1
-        },
-        events: {
-          onReady: function (e) {
-            e.target.playVideo();
-            syncPlayButtons(true);
-            _busy = false;
-          },
-          onStateChange: function (e) {
-            // YT.PlayerState.ENDED === 0
-            if (e.data === 0) {
-              closeMiniPlayer();
-            }
-          },
-          onError: function () {
-            // Fallback: open YouTube in new tab
-            closeMiniPlayer();
-            window.open(ytFallbackUrl, '_blank', 'noopener');
-            _busy = false;
-          }
-        }
-      });
-    }
+    // Create a plain iframe — no API, no popups, just embed + autoplay
+    wrap.innerHTML = `<iframe
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      frameborder="0"
+      title="${songTitle}"
+      style="width:64px;height:48px;border:none;">
+    </iframe>`;
 
-    // If API is loaded, create player immediately; otherwise wait
-    if (_ytAPIReady) {
-      createPlayer();
-    } else {
-      loadYTAPI();
-      const check = setInterval(() => {
-        if (_ytAPIReady) {
-          clearInterval(check);
-          createPlayer();
-        }
-      }, 100);
-      // Timeout after 8s
-      setTimeout(() => {
-        if (!_ytAPIReady) {
-          clearInterval(check);
-          closeMiniPlayer();
-          window.open(ytFallbackUrl, '_blank', 'noopener');
-          _busy = false;
-        }
-      }, 8000);
-    }
+    // Show the bar
+    container.classList.add('show', 'audio-only');
+    document.body.classList.add('bhajan-playing');
+    syncPlayButtons(true);
   }
 
   function closeMiniPlayer() {
     const container = document.getElementById('bhajanMiniPlayer');
     if (container) {
       container.classList.remove('show', 'audio-only');
-      // Move frame wrapper back to its original position (after the bar)
+      // Move frame wrapper back and clear iframe
       const wrap = container.querySelector('.bmp-frame-wrap');
       const bar = container.querySelector('.bmp-bar');
       if (wrap && bar && wrap.parentNode === bar) {
         container.appendChild(wrap);
       }
+      if (wrap) wrap.innerHTML = '';
     }
     document.body.classList.remove('bhajan-playing');
-    // Stop and destroy the YT player
-    if (_ytPlayer) {
-      try { _ytPlayer.stopVideo(); _ytPlayer.destroy(); } catch (_) {}
-      _ytPlayer = null;
-    }
     syncPlayButtons(false);
   }
 
@@ -366,10 +287,6 @@ window.DailyBhajan = (() => {
     return n.toLocaleString();
   }
 
-  return {
-    render, renderMiniInWidget, loadVisitCount, playBhajan, closeMiniPlayer,
-    get _ytPlayer() { return _ytPlayer; },
-    set _ytPlayer(v) { _ytPlayer = v; }
-  };
+  return { render, renderMiniInWidget, loadVisitCount, playBhajan, closeMiniPlayer, _startPlayer };
 
 })();
