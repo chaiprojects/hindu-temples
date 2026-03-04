@@ -186,28 +186,40 @@ window.DailyBhajan = (() => {
     });
   }
 
+  // ── YouTube IFrame API ──────────────────────────────────────
+  // Loaded eagerly so it's ready when user clicks Play.
+  let _ytReady = false;
+  let _ytPlayer = null;
+
+  (function loadYTAPI() {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+  })();
+
+  window.onYouTubeIframeAPIReady = function () { _ytReady = true; };
+
   // ── In-page floating mini-player ────────────────────────────
-  // Shows a compact YouTube embed with controls.
-  // Desktop: autoplay works. iOS: user taps the YouTube play button once.
+  // iOS autoplay trick: start muted (allowed), then unmute via API.
 
   function playBhajan() {
-    // Toggle: if already playing, stop
     if (document.body.classList.contains('bhajan-playing')) {
       closeMiniPlayer();
       return;
     }
-
     const d = getTodaysDeity();
     _startPlayer(d.videoId, `${d.emoji} ${d.deity}`, d.songTitle);
   }
 
-  /**
-   * Shared player: shows floating mini-player with YouTube embed.
-   */
   function _startPlayer(videoId, deityLabel, songTitle) {
     const container = document.getElementById('bhajanMiniPlayer');
     const fallback  = document.getElementById('bhajanFallbackLink');
     if (!container) return;
+
+    // If something is already playing, stop it first
+    if (document.body.classList.contains('bhajan-playing')) {
+      closeMiniPlayer();
+    }
 
     // Update header info
     const deityEl = document.getElementById('bhajanPlayerDeity');
@@ -216,20 +228,54 @@ window.DailyBhajan = (() => {
     if (titleEl) titleEl.textContent = songTitle;
     if (fallback) fallback.href = `https://www.youtube.com/watch?v=${videoId}`;
 
-    // Set iframe src with autoplay (works on desktop, shows play button on iOS)
+    // Prepare target div for YT player
     const wrap = container.querySelector('.bmp-frame-wrap');
-    wrap.innerHTML = `<iframe
-      src="https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1&controls=1"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      frameborder="0"
-      title="${songTitle}">
-    </iframe>`;
+    wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
 
     // Show the mini-player
     container.classList.add('show');
     document.body.classList.add('bhajan-playing');
     syncPlayButtons(true);
+
+    function createPlayer() {
+      if (_ytPlayer) {
+        try { _ytPlayer.destroy(); } catch (_) {}
+        _ytPlayer = null;
+      }
+      _ytPlayer = new YT.Player('bhajanYTTarget', {
+        videoId: videoId,
+        playerVars: {
+          autoplay: 1,
+          mute: 1,          // iOS requires muted for autoplay
+          playsinline: 1,
+          rel: 0,
+          modestbranding: 1,
+          controls: 1
+        },
+        events: {
+          onReady: function (e) {
+            e.target.playVideo();
+            // Unmute after a short delay — iOS allows this once playback starts
+            setTimeout(function () {
+              e.target.unMute();
+              e.target.setVolume(100);
+            }, 500);
+          },
+          onStateChange: function (e) {
+            if (e.data === 0) closeMiniPlayer(); // ended
+          }
+        }
+      });
+    }
+
+    if (_ytReady) {
+      createPlayer();
+    } else {
+      // Wait for API to load (should be fast since we preloaded it)
+      const t = setInterval(function () {
+        if (_ytReady) { clearInterval(t); createPlayer(); }
+      }, 100);
+    }
   }
 
   function closeMiniPlayer() {
@@ -240,6 +286,10 @@ window.DailyBhajan = (() => {
       if (wrap) wrap.innerHTML = '';
     }
     document.body.classList.remove('bhajan-playing');
+    if (_ytPlayer) {
+      try { _ytPlayer.destroy(); } catch (_) {}
+      _ytPlayer = null;
+    }
     syncPlayButtons(false);
   }
 
