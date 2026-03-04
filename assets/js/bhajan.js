@@ -186,7 +186,9 @@ window.DailyBhajan = (() => {
     });
   }
 
-  // ── In-page floating player (simple iframe — no YT API, no popups) ──
+  // ── In-page floating mini-player ────────────────────────────
+  // Shows a compact YouTube embed with controls.
+  // Desktop: autoplay works. iOS: user taps the YouTube play button once.
 
   function playBhajan() {
     // Toggle: if already playing, stop
@@ -200,8 +202,7 @@ window.DailyBhajan = (() => {
   }
 
   /**
-   * Shared player: creates a visible YouTube iframe inside the floating bar.
-   * Works on iOS because the iframe is visible and user-gesture-triggered.
+   * Shared player: shows floating mini-player with YouTube embed.
    */
   function _startPlayer(videoId, deityLabel, songTitle) {
     const container = document.getElementById('bhajanMiniPlayer');
@@ -215,25 +216,18 @@ window.DailyBhajan = (() => {
     if (titleEl) titleEl.textContent = songTitle;
     if (fallback) fallback.href = `https://www.youtube.com/watch?v=${videoId}`;
 
-    // Move frame wrapper inside the bar as a small thumbnail
+    // Set iframe src with autoplay (works on desktop, shows play button on iOS)
     const wrap = container.querySelector('.bmp-frame-wrap');
-    const bar = container.querySelector('.bmp-bar');
-    if (bar && wrap.parentNode !== bar) {
-      bar.insertBefore(wrap, bar.firstChild);
-    }
-
-    // Create a plain iframe — no API, no popups, just embed + autoplay
     wrap.innerHTML = `<iframe
-      src="https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1"
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1&controls=1"
       allow="autoplay; encrypted-media"
       allowfullscreen
       frameborder="0"
-      title="${songTitle}"
-      style="width:64px;height:48px;border:none;">
+      title="${songTitle}">
     </iframe>`;
 
-    // Show the bar
-    container.classList.add('show', 'audio-only');
+    // Show the mini-player
+    container.classList.add('show');
     document.body.classList.add('bhajan-playing');
     syncPlayButtons(true);
   }
@@ -241,13 +235,8 @@ window.DailyBhajan = (() => {
   function closeMiniPlayer() {
     const container = document.getElementById('bhajanMiniPlayer');
     if (container) {
-      container.classList.remove('show', 'audio-only');
-      // Move frame wrapper back and clear iframe
+      container.classList.remove('show');
       const wrap = container.querySelector('.bmp-frame-wrap');
-      const bar = container.querySelector('.bmp-bar');
-      if (wrap && bar && wrap.parentNode === bar) {
-        container.appendChild(wrap);
-      }
       if (wrap) wrap.innerHTML = '';
     }
     document.body.classList.remove('bhajan-playing');

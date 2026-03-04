@@ -2327,39 +2327,6 @@ main {
   bottom: 0;
 }
 
-/* Audio-only: float above the bottom edge */
-.bhajan-mini-player.show.audio-only {
-  bottom: 1.5rem;
-}
-
-/* Audio-only mode: show video as small thumbnail in bar (iOS requires visible player for autoplay). */
-.bhajan-mini-player.audio-only .bmp-frame-wrap {
-  width: 48px;
-  height: 36px;
-  overflow: hidden;
-  border-radius: 6px;
-  flex-shrink: 0;
-  background: #000;
-  line-height: 0;
-}
-
-.bhajan-mini-player.audio-only .bmp-frame-wrap iframe,
-.bhajan-mini-player.audio-only .bmp-frame-wrap div {
-  width: 64px;
-  height: 48px;
-  margin: -6px 0 0 -8px;
-}
-
-/* Audio-only: rearrange bar to include thumbnail */
-.bhajan-mini-player.audio-only .bmp-bar {
-  flex-wrap: nowrap;
-}
-
-/* Audio-only: slim bar with rounded corners */
-.bhajan-mini-player.audio-only {
-  border-radius: 14px;
-}
-
 /* ── Header bar ── */
 .bmp-bar {
   display: flex;
@@ -2498,14 +2465,6 @@ main {
 
   .bmp-frame-wrap iframe {
     height: calc(56.25vw); /* maintain 16:9 */
-  }
-
-  /* Audio-only: slim floating bar on mobile */
-  .bhajan-mini-player.audio-only {
-    width: calc(100% - 2rem);
-    left: 1rem;
-    right: 1rem;
-    border-radius: 14px;
   }
 
   /* Hide back-to-top while player is showing on mobile */
