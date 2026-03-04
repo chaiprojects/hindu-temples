@@ -2332,14 +2332,27 @@ main {
   bottom: 1.5rem;
 }
 
-/* Audio-only mode: keep YT player in DOM but invisible (display:none kills playback). */
+/* Audio-only mode: show video as small thumbnail in bar (iOS requires visible player for autoplay). */
 .bhajan-mini-player.audio-only .bmp-frame-wrap {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 48px;
+  height: 36px;
   overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #000;
+  line-height: 0;
+}
+
+.bhajan-mini-player.audio-only .bmp-frame-wrap iframe,
+.bhajan-mini-player.audio-only .bmp-frame-wrap div {
+  width: 64px;
+  height: 48px;
+  margin: -6px 0 0 -8px;
+}
+
+/* Audio-only: rearrange bar to include thumbnail */
+.bhajan-mini-player.audio-only .bmp-bar {
+  flex-wrap: nowrap;
 }
 
 /* Audio-only: slim bar with rounded corners */

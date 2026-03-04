@@ -247,15 +247,19 @@ window.DailyBhajan = (() => {
       _ytPlayer = null;
     }
 
-    // Ensure the target div exists inside the frame wrapper
+    // Move frame wrapper inside the bar (small thumbnail for iOS visibility)
     const wrap = container.querySelector('.bmp-frame-wrap');
+    const bar = container.querySelector('.bmp-bar');
+    if (bar && wrap.parentNode !== bar) {
+      bar.insertBefore(wrap, bar.firstChild);
+    }
     wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
 
     function createPlayer() {
       _ytPlayer = new YT.Player('bhajanYTTarget', {
         videoId: d.videoId,
-        height: '1',
-        width: '1',
+        height: '48',
+        width: '64',
         playerVars: {
           autoplay: 1,
           playsinline: 1,
@@ -313,6 +317,12 @@ window.DailyBhajan = (() => {
     const container = document.getElementById('bhajanMiniPlayer');
     if (container) {
       container.classList.remove('show', 'audio-only');
+      // Move frame wrapper back to its original position (after the bar)
+      const wrap = container.querySelector('.bmp-frame-wrap');
+      const bar = container.querySelector('.bmp-bar');
+      if (wrap && bar && wrap.parentNode === bar) {
+        container.appendChild(wrap);
+      }
     }
     document.body.classList.remove('bhajan-playing');
     // Stop and destroy the YT player

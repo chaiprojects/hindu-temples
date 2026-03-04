@@ -561,13 +561,17 @@ function playKatha(name) {
   }
 
   const wrap = container.querySelector('.bmp-frame-wrap');
+  const bar = container.querySelector('.bmp-bar');
+  if (bar && wrap.parentNode !== bar) {
+    bar.insertBefore(wrap, bar.firstChild);
+  }
   wrap.innerHTML = '<div id="bhajanYTTarget"></div>';
 
   function create() {
     const p = new YT.Player('bhajanYTTarget', {
       videoId: katha.videoId,
-      height: '1',
-      width: '1',
+      height: '48',
+      width: '64',
       playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1, controls: 0, disablekb: 1 },
       events: {
         onReady: function (e) { e.target.playVideo(); },
