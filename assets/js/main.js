@@ -143,9 +143,34 @@ function submitZip() {
   onZipSubmit(document.getElementById('zipInput')?.value.trim() || '');
 }
 
+// ── Location cache — remember the resolved location so refreshes
+//    never re-hit the geolocation API (and never re-prompt). ──
+const LOC_CACHE_KEY = 'bay_temples_location';
+
+function saveLocationCache() {
+  try {
+    localStorage.setItem(LOC_CACHE_KEY, JSON.stringify({
+      lat: userLocation.lat,
+      lon: userLocation.lon,
+      label: userLocation.label,
+      source: userLocation.source,
+      ts: Date.now()
+    }));
+  } catch (_) { /* private mode etc. */ }
+}
+
+function loadLocationCache() {
+  try {
+    const c = JSON.parse(localStorage.getItem(LOC_CACHE_KEY) || 'null');
+    if (c && typeof c.lat === 'number' && typeof c.lon === 'number') return c;
+  } catch (_) { /* corrupt/unavailable */ }
+  return null;
+}
+
 // ── Apply location change — re-render everything ──
 function applyLocationChange() {
   showLocationBanner('located');
+  saveLocationCache();
   window.RahuKalam.renderRahuKalam(userLocation);
   window.Ekadashi.recomputeEkadashi(userLocation);
 }
@@ -221,6 +246,7 @@ async function onGeolocationSuccess(pos) {
   // Fire-and-forget reverse geocode
   fetchLocationLabel(pos.coords.latitude, pos.coords.longitude).then(label => {
     userLocation.label = label;
+    saveLocationCache();
     showLocationBanner('located');
   });
 }
@@ -421,8 +447,30 @@ async function initApp() {
   });
   document.getElementById('gpsRetryBtn')?.addEventListener('click', retryGPS);
 
-  // Start geolocation
-  if ('geolocation' in navigator) {
+  // Start location. A previously resolved location (GPS or zip) is
+  // reused from localStorage so refreshes never re-prompt for
+  // permission; geolocation is only queried silently in the
+  // background when permission is already granted.
+  const cachedLoc = loadLocationCache();
+  if (cachedLoc) {
+    userLocation.lat = cachedLoc.lat;
+    userLocation.lon = cachedLoc.lon;
+    userLocation.label = cachedLoc.label || userLocation.label;
+    userLocation.source = cachedLoc.source || 'cache';
+    userLocation.tzName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    applyLocationChange();
+    if (navigator.permissions?.query && 'geolocation' in navigator) {
+      navigator.permissions.query({ name: 'geolocation' }).then(p => {
+        if (p.state === 'granted') {
+          navigator.geolocation.getCurrentPosition(
+            onGeolocationSuccess,
+            () => { /* keep cached location */ },
+            { timeout: 8000, maximumAge: 300000 }
+          );
+        }
+      }).catch(() => { /* keep cached location */ });
+    }
+  } else if ('geolocation' in navigator) {
     showLocationBanner('loading');
     navigator.geolocation.getCurrentPosition(
       onGeolocationSuccess,
