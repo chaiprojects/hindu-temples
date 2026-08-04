@@ -444,15 +444,6 @@ window.DailyBhajan = (() => {
     return n.toLocaleString();
   }
 
-  // ── Auto-start today's bhajan on every page load ────────────
-  // Starts muted (browser autoplay rules allow that), then tries to
-  // unmute; if the browser blocks it, the Unmute chip appears.
-  document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function () {
-      if (!document.body.classList.contains('bhajan-playing')) playBhajan();
-    }, 800);
-  });
-
   return { render, renderMiniInWidget, loadVisitCount, playBhajan, nextBhajan, closeMiniPlayer, _startPlayer };
 
 })();

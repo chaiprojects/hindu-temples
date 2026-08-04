@@ -91,11 +91,12 @@ ekadashi → temples → map → calendar → bhajan → main.
 - **Song rotation**: a localStorage counter (`bhajan_song_idx`) increments on every
   page load; the song played is `songs[(counter + skip) % songs.length]`, so each
   refresh plays a different bhajan from that day's pool.
-- **Autoplay**: the bhajan auto-starts ~0.8 s after page load (muted — allowed by
-  browser autoplay policy — then attempts unmute). If the browser blocks the unmute,
-  the *first user interaction anywhere on the page* (tap/click/keypress, captured via
-  one-shot pointerdown/keydown/touchend listeners) switches sound on automatically;
-  a "🔊 Tap anywhere for sound" chip in the mini-player bar doubles as a visual cue.
+- **Play on demand**: the bhajan starts only when a ▶ Play button is clicked (no
+  autoplay on page load). Playback starts muted then unmutes immediately; if the
+  browser blocks the unmute, the *first user interaction anywhere on the page*
+  (tap/click/keypress, captured via one-shot pointerdown/keydown/touchend listeners)
+  switches sound on automatically; a "🔊 Tap anywhere for sound" chip in the
+  mini-player bar doubles as a visual cue.
 - **Error skip**: if a video is unavailable (YT `onError`), the player advances to the
   next song in the pool automatically.
 - Renders a full card in `#bhajan-card-wrap` and a mini widget (deity, mantra, current
