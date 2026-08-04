@@ -264,6 +264,17 @@ window.DailyBhajan = (() => {
     _startPlayer(s.v, `${d.emoji} ${d.deity}`, s.t);
   }
 
+  // Advance to the next song in today's pool without a page reload
+  function nextBhajan() {
+    _songSkip++;
+    const d = getTodaysDeity();
+    const s = getTodaysSong();
+    render();
+    renderMiniInWidget();
+    document.body.classList.remove('bhajan-playing');
+    _startPlayer(s.v, `${d.emoji} ${d.deity}`, s.t);
+  }
+
   function _startPlayer(videoId, deityLabel, songTitle) {
     const container = document.getElementById('bhajanMiniPlayer');
     const fallback  = document.getElementById('bhajanFallbackLink');
@@ -442,6 +453,6 @@ window.DailyBhajan = (() => {
     }, 800);
   });
 
-  return { render, renderMiniInWidget, loadVisitCount, playBhajan, closeMiniPlayer, _startPlayer };
+  return { render, renderMiniInWidget, loadVisitCount, playBhajan, nextBhajan, closeMiniPlayer, _startPlayer };
 
 })();

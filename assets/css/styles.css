@@ -2388,8 +2388,8 @@ main {
   border-color: var(--saffron);
 }
 
-/* Close button */
-.bmp-close {
+/* Close + next-song buttons */
+.bmp-close, .bmp-next {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2406,7 +2406,7 @@ main {
   transition: background 0.2s, color 0.2s;
 }
 
-.bmp-close:hover {
+.bmp-close:hover, .bmp-next:hover {
   background: rgba(232, 130, 26, 0.15);
   color: var(--text-primary);
 }

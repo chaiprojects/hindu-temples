@@ -267,6 +267,61 @@ function retryGPS() {
   });
 }
 
+// ── Pull-to-refresh (home-screen app only) ──
+// iOS standalone web apps have no reload button and no native
+// pull-to-refresh; restore the gesture here. In-browser visits keep
+// the browser's own behavior, so this activates only in standalone.
+function initPullToRefresh() {
+  const standalone = window.matchMedia('(display-mode: standalone)').matches ||
+                     window.navigator.standalone === true;
+  if (!standalone) return;
+
+  const THRESHOLD = 75;
+  let startY = null, pulling = false, indicator = null;
+
+  function getIndicator() {
+    if (!indicator) {
+      indicator = document.createElement('div');
+      indicator.style.cssText =
+        'position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:9999;' +
+        'background:var(--bg-card,#fff);color:var(--text-primary,#333);' +
+        'padding:.45rem .95rem;border-radius:999px;box-shadow:0 2px 14px rgba(0,0,0,.25);' +
+        'font-size:.8rem;font-weight:600;opacity:0;transition:opacity .15s;pointer-events:none';
+      document.body.appendChild(indicator);
+    }
+    return indicator;
+  }
+
+  document.addEventListener('touchstart', e => {
+    pulling = window.scrollY <= 0 && e.touches.length === 1;
+    startY = pulling ? e.touches[0].clientY : null;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', e => {
+    if (!pulling || startY === null) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy > 20 && window.scrollY <= 0) {
+      const ind = getIndicator();
+      const ready = dy > THRESHOLD;
+      ind.textContent = ready ? '↻ Release to refresh' : '↓ Pull to refresh';
+      ind.style.opacity = '1';
+      ind.dataset.ready = ready ? '1' : '';
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (pulling && indicator && indicator.dataset.ready === '1') {
+      indicator.textContent = '↻ Refreshing…';
+      location.reload();
+    } else if (indicator) {
+      indicator.style.opacity = '0';
+      indicator.dataset.ready = '';
+    }
+    pulling = false;
+    startY = null;
+  }, { passive: true });
+}
+
 // ── Debounce Utility ──
 function debounce(fn, ms) {
   let timer;
@@ -480,6 +535,9 @@ async function initApp() {
   } else {
     showLocationBanner('prompt');
   }
+
+  // Pull-to-refresh gesture for the home-screen app
+  initPullToRefresh();
 
   // Start Ekadashi computation (deferred)
   window.Ekadashi.recomputeEkadashi(userLocation);
