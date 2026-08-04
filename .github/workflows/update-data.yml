@@ -1,0 +1,58 @@
+name: Refresh temple events
+
+# Keeps assets/data/events.json current by re-reading the temples' own
+# calendar feeds, then committing the result back to main. GitHub Pages
+# redeploys from that commit, so the published calendar stays live with
+# no manual editing.
+on:
+  schedule:
+    - cron: '17 11 * * *'   # daily, ~03:17 America/Los_Angeles
+  workflow_dispatch:         # allow a manual run from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - 'assets/data/temples.json'
+      - 'assets/data/events-curated.json'
+      - 'scripts/**'
+      - '.github/workflows/update-data.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-events
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The festival calendar is computed in the browser from panchang.js.
+      # If that maths regresses, every date on the site is wrong, so it
+      # gates the job.
+      - name: Test panchang engine
+        run: node scripts/test-panchang.js
+
+      - name: Validate temple directory
+        run: node scripts/validate-data.mjs
+
+      - name: Refresh events from temple feeds
+        run: node scripts/update-events.mjs
+
+      - name: Commit refreshed events
+        run: |
+          if git diff --quiet -- assets/data/events.json; then
+            echo "No event changes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/events.json
+          git commit -m "Refresh temple events $(date -u +%Y-%m-%d)"
+          git push

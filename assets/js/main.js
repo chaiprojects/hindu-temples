@@ -173,6 +173,9 @@ function applyLocationChange() {
   saveLocationCache();
   window.RahuKalam.renderRahuKalam(userLocation);
   window.Ekadashi.recomputeEkadashi(userLocation);
+  // Festival dates depend on sunrise at the user's location, so the
+  // calendar has to be recomputed too.
+  window.Calendar.onLocationChange();
 }
 
 // ── Reverse geocode ──
@@ -331,34 +334,73 @@ function debounce(fn, ms) {
   };
 }
 
+// ── Site stats ──
+// Derived from the temple data so the hero tiles, the map footer and the
+// section subtitles can never drift out of sync with the directory.
+function renderSiteStats() {
+  if (!window.Temples) return;
+  const { temples, cities, avgRating } = window.Temples.templeStats();
+
+  const set = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && value !== null) el.textContent = value;
+  };
+  set('statTemples', temples);
+  set('statCities', cities);
+
+  const ratingEl = document.getElementById('statRating');
+  if (ratingEl) {
+    ratingEl.innerHTML = avgRating === null
+      ? '&mdash;'
+      : `${avgRating}<span style="font-size:.75em">★</span>`;
+  }
+
+  const mapCount = document.getElementById('mapTempleCount');
+  if (mapCount) mapCount.textContent = `${temples} temples on map`;
+
+  document.querySelectorAll('[data-temple-count]').forEach(el => {
+    el.textContent = el.dataset.templeCount.replace('{n}', temples);
+  });
+
+  const resultCount = document.getElementById('templeResultCount');
+  if (resultCount) resultCount.textContent = `${temples} temples`;
+}
+
 // ── Featured Temple Carousel ──
 function initCarousel() {
   const track = document.getElementById('carouselTrack');
   const dotsWrap = document.getElementById('carouselDots');
   if (!track || !dotsWrap || !window.Temples) return;
 
-  // Pick top 5 by review count
+  const esc = window.Temples.escHtml;
+
+  // Most-reviewed temples first; entries without a verified review count
+  // simply sort last rather than being excluded.
   const top5 = [...window.Temples.TEMPLES]
-    .sort((a, b) => b.reviews - a.reviews)
+    .sort((a, b) => (b.reviews || 0) - (a.reviews || 0))
     .slice(0, 5);
+  if (!top5.length) return;
 
   track.innerHTML = top5.map((t, i) => {
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.name + ' ' + t.address)}`;
-    const siteLink = t.url || mapsUrl;
+    const mapsUrl = window.Temples.mapsUrlFor(t);
+    const siteLink = window.Temples.safeUrl(t.url) || mapsUrl;
+    const rating = typeof t.rating === 'number' && t.rating > 0
+      ? `<div class="t-rating">
+           <span class="stars">${window.Temples.starsHtml(t.rating)}</span>
+           <span class="rnum">${t.rating}${t.reviews ? ` (${Number(t.reviews).toLocaleString()})` : ''}</span>
+         </div>`
+      : '';
     return `<div class="carousel-slide" role="listitem">
       <div class="carousel-slide-accent"></div>
       <div class="carousel-slide-body">
         <div class="carousel-rank">#${i + 1}</div>
-        <h3 class="t-name">${t.name}</h3>
-        <div class="t-deity">${t.deity}</div>
-        <div class="carousel-slide-city">${t.city}</div>
-        <div class="t-rating">
-          <span class="stars">${starsHtml(t.rating)}</span>
-          <span class="rnum">${t.rating} (${t.reviews.toLocaleString()})</span>
-        </div>
+        <h3 class="t-name">${esc(t.name)}</h3>
+        <div class="t-deity">${esc(t.deity || '')}</div>
+        <div class="carousel-slide-city">${esc(t.city)}</div>
+        ${rating}
         <div class="carousel-slide-actions">
-          <a class="carousel-action-primary" href="${mapsUrl}" target="_blank" rel="noopener">Directions</a>
-          <a class="carousel-action-secondary" href="${siteLink}" target="_blank" rel="noopener">Website</a>
+          <a class="carousel-action-primary" href="${esc(mapsUrl)}" target="_blank" rel="noopener">Directions</a>
+          <a class="carousel-action-secondary" href="${esc(siteLink)}" target="_blank" rel="noopener">Website</a>
         </div>
       </div>
     </div>`;
@@ -446,14 +488,19 @@ async function initApp() {
   initBackToTop();
   initActiveNavLinks();
 
-  // Load temple events from JSON
-  await window.Calendar.loadTempleEvents();
+  // Load the temple directory and their events before first render.
+  // Both are static JSON, so this is one round trip each.
+  await Promise.all([
+    window.Temples.loadTemples(),
+    window.Calendar.loadTempleEvents()
+  ]);
 
   // Render widgets with default location
   window.RahuKalam.renderRahuKalam(userLocation);
   window.Calendar.render();
   window.Temples.renderTemples(window.Temples.TEMPLES);
   window.Temples.populateCityFilter();
+  renderSiteStats();
 
   // Initialize interactive map
   if (window.TempleMap) window.TempleMap.init();

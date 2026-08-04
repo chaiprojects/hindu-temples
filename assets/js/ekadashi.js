@@ -165,7 +165,11 @@ function sunriseJD(jd0, loc) {
     const ra = eq2.ra + n*(eq3.ra - eq1.ra)/2 + n*n*(eq3.ra - 2*eq2.ra + eq1.ra)/2;
     const dec = eq2.dec + n*(eq3.dec - eq1.dec)/2 + n*n*(eq3.dec - 2*eq2.dec + eq1.dec)/2;
     const th = ((Th0 + m*2*Math.PI*1.00273791/86400) % (2*Math.PI) + 2*Math.PI) % (2*Math.PI);
-    const H = th - ekLng - ra;
+    // Meeus writes the hour angle as H = theta - L - alpha with L positive
+    // WEST, so with an east-positive longitude the sign flips. Getting this
+    // wrong shifts sunrise by hours and silently moves tithi-at-sunrise
+    // decisions onto the wrong day.
+    const H = th + ekLng - ra;
     const h = Math.asin(Math.sin(ekLat)*Math.sin(dec) + Math.cos(ekLat)*Math.cos(dec)*Math.cos(H));
     const dm = (h - h0) / (Math.cos(dec)*Math.cos(ekLat)*Math.sin(H)) * 86400/(2*Math.PI);
     m = ((m + dm) % 86400 + 86400) % 86400;

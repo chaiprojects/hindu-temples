@@ -1129,6 +1129,37 @@ main {
   color: var(--gold);
 }
 
+/* Provenance line under the upcoming-events list: how many temple events
+   are loaded and when the feed refresh last ran. */
+.events-meta {
+  margin-top: 0.75rem;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: right;
+}
+
+/* "N of M temples" under the search + city filter row. */
+.temple-result-count {
+  margin: -0.35rem 0 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* "+N more" affordance inside a calendar cell. */
+.cal-more:focus-visible,
+.cal-event:focus-visible,
+.upcoming-item:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.upcoming-item {
+  cursor: pointer;
+}
+
 .upcoming-list {
   display: flex;
   flex-direction: column;

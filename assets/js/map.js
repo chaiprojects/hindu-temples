@@ -29,15 +29,21 @@ window.TempleMap = (() => {
 
   // ── Popup HTML ──────────────────────────────────────────────
   function makePopup(temple, idx) {
-    const r = Math.round(temple.rating);
-    const stars = '★'.repeat(r) + '☆'.repeat(5 - r);
+    const esc = window.Temples.escHtml;
+    // Rating is optional — newer directory entries have no verified score.
+    let ratingHtml = '';
+    if (typeof temple.rating === 'number' && temple.rating > 0) {
+      const r = Math.round(temple.rating);
+      const stars = '★'.repeat(r) + '☆'.repeat(Math.max(0, 5 - r));
+      ratingHtml = `<span class="mp-rating"><span class="mp-stars">${stars}</span> ${temple.rating}</span>`;
+    }
     return `
       <div class="map-popup-inner">
-        <div class="mp-name">${temple.name}</div>
-        <div class="mp-deity">✦ ${temple.deity}</div>
+        <div class="mp-name">${esc(temple.name)}</div>
+        ${temple.deity ? `<div class="mp-deity">✦ ${esc(temple.deity)}</div>` : ''}
         <div class="mp-meta">
-          <span class="mp-city">📍 ${temple.city}</span>
-          <span class="mp-rating"><span class="mp-stars">${stars}</span> ${temple.rating}</span>
+          <span class="mp-city">📍 ${esc(temple.city)}</span>
+          ${ratingHtml}
         </div>
         <button class="mp-btn" onclick="window.TempleMap.scrollToCard(${idx})">
           View Details <span class="mp-arrow">→</span>

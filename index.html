@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples from Concord to San Jose, with interactive map, Rahukalam calculator, Ekadashi dates, and festival calendar.">
+  <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples across the San Francisco Bay Area, with interactive map, Rahukalam calculator, Ekadashi dates, and a festival calendar fed by the temples' own event listings.">
   <title>Bay Area Hindu Temples &middot; Sacred Spaces</title>
 
   <!-- ── Favicon & App Icons ── -->
@@ -88,7 +88,7 @@
 <header class="site-header">
   <span class="om-symbol" aria-hidden="true">ॐ</span>
   <h1>Bay Area Hindu Temples</h1>
-  <p class="subtitle">From Concord to San Jose &middot; Sacred Spaces of the Bay</p>
+  <p class="subtitle">Across the San Francisco Bay Area &middot; Sacred Spaces of the Bay</p>
   <div class="ruler" aria-hidden="true">
     <div class="ruler-line"></div>
     <div class="ruler-dot"></div>
@@ -97,15 +97,15 @@
   <!-- Hero Stats -->
   <div class="hero-stats" aria-label="Site statistics">
     <div class="hero-stat">
-      <span class="hs-num">28</span>
+      <span class="hs-num" id="statTemples">&mdash;</span>
       <span class="hs-label">Temples</span>
     </div>
     <div class="hero-stat">
-      <span class="hs-num">16</span>
+      <span class="hs-num" id="statCities">&mdash;</span>
       <span class="hs-label">Cities</span>
     </div>
     <div class="hero-stat">
-      <span class="hs-num">4.7<span style="font-size:.75em">★</span></span>
+      <span class="hs-num" id="statRating">&mdash;</span>
       <span class="hs-label">Avg Rating</span>
     </div>
   </div>
@@ -156,6 +156,7 @@
         <div class="upcoming-list" id="upcomingList" role="list">
           <div class="cal-loading"><span class="spinner"></span> Loading events&hellip;</div>
         </div>
+        <div class="events-meta" id="eventsMeta" aria-live="polite"></div>
       </div>
     </section>
 
@@ -164,7 +165,7 @@
   <!-- ═══ INTERACTIVE MAP SECTION ═══ -->
   <section class="content-section map-section reveal" id="map-section" aria-label="Interactive temple map">
     <h2 class="section-header">Temple Map</h2>
-    <div class="section-subtitle">All 28 Temples Across the Bay Area &middot; Click a Pin for Details</div>
+    <div class="section-subtitle" data-temple-count="All {n} Temples Across the Bay Area &middot; Click a Pin for Details">All Temples Across the Bay Area &middot; Click a Pin for Details</div>
 
     <div class="map-outer">
       <div id="templeMap" aria-label="Interactive map showing Bay Area Hindu temples"></div>
@@ -178,7 +179,7 @@
   <!-- ═══ TEMPLES SECTION ═══ -->
   <section class="content-section reveal" id="temples" aria-label="Hindu temples listing">
     <h2 class="section-header">Hindu Temples</h2>
-    <div class="section-subtitle">Bay Area Corridor &middot; Concord &rarr; Fremont &rarr; Tri-Valley &rarr; Milpitas &rarr; San Jose</div>
+    <div class="section-subtitle">North Bay &rarr; San Francisco &rarr; East Bay &rarr; Tri-Valley &rarr; Peninsula &rarr; South Bay</div>
 
     <!-- Featured Temple Carousel -->
     <div class="carousel-wrap" id="carouselWrap">
@@ -204,6 +205,7 @@
         <option value="">All Cities</option>
       </select>
     </div>
+    <div class="temple-result-count" id="templeResultCount" aria-live="polite"></div>
 
     <div class="temples-grid reveal-stagger" id="templesGrid" role="list" aria-label="Temple cards"></div>
     <div class="no-results" id="noResults" role="status">No temples found matching your search.</div>
@@ -215,7 +217,7 @@
     <div class="about-content">
       <p>
         This website serves as a centralized, convenient reference for Hindu temples in the San Francisco Bay Area,
-        covering the corridor from Concord through Oakland, Fremont, Tri-Valley, and Milpitas down to San Jose.
+        covering the North Bay and San Francisco through the East Bay, Tri-Valley and Peninsula down to the South Bay.
         It brings together essential information for devotees: temple locations on an interactive map, darshan timings,
         daily Rahu Kalam calculations, Ekadashi dates, and upcoming festivals and events &mdash;
         all in one place.
@@ -333,12 +335,13 @@
 
 <!-- Scripts (order matters: dependencies first) -->
 <script src="assets/js/rahukalam.js?v=4"></script>
-<script src="assets/js/ekadashi.js?v=9"></script>
-<script src="assets/js/temples.js?v=4"></script>
-<script src="assets/js/map.js?v=4"></script>
-<script src="assets/js/calendar.js?v=4"></script>
-<script src="assets/js/bhajan.js?v=12"></script>
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/ekadashi.js?v=10"></script>
+<script src="assets/js/panchang.js?v=1"></script>
+<script src="assets/js/temples.js?v=5"></script>
+<script src="assets/js/map.js?v=5"></script>
+<script src="assets/js/calendar.js?v=5"></script>
+<script src="assets/js/bhajan.js?v=13"></script>
+<script src="assets/js/main.js?v=8"></script>
 
 </body>
 </html>
