@@ -1,20 +1,26 @@
 /* ============================================================
    Bay Area Hindu Temples — Styles
-   Light-on-dark theme with optional dark mode toggle
+   "Modern Temple" theme — sandstone & brass by day,
+   night-sanctum by dark. Light/dark toggle on [data-theme].
    ============================================================ */
 
 /* ── CSS Variables ── */
 :root {
-  --saffron: #E8821A;
-  --deep-red: #8B1A1A;
-  --gold: #D4A017;
-  --cream: #FAF3E0;
-  --dark: #120800;
-  --brown: #3A1800;
-  --light-gold: #F5D98A;
-  --marigold: #FFA500;
-  --maroon: #6B0F0F;
-  --card-bg: rgba(58, 24, 0, 0.45);
+  /* Brand palette — temple pigments, modernised */
+  --saffron: #D96A1E;       /* kesari — primary accent */
+  --saffron-soft: #F0913D;  /* lifted saffron for dark mode */
+  --deep-red: #7A1F2B;      /* kumkum */
+  --gold: #B8891F;          /* brass */
+  --gold-bright: #E3B549;   /* polished brass highlight */
+  --peacock: #126E6B;       /* peacock teal — secondary accent */
+  --accent: var(--saffron);  /* alias used by the bhajan card + footer */
+  --cream: #FBF6EC;
+  --dark: #121012;
+  --brown: #3A2A20;
+  --light-gold: #EFCC81;
+  --marigold: #F0913D;
+  --maroon: #6E1B22;
+  --card-bg: rgba(255, 255, 255, 0.045);
 
   /* Spacing scale (8px rhythm) */
   --space-xs: 0.25rem;   /* 4px */
@@ -25,57 +31,82 @@
   --space-2xl: 3rem;     /* 48px */
   --space-3xl: 4rem;     /* 64px */
 
-  /* Light theme (default) */
-  --bg-primary: #FAFAF8;
-  --bg-secondary: #F4F1EB;
+  /* Radius scale — generous, modern */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* Light theme (default) — sandstone & ivory */
+  --bg-primary: #FBF8F3;
+  --bg-secondary: #F3EDE3;
   --bg-card: #FFFFFF;
-  --bg-card-hover: #FFFDF7;
+  --bg-card-hover: #FFFCF7;
   --bg-widget: #FFFFFF;
-  --bg-input: #FAF8F3;
-  --text-primary: #1E1208;
-  --text-secondary: #4A3020;
-  --text-muted: #7A6248;
-  --text-faint: #AE9880;
-  --border-color: rgba(180, 140, 60, 0.18);
-  --border-hover: rgba(212, 160, 23, 0.50);
-  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
-  --header-bg: linear-gradient(160deg, #FAFAF8 0%, #F4F0E8 100%);
-  --nav-bg: rgba(250, 250, 248, 0.96);
-  --widget-gradient: linear-gradient(150deg, #FFFFFF, #FAF8F3);
-  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --bg-input: #F8F4EC;
+  --text-primary: #1B1512;
+  --text-secondary: #4A3B32;
+  --text-muted: #7B6A5D;
+  --text-faint: #A8988A;
+  --border-color: rgba(122, 90, 40, 0.14);
+  --border-hover: rgba(217, 106, 30, 0.42);
+  --shadow-sm: 0 1px 2px rgba(28, 20, 14, 0.05), 0 2px 8px rgba(28, 20, 14, 0.04);
+  --shadow-md: 0 2px 4px rgba(28, 20, 14, 0.04), 0 8px 24px rgba(28, 20, 14, 0.07);
+  --shadow-lg: 0 4px 8px rgba(28, 20, 14, 0.04), 0 24px 56px rgba(28, 20, 14, 0.10);
+  --header-bg: linear-gradient(180deg, #FDFBF7 0%, #F5EFE4 100%);
+  --nav-bg: rgba(251, 248, 243, 0.78);
+  --widget-gradient: linear-gradient(160deg, #FFFFFF, #FCF8F1);
+  --overlay-bg: rgba(27, 21, 18, 0.38);
   --tooltip-bg: #FFFFFF;
-  --accent-glow: rgba(232, 130, 26, 0.12);
-  --scrollbar-track: #EDE8DF;
-  --scrollbar-thumb: #C9A030;
+  --accent-glow: rgba(217, 106, 30, 0.14);
+  --accent-tint: rgba(217, 106, 30, 0.08);
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(122, 90, 40, 0.28);
+
+  /* Calendar categories */
+  --cat-festival-tint: rgba(217, 106, 30, 0.13);
+  --cat-ekadashi: #6F53A3;
+  --cat-ekadashi-tint: rgba(111, 83, 163, 0.13);
+  --cat-temple: #126E6B;
+  --cat-temple-tint: rgba(18, 110, 107, 0.13);
 }
 
-/* ── Dark Theme ── */
+/* ── Dark Theme — night sanctum ── */
 [data-theme="dark"] {
-  --bg-primary: #120800;
-  --bg-secondary: #1A0E04;
-  --bg-card: rgba(58, 24, 0, 0.45);
-  --bg-card-hover: rgba(58, 24, 0, 0.65);
-  --bg-widget: linear-gradient(150deg, rgba(58, 24, 0, 0.6), rgba(18, 8, 0, 0.85));
-  --bg-input: rgba(58, 24, 0, 0.4);
-  --text-primary: #FAF3E0;
-  --text-secondary: rgba(250, 243, 224, 0.75);
-  --text-muted: rgba(250, 243, 224, 0.55);
-  --text-faint: rgba(250, 243, 224, 0.35);
-  --border-color: rgba(212, 160, 23, 0.25);
-  --border-hover: rgba(212, 160, 23, 0.55);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 35px rgba(232, 130, 26, 0.14);
-  --header-bg: linear-gradient(135deg, #120800 0%, #1A0E04 100%);
-  --nav-bg: rgba(18, 8, 0, 0.95);
-  --widget-gradient: linear-gradient(150deg, rgba(58, 24, 0, 0.6), rgba(18, 8, 0, 0.85));
-  --overlay-bg: rgba(0, 0, 0, 0.6);
-  --tooltip-bg: linear-gradient(150deg, rgba(58, 24, 0, 0.97), rgba(18, 8, 0, 0.98));
-  --accent-glow: rgba(232, 130, 26, 0.28);
-  --scrollbar-track: #120800;
-  --scrollbar-thumb: #3A1800;
+  --saffron: #F0913D;
+  --gold: #E3B549;
+  --bg-primary: #121012;
+  --bg-secondary: #1A171A;
+  --bg-card: rgba(255, 255, 255, 0.045);
+  --bg-card-hover: rgba(255, 255, 255, 0.075);
+  --bg-widget: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  --bg-input: rgba(255, 255, 255, 0.05);
+  --text-primary: #F4EDE3;
+  --text-secondary: rgba(244, 237, 227, 0.78);
+  --text-muted: rgba(244, 237, 227, 0.56);
+  --text-faint: rgba(244, 237, 227, 0.34);
+  --border-color: rgba(244, 237, 227, 0.12);
+  --border-hover: rgba(240, 145, 61, 0.45);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.55);
+  --header-bg: linear-gradient(180deg, #17131A 0%, #121012 100%);
+  --nav-bg: rgba(18, 16, 18, 0.72);
+  --widget-gradient: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  --overlay-bg: rgba(0, 0, 0, 0.62);
+  --tooltip-bg: linear-gradient(160deg, #221D22, #171417);
+  --accent-glow: rgba(240, 145, 61, 0.22);
+  --accent-tint: rgba(240, 145, 61, 0.12);
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(244, 237, 227, 0.2);
+
+  /* Calendar categories — lifted for dark surfaces */
+  --cat-festival-tint: rgba(240, 145, 61, 0.16);
+  --cat-ekadashi: #AE93E0;
+  --cat-ekadashi-tint: rgba(174, 147, 224, 0.16);
+  --cat-temple: #57BDB8;
+  --cat-temple-tint: rgba(87, 189, 184, 0.16);
 }
 
 /* ── Reset ── */
@@ -102,22 +133,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-[data-theme="dark"] body::before {
+/* Ambient light — a soft wash of temple pigment behind everything.
+   Present in both themes; stronger at night. */
+body::before {
   content: '';
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 10% 40%, rgba(232, 130, 26, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 90% 10%, rgba(212, 160, 23, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 90%, rgba(139, 26, 26, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 55% at 12% 0%, rgba(217, 106, 30, 0.07) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 70% at 92% 8%, rgba(184, 137, 31, 0.07) 0%, transparent 62%),
+    radial-gradient(ellipse 80% 45% at 50% 100%, rgba(18, 110, 107, 0.05) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* ── Border Strip ── */
+[data-theme="dark"] body::before {
+  background:
+    radial-gradient(ellipse 70% 55% at 12% 0%, rgba(240, 145, 61, 0.10) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 70% at 92% 8%, rgba(227, 181, 73, 0.08) 0%, transparent 62%),
+    radial-gradient(ellipse 80% 45% at 50% 100%, rgba(18, 110, 107, 0.10) 0%, transparent 65%);
+}
+
+/* ── Border Strip — thin brass rule ── */
 .border-strip {
-  height: 3px;
-  background: linear-gradient(90deg, var(--deep-red) 0%, var(--saffron) 30%, var(--gold) 50%, var(--saffron) 70%, var(--deep-red) 100%);
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--deep-red) 0%,
+    var(--saffron) 28%,
+    var(--gold-bright) 50%,
+    var(--saffron) 72%,
+    var(--deep-red) 100%);
 }
 
 /* ── Location Banner (Top Bar) ── */
@@ -140,7 +185,7 @@ body {
 }
 
 [data-theme="dark"] .location-bar {
-  background: rgba(58, 24, 0, 0.3);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .location-bar .loc-icon {
@@ -174,7 +219,7 @@ body {
   background: none;
   border: 1px solid var(--border-color);
   color: var(--gold);
-  border-radius: 20px;
+  border-radius: var(--r-pill);
   padding: 3px 12px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
@@ -184,7 +229,7 @@ body {
 }
 
 .loc-btn:hover {
-  background: rgba(212, 160, 23, 0.15);
+  background: rgba(184, 137, 31, 0.15);
   border-color: var(--gold);
 }
 
@@ -198,7 +243,7 @@ body {
 }
 
 [data-theme="dark"] .zip-panel {
-  background: rgba(18, 8, 0, 0.6);
+  background: rgba(0, 0, 0, 0.22);
 }
 
 .zip-panel.show {
@@ -221,8 +266,8 @@ body {
 .zip-input {
   background: var(--bg-input);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 7px 12px;
+  border-radius: var(--r-pill);
+  padding: 8px 16px;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
@@ -233,26 +278,28 @@ body {
 
 .zip-input:focus {
   border-color: var(--saffron);
-  box-shadow: 0 0 0 3px rgba(232, 130, 26, 0.12);
+  box-shadow: 0 0 0 3px rgba(217, 106, 30, 0.12);
 }
 
 .zip-submit {
-  background: var(--saffron);
+  background: linear-gradient(145deg, var(--saffron), var(--deep-red));
   border: none;
   color: #fff;
-  border-radius: 8px;
-  padding: 7px 18px;
+  border-radius: var(--r-pill);
+  padding: 8px 20px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.01em;
-  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px var(--accent-glow);
+  transition: filter 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
 .zip-submit:hover {
-  background: var(--gold);
+  filter: brightness(1.08);
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--accent-glow);
 }
 
 .zip-error {
@@ -266,20 +313,21 @@ body {
   display: block;
 }
 
-/* ── Navigation ── */
+/* ── Navigation — frosted glass rail ── */
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 50;
   background: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
   border-bottom: 1px solid var(--border-color);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .site-nav.scrolled {
   box-shadow: var(--shadow-md);
+  border-bottom-color: transparent;
 }
 
 .nav-inner {
@@ -294,64 +342,63 @@ body {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   text-decoration: none;
   color: var(--text-primary);
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 0.75rem 0;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  padding: 0.7rem 0;
   white-space: nowrap;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
 }
 
+/* Brand mark: the om sits in a small brass medallion */
 .nav-brand .om {
-  color: var(--gold);
-  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(145deg, var(--saffron), var(--deep-red));
+  box-shadow: 0 2px 8px var(--accent-glow);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 2px;
   list-style: none;
   overflow-x: auto;
 }
 
+/* Pill navigation — no underline chrome, just a soft tinted capsule */
 .nav-links a {
   display: block;
-  padding: 0.85rem 1rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--r-pill);
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   white-space: nowrap;
-  transition: color 0.2s;
-  text-transform: uppercase;
+  transition: color 0.2s ease, background 0.2s ease;
   position: relative;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--saffron);
-  transition: width 0.3s ease, left 0.3s ease;
+.nav-links a:hover {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-  left: 0;
-}
-
-.nav-links a:hover,
 .nav-links a.active {
   color: var(--saffron);
+  background: var(--accent-tint);
 }
 
 .nav-actions {
@@ -362,23 +409,24 @@ body {
 
 /* Dark Mode Toggle */
 .theme-toggle {
-  background: none;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 50%;
+  border-radius: 11px;
   width: 36px;
   height: 36px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  transition: background 0.2s, border-color 0.2s;
+  font-size: 1rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
   color: var(--text-primary);
 }
 
 .theme-toggle:hover {
-  background: rgba(212, 160, 23, 0.15);
-  border-color: var(--gold);
+  background: var(--accent-tint);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
 }
 
 /* Mobile Nav Toggle */
@@ -460,20 +508,22 @@ body.nav-open {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 2rem 2rem 1.6rem;
+  padding: 3.2rem 2rem 2.4rem;
   background: var(--header-bg);
   border-bottom: 1px solid var(--border-color);
   transition: background 0.3s ease;
+  overflow: hidden;
 }
 
-/* Hero radial gradient overlays */
+/* Hero light — a single warm shaft, as through a sanctum doorway */
 .site-header::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(232, 130, 26, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 80% 20%, rgba(212, 160, 23, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 46% 88% at 50% -12%, var(--accent-glow) 0%, transparent 68%),
+    radial-gradient(ellipse 60% 50% at 12% 100%, rgba(18, 110, 107, 0.06) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 50% at 88% 100%, rgba(184, 137, 31, 0.08) 0%, transparent 62%);
   pointer-events: none;
   z-index: 0;
 }
@@ -483,66 +533,79 @@ body.nav-open {
   z-index: 1;
 }
 
+/* The om sits inside a torana — a rounded temple arch */
 .site-header .om-symbol {
-  font-size: 3.2rem;
-  color: var(--gold);
-  animation: glow 3s ease-in-out infinite;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 78px;
+  margin-bottom: 1.1rem;
+  font-size: 2.1rem;
   line-height: 1;
-  margin-bottom: 0.3rem;
-  display: block;
+  color: var(--saffron);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 34px 34px var(--r-md) var(--r-md);
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  animation: glow 4s ease-in-out infinite;
+}
+
+[data-theme="dark"] .site-header .om-symbol {
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 @keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 12px rgba(212, 160, 23, 0.5), 0 0 35px rgba(232, 130, 26, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 25px rgba(212, 160, 23, 0.95), 0 0 70px rgba(232, 130, 26, 0.65), 0 0 90px rgba(255, 165, 0, 0.3);
-  }
+  0%, 100% { box-shadow: var(--shadow-md), 0 0 0 0 rgba(217, 106, 30, 0); }
+  50%      { box-shadow: var(--shadow-md), 0 0 34px 2px var(--accent-glow); }
 }
 
 .site-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  color: var(--saffron);
-  letter-spacing: 0.03em;
-  font-weight: 700;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5.2vw, 3.4rem);
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  font-weight: 600;
 }
 
 [data-theme="dark"] .site-header h1 {
-  color: var(--light-gold);
+  color: var(--text-primary);
 }
 
 .site-header .subtitle {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   color: var(--text-muted);
-  font-size: 0.88rem;
-  margin-top: 0.35rem;
-  letter-spacing: 0.12em;
-  font-weight: 400;
+  font-size: 0.78rem;
+  margin-top: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
+/* Brass rule with a diamond at centre */
 .ruler {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem auto 0;
-  max-width: 300px;
+  gap: 0.9rem;
+  margin: 1.5rem auto 0;
+  max-width: 220px;
 }
 
 .ruler-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
 }
 
 .ruler-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background: linear-gradient(145deg, var(--gold-bright), var(--saffron));
+  border-radius: 2px;
+  transform: rotate(45deg);
 }
 
 /* ── Main Layout ── */
@@ -556,33 +619,34 @@ main {
 
 /* ── Section Headers ── */
 .section-header {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  color: var(--saffron);
-  margin-bottom: 0.25rem;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-weight: 700;
+  gap: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 [data-theme="dark"] .section-header {
-  color: var(--light-gold);
+  color: var(--text-primary);
 }
 
 .section-header::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, var(--border-hover), transparent);
+  background: linear-gradient(90deg, var(--border-color), transparent);
 }
 
 .section-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--text-muted);
-  margin-bottom: 1.3rem;
+  letter-spacing: 0.14em;
+  color: var(--text-faint);
+  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
@@ -608,12 +672,16 @@ main {
 .widget {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 1.4rem;
+  border-radius: var(--r-xl);
+  padding: 1.6rem;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.widget:hover {
   box-shadow: var(--shadow-md);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 [data-theme="dark"] .widget {
@@ -621,34 +689,45 @@ main {
   backdrop-filter: blur(10px);
 }
 
+/* A hairline of brass along the top edge — restraint over the old 3px band */
 .widget::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--saffron), var(--gold-bright), transparent);
+  opacity: 0.7;
 }
 
 .w-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  color: var(--saffron);
-  margin-bottom: 0.9rem;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  gap: 0.55rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 [data-theme="dark"] .w-title {
-  color: var(--gold);
+  color: var(--text-primary);
 }
 
+/* Icon chip */
 .w-title .icon {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  border-radius: var(--r-sm);
+  background: var(--accent-tint);
 }
 
 /* ── Rahu Kalam ── */
@@ -673,8 +752,8 @@ main {
 }
 
 [data-theme="dark"] .rahu-day {
-  background: rgba(139, 26, 26, 0.18);
-  border-color: rgba(212, 160, 23, 0.18);
+  background: rgba(122, 31, 43, 0.18);
+  border-color: rgba(184, 137, 31, 0.18);
 }
 
 .rahu-day:hover {
@@ -682,11 +761,11 @@ main {
 }
 
 [data-theme="dark"] .rahu-day:hover {
-  background: rgba(139, 26, 26, 0.38);
+  background: rgba(122, 31, 43, 0.38);
 }
 
 .rahu-day.today {
-  background: rgba(232, 130, 26, 0.12);
+  background: rgba(217, 106, 30, 0.12);
   border-color: var(--saffron);
   box-shadow: 0 0 12px var(--accent-glow);
 }
@@ -718,7 +797,7 @@ main {
 .rahu-callout {
   margin-top: 0.8rem;
   padding: 8px 12px;
-  background: rgba(232, 130, 26, 0.08);
+  background: rgba(217, 106, 30, 0.08);
   border-radius: 7px;
   border-left: 3px solid var(--saffron);
   font-size: 0.82rem;
@@ -727,7 +806,7 @@ main {
 }
 
 [data-theme="dark"] .rahu-callout {
-  background: rgba(232, 130, 26, 0.12);
+  background: rgba(217, 106, 30, 0.12);
 }
 
 .rahu-callout strong {
@@ -774,8 +853,8 @@ main {
 }
 
 [data-theme="dark"] .ek-item {
-  background: rgba(18, 8, 0, 0.4);
-  border-color: rgba(212, 160, 23, 0.15);
+  background: rgba(0, 0, 0, 0.16);
+  border-color: rgba(184, 137, 31, 0.15);
 }
 
 .ek-item:hover {
@@ -783,12 +862,12 @@ main {
 }
 
 .ek-item.next {
-  border-color: rgba(232, 130, 26, 0.5);
-  background: rgba(232, 130, 26, 0.08);
+  border-color: rgba(217, 106, 30, 0.5);
+  background: rgba(217, 106, 30, 0.08);
 }
 
 [data-theme="dark"] .ek-item.next {
-  background: rgba(232, 130, 26, 0.1);
+  background: rgba(217, 106, 30, 0.1);
 }
 
 .ek-item.past {
@@ -943,11 +1022,11 @@ main {
 }
 
 [data-theme="dark"] .cal-btn {
-  background: rgba(212, 160, 23, 0.15);
+  background: rgba(184, 137, 31, 0.15);
 }
 
 .cal-btn:hover {
-  background: rgba(212, 160, 23, 0.25);
+  background: rgba(184, 137, 31, 0.25);
 }
 
 .cal-month-label {
@@ -982,7 +1061,7 @@ main {
 .cal-cell {
   min-height: 52px;
   background: var(--bg-secondary);
-  border: 1px solid rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(184, 137, 31, 0.1);
   border-radius: 6px;
   padding: 4px;
   font-size: 0.68rem;
@@ -992,7 +1071,7 @@ main {
 }
 
 [data-theme="dark"] .cal-cell {
-  background: rgba(18, 8, 0, 0.3);
+  background: rgba(0, 0, 0, 0.14);
 }
 
 .cal-cell:hover {
@@ -1001,11 +1080,11 @@ main {
 
 .cal-cell.today {
   border-color: var(--saffron);
-  background: rgba(232, 130, 26, 0.08);
+  background: rgba(217, 106, 30, 0.08);
 }
 
 [data-theme="dark"] .cal-cell.today {
-  background: rgba(232, 130, 26, 0.1);
+  background: rgba(217, 106, 30, 0.1);
 }
 
 .cal-cell.other-month {
@@ -1013,11 +1092,11 @@ main {
 }
 
 .cal-cell.has-event {
-  border-color: rgba(212, 160, 23, 0.4);
+  border-color: rgba(184, 137, 31, 0.4);
 }
 
 [data-theme="dark"] .cal-cell.has-event {
-  background: rgba(58, 24, 0, 0.5);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .cal-date {
@@ -1031,27 +1110,40 @@ main {
   color: var(--marigold);
 }
 
+/* Event chips — tinted, not filled, so a dense month still reads calmly.
+   Category colour comes from --cat / --cat-tint, swapped per class. */
 .cal-event {
-  font-size: 0.55rem;
-  background: linear-gradient(90deg, var(--saffron), var(--gold));
-  color: #fff;
-  border-radius: 3px;
+  --cat: var(--saffron);
+  --cat-tint: var(--cat-festival-tint);
+  font-size: 0.56rem;
+  background: var(--cat-tint);
+  color: var(--cat);
+  border-left: 2px solid var(--cat);
+  border-radius: 0 4px 4px 0;
   padding: 1px 4px;
-  margin-bottom: 1px;
-  line-height: 1.4;
+  margin-bottom: 2px;
+  line-height: 1.45;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cal-event:hover {
+  background: var(--cat);
+  color: #fff;
 }
 
 .cal-event.ekadashi {
-  background: linear-gradient(90deg, #5B2A8B, #9B59B6);
+  --cat: var(--cat-ekadashi);
+  --cat-tint: var(--cat-ekadashi-tint);
 }
 
 .cal-event.temple-event {
-  background: rgba(68, 180, 68, 0.85);
+  --cat: var(--cat-temple);
+  --cat-tint: var(--cat-temple-tint);
 }
 
 .cal-loading {
@@ -1099,15 +1191,15 @@ main {
 }
 
 .leg-dot.festival {
-  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  background: var(--saffron);
 }
 
 .leg-dot.ekadashi {
-  background: linear-gradient(90deg, #5B2A8B, #9B59B6);
+  background: var(--cat-ekadashi);
 }
 
 .leg-dot.temple-event {
-  background: rgba(68, 180, 68, 0.8);
+  background: var(--cat-temple);
 }
 
 /* ── Upcoming Events List ── */
@@ -1180,7 +1272,7 @@ main {
 }
 
 [data-theme="dark"] .upcoming-item {
-  background: rgba(18, 8, 0, 0.3);
+  background: rgba(0, 0, 0, 0.14);
 }
 
 .upcoming-item:hover {
@@ -1241,12 +1333,12 @@ main {
 .tooltip-box {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 18px;
+  border-radius: var(--r-xl);
   padding: 1.6rem;
   max-width: 440px;
   width: 90%;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(212, 160, 23, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(184, 137, 31, 0.2);
 }
 
 [data-theme="dark"] .tooltip-box {
@@ -1254,7 +1346,7 @@ main {
 }
 
 .tooltip-box h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   color: var(--saffron);
   margin-bottom: 0.5rem;
 }
@@ -1299,7 +1391,7 @@ main {
   width: 100%;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--r-pill);
   padding: 10px 16px 10px 42px;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
@@ -1319,7 +1411,7 @@ main {
 
 .search-bar:focus {
   border-color: var(--saffron);
-  box-shadow: 0 0 0 3px rgba(232, 130, 26, 0.12);
+  box-shadow: 0 0 0 3px rgba(217, 106, 30, 0.12);
 }
 
 .search-icon {
@@ -1334,7 +1426,7 @@ main {
 .city-filter {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--r-pill);
   padding: 10px 16px;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
@@ -1353,7 +1445,7 @@ main {
 
 .city-filter:focus {
   border-color: var(--saffron);
-  box-shadow: 0 0 0 3px rgba(232, 130, 26, 0.12);
+  box-shadow: 0 0 0 3px rgba(217, 106, 30, 0.12);
 }
 
 /* ── Temple Grid ── */
@@ -1367,16 +1459,17 @@ main {
 .temple-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 1.3rem 1.4rem;
+  border-radius: var(--r-xl);
+  padding: 1.5rem 1.5rem 1.4rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1),
+              box-shadow 0.35s ease, border-color 0.35s ease, background 0.3s ease;
   box-shadow: var(--shadow-sm);
 }
 
 [data-theme="dark"] .temple-card {
-  background: linear-gradient(160deg, var(--card-bg), rgba(18, 8, 0, 0.75));
+  background: linear-gradient(160deg, var(--card-bg), rgba(255, 255, 255, 0.02));
 }
 
 /* Card glow follows cursor */
@@ -1389,7 +1482,7 @@ main {
   height: 100%;
   background: radial-gradient(
     300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(232, 130, 26, 0.08),
+    rgba(217, 106, 30, 0.08),
     transparent 60%
   );
   opacity: 0;
@@ -1409,10 +1502,11 @@ main {
 
 .temple-card:hover {
   border-color: var(--border-hover);
-  transform: translateY(-6px) rotateX(1deg);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 0 20px rgba(232, 130, 26, 0.08), 0 0 0 1px rgba(212, 160, 23, 0.2);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
+/* Brass hairline slides in along the bottom on hover */
 .temple-card::after {
   content: '';
   position: absolute;
@@ -1420,35 +1514,42 @@ main {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--deep-red), var(--gold), var(--saffron));
-  opacity: 0;
-  transition: opacity 0.35s;
+  background: linear-gradient(90deg, var(--deep-red), var(--saffron), var(--gold-bright));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .temple-card:hover::after {
-  opacity: 1;
+  transform: scaleX(1);
 }
 
+/* Deity glyph in a rounded temple-arch tile */
 .t-icon {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  background: linear-gradient(135deg, rgba(232, 130, 26, 0.1), rgba(212, 160, 23, 0.1));
-  border-radius: 10px;
-  padding: 6px 8px;
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 44px;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(160deg, var(--accent-tint), rgba(184, 137, 31, 0.08));
+  border: 1px solid var(--border-color);
+  border-radius: 20px 20px var(--r-sm) var(--r-sm);
 }
 
 .t-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.02rem;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+  font-size: 1.08rem;
   color: var(--text-primary);
-  line-height: 1.3;
-  margin-bottom: 0.3rem;
-  font-weight: 700;
+  line-height: 1.28;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 [data-theme="dark"] .t-name {
-  color: var(--cream);
+  color: var(--text-primary);
 }
 
 .t-addr {
@@ -1554,7 +1655,7 @@ main {
 }
 
 [data-theme="dark"] .about-content .disclaimer {
-  background: rgba(58, 24, 0, 0.3);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .about-content .disclaimer strong {
@@ -1571,9 +1672,9 @@ main {
   text-align: center;
   padding: 1.8rem;
   border-top: 1px solid var(--border-color);
-  color: var(--text-faint);
+  color: var(--text-muted);
   font-size: 0.83rem;
-  font-style: italic;
+  font-style: normal;
   background: var(--bg-secondary);
   transition: background 0.3s ease;
 }
@@ -1582,28 +1683,24 @@ main {
   background: transparent;
 }
 
-.site-footer span {
-  color: var(--saffron);
-}
-
 /* ── Back to Top ── */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 40;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--saffron);
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, var(--saffron), var(--deep-red));
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(232, 130, 26, 0.4);
+  box-shadow: var(--shadow-md), 0 6px 18px var(--accent-glow);
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -1632,23 +1729,22 @@ main {
   margin-bottom: var(--space-2xl);
 }
 
-/* Golden gradient separator between sections */
+/* Hairline separator between sections */
 .content-section + .content-section::before {
   content: '';
   display: block;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), var(--saffron), var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--border-color) 22%, var(--border-color) 78%, transparent);
   margin-bottom: var(--space-2xl);
-  opacity: 0.4;
 }
 
 /* Section header accent bar */
 .section-header::before {
   content: '';
-  width: 4px;
-  height: 1.2em;
+  width: 3px;
+  height: 0.95em;
   background: linear-gradient(180deg, var(--saffron), var(--gold));
-  border-radius: 2px;
+  border-radius: var(--r-pill);
   flex-shrink: 0;
 }
 
@@ -1723,7 +1819,7 @@ main {
 }
 
 .hs-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--saffron);
@@ -1755,7 +1851,7 @@ main {
 }
 
 .map-outer {
-  border-radius: 18px;
+  border-radius: var(--r-xl);
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
@@ -1795,7 +1891,7 @@ main {
 }
 
 [data-theme="dark"] .map-footer {
-  background: rgba(58, 24, 0, 0.3);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .map-hint {
@@ -1809,14 +1905,14 @@ main {
   color: var(--saffron);
   font-weight: 600;
   letter-spacing: 0.02em;
-  background: rgba(232, 130, 26, 0.1);
-  border-radius: 20px;
+  background: rgba(217, 106, 30, 0.1);
+  border-radius: var(--r-pill);
   padding: 2px 10px;
 }
 
 [data-theme="dark"] .map-count {
   color: var(--light-gold);
-  background: rgba(212, 160, 23, 0.12);
+  background: rgba(184, 137, 31, 0.12);
 }
 
 /* ── Custom Temple Marker ──────────────────────────────────── */
@@ -1832,7 +1928,7 @@ main {
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
   border: 2.5px solid #fff;
-  box-shadow: 0 3px 10px rgba(232, 130, 26, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px rgba(217, 106, 30, 0.5), 0 1px 3px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1840,7 +1936,7 @@ main {
 }
 
 .temple-marker-wrap:hover .tm-pin {
-  box-shadow: 0 5px 18px rgba(232, 130, 26, 0.7), 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 5px 18px rgba(217, 106, 30, 0.7), 0 2px 6px rgba(0,0,0,0.25);
   transform: rotate(-45deg) scale(1.12);
 }
 
@@ -1893,7 +1989,7 @@ main {
 }
 
 .mp-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -1965,9 +2061,9 @@ main {
 
 /* ── Temple Card Highlight (when clicked from map) ─────────── */
 @keyframes cardPulse {
-  0%   { box-shadow: 0 0 0 0 rgba(232, 130, 26, 0.5); }
-  50%  { box-shadow: 0 0 0 8px rgba(232, 130, 26, 0.15); }
-  100% { box-shadow: 0 0 0 0 rgba(232, 130, 26, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(217, 106, 30, 0.5); }
+  50%  { box-shadow: 0 0 0 8px rgba(217, 106, 30, 0.15); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 106, 30, 0); }
 }
 
 .temple-card.map-highlight {
@@ -1977,18 +2073,18 @@ main {
 
 /* ── Leaflet overrides for dark mode ───────────────────────── */
 [data-theme="dark"] .leaflet-control-zoom a {
-  background-color: rgba(58, 24, 0, 0.85) !important;
+  background-color: rgba(26, 23, 26, 0.92) !important;
   color: var(--light-gold) !important;
-  border-color: rgba(212, 160, 23, 0.3) !important;
+  border-color: rgba(184, 137, 31, 0.3) !important;
 }
 
 [data-theme="dark"] .leaflet-control-attribution {
-  background: rgba(18, 8, 0, 0.7) !important;
+  background: rgba(18, 16, 18, 0.82) !important;
   color: rgba(250, 243, 224, 0.5) !important;
 }
 
 [data-theme="dark"] .leaflet-control-attribution a {
-  color: rgba(212, 160, 23, 0.7) !important;
+  color: rgba(184, 137, 31, 0.7) !important;
 }
 
 /* ============================================================
@@ -2004,7 +2100,7 @@ main {
 .bhajan-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: var(--r-xl);
   overflow: hidden;
   box-shadow: 0 6px 32px rgba(139, 69, 12, 0.10);
   transition: box-shadow .25s;
@@ -2056,7 +2152,7 @@ main {
 }
 
 .bhajan-deity-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 1.45rem;
   font-weight: 700;
   color: var(--accent);
@@ -2076,7 +2172,7 @@ main {
 }
 
 .bhajan-mantra {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -2168,11 +2264,16 @@ main {
   align-items: center;
   gap: .75rem;
   margin: .7rem 0 .4rem;
-  padding: .65rem .9rem;
+  padding: .7rem .95rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-left: 3px solid var(--accent);
-  border-radius: 10px;
+  border-radius: var(--r-md);
+}
+
+/* On dark surfaces the flat secondary reads as a hole — lift it instead */
+[data-theme="dark"] .rahu-deity-mini {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .rdm-emoji {
@@ -2237,8 +2338,9 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--deep-red), var(--saffron), var(--gold), var(--saffron), var(--deep-red));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--saffron), var(--gold-bright), var(--saffron), transparent);
+  opacity: 0.6;
 }
 
 .footer-inner {
@@ -2263,8 +2365,16 @@ main {
 }
 
 .footer-om {
-  font-size: 1.25rem;
-  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(145deg, var(--saffron), var(--deep-red));
 }
 
 /* Visit Counter */
@@ -2273,10 +2383,10 @@ main {
   align-items: center;
   gap: .45rem;
   background: var(--bg-card);
-  border: 1.5px solid var(--border-color);
-  border-radius: 99px;
-  padding: .42rem 1.1rem;
-  box-shadow: 0 2px 8px rgba(139,69,12,.08);
+  border: 1px solid var(--border-color);
+  border-radius: var(--r-pill);
+  padding: .45rem 1.15rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .footer-counter-icon {
@@ -2284,7 +2394,7 @@ main {
 }
 
 .footer-count-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--accent);
@@ -2344,13 +2454,13 @@ main {
   background: var(--bg-card);
   border: 1.5px solid var(--border-color);
   border-radius: 14px 14px 0 0;
-  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(232, 130, 26, 0.12);
+  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(217, 106, 30, 0.12);
   transition: bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   overflow: hidden;
 }
 
 [data-theme="dark"] .bhajan-mini-player {
-  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(232, 130, 26, 0.22);
+  box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(217, 106, 30, 0.22);
 }
 
 /* Slide up when .show is added */
@@ -2369,7 +2479,7 @@ main {
 }
 
 [data-theme="dark"] .bmp-bar {
-  background: rgba(58, 24, 0, 0.55);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .bmp-info {
@@ -2414,7 +2524,7 @@ main {
 }
 
 .bmp-yt-link:hover {
-  background: rgba(232, 130, 26, 0.15);
+  background: rgba(217, 106, 30, 0.15);
   color: var(--saffron);
   border-color: var(--saffron);
 }
@@ -2438,7 +2548,7 @@ main {
 }
 
 .bmp-close:hover, .bmp-next:hover {
-  background: rgba(232, 130, 26, 0.15);
+  background: rgba(217, 106, 30, 0.15);
   color: var(--text-primary);
 }
 
@@ -2588,7 +2698,7 @@ body {
 }
 
 .carousel-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--saffron);
@@ -2619,7 +2729,7 @@ body {
 }
 
 .carousel-btn:hover {
-  background: rgba(212, 160, 23, 0.2);
+  background: rgba(184, 137, 31, 0.2);
   border-color: var(--gold);
 }
 
@@ -2647,7 +2757,7 @@ body {
   scroll-snap-align: start;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: var(--r-xl);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2655,7 +2765,7 @@ body {
 }
 
 [data-theme="dark"] .carousel-slide {
-  background: linear-gradient(160deg, var(--card-bg), rgba(18, 8, 0, 0.75));
+  background: linear-gradient(160deg, var(--card-bg), rgba(255, 255, 255, 0.02));
 }
 
 .carousel-slide:hover {
@@ -2686,7 +2796,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(232, 130, 26, 0.3);
+  box-shadow: 0 2px 8px rgba(217, 106, 30, 0.3);
 }
 
 .carousel-slide .t-name {
