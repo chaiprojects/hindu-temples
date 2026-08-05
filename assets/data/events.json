@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-04T15:51:54.255Z",
-  "windowStart": "2026-08-04",
-  "windowEnd": "2027-09-08",
+  "generatedAt": "2026-08-05T13:02:55.121Z",
+  "windowStart": "2026-08-05",
+  "windowEnd": "2027-09-09",
   "counts": {
     "total": 150,
     "fromFeeds": 117,
@@ -92,42 +92,22 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-04",
-      "endDate": "2026-08-04",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2413/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-08-04",
-      "endDate": "2026-08-04",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-04",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Krishna Ashtami - Bairavar Abhishekam",
       "startDate": "2026-08-05",
       "endDate": "2026-08-05",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2414/-/krishna-ashtami-bairavar-abhishekam.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -288,6 +268,16 @@
       "time": "3:15 PM – 8:30 PM",
       "url": "https://iskconberkeley.us/events/snana-yatra-2026/",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Aadi Karthigai Celebrations, Murugan Thirukalyanam & Pradhosham",
+      "startDate": "2026-08-09",
+      "endDate": "2026-08-09",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2418/-/aadi-karthigai-celebrations,-murugan-thirukalyanam-pradhosham.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Datta Sai Temple and Cultural Center",
@@ -512,21 +502,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-17",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-08-17",
       "endDate": "2026-08-17",
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-17",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
       "source": "seva-json"
     },
     {
@@ -1128,6 +1118,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-16",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
+      "source": "seva-json"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
