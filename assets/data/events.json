@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-05T13:02:55.121Z",
-  "windowStart": "2026-08-05",
-  "windowEnd": "2027-09-09",
+  "generatedAt": "2026-08-06T13:03:33.606Z",
+  "windowStart": "2026-08-06",
+  "windowEnd": "2027-09-10",
   "counts": {
     "total": 150,
     "fromFeeds": 117,
@@ -90,36 +90,6 @@
       "source": "curated"
     },
     {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Krishna Ashtami - Bairavar Abhishekam",
-      "startDate": "2026-08-05",
-      "endDate": "2026-08-05",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2414/-/krishna-ashtami-bairavar-abhishekam.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-05",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-08-05",
-      "endDate": "2026-08-05",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Aadi Krittikai",
@@ -178,6 +148,16 @@
       "time": "6:30 PM",
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-06",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -298,6 +278,16 @@
       "time": "06:30 PM",
       "url": "/events/pradosham",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-10",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2419/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -668,6 +658,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/rig-yajur-upakarma/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-26",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
