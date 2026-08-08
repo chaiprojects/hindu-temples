@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-07T11:56:53.062Z",
-  "windowStart": "2026-08-07",
-  "windowEnd": "2027-09-11",
+  "generatedAt": "2026-08-08T11:42:22.325Z",
+  "windowStart": "2026-08-08",
+  "windowEnd": "2027-09-12",
   "counts": {
-    "total": 147,
-    "fromFeeds": 115,
+    "total": 148,
+    "fromFeeds": 116,
     "curated": 32,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -51,7 +51,7 @@
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -90,36 +90,6 @@
       "source": "curated"
     },
     {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Mata ka Jagaran",
-      "startDate": "2026-08-07",
-      "endDate": "2026-08-07",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-07",
-      "endDate": "2026-08-07",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2416/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-07",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Shirdi Sai Parivaar",
       "city": "Milpitas",
       "title": "Saisatcharitra Parayan",
@@ -140,6 +110,16 @@
       "source": "rss"
     },
     {
+      "temple": "Sri Krishna Balaram Mandir",
+      "city": "Milpitas",
+      "title": "Krishna Fest 2026 – 5 Online Contests for all ages",
+      "startDate": "2026-08-08",
+      "endDate": "2026-09-04",
+      "time": "8:00 AM",
+      "url": "https://www.kbmandir.org/event/krishna-fest-2026-5-online-contests-for-all-ages/",
+      "source": "tribe"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Rathostavam & Annadanam",
@@ -158,6 +138,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://vallejohindutemple.com/event/mata-di-chowki-2/",
       "source": "tribe"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-08",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Badarikashrama",
@@ -247,6 +237,16 @@
       "endDate": "2026-08-11",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2420/-/aadi-amavasai.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-08-12",
+      "endDate": "2026-08-12",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2421/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
     },
     {
@@ -1260,6 +1260,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Sarva Pitru",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Mahalaya Amavasya",
@@ -1370,6 +1380,16 @@
       "source": "curated"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sri Rama Shadakshari Maha Yagnam",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-22",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sri-rama-parivara-utsava-murthisamprokshana/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Poornima - Satyanarayana Pooja",
@@ -1388,16 +1408,6 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sri Rama Parivara Utsava Murthi Samprokshana",
-      "startDate": "2026-10-31",
-      "endDate": "2026-10-31",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sri-rama-parivara-utsava-murthisamprokshana/",
-      "source": "wp-rest"
     },
     {
       "temple": "Sri Sai Temple",
