@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-08T11:42:22.325Z",
-  "windowStart": "2026-08-08",
-  "windowEnd": "2027-09-12",
+  "generatedAt": "2026-08-09T11:45:15.277Z",
+  "windowStart": "2026-08-09",
+  "windowEnd": "2027-09-13",
   "counts": {
-    "total": 148,
-    "fromFeeds": 116,
+    "total": 146,
+    "fromFeeds": 112,
     "curated": 32,
-    "carriedForward": 0,
-    "feedsOk": 11,
-    "feedsFailed": 0
+    "carriedForward": 2,
+    "feedsOk": 10,
+    "feedsFailed": 1
   },
   "sources": [
     {
@@ -21,7 +21,7 @@
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
@@ -39,19 +39,19 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 16
+      "count": 18
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
-      "ok": true,
-      "count": 3
+      "ok": false,
+      "error": "This operation was aborted"
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -75,7 +75,7 @@
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
       "feedType": "tribe",
       "ok": true,
-      "count": 1
+      "count": 0
     }
   ],
   "events": [
@@ -88,66 +88,6 @@
       "time": null,
       "url": "https://www.sgshanuman.org/events/2026/guru-karuna-mahotsav",
       "source": "curated"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Saisatcharitra Parayan",
-      "startDate": "2026-08-08",
-      "endDate": "2026-08-08",
-      "time": "8:00 AM – 8:30 PM",
-      "url": "https://shirdisaiparivaar.org/event/saisatcharitra-parayan/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Back To School Saraswathi Puja & Krishna Ekadashi",
-      "startDate": "2026-08-08",
-      "endDate": "2026-08-08",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2417/-/back-to-school-saraswathi-puja-krishna-ekadashi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Krishna Balaram Mandir",
-      "city": "Milpitas",
-      "title": "Krishna Fest 2026 – 5 Online Contests for all ages",
-      "startDate": "2026-08-08",
-      "endDate": "2026-09-04",
-      "time": "8:00 AM",
-      "url": "https://www.kbmandir.org/event/krishna-fest-2026-5-online-contests-for-all-ages/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-08-08",
-      "endDate": "2026-08-08",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
-      "city": "Vallejo",
-      "title": "MATA DI CHOWKI",
-      "startDate": "2026-08-08",
-      "endDate": "2026-08-08",
-      "time": "6:00 PM – 8:00 PM",
-      "url": "https://vallejohindutemple.com/event/mata-di-chowki-2/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-08",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Badarikashrama",
@@ -210,6 +150,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-09",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
@@ -244,7 +194,7 @@
       "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-08-12",
-      "endDate": "2026-08-12",
+      "endDate": "2026-08-13",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2421/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
@@ -602,6 +552,16 @@
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
+      "title": "Onam Celebrations",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-26",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/onam-celebrations/",
+      "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
       "title": "Rig/Yajur Upakarma",
       "startDate": "2026-08-26",
       "endDate": "2026-08-26",
@@ -762,6 +722,16 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-29",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
       "title": "Sri Raghavendra Swamy Aradhane",
       "startDate": "2026-08-29",
       "endDate": "2026-08-29",
@@ -908,6 +878,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Srinivasa Kalyana Utsavam & Saraswati Puja",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/srinivasa-kalyana-utsavam-saraswati-puja/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
