@@ -55,6 +55,7 @@
   --shadow-md: 0 2px 4px rgba(28, 20, 14, 0.04), 0 8px 24px rgba(28, 20, 14, 0.07);
   --shadow-lg: 0 4px 8px rgba(28, 20, 14, 0.04), 0 24px 56px rgba(28, 20, 14, 0.10);
   --header-bg: linear-gradient(180deg, #FDFBF7 0%, #F5EFE4 100%);
+  --header-overlay: linear-gradient(180deg, rgba(253, 251, 247, 0.90) 0%, rgba(250, 246, 238, 0.74) 55%, rgba(245, 239, 228, 0.88) 100%);
   --nav-bg: rgba(251, 248, 243, 0.78);
   --widget-gradient: linear-gradient(160deg, #FFFFFF, #FCF8F1);
   --overlay-bg: rgba(27, 21, 18, 0.38);
@@ -92,6 +93,7 @@
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.55);
   --header-bg: linear-gradient(180deg, #17131A 0%, #121012 100%);
+  --header-overlay: linear-gradient(180deg, rgba(23, 19, 26, 0.88) 0%, rgba(20, 17, 21, 0.74) 55%, rgba(18, 16, 18, 0.88) 100%);
   --nav-bg: rgba(18, 16, 18, 0.72);
   --widget-gradient: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
   --overlay-bg: rgba(0, 0, 0, 0.62);
@@ -509,7 +511,11 @@ body.nav-open {
   z-index: 1;
   text-align: center;
   padding: 3.2rem 2rem 2.4rem;
-  background: var(--header-bg);
+  /* Virupaksha temple gopuram — photo: iMahesh, Wikimedia Commons, CC BY-SA 4.0 */
+  background:
+    var(--header-overlay),
+    url('../../images/temple-hero.jpg') center 32% / cover no-repeat,
+    var(--header-bg);
   border-bottom: 1px solid var(--border-color);
   transition: background 0.3s ease;
   overflow: hidden;
@@ -2423,6 +2429,15 @@ main {
   font-size: .7rem;
   color: var(--text-muted);
   opacity: .6;
+}
+
+.footer-note a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer-note a:hover {
+  color: var(--saffron);
 }
 
 /* ── Fix <button> play elements (were styled as <a>) ── */
