@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-09T11:45:15.277Z",
-  "windowStart": "2026-08-09",
-  "windowEnd": "2027-09-13",
+  "generatedAt": "2026-08-10T11:58:51.839Z",
+  "windowStart": "2026-08-10",
+  "windowEnd": "2027-09-14",
   "counts": {
-    "total": 146,
-    "fromFeeds": 112,
-    "curated": 32,
-    "carriedForward": 2,
-    "feedsOk": 10,
-    "feedsFailed": 1
+    "total": 145,
+    "fromFeeds": 116,
+    "curated": 29,
+    "carriedForward": 0,
+    "feedsOk": 11,
+    "feedsFailed": 0
   },
   "sources": [
     {
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 18
+      "count": 21
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
-      "ok": false,
-      "error": "This operation was aborted"
+      "ok": true,
+      "count": 2
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 37
+      "count": 36
     },
     {
       "temple": "Sri Sai Temple",
@@ -90,76 +90,6 @@
       "source": "curated"
     },
     {
-      "temple": "Badarikashrama",
-      "city": "San Leandro",
-      "title": "Sri Sundarakand Ramayana",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": "10:30 AM",
-      "url": "https://www.badarikashrama.org/usa-events",
-      "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Monthly Special Havan",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "ISKCON Berkeley (Hare Krishna Temple)",
-      "city": "Berkeley",
-      "title": "Snana Yatra",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": "3:15 PM – 8:30 PM",
-      "url": "https://iskconberkeley.us/events/snana-yatra-2026/",
-      "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Aadi Karthigai Celebrations, Murugan Thirukalyanam & Pradhosham",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2418/-/aadi-karthigai-celebrations,-murugan-thirukalyanam-pradhosham.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Datta Sai Temple and Cultural Center",
-      "city": "San Ramon",
-      "title": "Pradosha Puja",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": "7:00 PM",
-      "url": "https://sridattasaimandir.org/temple/calendar/upcoming-events/",
-      "source": "curated"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-09",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
@@ -178,6 +108,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-10",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -208,6 +148,16 @@
       "time": "7:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Aadi Pooram",
+      "startDate": "2026-08-14",
+      "endDate": "2026-08-14",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2423/-/aadi-pooram.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -360,16 +310,6 @@
       "source": "js-data"
     },
     {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Nagara Panchami",
-      "startDate": "2026-08-16",
-      "endDate": "2026-08-16",
-      "time": "06:00 PM",
-      "url": "/events/nagara-panchami",
-      "source": "seva-json"
-    },
-    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Naga Panchami",
@@ -445,7 +385,7 @@
       "title": "Varamahalakshmi Vrata",
       "startDate": "2026-08-21",
       "endDate": "2026-08-21",
-      "time": "06:00 PM",
+      "time": "05:30 PM",
       "url": "/events/varamahalakshmi-vrata",
       "source": "seva-json"
     },
@@ -500,6 +440,16 @@
       "source": "curated"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Saraswati Pooja - Back to school",
+      "startDate": "2026-08-23",
+      "endDate": "2026-08-23",
+      "time": "04:00 PM",
+      "url": "/events/saraswati-pooja-back-to-school",
+      "source": "seva-json"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Ganesha Chathurthi Celebrations",
@@ -512,21 +462,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-08-24",
-      "endDate": "2026-08-24",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-08-24",
       "endDate": "2026-08-24",
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-24",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
       "source": "seva-json"
     },
     {
@@ -548,16 +498,6 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Onam Celebrations",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/onam-celebrations/",
-      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -652,21 +592,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Raksha Bandhan",
+      "title": "Rig/Yajur Veda Upakarma",
       "startDate": "2026-08-27",
       "endDate": "2026-08-27",
-      "time": "06:00 PM",
-      "url": "/events/raksha-bandhan",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Poornima - Satyanarayana Pooja",
-      "startDate": "2026-08-27",
-      "endDate": "2026-08-27",
-      "time": "05:30 PM",
-      "url": "/events/satyanarayana-puja",
+      "time": "07:00 AM",
+      "url": "/events/rig-yajur-veda-upakarma",
       "source": "seva-json"
     },
     {
@@ -730,16 +660,6 @@
       "source": "seva-json"
     },
     {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Raghavendra Swamy Aradhane",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": "06:00 PM",
-      "url": "/events/sri-raghavendra-swamy-aradhane",
-      "source": "seva-json"
-    },
-    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Sankata Hara Chathurthi",
@@ -748,6 +668,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Onam Celebrations",
+      "startDate": "2026-08-30",
+      "endDate": "2026-08-30",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/onam-celebrations/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Datta Sai Temple and Cultural Center",
@@ -848,6 +778,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Krishna Janmashtami Celebration",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-04",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/krishna-janmashtami-celebration-2/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -1120,6 +1060,16 @@
       "source": "curated"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-23",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
+      "source": "seva-json"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Purnima Satyanarayan Katha",
@@ -1250,6 +1200,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Mahalaya Amavasya",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Mahalaya Amavasya",
@@ -1258,6 +1218,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Durga Pooja Celebrations",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/durga-pooja-celebrations/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sai Temple",
@@ -1380,6 +1350,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Karwa Chowth Puja / Katha",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-28",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/karwa-chowth-puja-katha/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Sankatahara Chaturthi",
@@ -1467,6 +1447,16 @@
       "endDate": "2026-11-21",
       "time": "06:00 PM",
       "url": "/events/tulasi-vivah",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Poornima - Satyanarayana Pooja",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": "05:30 PM",
+      "url": "/events/satyanarayana-puja",
       "source": "seva-json"
     },
     {
