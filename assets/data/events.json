@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-10T11:58:51.839Z",
-  "windowStart": "2026-08-10",
-  "windowEnd": "2027-09-14",
+  "generatedAt": "2026-08-11T11:56:04.633Z",
+  "windowStart": "2026-08-11",
+  "windowEnd": "2027-09-15",
   "counts": {
     "total": 145,
-    "fromFeeds": 116,
-    "curated": 29,
+    "fromFeeds": 117,
+    "curated": 28,
     "carriedForward": 0,
     "feedsOk": 11,
     "feedsFailed": 0
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 21
+      "count": 22
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -80,46 +80,6 @@
   ],
   "events": [
     {
-      "temple": "Karya Siddhi Hanuman Temple",
-      "city": "Fremont",
-      "title": "Guru Karuna Mahotsav",
-      "startDate": "2026-06-24",
-      "endDate": "2026-08-10",
-      "time": null,
-      "url": "https://www.sgshanuman.org/events/2026/guru-karuna-mahotsav",
-      "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-10",
-      "endDate": "2026-08-10",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2419/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-08-10",
-      "endDate": "2026-08-10",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-10",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Aadi Amavasai",
@@ -128,6 +88,16 @@
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2420/-/aadi-amavasai.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-11",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -208,6 +178,16 @@
       "time": "9:00 AM – 6:30 PM",
       "url": "https://shirdisaiparivaar.org/event/guru-poornima-hindustani-mela-2026/",
       "source": "tribe"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sukla Chaturthi",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2424/-/sukla-chaturthi.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -332,21 +312,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-17",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Shashthi - Archana",
       "startDate": "2026-08-17",
       "endDate": "2026-08-17",
       "time": "06:00 PM",
       "url": "/events/shashthi",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-17",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
     {
@@ -708,6 +688,16 @@
       "time": "10:30 AM",
       "url": "https://fremonttemple.org/events/",
       "source": "curated"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-08-31",
+      "endDate": "2026-08-31",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1218,6 +1208,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Devi Navarathri Celebrations",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/devi-navarathri-celebrations/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
