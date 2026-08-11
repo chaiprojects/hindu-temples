@@ -1847,6 +1847,30 @@ main {
   font-weight: 500;
 }
 
+.hero-sun {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-top: 0.9rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-sun-icon {
+  font-size: 0.85rem;
+}
+
+.hero-sun-time {
+  color: var(--saffron);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .hero-sun-time {
+  color: var(--light-gold);
+}
+
 /* ═══════════════════════════════════════════════════════════
    INTERACTIVE TEMPLE MAP
    ═══════════════════════════════════════════════════════════ */
@@ -2654,6 +2678,10 @@ body {
   }
   .hs-label {
     font-size: 0.55rem;
+  }
+  .hero-sun {
+    gap: 1rem;
+    font-size: 0.68rem;
   }
 }
 

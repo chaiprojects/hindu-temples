@@ -167,10 +167,21 @@ function loadLocationCache() {
   return null;
 }
 
+// ── Hero sunrise/sunset ──
+function renderSunTimes() {
+  const riseEl = document.getElementById('heroSunrise');
+  const setEl = document.getElementById('heroSunset');
+  if (!riseEl || !setEl || !window.RahuKalam) return;
+  const { sunrise, sunset } = window.RahuKalam.calcSunriseSunset(new Date(), userLocation);
+  riseEl.textContent = window.RahuKalam.minsToTime(sunrise);
+  setEl.textContent = window.RahuKalam.minsToTime(sunset);
+}
+
 // ── Apply location change — re-render everything ──
 function applyLocationChange() {
   showLocationBanner('located');
   saveLocationCache();
+  renderSunTimes();
   window.RahuKalam.renderRahuKalam(userLocation);
   window.Ekadashi.recomputeEkadashi(userLocation);
   // Festival dates depend on sunrise at the user's location, so the
@@ -496,6 +507,7 @@ async function initApp() {
   ]);
 
   // Render widgets with default location
+  renderSunTimes();
   window.RahuKalam.renderRahuKalam(userLocation);
   window.Calendar.render();
   window.Temples.renderTemples(window.Temples.TEMPLES);
