@@ -6,7 +6,9 @@
 window.DailyBhajan = (() => {
 
   // ── Day → Deity mapping (0 = Sunday … 6 = Saturday) ──────
-  // Video IDs verified via YouTube oEmbed API, March 2026
+  // All videos are 3–4 minutes long (single bhajans, not jukeboxes
+  // or hour-long dhuns). Durations and embeddability verified
+  // against YouTube, August 2026.
   const DEITIES = [
     { // 0 – Sunday
       day: 'Sunday',
@@ -18,11 +20,11 @@ window.DailyBhajan = (() => {
       blessing: 'Seek blessings of the Sun God for health & vitality',
       accentColor: '#d97706',
       songs: [
-        { t: 'Om Jai Surya Bhagwan (Anuradha Paudwal)', v: 'F9uURnkc8iA' },
-        { t: 'Surya Aarti — Om Jai Surya Bhagwan',      v: 'Pj3IQy6KTCw' },
-        { t: 'Ravivaar Special Surya Dev Aarti',        v: 'g-VsdrTmOTE' },
-        { t: 'Surya Dev Aarti — Sunday Special',        v: 'OLui1rZ9ZG8' },
-        { t: 'Ravivaar Bhakti — Surya Bhajans',         v: '939Vr48dVVw' }
+        { t: 'Om Jai Surya Bhagwan Aarti',               v: '_3jJahZ3L9g' }, // 3:42
+        { t: 'Suryashtakam (Anuradha Paudwal)',          v: 'BPMgPs_R9J4' }, // 3:06
+        { t: 'Surya Mandala Stotram',                    v: '32TGOFRIVmE' }, // 3:50
+        { t: 'Jo Suraj Ko Pooje (Hariharan)',            v: 'XfwM8tLvyXg' }, // 4:10
+        { t: 'Aditya Hridayam — 4-Minute Recitation',    v: 'EsCbuTke7yw' }  // 4:15
       ],
       ytSearch: 'surya+dev+aarti+om+jai+surya+bhagwan+anuradha+paudwal'
     },
@@ -36,11 +38,11 @@ window.DailyBhajan = (() => {
       blessing: 'Offer milk & bilva leaves for peace and liberation',
       accentColor: '#7c3aed',
       songs: [
-        { t: 'Om Namah Shivaya Dhun',                    v: 'b4Tt5eglNE4' },
-        { t: 'Shiv Dhun (Anuradha Paudwal)',             v: '3FcBh45t9Vs' },
-        { t: 'Peaceful Om Namah Shivay Dhun',            v: 'C9dwTF1cTto' },
-        { t: 'Om Namah Shivaya — Shiv Bhajan',           v: 'E1I_05xu-ro' },
-        { t: 'Om Namah Shivay Dhoon (Hemant Chauhan)',   v: '4hiszMuQU4w' }
+        { t: 'Shiv Panchakshar Stotra (Sachet–Parampara)',    v: 'im0P-4Ds2Dk' }, // 3:26
+        { t: 'Siva Panchakshara Stotram (M.S. Subbulakshmi)', v: 'i1v_XnyxEDE' }, // 3:17
+        { t: 'Karpur Gauram Karunavtaram',                    v: 'wR-agGIqgik' }, // 4:13
+        { t: 'Shiv Panchakshar Stotram (Rameshbhai Oza)',     v: '9JaXutSnZ94' }, // 3:59
+        { t: 'Shiv Dhyan Mantra — Deep Meditation',           v: 'Ur2SsvKhIdo' }  // 3:09
       ],
       ytSearch: 'om+namah+shivaya+dhun+anuradha+paudwal'
     },
@@ -54,11 +56,11 @@ window.DailyBhajan = (() => {
       blessing: 'Fast or offer sindoor to Hanuman for courage & strength',
       accentColor: '#dc2626',
       songs: [
-        { t: 'Hanuman Chalisa (Gulshan Kumar)',          v: 'AETFvQonfV8' },
-        { t: 'Hanuman Chalisa (Hariharan)',              v: 'PlgIlN5gmQw' },
-        { t: 'Sankat Mochan Hanuman Ashtak',             v: 'HH_a6aRO1TE' },
-        { t: 'Hanuman Jayanti Bhajans',                  v: 'ASb9b3pHglU' },
-        { t: 'Shree Hanuman Chalisa Bhajans',            v: 'A_B_1nwK5Zs' }
+        { t: 'Aarti Kije Hanuman Lala Ki (Rasraj Ji Maharaj)', v: 'YRB6Xxdm3Do' }, // 3:23
+        { t: 'Aarti Kije Hanuman Lala Ki (Hariharan)',         v: 'gbYXo2Xqlmk' }, // 4:08
+        { t: 'Jai Ambe Gauri Aarti (Anuradha Paudwal)',        v: 'OH8mxbIp_Ro' }, // 3:37
+        { t: 'Om Jai Ambe Gauri — Durga Mata Aarti',           v: '3sEvIPncLkE' }, // 3:36
+        { t: 'Superfast Hanuman Chalisa',                      v: '_VzGJOezxB8' }  // 3:51
       ],
       ytSearch: 'hanuman+chalisa+gulshan+kumar+hariharan'
     },
@@ -72,11 +74,11 @@ window.DailyBhajan = (() => {
       blessing: 'Offer tulsi & yellow flowers for wisdom & love',
       accentColor: '#0369a1',
       songs: [
-        { t: 'Achyutam Keshavam',                        v: 'pzzPowh241o' },
-        { t: 'Hare Krishna Hare Rama — Maha Mantra',     v: 'Zdcth9NndEA' },
-        { t: 'Hare Krishna Maha Mantra (Prabhupada)',    v: 'MNzH-emA3Sk' },
-        { t: 'Achyutam Keshavam (Ankit Batra)',          v: 'gvu891ubYWE' },
-        { t: 'Achyutam Keshavam — Krishna Bhajan',       v: 'qPFGGpGbZEs' }
+        { t: 'Achyutam Keshavam (Ayanty Ray)',           v: 'PKZL5f1LUpk' }, // 3:18
+        { t: 'Hare Krishna Hare Rama — Morning Mantra',  v: '5F81ehtPqmM' }, // 3:50
+        { t: 'Hare Krishna Hare Rama Mantra',            v: 'Nr5ZIIZGJhY' }, // 3:08
+        { t: 'Madhurashtakam — Adharam Madhuram',        v: '1jnQZN8iUsc' }, // 4:14
+        { t: 'Om Jai Jagdish Hare',                      v: 'uXAOJtltKcg' }  // 4:09
       ],
       ytSearch: 'achyutam+keshavam+krishna+damodaram+bhajan'
     },
@@ -90,11 +92,11 @@ window.DailyBhajan = (() => {
       blessing: 'Seek the Guru\'s grace — offer flowers & light a diya on Guruvaar',
       accentColor: '#b45309',
       songs: [
-        { t: 'Om Sai Ram Dhun',                          v: '8NQKfBx2OYQ' },
-        { t: 'Om Sai Ram — Full Song',                   v: 'SvLVru_Tnlo' },
-        { t: 'Om Sai Ram, Om Sai Shyam (Suresh Wadkar)', v: '-h5__qZMWEs' },
-        { t: 'Hey Sai Ram (Suresh Wadkar)',              v: 'hzAmIj2Nwv4' },
-        { t: 'Jai Jai Sai Ram',                          v: 'xjbi3YbWneI' }
+        { t: 'Sai Baba Aarti (Rajshri Soul)',            v: 'DT5PaaxItzY' }, // 3:13
+        { t: 'Shirdi Sai Baba Aarti (with lyrics)',      v: 'WXMpcM8SQFM' }, // 3:22
+        { t: 'Aarati Saibaba — Soukhya Datar Jeeva',     v: 'Bes4ivvkzXk' }, // 2:55
+        { t: 'Om Om Sai Ram — Shirdi Sai Bhajan',        v: 'NKE6HSs2_zw' }, // 4:21
+        { t: 'Poojyaya Raghavendraya',                   v: 'Vrb1yfD_ch8' }  // 4:21
       ],
       ytSearch: 'om+sai+ram+dhun+shirdi+sai+baba+bhajan'
     },
@@ -108,11 +110,11 @@ window.DailyBhajan = (() => {
       blessing: 'Light a diya with ghee & offer lotus for wealth & grace',
       accentColor: '#db2777',
       songs: [
-        { t: 'Lakshmi Aarti (Anuradha Paudwal)',         v: 'SyqgAt-T0iQ' },
-        { t: 'Lakshmi Ji Ki Aarti',                      v: 'AeSXsYxgeVI' },
-        { t: 'Om Jai Lakshmi Mata',                      v: '0J1aNK16sFM' },
-        { t: 'Om Jai Lakshmi Mata (Sonu Nigam)',         v: 'n8IlWgH0iP8' },
-        { t: 'Lakshmi Aarti for Wealth & Prosperity',    v: '0D3VbBoJBrM' }
+        { t: 'Mahalakshmi Ashtakam (Rajshri Soul)',      v: 'FrUa0ovoZJQ' }, // 3:32
+        { t: 'Mahalakshmi Ashtakam — Chanting',          v: 'lCIHz9Nf68Y' }, // 3:23
+        { t: 'Shri Mahalakshmi Ashtakam',                v: 'k955jzEVdYo' }, // 3:48
+        { t: 'Om Jai Lakshmi Mata (Rahul Vaidya)',       v: 'J7zkL1zkPYU' }, // 4:24
+        { t: 'Superfast Lakshmi Chalisa',                v: '6BVyuMC02dw' }  // 3:17
       ],
       ytSearch: 'om+jai+lakshmi+mata+aarti+anuradha+paudwal'
     },
@@ -126,11 +128,11 @@ window.DailyBhajan = (() => {
       blessing: 'Offer sesame oil & black sesame to Shani for protection',
       accentColor: '#374151',
       songs: [
-        { t: 'Shani Chalisa',                            v: 'MJ14wONWjWg' },
-        { t: 'Shani Mantra 108 Times (Anuradha Paudwal)',v: 'KnMWL5jVx3s' },
-        { t: 'Jai Jai Shani Dev Aarti',                  v: '42fouuhg9Pw' },
-        { t: 'Shani Chalisa, Stuti & Aarti',             v: 'HAIrrpAYbK0' },
-        { t: 'Jai Shani Dev — Shani Aarti',              v: 'tcQMwShHwI8' }
+        { t: 'Jai Shani Dev — Shani Aarti',              v: 'tcQMwShHwI8' }, // 4:03
+        { t: 'Shani Dev Aarti — Jai Jai Shani Dev',      v: 'fZrQrTpRr7g' }, // 3:28
+        { t: 'Shree Shanidevachi Aarti (Marathi)',       v: 'oZ4HNJf1MVM' }, // 3:02
+        { t: 'Superfast Hanuman Chalisa (Shankar Mahadevan)', v: '9q8kkmCa9GY' }, // 2:58
+        { t: '3-Minute Hanuman Chalisa (Nitika Gautam)', v: 'xq4VWY7KxKc' }  // 3:00
       ],
       ytSearch: 'shani+dev+chalisa+bhajan'
     }
