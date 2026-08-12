@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-11T11:56:04.633Z",
-  "windowStart": "2026-08-11",
-  "windowEnd": "2027-09-15",
+  "generatedAt": "2026-08-12T11:58:31.198Z",
+  "windowStart": "2026-08-12",
+  "windowEnd": "2027-09-16",
   "counts": {
     "total": 145,
     "fromFeeds": 117,
@@ -82,26 +82,6 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Aadi Amavasai",
-      "startDate": "2026-08-11",
-      "endDate": "2026-08-11",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2420/-/aadi-amavasai.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-11",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-08-12",
       "endDate": "2026-08-13",
@@ -116,6 +96,16 @@
       "startDate": "2026-08-12",
       "endDate": "2026-08-12",
       "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-12",
+      "endDate": "2026-09-19",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -290,6 +280,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Aavani Maasa Begins",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2425/-/aavani-maasa-begins.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Naga Panchami",
@@ -422,11 +422,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Saraswati Pooja - Back to school",
+      "title": "Back to School Saraswati Pooja",
       "startDate": "2026-08-23",
       "endDate": "2026-08-23",
       "time": "04:00 PM",
-      "url": "/events/saraswati-pooja-back-to-school",
+      "url": "/events/back-to-school-saraswati-pooja",
       "source": "seva-json"
     },
     {
