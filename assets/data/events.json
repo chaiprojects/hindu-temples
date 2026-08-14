@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-13T11:59:16.658Z",
-  "windowStart": "2026-08-13",
-  "windowEnd": "2027-09-17",
+  "generatedAt": "2026-08-14T11:56:49.736Z",
+  "windowStart": "2026-08-14",
+  "windowEnd": "2027-09-18",
   "counts": {
     "total": 147,
     "fromFeeds": 119,
@@ -82,26 +82,6 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-13",
-      "endDate": "2026-08-13",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2422/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-13",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Aadi Pooram",
       "startDate": "2026-08-14",
       "endDate": "2026-08-14",
@@ -138,6 +118,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/andal-aadi-pooram/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-14",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -328,6 +318,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-08-18",
+      "endDate": "2026-08-18",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2428/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Vedanta Society Berkeley",
