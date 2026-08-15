@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T11:56:49.736Z",
-  "windowStart": "2026-08-14",
-  "windowEnd": "2027-09-18",
+  "generatedAt": "2026-08-15T11:33:50.871Z",
+  "windowStart": "2026-08-15",
+  "windowEnd": "2027-09-19",
   "counts": {
-    "total": 147,
-    "fromFeeds": 119,
+    "total": 145,
+    "fromFeeds": 117,
     "curated": 28,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 23
+      "count": 20
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -79,56 +79,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Aadi Pooram",
-      "startDate": "2026-08-14",
-      "endDate": "2026-08-14",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2423/-/aadi-pooram.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Ashta Lakshmi Puja & Varalakshmi Vratam",
-      "startDate": "2026-08-14",
-      "endDate": "2026-08-14",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/ashta-lakshmi-puja-varalakshmi-vratam/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Pavithrotsavam Celebrations",
-      "startDate": "2026-08-14",
-      "endDate": "2026-08-14",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/pavithrotsavam-celebrations/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Andal Aadi Pooram",
-      "startDate": "2026-08-14",
-      "endDate": "2026-08-14",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/andal-aadi-pooram/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-14",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -188,6 +138,16 @@
       "time": "06:00 PM",
       "url": "/events/rathostavam",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-15",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Badarikashrama",
@@ -327,6 +287,16 @@
       "endDate": "2026-08-18",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2428/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Visakam - Tamil Archana, Sukla Ashtami",
+      "startDate": "2026-08-19",
+      "endDate": "2026-08-19",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2429/-/visakam-tamil-archana,-sukla-ashtami.html",
       "source": "rss"
     },
     {
@@ -628,6 +598,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "SSP Health Fair -2026",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-29",
+      "time": "8:30 AM – 3:00 PM",
+      "url": "https://shirdisaiparivaar.org/event/ssp-health-fair-2026/",
+      "source": "tribe"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
