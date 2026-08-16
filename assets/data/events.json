@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-15T11:33:50.871Z",
-  "windowStart": "2026-08-15",
-  "windowEnd": "2027-09-19",
+  "generatedAt": "2026-08-16T11:33:39.841Z",
+  "windowStart": "2026-08-16",
+  "windowEnd": "2027-09-20",
   "counts": {
-    "total": 145,
-    "fromFeeds": 117,
-    "curated": 28,
-    "carriedForward": 0,
-    "feedsOk": 11,
-    "feedsFailed": 0
+    "total": 142,
+    "fromFeeds": 110,
+    "curated": 27,
+    "carriedForward": 5,
+    "feedsOk": 8,
+    "feedsFailed": 3
   },
   "sources": [
     {
@@ -20,14 +20,14 @@
     {
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
-      "ok": true,
-      "count": 5
+      "ok": false,
+      "error": "HTTP 415"
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
@@ -39,19 +39,19 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 20
+      "count": 19
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
-      "ok": true,
-      "count": 1
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -75,80 +75,10 @@
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
       "feedType": "tribe",
       "ok": true,
-      "count": 0
+      "count": 1
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Navagraha Abhishekam",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Guru Poornima, Hindustani Mela 2026",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": "9:00 AM – 6:30 PM",
-      "url": "https://shirdisaiparivaar.org/event/guru-poornima-hindustani-mela-2026/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Chaturthi",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2424/-/sukla-chaturthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "A Carnatic Vocal concert and a Bharatanatyam dance performance",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/bharatanatyam-dance-performance/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Datta Sai Temple and Cultural Center",
-      "city": "San Ramon",
-      "title": "Monthly Hanuman Chalisa (108 times)",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": "9:00 AM",
-      "url": "https://sridattasaimandir.org/temple/calendar/upcoming-events/",
-      "source": "curated"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-08-15",
-      "endDate": "2026-08-15",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-15",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Badarikashrama",
       "city": "San Leandro",
@@ -238,6 +168,16 @@
       "time": "6:00 PM",
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-16",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
@@ -680,6 +620,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
+      "city": "Vallejo",
+      "title": "JANMASHTAMI CELEBRATION 2026",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-04",
+      "time": "9:30 AM",
+      "url": "https://vallejohindutemple.com/event/janmashtami-celebration-2026/",
+      "source": "tribe"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Shashthi - Archana",
@@ -808,6 +758,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/srinivasa-kalyana-utsavam-saraswati-puja/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -1195,6 +1155,16 @@
       "title": "Mahalaya Amavasya",
       "startDate": "2026-10-09",
       "endDate": "2026-10-09",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Karthikeya Abhishekam",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
