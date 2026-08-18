@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-17T11:39:23.761Z",
-  "windowStart": "2026-08-17",
-  "windowEnd": "2027-09-21",
+  "generatedAt": "2026-08-18T11:40:21.331Z",
+  "windowStart": "2026-08-18",
+  "windowEnd": "2027-09-22",
   "counts": {
     "total": 140,
     "fromFeeds": 116,
@@ -82,52 +82,22 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Sukla Sashti & Shravana Somavara Vrat -1",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-17",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2426/-/sukla-sashti-shravana-somavara-vrat-1.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-17",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-17",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-17",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-08-18",
       "endDate": "2026-08-18",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2428/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-18",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -220,6 +190,16 @@
       "source": "curated"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "All Deities Abhishekam & Aarathi",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-22",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2432/-/all-deities-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Rathostavam & Annadanam",
@@ -272,21 +252,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-08-24",
-      "endDate": "2026-08-24",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Pradosham - Rudraabhishekam",
       "startDate": "2026-08-24",
       "endDate": "2026-08-24",
       "time": "06:30 PM",
       "url": "/events/pradosham",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-24",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
     {
@@ -702,6 +682,16 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-07",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
       "title": "Pradosham - Rudraabhishekam",
       "startDate": "2026-09-08",
       "endDate": "2026-09-08",
@@ -1037,6 +1027,16 @@
       "endDate": "2026-09-29",
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-01",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
       "source": "seva-json"
     },
     {
