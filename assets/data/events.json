@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-19T11:39:10.676Z",
-  "windowStart": "2026-08-19",
-  "windowEnd": "2027-09-23",
+  "generatedAt": "2026-08-20T11:42:01.989Z",
+  "windowStart": "2026-08-20",
+  "windowEnd": "2027-09-24",
   "counts": {
     "total": 140,
     "fromFeeds": 116,
@@ -82,42 +82,22 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Visakam - Tamil Archana, Sukla Ashtami",
-      "startDate": "2026-08-19",
-      "endDate": "2026-08-19",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2429/-/visakam-tamil-archana,-sukla-ashtami.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-19",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-08-19",
-      "endDate": "2026-08-19",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-08-20",
       "endDate": "2026-08-20",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2430/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-20",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -238,6 +218,16 @@
       "time": "04:00 PM",
       "url": "/events/back-to-school-saraswati-pooja",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shravana Somavara Vrat Week-2 & Pradhosham",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-24",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2434/-/shravana-somavara-vrat-week-2-pradhosham.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -698,6 +688,16 @@
       "time": "06:30 PM",
       "url": "/events/pradosham",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-09",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
