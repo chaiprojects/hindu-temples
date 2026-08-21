@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-20T11:42:01.989Z",
-  "windowStart": "2026-08-20",
-  "windowEnd": "2027-09-24",
+  "generatedAt": "2026-08-21T11:41:08.727Z",
+  "windowStart": "2026-08-21",
+  "windowEnd": "2027-09-25",
   "counts": {
-    "total": 140,
-    "fromFeeds": 116,
+    "total": 142,
+    "fromFeeds": 118,
     "curated": 24,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 19
+      "count": 20
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -79,26 +79,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-20",
-      "endDate": "2026-08-20",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2430/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-20",
-      "endDate": "2026-09-19",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -148,6 +128,16 @@
       "time": "6:00 PM",
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-21",
+      "endDate": "2026-09-19",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
@@ -268,6 +258,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-08-25",
+      "endDate": "2026-08-25",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2435/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -640,6 +640,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "SSP Carnatic Music Mela 2026",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": "9:00 AM – 6:00 PM",
+      "url": "https://shirdisaiparivaar.org/event/ssp-carnatic-music-mela-2026/",
+      "source": "tribe"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Srinivasa Kalyana Utsavam & Saraswati Puja",
@@ -718,6 +728,16 @@
       "time": "9:30 AM – 6:00 PM",
       "url": "https://shirdisaiparivaar.org/event/ganesha-idol-making-workshop-2026/",
       "source": "tribe"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Krishna Leelamrutham",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-12",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/krishna-leelamrutham/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
