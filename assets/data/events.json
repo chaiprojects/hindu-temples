@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-23T11:33:58.997Z",
-  "windowStart": "2026-08-23",
-  "windowEnd": "2027-09-27",
+  "generatedAt": "2026-08-24T11:43:29.499Z",
+  "windowStart": "2026-08-24",
+  "windowEnd": "2027-09-28",
   "counts": {
-    "total": 138,
+    "total": 137,
     "fromFeeds": 116,
-    "curated": 22,
+    "curated": 21,
     "carriedForward": 0,
     "feedsOk": 11,
     "feedsFailed": 0
@@ -80,56 +80,6 @@
   ],
   "events": [
     {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Lakshmi Narasimha Abhishekam",
-      "startDate": "2026-08-23",
-      "endDate": "2026-08-23",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "ISKCON Berkeley (Hare Krishna Temple)",
-      "city": "Berkeley",
-      "title": "Ratha-yatra (San Francisco, Golden Gate Park)",
-      "startDate": "2026-08-23",
-      "endDate": "2026-08-23",
-      "time": "10:15 AM",
-      "url": "https://iskconberkeley.us/events/ratha-yatra-2026/",
-      "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Ekadasi",
-      "startDate": "2026-08-23",
-      "endDate": "2026-08-23",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2433/-/sukla-ekadasi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Back to School Saraswati Pooja",
-      "startDate": "2026-08-23",
-      "endDate": "2026-08-23",
-      "time": "04:00 PM",
-      "url": "/events/back-to-school-saraswati-pooja",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-23",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Shravana Somavara Vrat Week-2 & Pradhosham",
@@ -170,6 +120,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sharada Bala Gurukulam_L1",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-24",
+      "time": "TBC",
+      "url": "/events/sharada-bala-gurukulam-l1",
+      "source": "seva-json"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Ganesha Atharvashirsha (21 days)",
@@ -178,6 +138,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-24",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -338,6 +308,16 @@
       "time": null,
       "url": "https://fremonttemple.org/events/",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Gayatri Jabam",
+      "startDate": "2026-08-28",
+      "endDate": "2026-08-28",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2438/-/gayatri-jabam.html",
+      "source": "rss"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1208,6 +1188,16 @@
       "time": "06:00 PM",
       "url": "/events/durga-ashtami",
       "source": "seva-json"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Maha Navami",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-19",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
