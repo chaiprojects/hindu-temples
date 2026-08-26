@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-25T11:43:02.217Z",
-  "windowStart": "2026-08-25",
-  "windowEnd": "2027-09-29",
+  "generatedAt": "2026-08-26T11:44:23.662Z",
+  "windowStart": "2026-08-26",
+  "windowEnd": "2027-09-30",
   "counts": {
     "total": 136,
     "fromFeeds": 115,
@@ -90,26 +90,6 @@
       "source": "curated"
     },
     {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-08-25",
-      "endDate": "2026-08-25",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2435/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-25",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Satyanarayan Katha",
@@ -138,6 +118,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/rig-yajur-upakarma/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -338,6 +328,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesha, Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-08-30",
+      "endDate": "2026-08-30",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2440/-/ganesha,-shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
