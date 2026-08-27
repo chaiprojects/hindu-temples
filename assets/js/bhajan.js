@@ -6,9 +6,11 @@
 window.DailyBhajan = (() => {
 
   // ── Day → Deity mapping (0 = Sunday … 6 = Saturday) ──────
-  // All videos are 3–4 minutes long (single bhajans, not jukeboxes
-  // or hour-long dhuns). Durations and embeddability verified
-  // against YouTube, August 2026.
+  // 8 songs per day, all single bhajans of ~2:30–5:30 (no jukeboxes
+  // or hour-long dhuns), mixing classic renditions (Anuradha Paudwal,
+  // Sadhana Sargam, M.S. Subbulakshmi) with popular modern ones
+  // (Jubin Nautiyal, Sachet–Parampara). Every video ID verified
+  // alive + embeddable via YouTube oEmbed, August 2026.
   const DEITIES = [
     { // 0 – Sunday
       day: 'Sunday',
@@ -24,7 +26,10 @@ window.DailyBhajan = (() => {
         { t: 'Suryashtakam (Anuradha Paudwal)',          v: 'BPMgPs_R9J4' }, // 3:06
         { t: 'Surya Mandala Stotram',                    v: '32TGOFRIVmE' }, // 3:50
         { t: 'Jo Suraj Ko Pooje (Hariharan)',            v: 'XfwM8tLvyXg' }, // 4:10
-        { t: 'Aditya Hridayam — 4-Minute Recitation',    v: 'EsCbuTke7yw' }  // 4:15
+        { t: 'Aditya Hridayam — 4-Minute Recitation',    v: 'EsCbuTke7yw' }, // 4:15
+        { t: 'Aditya Hrudayam Stotram (with lyrics)',    v: 'invPCYDaWUE' }, // 4:03
+        { t: 'Om Jai Surya Bhagwan (Anuradha Paudwal)',  v: '4aBf90AzlL0' }, // 3:09
+        { t: 'Surya Gayatri Mantra',                     v: 'gIVcR50flbk' }  // 4:04
       ],
       ytSearch: 'surya+dev+aarti+om+jai+surya+bhagwan+anuradha+paudwal'
     },
@@ -42,7 +47,10 @@ window.DailyBhajan = (() => {
         { t: 'Siva Panchakshara Stotram (M.S. Subbulakshmi)', v: 'i1v_XnyxEDE' }, // 3:17
         { t: 'Karpur Gauram Karunavtaram',                    v: 'wR-agGIqgik' }, // 4:13
         { t: 'Shiv Panchakshar Stotram (Rameshbhai Oza)',     v: '9JaXutSnZ94' }, // 3:59
-        { t: 'Shiv Dhyan Mantra — Deep Meditation',           v: 'Ur2SsvKhIdo' }  // 3:09
+        { t: 'Shiv Dhyan Mantra — Deep Meditation',           v: 'Ur2SsvKhIdo' }, // 3:09
+        { t: 'Om Jai Shiv Omkara (Anuradha Paudwal)',         v: 'BhwOproElxU' }, // 4:58
+        { t: 'Shiv Tandav — Rock Version (Sachet–Parampara)', v: 'aLBImFnsWHM' }, // 3:38
+        { t: 'Namo Namo Ji Shankara (Kedarnath)',             v: 'dx4Teh-nv3A' }  // 5:29
       ],
       ytSearch: 'om+namah+shivaya+dhun+anuradha+paudwal'
     },
@@ -60,7 +68,10 @@ window.DailyBhajan = (() => {
         { t: 'Aarti Kije Hanuman Lala Ki (Hariharan)',         v: 'gbYXo2Xqlmk' }, // 4:08
         { t: 'Jai Ambe Gauri Aarti (Anuradha Paudwal)',        v: 'OH8mxbIp_Ro' }, // 3:37
         { t: 'Om Jai Ambe Gauri — Durga Mata Aarti',           v: '3sEvIPncLkE' }, // 3:36
-        { t: 'Superfast Hanuman Chalisa',                      v: '_VzGJOezxB8' }  // 3:51
+        { t: 'Superfast Hanuman Chalisa',                      v: '_VzGJOezxB8' }, // 3:51
+        { t: 'Aigiri Nandini (Jubin Nautiyal)',                v: 'IQ8axjD0YzE' }, // 4:31
+        { t: 'Durga Chalisa — Superfast',                      v: 'HuF-A0GqAMA' }, // 2:56
+        { t: 'Bajrang Baan — Superfast',                       v: 'Fahq3LYQq88' }  // 3:52
       ],
       ytSearch: 'hanuman+chalisa+gulshan+kumar+hariharan'
     },
@@ -78,7 +89,10 @@ window.DailyBhajan = (() => {
         { t: 'Hare Krishna Hare Rama — Morning Mantra',  v: '5F81ehtPqmM' }, // 3:50
         { t: 'Hare Krishna Hare Rama Mantra',            v: 'Nr5ZIIZGJhY' }, // 3:08
         { t: 'Madhurashtakam — Adharam Madhuram',        v: '1jnQZN8iUsc' }, // 4:14
-        { t: 'Om Jai Jagdish Hare',                      v: 'uXAOJtltKcg' }  // 4:09
+        { t: 'Om Jai Jagdish Hare',                      v: 'uXAOJtltKcg' }, // 4:09
+        { t: 'Shri Krishna Govind Hare Murari (Jubin Nautiyal)', v: '1qmPNot9NJs' }, // 2:35
+        { t: 'Achyutam Keshavam (Alka Yagnik)',          v: '5-Xoh7jKVo8' }, // 4:46
+        { t: 'Govind Bolo (Jubin Nautiyal)',             v: '9xcFFz8nZgI' }  // 2:33
       ],
       ytSearch: 'achyutam+keshavam+krishna+damodaram+bhajan'
     },
@@ -96,7 +110,10 @@ window.DailyBhajan = (() => {
         { t: 'Shirdi Sai Baba Aarti (with lyrics)',      v: 'WXMpcM8SQFM' }, // 3:22
         { t: 'Aarati Saibaba — Soukhya Datar Jeeva',     v: 'Bes4ivvkzXk' }, // 2:55
         { t: 'Om Om Sai Ram — Shirdi Sai Bhajan',        v: 'NKE6HSs2_zw' }, // 4:21
-        { t: 'Poojyaya Raghavendraya',                   v: 'Vrb1yfD_ch8' }  // 4:21
+        { t: 'Poojyaya Raghavendraya',                   v: 'Vrb1yfD_ch8' }, // 4:21
+        { t: 'Sai Ram Sai Shyam (Sadhana Sargam)',       v: 'chm_J1lifTM' }, // 5:05
+        { t: 'Guru Brahma Guru Vishnu (Rajshri Soul)',   v: '0W3QqjQSSNU' }, // 3:00
+        { t: 'Sai Ram Sai Shyam (Aks & Lakshmi)',        v: 'gPWnAGDo4b8' }  // 4:59
       ],
       ytSearch: 'om+sai+ram+dhun+shirdi+sai+baba+bhajan'
     },
@@ -114,7 +131,10 @@ window.DailyBhajan = (() => {
         { t: 'Mahalakshmi Ashtakam — Chanting',          v: 'lCIHz9Nf68Y' }, // 3:23
         { t: 'Shri Mahalakshmi Ashtakam',                v: 'k955jzEVdYo' }, // 3:48
         { t: 'Om Jai Lakshmi Mata (Rahul Vaidya)',       v: 'J7zkL1zkPYU' }, // 4:24
-        { t: 'Superfast Lakshmi Chalisa',                v: '6BVyuMC02dw' }  // 3:17
+        { t: 'Superfast Lakshmi Chalisa',                v: '6BVyuMC02dw' }, // 3:17
+        { t: 'Laxmi Aarti (Anuradha Paudwal)',           v: 'zdZ67AM47u8' }, // 5:12
+        { t: 'Kanakadhara Stotram — Superfast',          v: 'eCUQp_2OmMY' }, // 3:50
+        { t: 'Om Jai Lakshmi Mata (Sanjeevani Bhelande)', v: '0D3VbBoJBrM' }  // 4:52
       ],
       ytSearch: 'om+jai+lakshmi+mata+aarti+anuradha+paudwal'
     },
@@ -132,7 +152,10 @@ window.DailyBhajan = (() => {
         { t: 'Shani Dev Aarti — Jai Jai Shani Dev',      v: 'fZrQrTpRr7g' }, // 3:28
         { t: 'Shree Shanidevachi Aarti (Marathi)',       v: 'oZ4HNJf1MVM' }, // 3:02
         { t: 'Superfast Hanuman Chalisa (Shankar Mahadevan)', v: '9q8kkmCa9GY' }, // 2:58
-        { t: '3-Minute Hanuman Chalisa (Nitika Gautam)', v: 'xq4VWY7KxKc' }  // 3:00
+        { t: '3-Minute Hanuman Chalisa (Nitika Gautam)', v: 'xq4VWY7KxKc' }, // 3:00
+        { t: 'Jai Jai Hey Shani Raj Dev (Anuradha Paudwal & Suresh Wadkar)', v: 'CtWKNajSUmI' }, // 5:26
+        { t: 'Jai Jai Shani Dev Bhaktan Hitkari',        v: '42fouuhg9Pw' }, // 2:30
+        { t: 'Shani Chalisa — Superfast',                v: 'n7l7FslXklc' }  // 3:18
       ],
       ytSearch: 'shani+dev+chalisa+bhajan'
     }
