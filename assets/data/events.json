@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-26T11:44:23.662Z",
-  "windowStart": "2026-08-26",
-  "windowEnd": "2027-09-30",
+  "generatedAt": "2026-08-27T21:01:39.839Z",
+  "windowStart": "2026-08-27",
+  "windowEnd": "2027-10-01",
   "counts": {
-    "total": 136,
-    "fromFeeds": 115,
-    "curated": 21,
-    "carriedForward": 0,
-    "feedsOk": 11,
-    "feedsFailed": 0
+    "total": 134,
+    "fromFeeds": 110,
+    "curated": 20,
+    "carriedForward": 4,
+    "feedsOk": 9,
+    "feedsFailed": 2
   },
   "sources": [
     {
@@ -20,14 +20,14 @@
     {
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
-      "ok": true,
-      "count": 5
+      "ok": false,
+      "error": "HTTP 415"
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 19
+      "count": 18
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -51,7 +51,7 @@
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -87,66 +87,6 @@
       "endDate": "2026-09-13",
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Satyanarayan Katha",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Aavani Avittam Rigvedham, Onam, Aavani Chaturthasi- Natarajar Abhishekam",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2436/-/aavani-avittam-rigvedham,-onam,-aavani-chaturthasi-natarajar-abhishekam.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Rig/Yajur Upakarma",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/rig-yajur-upakarma/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-26",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
-      "city": "Fremont",
-      "title": "Rig Veda Upakarma",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "time": null,
-      "url": "https://fremonttemple.org/events/",
       "source": "curated"
     },
     {
@@ -238,6 +178,16 @@
       "time": "6:00 AM & 9:00 AM batches",
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-27",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
@@ -358,6 +308,16 @@
       "time": null,
       "url": "https://sridattasaimandir.org/temple/calendar/upcoming-events/",
       "source": "curated"
+    },
+    {
+      "temple": "Sri Krishna Balaram Mandir",
+      "city": "Milpitas",
+      "title": "Grand Balaram Jayanthi Celebrations",
+      "startDate": "2026-08-30",
+      "endDate": "2026-08-30",
+      "time": "12:00 PM – 2:30 PM",
+      "url": "https://www.kbmandir.org/event/grand-balaram-jayanthi-celebrations-3/",
+      "source": "tribe"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -790,6 +750,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-16",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Adhika Masa Sri Vishnu Brahmotsavam",
@@ -1208,6 +1178,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Vijaya Dashami",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-20",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Sai Temple",
