@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-28T21:22:35.633Z",
-  "windowStart": "2026-08-28",
-  "windowEnd": "2027-10-02",
+  "generatedAt": "2026-08-29T15:38:14.815Z",
+  "windowStart": "2026-08-29",
+  "windowEnd": "2027-10-03",
   "counts": {
     "total": 130,
     "fromFeeds": 113,
@@ -90,26 +90,6 @@
       "source": "curated"
     },
     {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Gayatri Jabam",
-      "startDate": "2026-08-28",
-      "endDate": "2026-08-28",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2438/-/gayatri-jabam.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-28",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Gamha Poornima Celebration",
@@ -168,6 +148,16 @@
       "time": "06:00 PM",
       "url": "/events/rathostavam",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-29",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -278,6 +268,16 @@
       "time": "9:30 AM",
       "url": "https://vallejohindutemple.com/event/janmashtami-celebration-2026/",
       "source": "tribe"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Krishna Sashti",
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-02",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2443/-/krishna-sashti.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
