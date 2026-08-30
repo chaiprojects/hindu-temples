@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-29T15:38:14.815Z",
-  "windowStart": "2026-08-29",
-  "windowEnd": "2027-10-03",
+  "generatedAt": "2026-08-30T15:20:35.988Z",
+  "windowStart": "2026-08-30",
+  "windowEnd": "2027-10-04",
   "counts": {
     "total": 130,
     "fromFeeds": 113,
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 17
+      "count": 18
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -88,76 +88,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Gamha Poornima Celebration",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Balarama Jayanthi",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Jagannath Pooja",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "SSP Health Fair -2026",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": "8:30 AM – 3:00 PM",
-      "url": "https://shirdisaiparivaar.org/event/ssp-health-fair-2026/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "All Deities Abhishekam & Aarathi",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2439/-/all-deities-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-08-29",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -218,6 +148,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-08-30",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedic Dharma Samaj — Fremont Hindu Temple",
@@ -310,6 +250,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Karthigai & Gokulashtami",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2444/-/karthigai-gokulashtami.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sri Krishna Janmastami",
@@ -335,7 +285,7 @@
       "title": "Sri Krishna Janmashtami",
       "startDate": "2026-09-03",
       "endDate": "2026-09-03",
-      "time": "06:00 PM",
+      "time": "07:00 PM",
       "url": "/events/sri-krishna-janmashtami",
       "source": "seva-json"
     },
@@ -710,6 +660,16 @@
       "source": "wp-rest"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Aandal Abhishekam",
@@ -772,16 +732,6 @@
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
-      "title": "Jagannath Pooja",
-      "startDate": "2026-09-26",
-      "endDate": "2026-09-26",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
       "title": "Mahalaya",
       "startDate": "2026-09-26",
       "endDate": "2026-09-26",
@@ -793,6 +743,16 @@
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Pitru Paksha Begins",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Jagannath Pooja",
       "startDate": "2026-09-26",
       "endDate": "2026-09-26",
       "time": null,
@@ -988,6 +948,16 @@
       "time": "06:00 PM",
       "url": "/events/lalitha-panchami-deepa-pooja-bhagavathi-seva",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Navarathri Sri Vishnu Brahmotsavam",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-16",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/navarathrisri-vishnu-brahmotsavam/",
+      "source": "wp-rest"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1198,6 +1168,36 @@
       "time": "05:30 PM",
       "url": "/events/satyanarayana-puja",
       "source": "seva-json"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Sankata Hara Chaturthi",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-28",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Ganesha Abhishekam",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-28",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Karva Chouth",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-28",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
