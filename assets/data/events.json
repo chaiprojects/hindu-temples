@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-01T15:28:11.966Z",
-  "windowStart": "2026-09-01",
-  "windowEnd": "2027-10-06",
+  "generatedAt": "2026-09-03T14:59:45.260Z",
+  "windowStart": "2026-09-03",
+  "windowEnd": "2027-10-08",
   "counts": {
-    "total": 125,
-    "fromFeeds": 110,
+    "total": 123,
+    "fromFeeds": 105,
     "curated": 15,
-    "carriedForward": 0,
-    "feedsOk": 11,
-    "feedsFailed": 0
+    "carriedForward": 3,
+    "feedsOk": 8,
+    "feedsFailed": 3
   },
   "sources": [
     {
@@ -20,14 +20,14 @@
     {
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
-      "ok": true,
-      "count": 5
+      "ok": false,
+      "error": "HTTP 415"
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
@@ -44,8 +44,8 @@
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 33
+      "count": 34
     },
     {
       "temple": "Sri Sai Temple",
@@ -75,7 +75,7 @@
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
       "feedType": "tribe",
       "ok": true,
-      "count": 1
+      "count": 0
     }
   ],
   "events": [
@@ -88,66 +88,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-09-01",
-      "endDate": "2026-09-01",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2442/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
-      "city": "Vallejo",
-      "title": "JANMASHTAMI CELEBRATION 2026",
-      "startDate": "2026-09-01",
-      "endDate": "2026-09-04",
-      "time": "9:30 AM",
-      "url": "https://vallejohindutemple.com/event/janmashtami-celebration-2026/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-01",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Krishna Sashti",
-      "startDate": "2026-09-02",
-      "endDate": "2026-09-02",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2443/-/krishna-sashti.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-09-02",
-      "endDate": "2026-09-02",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-09-02",
-      "endDate": "2026-09-02",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -208,6 +148,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -307,6 +257,16 @@
       "endDate": "2026-09-05",
       "time": "06:00 PM",
       "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "SEVA Community Service- 2nd Annual Day Celebrations",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": "6:00 PM to 6:30 PM",
+      "url": "/events/seva-community-service-2nd-annual-day-celebrations",
       "source": "seva-json"
     },
     {
@@ -630,6 +590,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-23",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Purnima Satyanarayan Katha",
@@ -878,6 +848,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/navarathrisri-vishnu-brahmotsavam/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-16",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
