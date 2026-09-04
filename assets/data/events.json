@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-03T14:59:45.260Z",
-  "windowStart": "2026-09-03",
-  "windowEnd": "2027-10-08",
+  "generatedAt": "2026-09-04T14:57:05.809Z",
+  "windowStart": "2026-09-04",
+  "windowEnd": "2027-10-09",
   "counts": {
-    "total": 123,
-    "fromFeeds": 105,
-    "curated": 15,
-    "carriedForward": 3,
-    "feedsOk": 8,
-    "feedsFailed": 3
+    "total": 121,
+    "fromFeeds": 107,
+    "curated": 14,
+    "carriedForward": 0,
+    "feedsOk": 10,
+    "feedsFailed": 1
   },
   "sources": [
     {
@@ -20,14 +20,14 @@
     {
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
-      "ok": false,
-      "error": "HTTP 415"
+      "ok": true,
+      "count": 5
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
       "feedType": "tribe",
-      "ok": false,
-      "error": "HTTP 403"
+      "ok": true,
+      "count": 0
     },
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 18
+      "count": 17
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": false,
-      "error": "HTTP 403"
+      "error": "Unexpected token '<', \"<!doctype \"... is not valid JSON"
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,13 +57,13 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 34
+      "count": 33
     },
     {
       "temple": "Sri Sai Temple",
       "feedType": "squarespace",
       "ok": true,
-      "count": 8
+      "count": 7
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -88,76 +88,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Shri Krishna Janmashtami",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Karthigai & Gokulashtami",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2444/-/karthigai-gokulashtami.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sri Krishna Janmastami",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/krishna-janmashtami-celebration/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sai Temple",
-      "city": "Pleasanton",
-      "title": "Krishna Janmashtami 2026",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": "7:50 AM",
-      "url": "https://www.srisaitemple.org/upcoming-events/krishna-janmashtami-e9f7p",
-      "source": "squarespace"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Krishna Janmashtami",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": "07:00 PM",
-      "url": "/events/sri-krishna-janmashtami",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
-      "city": "Fremont",
-      "title": "Krishna Janmashtami",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-03",
-      "time": null,
-      "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-03",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -208,6 +138,16 @@
       "time": "5:00 PM – 8:30 PM",
       "url": "https://www.kbmandir.org/event/sri-krishna-janmashtami-celebrations/",
       "source": "tribe"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -270,6 +210,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesh Chaturthi Festival Day 2 & Krishna Ekadasi",
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-06",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2447/-/ganesh-chaturthi-festival-day-2-krishna-ekadasi.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sri Raghavendra Swamy Aradhane",
@@ -280,6 +230,16 @@
       "source": "wp-rest"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Labor Day Temple Hours -10AM -8.30PM, Ganesh Chaturthi Festival Day 3, Sukla Sashti & Shravana Somavara Vrat -4 Celebrat",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-07",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2449/-/labor-day-temple-hours-10am-8-30pm,-ganesh-chaturthi-festival-day-3,-sukla-sashti-shravana-somavara-vrat-4-celebrations.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Monday Rudrabhishekam",
@@ -288,6 +248,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesh Chaturthi Festival Day 4, Pradhosham",
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-08",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2448/-/ganesh-chaturthi-festival-day-4,-pradhosham.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1123,6 +1093,16 @@
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Mata ka Jagaran",
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-06",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Dhanteras",
       "startDate": "2026-11-06",
       "endDate": "2026-11-06",
       "time": null,
