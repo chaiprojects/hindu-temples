@@ -517,9 +517,9 @@ async function initApp() {
   // Initialize interactive map
   if (window.TempleMap) window.TempleMap.init();
 
-  // Daily devotional bhajan + mini Rahu Kalam widget + visit counter
+  // Daily deity widget inside the Rahu Kalam callout + visit counter.
+  // (The standalone devotional section was removed; the widget covers it.)
   if (window.DailyBhajan) {
-    window.DailyBhajan.render();
     window.DailyBhajan.renderMiniInWidget();
     window.DailyBhajan.loadVisitCount();
   }

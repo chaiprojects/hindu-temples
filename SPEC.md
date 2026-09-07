@@ -163,8 +163,10 @@ Nothing on the site is hard-coded to a date range any more, and no step invents 
   mini-player bar doubles as a visual cue.
 - **Error skip**: if a video is unavailable (YT `onError`), the player advances to the
   next song in the pool automatically.
-- Renders a full card in `#bhajan-card-wrap` and a mini widget (deity, mantra, current
-  song title) inside the Rahu Kalam callout; both share play/stop state.
+- Renders a mini widget (deity, mantra, current song title, play + next buttons)
+  inside the Rahu Kalam callout; it shares play/stop state with the mini-player.
+  The former standalone "Daily Devotional" section was removed in Sep 2026, though
+  `render()` and its CSS remain should it be brought back.
 - Playback uses the YouTube IFrame API in a floating mini-player (`#bhajanMiniPlayer`).
 - Also owns the site visit counter (Abacus, abacus.jasoncameron.dev, one hit per browser session, with a localStorage fallback).
 
