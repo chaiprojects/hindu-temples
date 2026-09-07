@@ -2102,6 +2102,11 @@ main {
 }
 
 /* ── Leaflet overrides for dark mode ───────────────────────── */
+/* OSM only ships a light basemap; invert it for the dark theme. */
+.map-tiles-dark {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9) saturate(0.6);
+}
+
 [data-theme="dark"] .leaflet-control-zoom a {
   background-color: rgba(26, 23, 26, 0.92) !important;
   color: var(--light-gold) !important;

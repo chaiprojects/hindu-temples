@@ -1,7 +1,10 @@
 // ============================================================
 // Temple Map Module — Leaflet.js interactive map
-// Uses CartoDB tiles (free, no API key required)
-// Light mode: CartoDB Positron | Dark mode: CartoDB Dark Matter
+// Uses OpenStreetMap standard tiles (free, no API key required).
+// CARTO basemaps started watermarking keyless requests with
+// "API KEY REQUIRED" in Aug 2026, so they were dropped.
+// Dark mode: same OSM tiles, recoloured with a CSS filter
+// (see .map-tiles-dark in styles.css).
 // ============================================================
 
 window.TempleMap = (() => {
@@ -12,9 +15,8 @@ window.TempleMap = (() => {
   let activeTile = null;
   let initialized = false;
 
-  const LIGHT_TILE_URL = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-  const DARK_TILE_URL  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-  const ATTRIBUTION    = '&copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>';
+  const TILE_URL    = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors';
 
   // ── Custom Marker Icon ──────────────────────────────────────
   function makeIcon(active) {
@@ -73,15 +75,14 @@ window.TempleMap = (() => {
     L.control.zoom({ position: 'topright' }).addTo(map);
 
     // Tile layers
-    lightTile = L.tileLayer(LIGHT_TILE_URL, {
+    lightTile = L.tileLayer(TILE_URL, {
       attribution: ATTRIBUTION,
-      maxZoom: 18,
-      subdomains: 'abcd'
+      maxZoom: 19
     });
-    darkTile = L.tileLayer(DARK_TILE_URL, {
+    darkTile = L.tileLayer(TILE_URL, {
       attribution: ATTRIBUTION,
-      maxZoom: 18,
-      subdomains: 'abcd'
+      maxZoom: 19,
+      className: 'map-tiles-dark'
     });
 
     activeTile = isDark ? darkTile : lightTile;

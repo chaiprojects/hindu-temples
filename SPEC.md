@@ -14,7 +14,7 @@ refreshed daily from the temples' own calendar feeds by a GitHub Action.
 
 - **Plain HTML/CSS/JavaScript** — no framework, no build step, no package manager.
   Open `index.html` (or serve the directory) and it runs.
-- **Leaflet.js 1.9.4** (unpkg CDN) with **CartoDB** raster tiles for the map — no API key.
+- **Leaflet.js 1.9.4** (unpkg CDN) with **OpenStreetMap** standard raster tiles for the map — no API key (CARTO basemaps began watermarking keyless tiles in Aug 2026; dark mode is a CSS invert filter on the same tiles).
 - **Google Fonts** — Playfair Display (headings) + Inter (body).
 - **YouTube IFrame API** for the bhajan audio player.
 - **Nominatim** (OpenStreetMap) for forward/reverse geocoding — no API key.
