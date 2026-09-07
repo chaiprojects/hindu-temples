@@ -166,7 +166,7 @@ Nothing on the site is hard-coded to a date range any more, and no step invents 
 - Renders a full card in `#bhajan-card-wrap` and a mini widget (deity, mantra, current
   song title) inside the Rahu Kalam callout; both share play/stop state.
 - Playback uses the YouTube IFrame API in a floating mini-player (`#bhajanMiniPlayer`).
-- Also owns the site visit counter (countapi.xyz with a localStorage fallback).
+- Also owns the site visit counter (Abacus, abacus.jasoncameron.dev, one hit per browser session, with a localStorage fallback).
 
 ### UI / UX
 - Dark mode: `data-theme` attribute on `<html>`, persisted in localStorage, defaults to
@@ -187,7 +187,7 @@ Nothing on the site is hard-coded to a date range any more, and no step invents 
 | Nominatim | Zip + reverse geocoding | Falls back to coords label / default location |
 | YouTube IFrame API | Bhajan playback | Play button no-ops |
 | Google Fonts | Typography | System font fallback |
-| countapi.xyz | Visit counter | localStorage-only count |
+| Abacus (abacus.jasoncameron.dev) | Visit counter | localStorage-only count |
 
 ## Event ingestion (`scripts/update-events.mjs`)
 
@@ -246,8 +246,8 @@ generic parsers there are adapters for the shapes these temples actually ship:
 - 3 of 20 checked festival dates differ by a day from some temples (Karthigai Deepam,
   Vaikuntha Ekadashi, Gita Jayanti) — cases where the temples disagree among
   themselves. The calendar discloses that festival dates are computed.
-- countapi.xyz has been unreliable/discontinued; the visit counter usually falls back
-  to the per-device localStorage count.
+- The visit counter moved from countapi.xyz (shut down) to Abacus in Sep 2026; the
+  total therefore starts from zero as of that date.
 - No service worker; no linting.
 
 ## Notable fix
