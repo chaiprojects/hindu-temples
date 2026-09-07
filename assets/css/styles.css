@@ -2285,6 +2285,38 @@ main {
   transform: translateY(-1px);
 }
 
+/* Play + next buttons sit together at the end of the song bar */
+.bhajan-song-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  flex-shrink: 0;
+}
+
+/* Small round "next song" button: skips to another bhajan for today's deity */
+.bhajan-next-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-size: .85rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background .2s, color .2s, transform .15s;
+}
+
+.bhajan-next-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 /* ── Dark mode tweaks ── */
 [data-theme="dark"] .bhajan-card {
   box-shadow: 0 6px 32px rgba(0,0,0,.4);
@@ -2471,11 +2503,15 @@ main {
 
 /* ── Fix <button> play elements (were styled as <a>) ── */
 .bhajan-play-btn,
+.bhajan-next-btn,
 .rdm-play-btn {
   border: none;
   cursor: pointer;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+/* The reset above strips borders; the next button keeps its outline */
+.bhajan-next-btn { border: 1.5px solid var(--accent); }
 
 /* ── Responsive ── */
 @media (max-width: 480px) {
@@ -2949,6 +2985,7 @@ body {
 .zip-submit:active,
 .cal-btn:active,
 .bhajan-play-btn:active,
+.bhajan-next-btn:active,
 .rdm-play-btn:active,
 .loc-btn:active,
 .theme-toggle:active,

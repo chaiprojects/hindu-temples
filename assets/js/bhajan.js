@@ -217,13 +217,19 @@ window.DailyBhajan = (() => {
           <span class="bhajan-music-icon">🎵</span>
           <div class="bhajan-song-bar-info">
             <div class="bhajan-song-bar-title">${getTodaysSong().t}</div>
-            <div class="bhajan-song-bar-hint">Plays here · YouTube · new song each visit</div>
+            <div class="bhajan-song-bar-hint">Plays here · YouTube · ⏭ for another ${d.deity} bhajan</div>
           </div>
-          <button class="bhajan-play-btn"
-                  onclick="window.DailyBhajan.playBhajan()"
-                  aria-label="Play ${getTodaysSong().t}">
-            ▶ Play
-          </button>
+          <div class="bhajan-song-actions">
+            <button class="bhajan-play-btn"
+                    onclick="window.DailyBhajan.playBhajan()"
+                    aria-label="Play ${getTodaysSong().t}">
+              ▶ Play
+            </button>
+            <button class="bhajan-next-btn"
+                    onclick="window.DailyBhajan.nextBhajan()"
+                    aria-label="Play next ${d.deity} bhajan"
+                    title="Next ${d.deity} bhajan">⏭</button>
+          </div>
         </div>
 
       </div>
