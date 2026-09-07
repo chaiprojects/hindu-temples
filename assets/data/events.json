@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-06T14:10:27.288Z",
-  "windowStart": "2026-09-06",
-  "windowEnd": "2027-10-11",
+  "generatedAt": "2026-09-07T16:27:02.808Z",
+  "windowStart": "2026-09-07",
+  "windowEnd": "2027-10-12",
   "counts": {
-    "total": 117,
-    "fromFeeds": 103,
+    "total": 116,
+    "fromFeeds": 102,
     "curated": 14,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -92,36 +92,6 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Ganesh Chaturthi Festival Day 2 & Krishna Ekadasi",
-      "startDate": "2026-09-06",
-      "endDate": "2026-09-06",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2447/-/ganesh-chaturthi-festival-day-2-krishna-ekadasi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sri Raghavendra Swamy Aradhane",
-      "startDate": "2026-09-06",
-      "endDate": "2026-09-06",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sri-raghavendra-swamy-aradhane-2/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-06",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Labor Day Temple Hours -10AM -8.30PM, Ganesh Chaturthi Festival Day 3, Sukla Sashti & Shravana Somavara Vrat -4 Celebrat",
       "startDate": "2026-09-07",
       "endDate": "2026-09-07",
@@ -138,6 +108,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -187,6 +167,16 @@
       "endDate": "2026-09-10",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2451/-/ganesh-chaturthi-festival-day-6-amavasai.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesh Chaturthi Festival Day 7",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-11",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2452/-/ganesh-chaturthi-festival-day-7.html",
       "source": "rss"
     },
     {
