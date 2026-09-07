@@ -34,7 +34,7 @@ assets/
     temples.js              Loads temples.json; card grid, filters, derived stats
     map.js                  Leaflet map module (window.TempleMap)
     calendar.js             Month-view calendar merging festivals/Ekadashi/temple events
-    bhajan.js               Daily deity/bhajan player (window.DailyBhajan) + visit counter
+    bhajan.js               Daily deity/bhajan player (window.DailyBhajan) + visit counter (Abacus)
     main.js                 Orchestrator: location state, theme, nav, wiring (loads last)
   data/
     temples.json            The temple directory — single source of truth (50 entries)

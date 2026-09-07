@@ -448,25 +448,37 @@ window.DailyBhajan = (() => {
     syncPlayButtons(false);
   }
 
-  // ── Visit Counter via countapi.xyz (free, no key needed) ──
+  // ── Visit Counter via Abacus (free, no key needed) ──
+  // countapi.xyz shut down; Abacus is a drop-in replacement with the
+  // same /hit and /get endpoints. One visit is counted per browser
+  // session so a refresh doesn't inflate the total.
+  const COUNTER_BASE = 'https://abacus.jasoncameron.dev';
+  const COUNTER_PATH = '/chaiprojects-hindu-temples/visits';
+
   async function loadVisitCount() {
     const el = document.getElementById('visitCountNum');
     if (!el) return;
 
-    // Increment per-device count in localStorage
+    // Increment per-device count in localStorage (fallback display)
     const localKey   = 'bay_temples_visits';
     const localCount = parseInt(localStorage.getItem(localKey) || '0', 10) + 1;
     localStorage.setItem(localKey, localCount);
 
+    let counted = false;
+    try { counted = sessionStorage.getItem('bay_temples_counted') === '1'; } catch (_) {}
+
     try {
       const r = await fetch(
-        'https://api.countapi.xyz/hit/chaiprojects-hindu-temples/visits',
+        COUNTER_BASE + (counted ? '/get' : '/hit') + COUNTER_PATH,
         { cache: 'no-store' }
       );
       if (r.ok) {
         const data = await r.json();
-        el.textContent = formatCount(data.value);
-        return;
+        if (typeof data.value === 'number') {
+          try { sessionStorage.setItem('bay_temples_counted', '1'); } catch (_) {}
+          el.textContent = formatCount(data.value);
+          return;
+        }
       }
     } catch (_) { /* ignore */ }
 
@@ -476,9 +488,7 @@ window.DailyBhajan = (() => {
   }
 
   function formatCount(n) {
-    if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
-    if (n >= 1_000)     return (n / 1_000).toFixed(1) + 'K';
-    return n.toLocaleString();
+    return n.toLocaleString('en-US');
   }
 
   return { render, renderMiniInWidget, loadVisitCount, playBhajan, nextBhajan, closeMiniPlayer, _startPlayer };
