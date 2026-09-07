@@ -250,11 +250,17 @@ window.DailyBhajan = (() => {
           <div class="rdm-mantra">${d.mantra}</div>
           <div class="rdm-mantra" style="opacity:.8">🎵 ${s.t}</div>
         </div>
-        <button class="rdm-play-btn"
-                onclick="window.DailyBhajan.playBhajan()"
-                aria-label="Play ${s.t}">
-          ▶ Play
-        </button>
+        <div class="rdm-actions">
+          <button class="rdm-play-btn"
+                  onclick="window.DailyBhajan.playBhajan()"
+                  aria-label="Play ${s.t}">
+            ▶ Play
+          </button>
+          <button class="rdm-next-btn"
+                  onclick="window.DailyBhajan.nextBhajan()"
+                  aria-label="Play next ${d.deity} bhajan"
+                  title="Next ${d.deity} bhajan">⏭</button>
+        </div>
       </div>
     `;
   }

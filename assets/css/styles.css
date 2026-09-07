@@ -2388,6 +2388,36 @@ main {
   filter: brightness(1.15);
 }
 
+/* Play + next side by side in the mini widget */
+.rdm-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  flex-shrink: 0;
+}
+
+/* Compact "next song" button, sized to the smaller widget play button */
+.rdm-next-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent);
+  font-size: .72rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background .2s, color .2s;
+}
+
+.rdm-next-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* ============================================================
    Site Footer (redesigned with visit counter)
    ============================================================ */
@@ -2504,14 +2534,16 @@ main {
 /* ── Fix <button> play elements (were styled as <a>) ── */
 .bhajan-play-btn,
 .bhajan-next-btn,
-.rdm-play-btn {
+.rdm-play-btn,
+.rdm-next-btn {
   border: none;
   cursor: pointer;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* The reset above strips borders; the next button keeps its outline */
-.bhajan-next-btn { border: 1.5px solid var(--accent); }
+.bhajan-next-btn,
+.rdm-next-btn { border: 1.5px solid var(--accent); }
 
 /* ── Responsive ── */
 @media (max-width: 480px) {
@@ -2987,6 +3019,7 @@ body {
 .bhajan-play-btn:active,
 .bhajan-next-btn:active,
 .rdm-play-btn:active,
+.rdm-next-btn:active,
 .loc-btn:active,
 .theme-toggle:active,
 .back-to-top:active,
