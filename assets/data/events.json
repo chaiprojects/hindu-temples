@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-09T15:06:45.868Z",
-  "windowStart": "2026-09-09",
-  "windowEnd": "2027-10-14",
+  "generatedAt": "2026-09-10T14:59:07.026Z",
+  "windowStart": "2026-09-10",
+  "windowEnd": "2027-10-15",
   "counts": {
     "total": 116,
     "fromFeeds": 102,
@@ -92,42 +92,22 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Ganesh Chaturthi Festival day 5",
-      "startDate": "2026-09-09",
-      "endDate": "2026-09-09",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2450/-/ganesh-chaturthi-festival-day-5.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-09",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-09-09",
-      "endDate": "2026-09-09",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Ganesh Chaturthi Festival Day 6 & Amavasai",
       "startDate": "2026-09-10",
       "endDate": "2026-09-10",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2451/-/ganesh-chaturthi-festival-day-6-amavasai.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-10",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -280,6 +260,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesh Chaturthi Festival Day 10 & Ganesh Chaturthi Day",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-14",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2455/-/ganesh-chaturthi-festival-day-10-ganesh-chaturthi-day.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Sai Temple",
       "city": "Pleasanton",
       "title": "Ganesh Chaturthi 2026",
@@ -295,7 +285,7 @@
       "title": "Ganesh Chaturthi",
       "startDate": "2026-09-14",
       "endDate": "2026-09-14",
-      "time": "06:00 PM",
+      "time": "06:30 AM",
       "url": "/events/ganesh-chaturthi",
       "source": "seva-json"
     },
@@ -588,6 +578,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-09-30",
+      "endDate": "2026-09-30",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
