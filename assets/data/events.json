@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-10T14:59:07.026Z",
-  "windowStart": "2026-09-10",
-  "windowEnd": "2027-10-15",
+  "generatedAt": "2026-09-11T15:00:31.821Z",
+  "windowStart": "2026-09-11",
+  "windowEnd": "2027-10-16",
   "counts": {
-    "total": 116,
-    "fromFeeds": 102,
+    "total": 117,
+    "fromFeeds": 103,
     "curated": 14,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 12
+      "count": 13
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -92,32 +92,22 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Ganesh Chaturthi Festival Day 6 & Amavasai",
-      "startDate": "2026-09-10",
-      "endDate": "2026-09-10",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2451/-/ganesh-chaturthi-festival-day-6-amavasai.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-10",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Ganesh Chaturthi Festival Day 7",
       "startDate": "2026-09-11",
       "endDate": "2026-09-11",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2452/-/ganesh-chaturthi-festival-day-7.html",
       "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -308,6 +298,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Visakam - Tamil Archana",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-15",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2456/-/visakam-tamil-archana.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sai Temple",
@@ -508,6 +508,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Maha Thiruppavada (Annakutotsavam) Seva to Lord Venkateshwara",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/maha-thiruppavada/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
