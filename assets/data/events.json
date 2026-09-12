@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-11T15:00:31.821Z",
-  "windowStart": "2026-09-11",
-  "windowEnd": "2027-10-16",
+  "generatedAt": "2026-09-12T14:06:57.518Z",
+  "windowStart": "2026-09-12",
+  "windowEnd": "2027-10-17",
   "counts": {
-    "total": 117,
-    "fromFeeds": 103,
+    "total": 118,
+    "fromFeeds": 104,
     "curated": 14,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -45,7 +45,7 @@
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -88,26 +88,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesh Chaturthi Festival Day 7",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-11",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2452/-/ganesh-chaturthi-festival-day-7.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -178,6 +158,16 @@
       "time": "06:00 PM",
       "url": "/events/rathostavam",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -340,6 +330,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Purattasi Maasa Begins, Sukla Sashti",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-16",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2457/-/purattasi-maasa-begins,-sukla-sashti.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Shashthi - Archana",
@@ -468,6 +468,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "Sai Satyavrata Pooja",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-25",
+      "time": "7:00 PM – 8:30 PM",
+      "url": "https://shirdisaiparivaar.org/event/sai-satyavrata-pooja/",
+      "source": "tribe"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
