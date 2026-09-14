@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-13T14:55:12.068Z",
-  "windowStart": "2026-09-13",
-  "windowEnd": "2027-10-18",
+  "generatedAt": "2026-09-14T16:57:38.833Z",
+  "windowStart": "2026-09-14",
+  "windowEnd": "2027-10-19",
   "counts": {
-    "total": 114,
-    "fromFeeds": 100,
-    "curated": 14,
+    "total": 109,
+    "fromFeeds": 97,
+    "curated": 12,
     "carriedForward": 0,
     "feedsOk": 11,
     "feedsFailed": 0
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 11
+      "count": 9
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 32
+      "count": 31
     },
     {
       "temple": "Sri Sai Temple",
@@ -79,86 +79,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
-      "city": "Fremont",
-      "title": "Ganesha Atharvashirsha (21 days)",
-      "startDate": "2026-08-24",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Monthly Special Havan",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesh Chaturthi Festival Day 9",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2454/-/ganesh-chaturthi-festival-day-9.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Ganesha Chaturthi Children's Ganesha Puja & Cultural Program",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/ganesha-puja-cultural-program/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Swarna Gowri Vratam/Hartalika Teej Vrat",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/swarna-gowri-vratam-hartalika-teej-vrat/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Swarna Gowri Vrata",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": "06:00 PM",
-      "url": "/events/swarna-gowri-vrata",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
-      "city": "Fremont",
-      "title": "Swarna Gowri Vratam / Sama Upakarma",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-13",
-      "time": null,
-      "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-13",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -218,6 +138,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -297,6 +227,16 @@
       "endDate": "2026-09-17",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2458/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sukla Ashtami",
+      "startDate": "2026-09-18",
+      "endDate": "2026-09-18",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2459/-/sukla-ashtami.html",
       "source": "rss"
     },
     {
@@ -1053,6 +993,16 @@
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Deepavali",
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Diwali",
       "startDate": "2026-11-08",
       "endDate": "2026-11-08",
       "time": null,
