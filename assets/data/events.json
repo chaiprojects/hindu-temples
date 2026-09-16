@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-15T15:33:34.344Z",
-  "windowStart": "2026-09-15",
-  "windowEnd": "2027-10-20",
+  "generatedAt": "2026-09-16T15:25:17.973Z",
+  "windowStart": "2026-09-16",
+  "windowEnd": "2027-10-21",
   "counts": {
-    "total": 107,
-    "fromFeeds": 90,
+    "total": 106,
+    "fromFeeds": 95,
     "curated": 11,
-    "carriedForward": 6,
-    "feedsOk": 10,
-    "feedsFailed": 1
+    "carriedForward": 0,
+    "feedsOk": 11,
+    "feedsFailed": 0
   },
   "sources": [
     {
@@ -62,8 +62,8 @@
     {
       "temple": "Sri Sai Temple",
       "feedType": "squarespace",
-      "ok": false,
-      "error": "Expected ':' after property name in JSON at position 466 (line 1 column 467)"
+      "ok": true,
+      "count": 5
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -79,36 +79,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Visakam - Tamil Archana",
-      "startDate": "2026-09-15",
-      "endDate": "2026-09-15",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2456/-/visakam-tamil-archana.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sai Temple",
-      "city": "Pleasanton",
-      "title": "Temple Anniversary",
-      "startDate": "2026-09-15",
-      "endDate": "2026-09-15",
-      "time": "7:50 AM",
-      "url": "https://www.srisaitemple.org/upcoming-events/krishna-janmashtami-e9f7p-c37f5",
-      "source": "squarespace"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-15",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -148,6 +118,16 @@
       "time": "06:00 PM",
       "url": "/events/shashthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -258,6 +238,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesh Visarjan",
+      "startDate": "2026-09-20",
+      "endDate": "2026-09-20",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2461/-/ganesh-visarjan.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
