@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-18T14:58:58.153Z",
-  "windowStart": "2026-09-18",
-  "windowEnd": "2027-10-23",
+  "generatedAt": "2026-09-19T14:24:41.362Z",
+  "windowStart": "2026-09-19",
+  "windowEnd": "2027-10-24",
   "counts": {
-    "total": 107,
-    "fromFeeds": 96,
+    "total": 104,
+    "fromFeeds": 93,
     "curated": 11,
     "carriedForward": 0,
     "feedsOk": 11,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -51,7 +51,7 @@
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -79,56 +79,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Ashtami",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-18",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2459/-/sukla-ashtami.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Adhika Masa Sri Vishnu Brahmotsavam",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-18",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/adhika-masasri-vishnu-brahmotsavam/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Ganesha Chathurthi Celebrations",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-18",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/ganesha-chathurthi-celebrations/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Krishna Balaram Mandir",
-      "city": "Milpitas",
-      "title": "Grand Sri Radhastami Celebrations",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-18",
-      "time": "7:00 PM – 8:30 PM",
-      "url": "https://www.kbmandir.org/event/grand-sri-radhastami-celebrations/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -168,6 +118,16 @@
       "time": "06:00 PM",
       "url": "/events/rathostavam",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Summer Recess",
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-27",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -237,6 +197,16 @@
       "endDate": "2026-09-22",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2463/-/shiva-murugan,-durgai,-sundareshwarar-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Pradhosham",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-23",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2464/-/pradhosham.html",
       "source": "rss"
     },
     {
