@@ -477,6 +477,9 @@ function initCardGlow() {
 // ── Scroll Reveal ──
 function initScrollReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // threshold: 0 — reveal as soon as any part of the element scrolls into
+  // view. A percentage threshold never fires for a section taller than
+  // ~10 viewports (the stacked temple list on a phone), leaving it invisible.
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -484,9 +487,18 @@ function initScrollReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   window._revealObserver = observer;
+
+  // Safety net: if anything is still hidden after the page has settled
+  // (observer quirks in some mobile browsers), show it rather than leave
+  // a blank section.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 2500);
 }
 
 // ── Initialization ──

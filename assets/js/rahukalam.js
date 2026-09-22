@@ -79,8 +79,9 @@ const RAHU_SLOT = [7, 1, 6, 4, 5, 3, 2];
  * Convert minutes from midnight to human-readable time.
  */
 function minsToTime(mins) {
-  const h = Math.floor(mins / 60);
-  const m = Math.round(mins % 60);
+  const total = Math.round(mins);           // round first so 59.6 → next hour, never ":60"
+  const h = Math.floor(total / 60) % 24;
+  const m = total % 60;
   const ap = h >= 12 ? 'PM' : 'AM';
   const hh = h > 12 ? h - 12 : h === 0 ? 12 : h;
   return `${hh}:${String(m).padStart(2, '0')} ${ap}`;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Bay Area Hindu Temples — Comprehensive guide to Hindu temples across the San Francisco Bay Area, with interactive map, Rahukalam calculator, Ekadashi dates, and a festival calendar fed by the temples' own event listings.">
   <title>Bay Area Hindu Temples &middot; Sacred Spaces</title>
 
@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Leaflet.js — free interactive maps, no API key needed -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <link rel="stylesheet" href="assets/css/styles.css?v=13">
+  <link rel="stylesheet" href="assets/css/styles.css?v=14">
 </head>
 <body>
 
@@ -122,7 +122,7 @@
 
     <!-- Rahu Kalam Widget -->
     <section class="widget content-section" id="rahukalam" aria-label="Rahu Kalam times">
-      <div class="w-title"><span class="icon" aria-hidden="true">🌑</span> Rahu Kalam &mdash; <span id="rahuLocationLabel">Bay Area</span></div>
+      <div class="w-title"><span class="icon" aria-hidden="true">🌑</span> <span class="w-title-text">Rahu Kalam &mdash; <span id="rahuLocationLabel">Bay Area</span></span></div>
       <div class="rahu-grid" id="rahuGrid" role="list" aria-label="Weekly Rahu Kalam times"></div>
       <div class="rahu-callout" id="rahuCallout" aria-live="polite"></div>
       <div id="rahuDailyDeity"></div>
@@ -169,12 +169,12 @@
   <!-- ═══ INTERACTIVE MAP SECTION ═══ -->
   <section class="content-section map-section reveal" id="map-section" aria-label="Interactive temple map">
     <h2 class="section-header">Temple Map</h2>
-    <div class="section-subtitle" data-temple-count="All {n} Temples Across the Bay Area &middot; Click a Pin for Details">All Temples Across the Bay Area &middot; Click a Pin for Details</div>
+    <div class="section-subtitle" data-temple-count="All {n} Temples Across the Bay Area &middot; Select a Pin for Details">All Temples Across the Bay Area &middot; Select a Pin for Details</div>
 
     <div class="map-outer">
       <div id="templeMap" aria-label="Interactive map showing Bay Area Hindu temples"></div>
       <div class="map-footer">
-        <span class="map-hint">🛕 Click any pin &nbsp;·&nbsp; Scroll inside map to zoom &nbsp;·&nbsp; Filters sync with temple list below</span>
+        <span class="map-hint">🛕 Tap any pin<span class="map-hint-desktop"> &nbsp;·&nbsp; Scroll inside map to zoom</span> &nbsp;·&nbsp; Filters sync with temple list below</span>
         <span class="map-count" id="mapTempleCount">28 temples on map</span>
       </div>
     </div>
@@ -338,14 +338,14 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <!-- Scripts (order matters: dependencies first) -->
-<script src="assets/js/rahukalam.js?v=4"></script>
+<script src="assets/js/rahukalam.js?v=5"></script>
 <script src="assets/js/ekadashi.js?v=10"></script>
 <script src="assets/js/panchang.js?v=1"></script>
 <script src="assets/js/temples.js?v=5"></script>
 <script src="assets/js/map.js?v=6"></script>
 <script src="assets/js/calendar.js?v=5"></script>
 <script src="assets/js/bhajan.js?v=17"></script>
-<script src="assets/js/main.js?v=9"></script>
+<script src="assets/js/main.js?v=10"></script>
 
 </body>
 </html>
