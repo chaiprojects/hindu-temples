@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-21T17:02:53.962Z",
-  "windowStart": "2026-09-21",
-  "windowEnd": "2027-10-26",
+  "generatedAt": "2026-09-22T15:31:19.751Z",
+  "windowStart": "2026-09-22",
+  "windowEnd": "2027-10-27",
   "counts": {
     "total": 102,
     "fromFeeds": 92,
@@ -88,26 +88,6 @@
       "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Ekadasi",
-      "startDate": "2026-09-21",
-      "endDate": "2026-09-21",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2462/-/sukla-ekadasi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-09-21",
-      "endDate": "2026-09-21",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -228,6 +208,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Aavani Avittam & Yajur veda Puja & Mahalaya Paksha Begins",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2467/-/aavani-avittam-yajur-veda-puja-mahalaya-paksha-begins.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -488,6 +478,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-12",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
