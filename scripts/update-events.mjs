@@ -19,6 +19,8 @@
 //   'squarespace' Squarespace ?format=json-pretty events collection
 //   'seva-json'   a site's own JSON events API
 //   'js-data'     a static per-year JS data file of festivals
+//   'firebase-rtdb' public nodes of a Firebase Realtime Database
+//   'gatsby-craft'  a Gatsby site's page-data.json for a Craft CMS events query
 // Temples with no machine-readable feed at all are covered by the
 // hand-maintained assets/data/events-curated.json.
 //
@@ -477,6 +479,86 @@ async function fromJsData(feedUrlTemplate, eventsUrl) {
   return out;
 }
 
+/**
+ * Firebase Realtime Database with world-readable event nodes (Sri Kamakshi).
+ *   special-events:   [{ title, startDate: "YYYY-MM-DDTHH:mm:ss", endDate, eventId }]
+ *   recurring-events: [{ title, recurringDates: ["YYYY-MM-DD", ...], startTime: "HH:mm:ss" }]
+ * Timestamps are wall-clock Pacific with no offset, so the date is taken as-is.
+ * A series listed on more than ~60 dates is a daily ritual, not a calendar
+ * event, and is skipped so it does not blanket every day of the year.
+ */
+async function fromFirebaseRtdb(feedUrl, eventsUrl) {
+  const base = feedUrl.replace(/\/+$/, '');
+  const node = async name => {
+    const json = JSON.parse(await get(`${base}/${name}.json`, 'application/json'));
+    return Array.isArray(json) ? json : Object.values(json || {});
+  };
+  const timeOf = (s, s2) => {
+    const m = /(\d{2}):(\d{2})/.exec(String(s || '').slice(11) || String(s || ''));
+    if (!m) return null;
+    let t = fmtTime(+m[1], +m[2]);
+    const m2 = /(\d{2}):(\d{2})/.exec(String(s2 || ''));
+    if (m2) t += ` – ${fmtTime(+m2[1], +m2[2])}`;
+    return t;
+  };
+  const out = [];
+
+  for (const e of await node('special-events')) {
+    const start = String(e.startDate || '').slice(0, 10);
+    if (!isDate(start) || !e.title) continue;
+    const end = String(e.endDate || '').slice(0, 10);
+    const sameDay = !isDate(end) || end === start;
+    out.push({
+      title: clean(e.title),
+      startDate: start,
+      endDate: isDate(end) ? end : start,
+      time: timeOf(e.startDate, sameDay ? e.endDate : null),
+      url: eventsUrl || null
+    });
+  }
+
+  for (const e of await node('recurring-events')) {
+    const dates = Array.isArray(e.recurringDates) ? e.recurringDates.filter(isDate) : [];
+    if (!e.title || !dates.length || dates.length > 60) continue;
+    const time = timeOf(`T${e.startTime || ''}`, e.endTime);
+    for (const d of dates) {
+      out.push({ title: clean(e.title), startDate: d, endDate: d, time, url: eventsUrl || null });
+    }
+  }
+  return out;
+}
+
+/**
+ * Gatsby page-data.json for a Craft CMS events query (Mount Madonna).
+ *   result.data.craft.entries: [{ title, url, eventType, eventStartTime (UTC ISO),
+ *                                 eventEndTime, repeats: ["monday", ...] }]
+ * Entries with weekday repeats are daily/weekly rituals (evening arati) and
+ * are skipped; everything else is a dated event.
+ */
+async function fromGatsbyCraft(feedUrl, eventsUrl) {
+  const json = JSON.parse(await get(feedUrl, 'application/json'));
+  const entries = json?.result?.data?.craft?.entries;
+  if (!Array.isArray(entries)) throw new Error('no craft.entries in page-data');
+  const out = [];
+  for (const e of entries) {
+    if (!e.title || !e.eventStartTime) continue;
+    if (Array.isArray(e.repeats) && e.repeats.length) continue;
+    const startAt = new Date(e.eventStartTime);
+    if (isNaN(startAt)) continue;
+    const s = toLocalParts(startAt);
+    let end = s.date;
+    let time = fmtTime(s.hour, s.minute);
+    const endAt = e.eventEndTime ? new Date(e.eventEndTime) : null;
+    if (endAt && !isNaN(endAt)) {
+      const en = toLocalParts(endAt);
+      if (en.date > s.date) end = en.date;
+      else time += ` – ${fmtTime(en.hour, en.minute)}`;
+    }
+    out.push({ title: clean(e.title), startDate: s.date, endDate: end, time, url: e.url || eventsUrl || null });
+  }
+  return out;
+}
+
 async function fetchFeed(temple, windowEnd) {
   switch (temple.feedType) {
     case 'tribe':       return fromTribe(temple.feedUrl);
@@ -488,6 +570,8 @@ async function fetchFeed(temple, windowEnd) {
     case 'squarespace': return fromSquarespace(temple.feedUrl);
     case 'seva-json':   return fromSevaJson(temple.feedUrl, temple.eventsUrl);
     case 'js-data':     return fromJsData(temple.feedUrl, temple.eventsUrl);
+    case 'firebase-rtdb': return fromFirebaseRtdb(temple.feedUrl, temple.eventsUrl);
+    case 'gatsby-craft':  return fromGatsbyCraft(temple.feedUrl, temple.eventsUrl);
     default: throw new Error(`unknown feedType ${temple.feedType}`);
   }
 }

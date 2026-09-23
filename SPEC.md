@@ -37,7 +37,7 @@ assets/
     bhajan.js               Daily deity/bhajan player (window.DailyBhajan) + visit counter (Abacus)
     main.js                 Orchestrator: location state, theme, nav, wiring (loads last)
   data/
-    temples.json            The temple directory — single source of truth (50 entries)
+    temples.json            The temple directory — single source of truth (52 entries)
     events.json             Generated: temple events, refreshed by CI (do not hand-edit)
     events-curated.json     Hand-maintained events for temples with no machine feed
   icons/                    Favicons + PWA icons (16–512 px)
@@ -206,8 +206,10 @@ generic parsers there are adapters for the shapes these temples actually ship:
 | `squarespace` | Squarespace `?format=json-pretty` events collection |
 | `seva-json` | A site's own JSON events API |
 | `js-data` | A static per-year JS file of festivals |
+| `firebase-rtdb` | Public nodes of a Firebase Realtime Database (`special-events`, `recurring-events`) |
+| `gatsby-craft` | A Gatsby site's `page-data.json` for a Craft CMS events query |
 
-11 of 50 temples expose something machine-readable; the rest are covered by
+13 of 52 temples expose something machine-readable; the rest are covered by
 `events-curated.json`. Behaviour worth knowing:
 
 - A feed that fails is **not** treated as "no events" — the previous run's future

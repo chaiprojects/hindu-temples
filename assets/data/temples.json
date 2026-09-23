@@ -320,6 +320,22 @@
     "reviews": 50
   },
   {
+    "slug": "sri-kamakshi-morgan-hill",
+    "name": "Sri Kamakshi Community Center (SKCC)",
+    "address": "16705 Butterfield Blvd, Morgan Hill, CA 95037",
+    "city": "Morgan Hill",
+    "lat": 37.1235,
+    "lng": -121.642,
+    "deity": "Sri Kamakshi, Adi Shankaracharya, Maha Periyava",
+    "hours": "Mon–Fri: 8–11 AM & 5:30–8 PM | Sat–Sun: 8 AM–1 PM & 4–8:30 PM",
+    "url": "https://srikamakshi.org",
+    "eventsUrl": "https://srikamakshi.org/events.html",
+    "feedType": "firebase-rtdb",
+    "feedUrl": "https://skcc-prod.firebaseio.com",
+    "rating": null,
+    "reviews": null
+  },
+  {
     "slug": "isso-swaminarayan-newark",
     "name": "ISSO Shree Swaminarayan Temple (Bay Area)",
     "address": "35471 Dumbarton Ct, Newark, CA 94560",
@@ -796,6 +812,22 @@
     "eventsUrl": "https://vallejohindutemple.com/events/month/",
     "feedType": "tribe",
     "feedUrl": "https://vallejohindutemple.com/wp-json/tribe/events/v1/events",
+    "rating": null,
+    "reviews": null
+  },
+  {
+    "slug": "hanuman-temple-mount-madonna",
+    "name": "Sankat Mochan Hanuman Temple (Mount Madonna)",
+    "address": "445 Summit Rd, Watsonville, CA 95076",
+    "city": "Watsonville",
+    "lat": 37.025,
+    "lng": -121.7472,
+    "deity": "Hanuman, Ganesha",
+    "hours": "Sat: 6–7:30 AM & 11 AM–7 PM | Tue: 4–7 PM (reservation required) | Tue 6–7:30 AM arati: no reservation",
+    "url": "https://temple.mountmadonna.org",
+    "eventsUrl": "https://temple.mountmadonna.org/events-page",
+    "feedType": "gatsby-craft",
+    "feedUrl": "https://temple.mountmadonna.org/page-data/events-page/page-data.json",
     "rating": null,
     "reviews": null
   }

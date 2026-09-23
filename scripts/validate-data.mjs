@@ -21,7 +21,8 @@ const readJson = async name => JSON.parse(await readFile(path.join(DATA, name), 
 const BOUNDS = { minLat: 36.8, maxLat: 38.9, minLng: -123.2, maxLng: -121.0 };
 const FEED_TYPES = new Set([
   'tribe', 'ics', 'gcal', 'jsonld', 'rss',
-  'wp-rest', 'squarespace', 'seva-json', 'js-data'
+  'wp-rest', 'squarespace', 'seva-json', 'js-data',
+  'firebase-rtdb', 'gatsby-craft'
 ]);
 const isHttp = u => { try { return /^https?:$/.test(new URL(u).protocol); } catch { return false; } };
 const isDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && !isNaN(new Date(s));
