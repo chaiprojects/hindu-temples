@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-23T15:27:00.370Z",
-  "windowStart": "2026-09-23",
-  "windowEnd": "2027-10-28",
+  "generatedAt": "2026-09-24T15:49:31.044Z",
+  "windowStart": "2026-09-24",
+  "windowEnd": "2027-10-29",
   "counts": {
-    "total": 114,
-    "fromFeeds": 104,
+    "total": 117,
+    "fromFeeds": 106,
     "curated": 10,
-    "carriedForward": 0,
-    "feedsOk": 13,
-    "feedsFailed": 0
+    "carriedForward": 1,
+    "feedsOk": 11,
+    "feedsFailed": 2
   },
   "sources": [
     {
@@ -32,20 +32,20 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 502"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
-      "ok": true,
-      "count": 1
+      "ok": false,
+      "error": "This operation was aborted"
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 30
+      "count": 31
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -87,7 +87,7 @@
       "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
       "feedType": "gatsby-craft",
       "ok": true,
-      "count": 2
+      "count": 3
     }
   ],
   "events": [
@@ -98,36 +98,6 @@
       "startDate": "2026-09-20",
       "endDate": "2026-09-27",
       "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Pradhosham",
-      "startDate": "2026-09-23",
-      "endDate": "2026-09-23",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2464/-/pradhosham.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-09-23",
-      "endDate": "2026-09-23",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-09-23",
-      "endDate": "2026-09-23",
-      "time": "7:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -282,6 +252,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Prathama (Nootana) Upakarma",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": "8:00 AM",
+      "url": "/events/prathama-nootana-upakarma-",
+      "source": "seva-json"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Lakshmi Narasimha Abhishekam",
@@ -299,6 +279,16 @@
       "endDate": "2026-09-27",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2468/-/ganesha,-shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-09-28",
+      "endDate": "2026-09-28",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2469/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
     },
     {
@@ -562,6 +552,16 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-14",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Lalitha Panchami - Deepa Pooja/Bhagavathi Seva",
@@ -570,6 +570,16 @@
       "time": "06:00 PM",
       "url": "/events/lalitha-panchami-deepa-pooja-bhagavathi-seva",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Mata Ki Chowki",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-16",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/mata-ki-chowki/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -720,6 +730,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
+      "city": "Watsonville",
+      "title": "Sindoor Puja & Hanuman Chalisa Path 2026",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-20",
+      "time": "5:30 PM – 8:30 PM",
+      "url": "https://temple.mountmadonna.org/events/sindoor-puja-hanuman-chalisa-path",
+      "source": "gatsby-craft"
     },
     {
       "temple": "Sri Sai Temple",
@@ -900,6 +920,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-06",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
