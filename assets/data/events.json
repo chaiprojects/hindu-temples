@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-24T15:49:31.044Z",
-  "windowStart": "2026-09-24",
-  "windowEnd": "2027-10-29",
+  "generatedAt": "2026-09-25T15:49:03.821Z",
+  "windowStart": "2026-09-25",
+  "windowEnd": "2027-10-30",
   "counts": {
     "total": 117,
-    "fromFeeds": 106,
+    "fromFeeds": 107,
     "curated": 10,
-    "carriedForward": 1,
-    "feedsOk": 11,
-    "feedsFailed": 2
+    "carriedForward": 0,
+    "feedsOk": 13,
+    "feedsFailed": 0
   },
   "sources": [
     {
@@ -32,8 +32,8 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": false,
-      "error": "HTTP 502"
+      "ok": true,
+      "count": 0
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -44,8 +44,8 @@
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
-      "ok": false,
-      "error": "This operation was aborted"
+      "ok": true,
+      "count": 1
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -100,16 +100,6 @@
       "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Purattasi Chaturthasi - Natarajar Abhishekam",
-      "startDate": "2026-09-24",
-      "endDate": "2026-09-24",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2465/-/purattasi-chaturthasi-natarajar-abhishekam.html",
-      "source": "rss"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -320,6 +310,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sankatahara Chaturthi",
+      "startDate": "2026-09-29",
+      "endDate": "2026-09-29",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2470/-/sankatahara-chaturthi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
