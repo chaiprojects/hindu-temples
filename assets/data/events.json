@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-27T15:39:30.453Z",
-  "windowStart": "2026-09-27",
-  "windowEnd": "2027-11-01",
+  "generatedAt": "2026-09-28T18:35:56.714Z",
+  "windowStart": "2026-09-28",
+  "windowEnd": "2027-11-02",
   "counts": {
     "total": 112,
     "fromFeeds": 102,
@@ -15,7 +15,7 @@
       "temple": "Vedanta Society Berkeley",
       "feedType": "gcal",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -91,36 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Lakshmi Narasimha Abhishekam",
-      "startDate": "2026-09-27",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesha, Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-09-27",
-      "endDate": "2026-09-27",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2468/-/ganesha,-shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Summer Recess",
-      "startDate": "2026-09-27",
-      "endDate": "2026-09-27",
-      "time": "2:00 AM – 3:00 AM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -230,6 +200,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-02",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2473/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -510,6 +490,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sesha Vastra Event",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sesha-vastra-event-2/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1055,6 +1045,16 @@
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Aandal Abhishekam",
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Baba Balak Nath Chouki",
       "startDate": "2026-11-22",
       "endDate": "2026-11-22",
       "time": null,
