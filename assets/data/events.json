@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-28T18:35:56.714Z",
-  "windowStart": "2026-09-28",
-  "windowEnd": "2027-11-02",
+  "generatedAt": "2026-09-29T16:53:23.981Z",
+  "windowStart": "2026-09-29",
+  "windowEnd": "2027-11-03",
   "counts": {
     "total": 112,
     "fromFeeds": 102,
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-09-28",
-      "endDate": "2026-09-28",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2469/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-09-28",
-      "endDate": "2026-09-28",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -220,6 +200,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Health & Well Being Puja & Krishna Ashtami, Monthly Temple Pradhakshina, Monthly Medical Camp",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2474/-/health-well-being-puja-krishna-ashtami,-monthly-temple-pradhakshina,-monthly-medical-camp.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -570,6 +560,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-19",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
