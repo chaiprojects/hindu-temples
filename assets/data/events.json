@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-30T16:49:21.621Z",
-  "windowStart": "2026-09-30",
-  "windowEnd": "2027-11-04",
+  "generatedAt": "2026-10-01T17:22:04.412Z",
+  "windowStart": "2026-10-01",
+  "windowEnd": "2027-11-05",
   "counts": {
     "total": 117,
     "fromFeeds": 107,
@@ -94,26 +94,6 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Karthigai",
-      "startDate": "2026-09-30",
-      "endDate": "2026-09-30",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2471/-/karthigai.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-09-30",
-      "endDate": "2026-09-30",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-10-01",
       "endDate": "2026-10-01",
@@ -189,6 +169,16 @@
       "endDate": "2026-10-04",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2475/-/ganesha,-shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-05",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2476/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
     },
     {
@@ -670,6 +660,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-21",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
