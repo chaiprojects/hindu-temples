@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-01T17:22:04.412Z",
-  "windowStart": "2026-10-01",
-  "windowEnd": "2027-11-05",
+  "generatedAt": "2026-10-02T16:38:01.314Z",
+  "windowStart": "2026-10-02",
+  "windowEnd": "2027-11-06",
   "counts": {
-    "total": 117,
-    "fromFeeds": 107,
+    "total": 119,
+    "fromFeeds": 109,
     "curated": 10,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -63,7 +63,7 @@
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "feedType": "firebase-rtdb",
       "ok": true,
-      "count": 9
+      "count": 11
     },
     {
       "temple": "Sri Sai Temple",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-01",
-      "endDate": "2026-10-01",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2472/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-10-01",
-      "endDate": "2026-10-01",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -190,6 +170,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Krishna Ekadasi",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-06",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2477/-/krishna-ekadasi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -320,6 +310,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/durga-pooja-celebrations/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Kamakshi Community Center (SKCC)",
+      "city": "Morgan Hill",
+      "title": "Sharada Navarathri Events",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-20",
+      "time": "8:00 AM",
+      "url": "https://srikamakshi.org/events.html",
+      "source": "firebase-rtdb"
     },
     {
       "temple": "Sri Sai Temple",
@@ -700,6 +700,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Kamakshi Community Center (SKCC)",
+      "city": "Morgan Hill",
+      "title": "Sahasra Suvasini Puja & Kanya Puja",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "time": "8:30 AM – 6:00 PM",
+      "url": "https://srikamakshi.org/events.html",
+      "source": "firebase-rtdb"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1149,6 +1159,16 @@
       "endDate": "2026-11-26",
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
       "source": "seva-json"
     },
     {
