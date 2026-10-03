@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-02T16:38:01.314Z",
-  "windowStart": "2026-10-02",
-  "windowEnd": "2027-11-06",
+  "generatedAt": "2026-10-03T15:08:41.586Z",
+  "windowStart": "2026-10-03",
+  "windowEnd": "2027-11-07",
   "counts": {
-    "total": 119,
-    "fromFeeds": 109,
+    "total": 126,
+    "fromFeeds": 116,
     "curated": 10,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 29
+      "count": 36
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Mata ka Jagaran",
-      "startDate": "2026-10-02",
-      "endDate": "2026-10-02",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-02",
-      "endDate": "2026-10-02",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2473/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -179,6 +159,16 @@
       "endDate": "2026-10-06",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2477/-/krishna-ekadasi.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Pradhosham",
+      "startDate": "2026-10-07",
+      "endDate": "2026-10-07",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2478/-/pradhosham.html",
       "source": "rss"
     },
     {
@@ -262,6 +252,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharadamba Mahabhishekam",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "3:00 PM",
+      "url": "/events/sri-sharadamba-mahabhishekam",
+      "source": "seva-json"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Mahalaya Amavasya",
@@ -332,6 +332,16 @@
       "source": "squarespace"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 1 – PRATHAMA",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
+      "source": "seva-json"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Navarathri / Chandi Homam",
@@ -352,6 +362,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 2 – DWITIYA",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-12",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
+      "source": "seva-json"
+    },
+    {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "city": "Morgan Hill",
       "title": "Sri Maha Periyava Anusha Puja",
@@ -360,6 +380,26 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 3 – TRITIYA",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-13",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 4 – CHATURTHI",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-14",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
+      "source": "seva-json"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -374,11 +414,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Lalitha Panchami - Deepa Pooja/Bhagavathi Seva",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 5 – PANCHAMI",
       "startDate": "2026-10-15",
       "endDate": "2026-10-15",
-      "time": "06:00 PM",
-      "url": "/events/lalitha-panchami-deepa-pooja-bhagavathi-seva",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
     },
     {
@@ -432,6 +472,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 6 – SHASHTI",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-16",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
+      "source": "seva-json"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Navagraha Abhishekam",
@@ -479,6 +529,16 @@
       "endDate": "2026-10-17",
       "time": "06:00 PM",
       "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 7 – SAPTAMI",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
     },
     {
@@ -534,11 +594,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Durga Ashtami",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 8 – ASHTAMI",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
-      "time": "06:00 PM",
-      "url": "/events/durga-ashtami",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
     },
     {
@@ -574,11 +634,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Maha Navami",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 9 – MAHANAVAMI",
       "startDate": "2026-10-19",
       "endDate": "2026-10-19",
-      "time": "06:00 PM",
-      "url": "/events/maha-navami",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
     },
     {
@@ -644,11 +704,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Vijaya Dashami",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 10 – DASHAMI",
       "startDate": "2026-10-20",
       "endDate": "2026-10-20",
-      "time": "06:00 PM",
-      "url": "/events/vijaya-dashami",
+      "time": null,
+      "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
     },
     {
@@ -1107,6 +1167,16 @@
       "title": "Suna Vesha",
       "startDate": "2026-11-22",
       "endDate": "2026-11-22",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Purnima Satyanarayan Katha",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
