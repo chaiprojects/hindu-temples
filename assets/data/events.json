@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-03T15:08:41.586Z",
-  "windowStart": "2026-10-03",
-  "windowEnd": "2027-11-07",
+  "generatedAt": "2026-10-04T15:48:22.258Z",
+  "windowStart": "2026-10-04",
+  "windowEnd": "2027-11-08",
   "counts": {
     "total": 126,
     "fromFeeds": 116,
@@ -92,36 +92,6 @@
   ],
   "events": [
     {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Sri Venkateshwara Abhishekam",
-      "startDate": "2026-10-03",
-      "endDate": "2026-10-03",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Health & Well Being Puja & Krishna Ashtami, Monthly Temple Pradhakshina, Monthly Medical Camp",
-      "startDate": "2026-10-03",
-      "endDate": "2026-10-03",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2474/-/health-well-being-puja-krishna-ashtami,-monthly-temple-pradhakshina,-monthly-medical-camp.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-10-03",
-      "endDate": "2026-10-03",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Ganesha, Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
@@ -200,6 +170,16 @@
       "time": "7:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-08",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2479/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -772,6 +752,16 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Lakshmi Narasimha Abhishekam",
@@ -1230,6 +1220,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Sankata Hara Chaturthi",
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-27",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
