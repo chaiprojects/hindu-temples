@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04T15:48:22.258Z",
-  "windowStart": "2026-10-04",
-  "windowEnd": "2027-11-08",
+  "generatedAt": "2026-10-05T19:48:01.848Z",
+  "windowStart": "2026-10-05",
+  "windowEnd": "2027-11-09",
   "counts": {
-    "total": 126,
-    "fromFeeds": 116,
+    "total": 140,
+    "fromFeeds": 130,
     "curated": 10,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -15,7 +15,7 @@
       "temple": "Vedanta Society Berkeley",
       "feedType": "gcal",
       "ok": true,
-      "count": 3
+      "count": 15
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 14
+      "count": 16
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -91,16 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesha, Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-04",
-      "endDate": "2026-10-04",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2475/-/ganesha,-shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -182,6 +172,16 @@
       "source": "rss"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-08",
+      "time": "8:00 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Sarva Pitru",
@@ -200,6 +200,26 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Mahalaya Amavasai",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2480/-/mahalaya-amavasai.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Special Dhrupad Recital by Gundicha Brothers",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "time": "6:30 PM – 8:30 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -332,6 +352,26 @@
       "source": "curated"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Viveka Chudamani",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": "6:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Sunday Lecture: Swami Vivekananda on the Solidarity of Self",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": "11:00 AM – 12:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Monday Rudrabhishekam",
@@ -394,12 +434,22 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 5 – PANCHAMI",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 5 – LALITHA PANCHAMI",
       "startDate": "2026-10-15",
       "endDate": "2026-10-15",
       "time": null,
       "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-15",
+      "time": "8:00 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -454,7 +504,7 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 6 – SHASHTI",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 6 – SHASHTI : BHAGAVATHI SEVA",
       "startDate": "2026-10-16",
       "endDate": "2026-10-16",
       "time": null,
@@ -514,7 +564,7 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 7 – SAPTAMI",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 7 – SAPTAMI : SARASWATHI POOJA",
       "startDate": "2026-10-17",
       "endDate": "2026-10-17",
       "time": null,
@@ -574,12 +624,42 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 8 – ASHTAMI",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 8 – ASHTAMI : Chandi Homam",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
       "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "No Sunday Lecture & No Evening Class",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Durga Puja",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": "3:00 PM – 5:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "No Evening Class",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -684,7 +764,7 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 10 – DASHAMI",
+      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 10 – DASHAMI : Aksharabhyasam",
       "startDate": "2026-10-20",
       "endDate": "2026-10-20",
       "time": null,
@@ -720,6 +800,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/sri-rama-parivara-utsava-murthisamprokshana/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-22",
+      "time": "8:00 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -782,6 +872,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Navaratri Garba Celebration",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/navaratri-garba-celebration/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "city": "Morgan Hill",
       "title": "Nava-Avarana (Pournami) Puja",
@@ -800,6 +900,26 @@
       "time": "05:30 PM",
       "url": "/events/satyanarayana-puja",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Viveka Chudamani",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "time": "6:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "time": "11:00 AM – 12:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -990,6 +1110,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Skanda Shashti Celebrations",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-09",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/skanda-shashti-celebrations/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1220,6 +1350,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Ramanama Sankirtanam",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-26",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
