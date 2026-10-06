@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-05T19:48:01.848Z",
-  "windowStart": "2026-10-05",
-  "windowEnd": "2027-11-09",
+  "generatedAt": "2026-10-06T17:10:54.078Z",
+  "windowStart": "2026-10-06",
+  "windowEnd": "2027-11-10",
   "counts": {
-    "total": 140,
-    "fromFeeds": 130,
+    "total": 152,
+    "fromFeeds": 142,
     "curated": 10,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 16
+      "count": 27
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-05",
-      "endDate": "2026-10-05",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2476/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-10-05",
-      "endDate": "2026-10-05",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -230,6 +210,26 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "Sai Satcharita Parayan",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "8:00 AM – 8:00 PM",
+      "url": "https://shirdisaiparivaar.org/event/sai-satcharita-parayan/",
+      "source": "tribe"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesha, Shiva Murugan, Navagraha, Sundareshwarar & Meenakshi Abhishekam & Aarthi",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2481/-/ganesha,-shiva-murugan,-navagraha,-sundareshwarar-meenakshi-abhishekam-aarthi.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -874,6 +874,16 @@
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
+      "title": "Shiva Annabhishekam & Annakutotsavam",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/shiva-annabhishekam-annakutotsavam/",
+      "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
       "title": "Navaratri Garba Celebration",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
@@ -904,6 +914,16 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "startDate": "2026-10-25",
+      "endDate": "2026-10-25",
+      "time": "11:00 AM – 12:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
       "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
@@ -912,14 +932,14 @@
       "source": "gcal"
     },
     {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
-      "startDate": "2026-10-25",
-      "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-10-26",
+      "endDate": "2026-10-26",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1032,6 +1052,26 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sri Maa Kali Puja",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sri-maa-kali-puja/",
+      "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Deepavali Celebrations Dhanalakshmi Puja",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/dhanalakshmi-puja/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Sai Temple",
       "city": "Pleasanton",
       "title": "Naraka Chaturdashi (2026)",
@@ -1070,6 +1110,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Deepavali Celebrations Lakshmi Kubera Puja",
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/lakshmi-kubera-puja/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sai Temple",
@@ -1114,6 +1164,16 @@
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
+      "title": "Karthika Masa Somavara Shiva Abhishekam",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-09",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/karthika-masa-somavarashiva-abhishekam/",
+      "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
       "title": "Skanda Shashti Celebrations",
       "startDate": "2026-11-09",
       "endDate": "2026-11-09",
@@ -1150,6 +1210,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Naga Chaturthi",
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-12",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/naga-chaturthi/",
+      "source": "wp-rest"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1242,6 +1312,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sri Vishnu Pushpa Yaagam",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sri-vishnu-pushpa-yaagam/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Tulasi Vivah",
@@ -1302,6 +1382,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Karthika Poornima Sri Satyanarayana Puja (Group)",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/karthika-poornima-sri-satyanarayana-puja-group/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "city": "Morgan Hill",
       "title": "Nava-Avarana (Pournami) Puja",
@@ -1340,6 +1430,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sudarshana Homam",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sudarshana-homam/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1382,6 +1482,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Kaala Bhairava Jayanthi",
+      "startDate": "2026-11-30",
+      "endDate": "2026-11-30",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/kaala-bhairava-jayanthi/",
+      "source": "wp-rest"
+    },
+    {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "city": "Morgan Hill",
       "title": "Pooram Puja",
@@ -1410,6 +1520,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sri Vaikunta Ekadasi",
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sri-vaikuntha-ekadasi/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
