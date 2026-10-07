@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-06T17:10:54.078Z",
-  "windowStart": "2026-10-06",
-  "windowEnd": "2027-11-10",
+  "generatedAt": "2026-10-07T17:49:05.591Z",
+  "windowStart": "2026-10-07",
+  "windowEnd": "2027-11-11",
   "counts": {
-    "total": 152,
-    "fromFeeds": 142,
+    "total": 154,
+    "fromFeeds": 144,
     "curated": 10,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 27
+      "count": 29
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -91,16 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Krishna Ekadasi",
-      "startDate": "2026-10-06",
-      "endDate": "2026-10-06",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2477/-/krishna-ekadasi.html",
-      "source": "rss"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -290,6 +280,16 @@
       "time": "7:30 AM",
       "url": "https://temple.mountmadonna.org/events/navaratri-2024",
       "source": "gatsby-craft"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri Begins - Day 1",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2482/-/navaratri-begins-day-1.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -634,7 +634,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Sunday Lecture & No Evening Class",
+      "title": "No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -654,7 +654,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Evening Class",
+      "title": "No Sunday Lecture & No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -914,20 +914,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -990,6 +990,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Sarvam Vishnu Mayam",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/sarvam-vishnu-mayam/",
+      "source": "wp-rest"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -1310,6 +1320,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Tulasi Vivaham",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/tulasi-vivaham/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
