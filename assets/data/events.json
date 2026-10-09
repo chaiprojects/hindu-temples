@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-08T17:53:17.473Z",
-  "windowStart": "2026-10-08",
-  "windowEnd": "2027-11-12",
+  "generatedAt": "2026-10-09T17:26:26.681Z",
+  "windowStart": "2026-10-09",
+  "windowEnd": "2027-11-13",
   "counts": {
     "total": 156,
     "fromFeeds": 146,
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-08",
-      "endDate": "2026-10-08",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2479/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
-      "startDate": "2026-10-08",
-      "endDate": "2026-10-08",
-      "time": "8:00 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -360,6 +340,16 @@
       "time": null,
       "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri Day 3 & Visakam -Tamil Archana",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-13",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2484/-/navaratri-day-3-visakam-tamil-archana.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -988,6 +978,16 @@
       "startDate": "2026-10-28",
       "endDate": "2026-10-28",
       "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-29",
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
