@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-10-09T17:26:26.681Z",
-  "windowStart": "2026-10-09",
-  "windowEnd": "2027-11-13",
+  "generatedAt": "2026-10-10T16:14:17.181Z",
+  "windowStart": "2026-10-10",
+  "windowEnd": "2027-11-14",
   "counts": {
-    "total": 156,
-    "fromFeeds": 146,
+    "total": 155,
+    "fromFeeds": 145,
     "curated": 10,
     "carriedForward": 0,
-    "feedsOk": 13,
-    "feedsFailed": 0
+    "feedsOk": 12,
+    "feedsFailed": 1
   },
   "sources": [
     {
       "temple": "Vedanta Society Berkeley",
       "feedType": "gcal",
       "ok": true,
-      "count": 15
+      "count": 14
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -32,8 +32,8 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Sarva Pitru",
-      "startDate": "2026-10-09",
-      "endDate": "2026-10-09",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Mahalaya Amavasya",
-      "startDate": "2026-10-09",
-      "endDate": "2026-10-09",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Mahalaya Amavasai",
-      "startDate": "2026-10-09",
-      "endDate": "2026-10-09",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2480/-/mahalaya-amavasai.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Special Dhrupad Recital by Gundicha Brothers",
-      "startDate": "2026-10-09",
-      "endDate": "2026-10-09",
-      "time": "6:30 PM – 8:30 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -294,20 +254,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda on the Solidarity of Self",
       "startDate": "2026-10-11",
       "endDate": "2026-10-11",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda on the Solidarity of Self",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-11",
       "endDate": "2026-10-11",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -370,6 +330,16 @@
       "time": null,
       "url": "/events/sharannavaratri-2026",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri Day 4 & Sukla Chaturthi",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-14",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2485/-/navaratri-day-4-sukla-chaturthi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -894,20 +864,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -1497,6 +1467,26 @@
       "title": "Sankata Hara Chaturthi",
       "startDate": "2026-11-27",
       "endDate": "2026-11-27",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Ganesh Abhishekam",
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-27",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Lakshmi Narasimha Abhishekam",
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
