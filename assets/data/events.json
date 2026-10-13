@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-12T20:17:28.625Z",
-  "windowStart": "2026-10-12",
-  "windowEnd": "2027-11-16",
+  "generatedAt": "2026-10-13T18:17:38.010Z",
+  "windowStart": "2026-10-13",
+  "windowEnd": "2027-11-17",
   "counts": {
-    "total": 148,
-    "fromFeeds": 139,
+    "total": 147,
+    "fromFeeds": 138,
     "curated": 9,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 34
+      "count": 33
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -130,36 +130,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri Day 2",
-      "startDate": "2026-10-12",
-      "endDate": "2026-10-12",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2483/-/navaratri-day-2.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-10-12",
-      "endDate": "2026-10-12",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 2 – DWITIYA",
-      "startDate": "2026-10-12",
-      "endDate": "2026-10-12",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -352,6 +322,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri Day 7 - Aippasi Maasa Begins",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2488/-/navaratri-day-7-aippasi-maasa-begins.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sesha Vastra Event",
@@ -444,16 +424,6 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Sunday Lecture & No Evening Class",
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
       "title": "No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
@@ -468,6 +438,16 @@
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": "3:00 PM – 5:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "No Sunday Lecture & No Evening Class",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -497,7 +477,7 @@
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-10-19",
       "endDate": "2026-10-19",
-      "time": "7:00 PM",
+      "time": "6:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
@@ -767,7 +747,7 @@
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-10-26",
       "endDate": "2026-10-26",
-      "time": "7:00 PM",
+      "time": "6:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
@@ -860,6 +840,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/sarvam-vishnu-mayam/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-02",
+      "time": "6:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
