@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-13T18:17:38.010Z",
-  "windowStart": "2026-10-13",
-  "windowEnd": "2027-11-17",
+  "generatedAt": "2026-10-14T15:49:32.139Z",
+  "windowStart": "2026-10-14",
+  "windowEnd": "2027-11-18",
   "counts": {
-    "total": 147,
-    "fromFeeds": 138,
+    "total": 145,
+    "fromFeeds": 136,
     "curated": 9,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -57,13 +57,13 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 33
+      "count": 32
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "feedType": "firebase-rtdb",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "temple": "Sri Sai Temple",
@@ -130,36 +130,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri Day 3 & Visakam -Tamil Archana",
-      "startDate": "2026-10-13",
-      "endDate": "2026-10-13",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2484/-/navaratri-day-3-visakam-tamil-archana.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Sri Maha Periyava Anusha Puja",
-      "startDate": "2026-10-13",
-      "endDate": "2026-10-13",
-      "time": "6:00 PM – 8:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 3 – TRITIYA",
-      "startDate": "2026-10-13",
-      "endDate": "2026-10-13",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -392,6 +362,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri Day 8, Chandi Homam Celebrations, Durga Ashtami",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2489/-/navaratri-day-8,-chandi-homam-celebrations,-durga-ashtami.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Bathukamma - Cultural Celebrations",
@@ -424,20 +404,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Evening Class",
+      "title": "Durga Puja",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
-      "time": null,
+      "time": "3:00 PM – 5:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Durga Puja",
+      "title": "No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
-      "time": "3:00 PM – 5:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -724,20 +704,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
