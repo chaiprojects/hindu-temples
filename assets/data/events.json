@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-14T15:49:32.139Z",
-  "windowStart": "2026-10-14",
-  "windowEnd": "2027-11-18",
+  "generatedAt": "2026-10-15T15:35:46.374Z",
+  "windowStart": "2026-10-15",
+  "windowEnd": "2027-11-19",
   "counts": {
-    "total": 145,
-    "fromFeeds": 136,
+    "total": 144,
+    "fromFeeds": 135,
     "curated": 9,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 32
+      "count": 31
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -130,36 +130,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri Day 4 & Sukla Chaturthi",
-      "startDate": "2026-10-14",
-      "endDate": "2026-10-14",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2485/-/navaratri-day-4-sukla-chaturthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 4 – CHATURTHI",
-      "startDate": "2026-10-14",
-      "endDate": "2026-10-14",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-10-14",
-      "endDate": "2026-10-14",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -414,7 +384,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Evening Class",
+      "title": "No Sunday Lecture & No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -424,7 +394,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Sunday Lecture & No Evening Class",
+      "title": "No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -440,6 +410,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Navaratri - Day 9 & Saraswathi puja, Ayutha Puja & Maha Navami",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-19",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2490/-/navaratri-day-9-saraswathi-puja,-ayutha-puja-maha-navami.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -704,20 +684,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -840,6 +820,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-04",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
