@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-16T15:22:12.881Z",
-  "windowStart": "2026-10-16",
-  "windowEnd": "2027-11-20",
+  "generatedAt": "2026-10-17T14:12:32.924Z",
+  "windowStart": "2026-10-17",
+  "windowEnd": "2027-11-21",
   "counts": {
-    "total": 144,
-    "fromFeeds": 135,
+    "total": 140,
+    "fromFeeds": 131,
     "curated": 9,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 29
+      "count": 25
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -51,13 +51,13 @@
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 30
+      "count": 29
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -130,76 +130,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri Day 6 & Sukla Sashti",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2487/-/navaratri-day-6-sukla-sashti.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Mata Ki Chowki",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/mata-ki-chowki/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Devi Navarathri Celebrations Goddess Kanaka Durga Kumkumarchana",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/kumkumarchana/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Saraswati Puja",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/saraswati-puja/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Navarathri Sri Vishnu Brahmotsavam",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/navarathrisri-vishnu-brahmotsavam/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 6 – SHASHTI : BHAGAVATHI SEVA",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-16",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -344,16 +274,6 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Sunday Lecture & No Evening Class",
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
       "title": "Durga Puja",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
@@ -365,6 +285,16 @@
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
       "title": "No Evening Class",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "No Sunday Lecture & No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -492,6 +422,16 @@
       "source": "wp-rest"
     },
     {
+      "temple": "Sri Krishna Balaram Mandir",
+      "city": "Milpitas",
+      "title": "Grand Vijayadashami Celebrations",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-20",
+      "time": "6:30 PM – 8:30 PM",
+      "url": "https://www.kbmandir.org/event/grand-vijayadashami-celebrations-2/",
+      "source": "tribe"
+    },
+    {
       "temple": "Sri Sai Temple",
       "city": "Pleasanton",
       "title": "Vijayadasami & Prana Prathista Anniversary",
@@ -520,6 +460,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sukla Ekadasi",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-21",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2492/-/sukla-ekadasi.html",
+      "source": "rss"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -674,20 +624,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -1420,6 +1370,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/ayyappa-maha-padi-puja-celebrations/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-12-14",
+      "endDate": "2026-12-14",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
