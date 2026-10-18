@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-17T14:12:32.924Z",
-  "windowStart": "2026-10-17",
-  "windowEnd": "2027-11-21",
+  "generatedAt": "2026-10-18T14:33:47.812Z",
+  "windowStart": "2026-10-18",
+  "windowEnd": "2027-11-22",
   "counts": {
-    "total": 140,
-    "fromFeeds": 131,
+    "total": 138,
+    "fromFeeds": 129,
     "curated": 9,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 25
+      "count": 24
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 29
+      "count": 28
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -130,76 +130,6 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Navagraha Abhishekam",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Tula Sankramana",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Ayyappa Abhishekam",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri Day 7 - Aippasi Maasa Begins",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2488/-/navaratri-day-7-aippasi-maasa-begins.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sesha Vastra Event",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sesha-vastra-event-2/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 7 – SAPTAMI : SARASWATHI POOJA",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -284,7 +214,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Evening Class",
+      "title": "No Sunday Lecture & No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -294,7 +224,7 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "No Sunday Lecture & No Evening Class",
+      "title": "No Evening Class",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
       "time": null,
@@ -482,6 +412,16 @@
       "source": "gcal"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-22",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2493/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sri Rama Shadakshari Maha Yagnam",
@@ -624,20 +564,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Viveka Chudamani",
+      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "6:30 PM – 9:00 PM",
+      "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Sunday Lecture: Swami Vivekananda's concept of Evolution",
+      "title": "Viveka Chudamani",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
-      "time": "11:00 AM – 12:00 PM",
+      "time": "6:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -864,6 +804,16 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
       "title": "Naraka Chaturdashi",
       "startDate": "2026-11-07",
       "endDate": "2026-11-07",
@@ -1054,7 +1004,7 @@
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
-      "title": "Ayyappa Abhishekam",
+      "title": "Vrishchika Sankramana",
       "startDate": "2026-11-16",
       "endDate": "2026-11-16",
       "time": null,
@@ -1064,7 +1014,7 @@
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
-      "title": "Vrishchika Sankramana",
+      "title": "Ayyappa Abhishekam",
       "startDate": "2026-11-16",
       "endDate": "2026-11-16",
       "time": null,
@@ -1362,6 +1312,26 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Karthikeya Abhishekam",
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Monthly Special Havan",
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Ayyappa Maha Padi Puja Celebrations",
@@ -1380,6 +1350,16 @@
       "time": "06:00 PM",
       "url": "/events/shashthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Ayyappa Abhishekam",
+      "startDate": "2026-12-15",
+      "endDate": "2026-12-15",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
