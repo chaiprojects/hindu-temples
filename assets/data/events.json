@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-19T17:28:13.551Z",
-  "windowStart": "2026-10-19",
-  "windowEnd": "2027-11-23",
+  "generatedAt": "2026-10-20T15:39:03.285Z",
+  "windowStart": "2026-10-20",
+  "windowEnd": "2027-11-24",
   "counts": {
-    "total": 130,
-    "fromFeeds": 121,
-    "curated": 9,
+    "total": 128,
+    "fromFeeds": 120,
+    "curated": 8,
     "carriedForward": 0,
     "feedsOk": 13,
     "feedsFailed": 0
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 27
+      "count": 26
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -127,56 +127,6 @@
       "title": "Navarathri / Chandi Homam",
       "startDate": "2026-10-11",
       "endDate": "2026-10-20",
-      "time": null,
-      "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Maha Navami",
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-19",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Navaratri - Day 9 & Saraswathi puja, Ayutha Puja & Maha Navami",
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-19",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2490/-/navaratri-day-9-saraswathi-puja,-ayutha-puja-maha-navami.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-19",
-      "time": "6:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sri Sharada Sharannavaratri Mahotsava 2026 – Day 9 – MAHANAVAMI",
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-19",
-      "time": null,
-      "url": "/events/sharannavaratri-2026",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
-      "city": "Fremont",
-      "title": "Saraswathi Pooja",
-      "startDate": "2026-10-19",
-      "endDate": "2026-10-19",
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
@@ -360,6 +310,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesha, Shiva Murugan, Navagraha, Sundareshwarar & Meenakshi Abhishekam & Aarthi",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2495/-/ganesha,-shiva-murugan,-navagraha,-sundareshwarar-meenakshi-abhishekam-aarthi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -800,6 +760,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/skanda-shashti-celebrations/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-09",
+      "time": "6:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -1285,6 +1255,16 @@
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Vaikunta Ekadashi",
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Geetha Jayanthi",
       "startDate": "2026-12-19",
       "endDate": "2026-12-19",
       "time": null,
