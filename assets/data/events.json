@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-21T15:57:32.147Z",
-  "windowStart": "2026-10-21",
-  "windowEnd": "2027-11-25",
+  "generatedAt": "2026-10-22T15:52:52.669Z",
+  "windowStart": "2026-10-22",
+  "windowEnd": "2027-11-26",
   "counts": {
     "total": 118,
     "fromFeeds": 112,
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Ekadasi",
-      "startDate": "2026-10-21",
-      "endDate": "2026-10-21",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2492/-/sukla-ekadasi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-10-21",
-      "endDate": "2026-10-21",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -310,6 +290,16 @@
       "time": "11:00 AM – 12:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-26",
+      "endDate": "2026-10-26",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2497/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -670,6 +660,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-11",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
