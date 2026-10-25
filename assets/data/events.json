@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-24T14:31:23.355Z",
-  "windowStart": "2026-10-24",
-  "windowEnd": "2027-11-28",
+  "generatedAt": "2026-10-25T14:56:57.726Z",
+  "windowStart": "2026-10-25",
+  "windowEnd": "2027-11-29",
   "counts": {
-    "total": 116,
-    "fromFeeds": 110,
+    "total": 115,
+    "fromFeeds": 109,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -63,7 +63,7 @@
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "feedType": "firebase-rtdb",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "temple": "Sri Sai Temple",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Jagannath Pooja",
-      "startDate": "2026-10-24",
-      "endDate": "2026-10-24",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesha, Shiva Murugan, Navagraha, Sundareshwarar & Meenakshi Abhishekam & Aarthi",
-      "startDate": "2026-10-24",
-      "endDate": "2026-10-24",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2495/-/ganesha,-shiva-murugan,-navagraha,-sundareshwarar-meenakshi-abhishekam-aarthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Sahasra Suvasini Puja & Kanya Puja",
-      "startDate": "2026-10-24",
-      "endDate": "2026-10-24",
-      "time": "8:30 AM – 6:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-10-24",
-      "endDate": "2026-10-24",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -330,6 +290,16 @@
       "time": "7:30 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-29",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2500/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -670,6 +640,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
@@ -1190,6 +1170,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Purnima Satyanarayan Katha",
+      "startDate": "2026-12-23",
+      "endDate": "2026-12-23",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
