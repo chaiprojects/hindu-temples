@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-26T17:22:34.020Z",
-  "windowStart": "2026-10-26",
-  "windowEnd": "2027-11-30",
+  "generatedAt": "2026-10-27T16:37:11.413Z",
+  "windowStart": "2026-10-27",
+  "windowEnd": "2027-12-01",
   "counts": {
     "total": 108,
     "fromFeeds": 102,
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-10-26",
-      "endDate": "2026-10-26",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2497/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-10-26",
-      "endDate": "2026-10-26",
-      "time": "6:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -219,6 +199,16 @@
       "endDate": "2026-10-30",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2501/-/krishna-sashti.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Ganesha, Shiva Murugan, Navagraha, Sundareshwarar & Meenakshi Abhishekam & Aarthi",
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2502/-/ganesha,-shiva-murugan,-navagraha,-sundareshwarar-meenakshi-abhishekam-aarthi.html",
       "source": "rss"
     },
     {
@@ -630,6 +620,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/ayyappa-mandala-puja-celebrations/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-16",
+      "time": "6:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
