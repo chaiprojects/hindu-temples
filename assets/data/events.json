@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27T16:37:11.413Z",
-  "windowStart": "2026-10-27",
-  "windowEnd": "2027-12-01",
+  "generatedAt": "2026-10-28T17:09:37.944Z",
+  "windowStart": "2026-10-28",
+  "windowEnd": "2027-12-02",
   "counts": {
     "total": 108,
     "fromFeeds": 102,
@@ -91,16 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Karthigai",
-      "startDate": "2026-10-27",
-      "endDate": "2026-10-27",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2498/-/karthigai.html",
-      "source": "rss"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -222,6 +212,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Krishna Ashtami - Bairavar Abhishekam",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2503/-/krishna-ashtami-bairavar-abhishekam.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sarvam Vishnu Mayam",
@@ -237,7 +237,7 @@
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-11-02",
       "endDate": "2026-11-02",
-      "time": "6:00 PM",
+      "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
@@ -467,7 +467,7 @@
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-11-09",
       "endDate": "2026-11-09",
-      "time": "6:00 PM",
+      "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
@@ -627,7 +627,7 @@
       "title": "Monday Rudrabhishekam",
       "startDate": "2026-11-16",
       "endDate": "2026-11-16",
-      "time": "6:00 PM",
+      "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
