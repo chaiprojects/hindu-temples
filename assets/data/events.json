@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-28T17:09:37.944Z",
-  "windowStart": "2026-10-28",
-  "windowEnd": "2027-12-02",
+  "generatedAt": "2026-10-29T17:25:21.203Z",
+  "windowStart": "2026-10-29",
+  "windowEnd": "2027-12-03",
   "counts": {
-    "total": 108,
-    "fromFeeds": 102,
+    "total": 107,
+    "fromFeeds": 101,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,13 +39,13 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 17
+      "count": 16
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 24
+      "count": 23
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -91,76 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Karva Chouth",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Sankata Hara Chaturthi",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Ganesha Abhishekam",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Karwa Chauth, Sankatahara Chaturthi",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2499/-/karwa-chauth,-sankatahara-chaturthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Karwa Chowth Puja / Katha",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/karwa-chowth-puja-katha/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sankatahara Chaturthi",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": "06:30 PM",
-      "url": "/events/sankatahara-chaturthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-10-28",
-      "endDate": "2026-10-28",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -212,6 +142,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "Annual donation drive 2026-2027",
+      "startDate": "2026-11-01",
+      "endDate": "2027-01-31",
+      "time": null,
+      "url": "https://shirdisaiparivaar.org/event/annual-donation-drive/",
+      "source": "tribe"
+    },
+    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Krishna Ashtami - Bairavar Abhishekam",
@@ -230,6 +170,16 @@
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/sarvam-vishnu-mayam/",
       "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-02",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2504/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -630,6 +580,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-18",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -1142,6 +1102,26 @@
       "source": "js-data"
     },
     {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Jagannath Pooja",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Ganesha Abhishekam",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Sankatahara Chaturthi",
@@ -1150,6 +1130,16 @@
       "time": "06:30 PM",
       "url": "/events/sankatahara-chaturthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Hindu Temple & Community Center",
+      "city": "Sunnyvale",
+      "title": "Lakshmi Narasimha Abhishekam",
+      "startDate": "2026-12-27",
+      "endDate": "2026-12-27",
+      "time": null,
+      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
+      "source": "js-data"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
