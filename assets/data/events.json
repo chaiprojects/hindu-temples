@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-31T16:05:45.376Z",
-  "windowStart": "2026-10-31",
-  "windowEnd": "2027-12-05",
+  "generatedAt": "2026-11-01T17:07:21.645Z",
+  "windowStart": "2026-11-01",
+  "windowEnd": "2027-12-06",
   "counts": {
     "total": 114,
     "fromFeeds": 108,
     "curated": 6,
     "carriedForward": 0,
-    "feedsOk": 13,
-    "feedsFailed": 0
+    "feedsOk": 12,
+    "feedsFailed": 1
   },
   "sources": [
     {
@@ -32,8 +32,8 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Ganesha, Shiva Murugan, Navagraha, Sundareshwarar & Meenakshi Abhishekam & Aarthi",
-      "startDate": "2026-10-31",
-      "endDate": "2026-10-31",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2502/-/ganesha,-shiva-murugan,-navagraha,-sundareshwarar-meenakshi-abhishekam-aarthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-10-31",
-      "endDate": "2026-10-31",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
     {
       "temple": "Shirdi Sai Parivaar",
       "city": "Milpitas",
@@ -222,6 +202,16 @@
       "source": "gcal"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-05",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2507/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "source": "rss"
+    },
+    {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
       "title": "Narada Bhakti Sutra",
@@ -314,21 +304,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Naraka Chaturdashi",
       "startDate": "2026-11-07",
       "endDate": "2026-11-07",
       "time": "06:00 PM",
       "url": "/events/naraka-chaturdashi",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
       "source": "seva-json"
     },
     {
@@ -387,7 +377,7 @@
       "title": "Deepavali",
       "startDate": "2026-11-08",
       "endDate": "2026-11-08",
-      "time": "06:00 PM",
+      "time": "05:30 PM",
       "url": "/events/deepavali",
       "source": "seva-json"
     },
@@ -689,6 +679,16 @@
       "endDate": "2026-11-21",
       "time": "06:30 PM",
       "url": "/events/pradosham",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
       "source": "seva-json"
     },
     {
