@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-01T17:07:21.645Z",
-  "windowStart": "2026-11-01",
-  "windowEnd": "2027-12-06",
+  "generatedAt": "2026-11-02T20:46:13.695Z",
+  "windowStart": "2026-11-02",
+  "windowEnd": "2027-12-07",
   "counts": {
-    "total": 114,
-    "fromFeeds": 108,
+    "total": 111,
+    "fromFeeds": 105,
     "curated": 6,
     "carriedForward": 0,
-    "feedsOk": 12,
-    "feedsFailed": 1
+    "feedsOk": 13,
+    "feedsFailed": 0
   },
   "sources": [
     {
@@ -32,20 +32,20 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "count": 0
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 16
+      "count": 15
     },
     {
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 3
+      "count": 1
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Annual donation drive 2026-2027",
-      "startDate": "2026-11-01",
-      "endDate": "2027-01-31",
-      "time": null,
-      "url": "https://shirdisaiparivaar.org/event/annual-donation-drive/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Priest Visit From Shirdi -Nov 1st",
-      "startDate": "2026-11-01",
-      "endDate": "2026-11-01",
-      "time": "6:00 AM – 12:00 PM",
-      "url": "https://shirdisaiparivaar.org/event/priest-visit-from-shirdi-nov-1st/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Krishna Ashtami - Bairavar Abhishekam",
-      "startDate": "2026-11-01",
-      "endDate": "2026-11-01",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2503/-/krishna-ashtami-bairavar-abhishekam.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sarvam Vishnu Mayam",
-      "startDate": "2026-11-01",
-      "endDate": "2026-11-01",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sarvam-vishnu-mayam/",
-      "source": "wp-rest"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -240,6 +200,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Dhanteras & Pradhosham",
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-06",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2508/-/dhanteras-pradhosham.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
