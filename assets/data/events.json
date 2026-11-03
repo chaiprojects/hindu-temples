@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-02T20:46:13.695Z",
-  "windowStart": "2026-11-02",
-  "windowEnd": "2027-12-07",
+  "generatedAt": "2026-11-03T18:26:10.139Z",
+  "windowStart": "2026-11-03",
+  "windowEnd": "2027-12-08",
   "counts": {
-    "total": 111,
-    "fromFeeds": 105,
+    "total": 112,
+    "fromFeeds": 106,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -51,7 +51,7 @@
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-02",
-      "endDate": "2026-11-02",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2504/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-11-02",
-      "endDate": "2026-11-02",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -242,6 +222,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Deepavali & Celebrations, Health & Wellbeing Puja",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2509/-/deepavali-celebrations,-health-wellbeing-puja.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sri Maa Kali Puja",
@@ -332,6 +322,16 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Sri Krishna Balaram Mandir",
+      "city": "Milpitas",
+      "title": "Deepavali & Govardhan Puja Celebrations",
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "time": "12:00 PM – 2:30 PM",
+      "url": "https://www.kbmandir.org/event/deepavali-govardhan-puja-celebrations/",
+      "source": "tribe"
+    },
+    {
       "temple": "Sri Sai Temple",
       "city": "Pleasanton",
       "title": "Diwali (2026)",
@@ -404,21 +404,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-11-09",
-      "endDate": "2026-11-09",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Bali Padyami",
       "startDate": "2026-11-09",
       "endDate": "2026-11-09",
       "time": "06:00 PM",
       "url": "/events/bali-padyami",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-09",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
     {
@@ -760,6 +760,16 @@
       "time": "6:30 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
