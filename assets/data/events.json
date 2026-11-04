@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-03T18:26:10.139Z",
-  "windowStart": "2026-11-03",
-  "windowEnd": "2027-12-08",
+  "generatedAt": "2026-11-04T18:38:12.162Z",
+  "windowStart": "2026-11-04",
+  "windowEnd": "2027-12-09",
   "counts": {
     "total": 112,
     "fromFeeds": 106,
@@ -63,7 +63,7 @@
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "feedType": "firebase-rtdb",
       "ok": true,
-      "count": 12
+      "count": 10
     },
     {
       "temple": "Sri Sai Temple",
@@ -87,40 +87,10 @@
       "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
       "feedType": "gatsby-craft",
       "ok": true,
-      "count": 0
+      "count": 2
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Durgai, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-03",
-      "endDate": "2026-11-03",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2505/-/shiva-murugan,-durgai,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Aippasi Pooram",
-      "startDate": "2026-11-03",
-      "endDate": "2026-11-03",
-      "time": "6:00 PM – 8:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Pooram Puja",
-      "startDate": "2026-11-03",
-      "endDate": "2026-11-03",
-      "time": "6:00 PM – 8:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -222,6 +192,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
+      "city": "Watsonville",
+      "title": "Devi Suktam Fire Ceremony to honor the Goddess Mother",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": "4:30 PM – 5:30 PM",
+      "url": "https://temple.mountmadonna.org/events/devi-suktam",
+      "source": "gatsby-craft"
+    },
+    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Deepavali & Celebrations, Health & Wellbeing Puja",
@@ -300,6 +280,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Diwali Lakshmi Puja Celebrations, Amavasai, Kedara Gowri Vratham",
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-08",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2510/-/diwali-lakshmi-puja-celebrations,-amavasai,-kedara-gowri-vratham.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -800,6 +790,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
+      "city": "Watsonville",
+      "title": "Sindoor Puja & Hanuman Chalisa Path 2026",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24",
+      "time": "6:30 AM – 9:00 AM",
+      "url": "https://temple.mountmadonna.org/events/sindoor-puja-hanuman-chalisa-path",
+      "source": "gatsby-craft"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
