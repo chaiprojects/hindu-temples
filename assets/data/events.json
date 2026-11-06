@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-05T18:44:13.995Z",
-  "windowStart": "2026-11-05",
-  "windowEnd": "2027-12-10",
+  "generatedAt": "2026-11-06T17:57:26.496Z",
+  "windowStart": "2026-11-06",
+  "windowEnd": "2027-12-11",
   "counts": {
-    "total": 113,
-    "fromFeeds": 107,
+    "total": 114,
+    "fromFeeds": 108,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -45,7 +45,7 @@
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-05",
-      "endDate": "2026-11-05",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2507/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
-      "startDate": "2026-11-05",
-      "endDate": "2026-11-05",
-      "time": "8:00 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -402,6 +382,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Kandha Sashti - Day 2",
+      "startDate": "2026-11-10",
+      "endDate": "2026-11-10",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2512/-/kandha-sashti-day-2.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "city": "Morgan Hill",
       "title": "Sri Maha Periyava Anusha Puja",
@@ -460,6 +450,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "SSP Holistic HEALTH FAIR – 2026",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "time": "9:00 AM – 3:00 PM",
+      "url": "https://shirdisaiparivaar.org/event/ssp-holistic-health-fair-2026/",
+      "source": "tribe"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -828,6 +828,16 @@
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
       "time": null,
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-26",
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
