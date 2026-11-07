@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-06T17:57:26.496Z",
-  "windowStart": "2026-11-06",
-  "windowEnd": "2027-12-11",
+  "generatedAt": "2026-11-07T16:50:04.821Z",
+  "windowStart": "2026-11-07",
+  "windowEnd": "2027-12-12",
   "counts": {
-    "total": 114,
-    "fromFeeds": 108,
+    "total": 112,
+    "fromFeeds": 106,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 40
+      "count": 38
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Mata ka Jagaran",
-      "startDate": "2026-11-06",
-      "endDate": "2026-11-06",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Dhanteras",
-      "startDate": "2026-11-06",
-      "endDate": "2026-11-06",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Dhanteras & Pradhosham",
-      "startDate": "2026-11-06",
-      "endDate": "2026-11-06",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2508/-/dhanteras-pradhosham.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-11-06",
-      "endDate": "2026-11-06",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -402,6 +362,16 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Kandha Sashti Day 3",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-11",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2513/-/kandha-sashti-day-3.html",
+      "source": "rss"
+    },
+    {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
       "title": "Yoga dharana",
@@ -624,16 +594,6 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Rathostavam & Annadanam",
       "startDate": "2026-11-21",
       "endDate": "2026-11-21",
@@ -649,6 +609,16 @@
       "endDate": "2026-11-21",
       "time": "06:00 PM",
       "url": "/events/tulasi-vivah",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
       "source": "seva-json"
     },
     {
@@ -1100,6 +1070,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-12-21",
+      "endDate": "2026-12-21",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
+      "source": "seva-json"
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
