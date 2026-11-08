@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-07T16:50:04.821Z",
-  "windowStart": "2026-11-07",
-  "windowEnd": "2027-12-12",
+  "generatedAt": "2026-11-08T17:02:47.375Z",
+  "windowStart": "2026-11-08",
+  "windowEnd": "2027-12-13",
   "counts": {
-    "total": 112,
-    "fromFeeds": 106,
+    "total": 105,
+    "fromFeeds": 99,
     "curated": 6,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 15
+      "count": 13
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 23
+      "count": 22
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -69,13 +69,13 @@
       "temple": "Sri Sai Temple",
       "feedType": "squarespace",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 38
+      "count": 36
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -87,100 +87,10 @@
       "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
       "feedType": "gatsby-craft",
       "ok": true,
-      "count": 2
+      "count": 1
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Sri Venkateshwara Abhishekam",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Naraka Chaturdashi",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
-      "city": "Watsonville",
-      "title": "Devi Suktam Fire Ceremony to honor the Goddess Mother",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": "4:30 PM – 5:30 PM",
-      "url": "https://temple.mountmadonna.org/events/devi-suktam",
-      "source": "gatsby-craft"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Deepavali & Celebrations, Health & Wellbeing Puja",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2509/-/deepavali-celebrations,-health-wellbeing-puja.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sri Maa Kali Puja",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sri-maa-kali-puja/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Deepavali Celebrations Dhanalakshmi Puja",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/dhanalakshmi-puja/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sai Temple",
-      "city": "Pleasanton",
-      "title": "Naraka Chaturdashi (2026)",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": "7:50 AM",
-      "url": "https://www.srisaitemple.org/upcoming-events/naraka-chaturdashi-258lt",
-      "source": "squarespace"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Naraka Chaturdashi",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": "06:00 PM",
-      "url": "/events/naraka-chaturdashi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-11-07",
-      "endDate": "2026-11-07",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -390,6 +300,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Kandha Sashti - Day 4 & Sukla Chaturthi",
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-12",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2514/-/kandha-sashti-day-4-sukla-chaturthi.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -830,6 +750,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-28",
+      "endDate": "2026-11-28",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
