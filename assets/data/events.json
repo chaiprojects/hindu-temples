@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-10T18:40:05.872Z",
-  "windowStart": "2026-11-10",
-  "windowEnd": "2027-12-15",
+  "generatedAt": "2026-11-11T18:41:40.456Z",
+  "windowStart": "2026-11-11",
+  "windowEnd": "2027-12-16",
   "counts": {
-    "total": 94,
-    "fromFeeds": 89,
+    "total": 93,
+    "fromFeeds": 88,
     "curated": 5,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -63,7 +63,7 @@
       "temple": "Sri Kamakshi Community Center (SKCC)",
       "feedType": "firebase-rtdb",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "temple": "Sri Sai Temple",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Kandha Sashti - Day 2",
-      "startDate": "2026-11-10",
-      "endDate": "2026-11-10",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2512/-/kandha-sashti-day-2.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Sri Maha Periyava Anusha Puja",
-      "startDate": "2026-11-10",
-      "endDate": "2026-11-10",
-      "time": "6:00 PM – 8:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -260,6 +240,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Maha Skandha Sashti Celebrations, Murugan Thirukalyanam",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2517/-/maha-skandha-sashti-celebrations,-murugan-thirukalyanam.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -584,20 +574,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
