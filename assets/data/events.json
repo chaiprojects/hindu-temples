@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-11T18:41:40.456Z",
-  "windowStart": "2026-11-11",
-  "windowEnd": "2027-12-16",
+  "generatedAt": "2026-11-12T18:54:56.408Z",
+  "windowStart": "2026-11-12",
+  "windowEnd": "2027-12-17",
   "counts": {
-    "total": 93,
-    "fromFeeds": 88,
+    "total": 94,
+    "fromFeeds": 89,
     "curated": 5,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 20
+      "count": 21
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Kandha Sashti Day 3",
-      "startDate": "2026-11-11",
-      "endDate": "2026-11-11",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2513/-/kandha-sashti-day-3.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-11-11",
-      "endDate": "2026-11-11",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -212,6 +192,16 @@
       "source": "seva-json"
     },
     {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Skanda Shashti",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "time": "03:00 PM",
+      "url": "/events/skanda-shashti",
+      "source": "seva-json"
+    },
+    {
       "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
       "city": "Fremont",
       "title": "Soora Samharam / Mandala Puja Start",
@@ -280,6 +270,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Karthigai Maasa Begins, Karthigai Somavara 1",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-16",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2518/-/karthigai-maasa-begins,-karthigai-somavara-1.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -574,20 +574,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -680,6 +680,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-12-02",
+      "endDate": "2026-12-02",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
