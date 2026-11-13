@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-12T18:54:56.408Z",
-  "windowStart": "2026-11-12",
-  "windowEnd": "2027-12-17",
+  "generatedAt": "2026-11-13T18:30:44.414Z",
+  "windowStart": "2026-11-13",
+  "windowEnd": "2027-12-18",
   "counts": {
-    "total": 94,
-    "fromFeeds": 89,
+    "total": 92,
+    "fromFeeds": 87,
     "curated": 5,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 33
+      "count": 32
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Nagula Chauthi",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-12",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Kandha Sashti - Day 4 & Sukla Chaturthi",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-12",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2514/-/kandha-sashti-day-4-sukla-chaturthi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Naga Chaturthi",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-12",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/naga-chaturthi/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-12",
-      "time": "8:00 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -310,6 +270,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sukla Ashtami",
+      "startDate": "2026-11-17",
+      "endDate": "2026-11-17",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2519/-/sukla-ashtami.html",
+      "source": "rss"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -574,20 +544,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -688,6 +658,16 @@
       "startDate": "2026-12-02",
       "endDate": "2026-12-02",
       "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-03",
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
