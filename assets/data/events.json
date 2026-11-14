@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-13T18:30:44.414Z",
-  "windowStart": "2026-11-13",
-  "windowEnd": "2027-12-18",
+  "generatedAt": "2026-11-14T17:05:44.062Z",
+  "windowStart": "2026-11-14",
+  "windowEnd": "2027-12-19",
   "counts": {
-    "total": 92,
-    "fromFeeds": 87,
+    "total": 93,
+    "fromFeeds": 88,
     "curated": 5,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -91,16 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Kandha Sashti Day 5",
-      "startDate": "2026-11-13",
-      "endDate": "2026-11-13",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2515/-/kandha-sashti-day-5.html",
-      "source": "rss"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -154,6 +144,16 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
       "title": "Skanda Shashti",
       "startDate": "2026-11-14",
       "endDate": "2026-11-14",
@@ -200,16 +200,6 @@
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2517/-/maha-skandha-sashti-celebrations,-murugan-thirukalyanam.html",
       "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-11-15",
-      "endDate": "2026-11-15",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
@@ -279,6 +269,16 @@
       "endDate": "2026-11-17",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2519/-/sukla-ashtami.html",
+      "source": "rss"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-18",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2520/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
     },
     {
@@ -720,6 +720,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "2026-2027 Shri Adhyayana Utsavam",
+      "startDate": "2026-12-11",
+      "endDate": "2026-12-11",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/shri-adhyayana-utsavam/",
+      "source": "wp-rest"
     },
     {
       "temple": "Hindu Temple & Community Center",
