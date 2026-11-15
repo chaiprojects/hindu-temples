@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-14T17:05:44.062Z",
-  "windowStart": "2026-11-14",
-  "windowEnd": "2027-12-19",
+  "generatedAt": "2026-11-15T17:42:07.225Z",
+  "windowStart": "2026-11-15",
+  "windowEnd": "2027-12-20",
   "counts": {
-    "total": 93,
-    "fromFeeds": 88,
-    "curated": 5,
+    "total": 87,
+    "fromFeeds": 83,
+    "curated": 4,
     "carriedForward": 0,
     "feedsOk": 13,
     "feedsFailed": 0
@@ -21,7 +21,7 @@
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
@@ -45,7 +45,7 @@
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 4
+      "count": 2
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 21
+      "count": 20
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 32
+      "count": 31
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,86 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Karthikeya Abhishekam",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Sai Satcharita Parayan",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": "8:00 AM – 8:00 PM",
-      "url": "https://shirdisaiparivaar.org/event/sai-satcharita-parayan/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "SSP Holistic HEALTH FAIR – 2026",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": "9:00 AM – 3:00 PM",
-      "url": "https://shirdisaiparivaar.org/event/ssp-holistic-health-fair-2026/",
-      "source": "tribe"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Kandha Sashti Day 6 / Maha Kandha Sashti & Soorasamharam",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2516/-/kandha-sashti-day-6-maha-kandha-sashti-soorasamharam.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Shashthi - Archana",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": "06:00 PM",
-      "url": "/events/shashthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Skanda Shashti",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": "03:00 PM",
-      "url": "/events/skanda-shashti",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Siddhi Vinayaka Cultural Center (SVCC)",
-      "city": "Fremont",
-      "title": "Soora Samharam / Mandala Puja Start",
-      "startDate": "2026-11-14",
-      "endDate": "2026-11-14",
-      "time": null,
-      "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
-      "source": "curated"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -276,7 +196,7 @@
       "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
       "startDate": "2026-11-18",
-      "endDate": "2026-11-18",
+      "endDate": "2026-11-19",
       "time": null,
       "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2520/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
@@ -344,16 +264,6 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Tulasi Vivah",
       "startDate": "2026-11-21",
       "endDate": "2026-11-21",
@@ -369,6 +279,16 @@
       "endDate": "2026-11-21",
       "time": "06:30 PM",
       "url": "/events/pradosham",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
       "source": "seva-json"
     },
     {
@@ -544,20 +464,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -709,6 +629,16 @@
       "endDate": "2026-12-05",
       "time": "06:30 PM",
       "url": "/events/pradosham",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
       "source": "seva-json"
     },
     {
@@ -1010,6 +940,16 @@
       "time": "6:00 PM – 8:00 PM",
       "url": "https://srikamakshi.org/events.html",
       "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Shashthi - Archana",
+      "startDate": "2026-12-28",
+      "endDate": "2026-12-28",
+      "time": "06:00 PM",
+      "url": "/events/shashthi",
+      "source": "seva-json"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
