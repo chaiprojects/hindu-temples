@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-16T21:01:22.859Z",
-  "windowStart": "2026-11-16",
-  "windowEnd": "2027-12-21",
+  "generatedAt": "2026-11-17T19:50:46.941Z",
+  "windowStart": "2026-11-17",
+  "windowEnd": "2027-12-22",
   "counts": {
-    "total": 85,
-    "fromFeeds": 81,
+    "total": 82,
+    "fromFeeds": 78,
     "curated": 4,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 29
+      "count": 27
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,66 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Vrishchika Sankramana",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Ayyappa Abhishekam",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Karthigai Maasa Begins, Karthigai Somavara 1",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2518/-/karthigai-maasa-begins,-karthigai-somavara-1.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Ayyappa Mandala Puja Celebrations",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/ayyappa-mandala-puja-celebrations/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Kamakshi Community Center (SKCC)",
-      "city": "Morgan Hill",
-      "title": "Karthika Somavaram",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": "6:30 PM – 8:00 PM",
-      "url": "https://srikamakshi.org/events.html",
-      "source": "firebase-rtdb"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-16",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -220,6 +160,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Pradhosham",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2523/-/pradhosham.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -364,16 +314,6 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Monday Rudrabhishekam",
-      "startDate": "2026-11-23",
-      "endDate": "2026-11-23",
-      "time": "7:00 PM",
-      "url": "/events/monday-rudrabhishekam-",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Kartika Purnima",
       "startDate": "2026-11-23",
       "endDate": "2026-11-23",
@@ -389,6 +329,16 @@
       "endDate": "2026-11-23",
       "time": "05:30 PM",
       "url": "/events/satyanarayana-puja",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
     },
     {
@@ -632,6 +582,26 @@
       "source": "firebase-rtdb"
     },
     {
+      "temple": "Sri Kamakshi Community Center (SKCC)",
+      "city": "Morgan Hill",
+      "title": "Karthika Somavaram",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-07",
+      "time": "6:30 PM – 8:00 PM",
+      "url": "https://srikamakshi.org/events.html",
+      "source": "firebase-rtdb"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Monday Rudrabhishekam",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-07",
+      "time": "7:00 PM",
+      "url": "/events/monday-rudrabhishekam-",
+      "source": "seva-json"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "2026-2027 Shri Adhyayana Utsavam",
@@ -674,7 +644,7 @@
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
-      "title": "Ayyappa Abhishekam",
+      "title": "Dhanu Sankramana",
       "startDate": "2026-12-15",
       "endDate": "2026-12-15",
       "time": null,
@@ -684,7 +654,7 @@
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
-      "title": "Dhanu Sankramana",
+      "title": "Ayyappa Abhishekam",
       "startDate": "2026-12-15",
       "endDate": "2026-12-15",
       "time": null,
