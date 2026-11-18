@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-17T19:50:46.941Z",
-  "windowStart": "2026-11-17",
-  "windowEnd": "2027-12-22",
+  "generatedAt": "2026-11-18T19:24:05.458Z",
+  "windowStart": "2026-11-18",
+  "windowEnd": "2027-12-23",
   "counts": {
-    "total": 82,
-    "fromFeeds": 78,
+    "total": 83,
+    "fromFeeds": 79,
     "curated": 4,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -45,7 +45,7 @@
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
@@ -92,14 +92,14 @@
   ],
   "events": [
     {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Sukla Ashtami",
-      "startDate": "2026-11-17",
-      "endDate": "2026-11-17",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2519/-/sukla-ashtami.html",
-      "source": "rss"
+      "temple": "Shirdi Sai Parivaar",
+      "city": "Milpitas",
+      "title": "Toy & Blanket Drive 2026",
+      "startDate": "2026-11-18",
+      "endDate": "2027-02-18",
+      "time": "8:00 AM",
+      "url": "https://shirdisaiparivaar.org/event/toy-blanket-drive-2026/",
+      "source": "tribe"
     },
     {
       "temple": "Shiva Murugan Temple",
@@ -262,6 +262,16 @@
       "source": "js-data"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Bharani Deepam",
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2524/-/bharani-deepam.html",
+      "source": "rss"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Purnima Satyanarayan Katha",
@@ -394,20 +404,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
