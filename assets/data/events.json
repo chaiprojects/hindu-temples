@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-18T19:24:05.458Z",
-  "windowStart": "2026-11-18",
-  "windowEnd": "2027-12-23",
+  "generatedAt": "2026-11-19T19:29:06.472Z",
+  "windowStart": "2026-11-19",
+  "windowEnd": "2027-12-24",
   "counts": {
     "total": 83,
     "fromFeeds": 79,
     "curated": 4,
     "carriedForward": 0,
-    "feedsOk": 13,
-    "feedsFailed": 0
+    "feedsOk": 11,
+    "feedsFailed": 2
   },
   "sources": [
     {
@@ -21,7 +21,7 @@
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
@@ -32,8 +32,8 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -45,13 +45,13 @@
       "temple": "Shirdi Sai Parivaar",
       "feedType": "tribe",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -92,34 +92,14 @@
   ],
   "events": [
     {
-      "temple": "Shirdi Sai Parivaar",
-      "city": "Milpitas",
-      "title": "Toy & Blanket Drive 2026",
-      "startDate": "2026-11-18",
-      "endDate": "2027-02-18",
-      "time": "8:00 AM",
-      "url": "https://shirdisaiparivaar.org/event/toy-blanket-drive-2026/",
-      "source": "tribe"
-    },
-    {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
       "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-18",
+      "startDate": "2026-11-19",
       "endDate": "2026-11-19",
       "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2520/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2521/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
       "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-11-18",
-      "endDate": "2026-11-18",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
@@ -292,6 +272,16 @@
       "source": "tribe"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Karthigai Deepam, Purnima, Karthigai Somavaram 2",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2525/-/karthigai-deepam,-purnima,-karthigai-somavaram-2.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Karthika Poornima Sri Satyanarayana Puja (Group)",
@@ -404,20 +394,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -610,6 +600,16 @@
       "time": "7:00 PM",
       "url": "/events/monday-rudrabhishekam-",
       "source": "seva-json"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-12-09",
+      "endDate": "2026-12-09",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
