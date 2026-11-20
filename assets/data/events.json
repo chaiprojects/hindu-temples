@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-19T19:29:06.472Z",
-  "windowStart": "2026-11-19",
-  "windowEnd": "2027-12-24",
+  "generatedAt": "2026-11-20T19:05:41.381Z",
+  "windowStart": "2026-11-20",
+  "windowEnd": "2027-12-25",
   "counts": {
     "total": 83,
     "fromFeeds": 79,
     "curated": 4,
     "carriedForward": 0,
-    "feedsOk": 11,
-    "feedsFailed": 2
+    "feedsOk": 13,
+    "feedsFailed": 0
   },
   "sources": [
     {
@@ -32,8 +32,8 @@
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
       "feedType": "tribe",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "count": 0
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -50,8 +50,8 @@
     {
       "temple": "Sri Krishna Balaram Mandir",
       "feedType": "tribe",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "count": 0
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -91,26 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-19",
-      "endDate": "2026-11-19",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2521/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
-      "startDate": "2026-11-19",
-      "endDate": "2026-11-19",
-      "time": "8:00 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -362,6 +342,16 @@
       "source": "gatsby-craft"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Karthigai",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2526/-/karthigai.html",
+      "source": "rss"
+    },
+    {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "city": "Livermore",
       "title": "Sudarshana Homam",
@@ -394,20 +384,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -608,6 +598,16 @@
       "startDate": "2026-12-09",
       "endDate": "2026-12-09",
       "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-10",
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
