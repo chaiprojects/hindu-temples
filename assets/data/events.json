@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-21T17:57:36.872Z",
-  "windowStart": "2026-11-21",
-  "windowEnd": "2027-12-26",
+  "generatedAt": "2026-11-22T18:29:49.743Z",
+  "windowStart": "2026-11-22",
+  "windowEnd": "2027-12-27",
   "counts": {
-    "total": 83,
-    "fromFeeds": 79,
+    "total": 77,
+    "fromFeeds": 73,
     "curated": 4,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 9
+      "count": 7
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 20
+      "count": 18
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 27
+      "count": 25
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,86 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Navagraha Abhishekam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Tulasi Vivah",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Pradhosham",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2523/-/pradhosham.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Tulasi Vivaham",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/tulasi-vivaham/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sri Vishnu Pushpa Yaagam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sri-vishnu-pushpa-yaagam/",
-      "source": "wp-rest"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Tulasi Vivah",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": "06:00 PM",
-      "url": "/events/tulasi-vivah",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Rathostavam & Annadanam",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21",
-      "time": "06:00 PM",
-      "url": "/events/rathostavam",
-      "source": "seva-json"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -284,11 +204,11 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Kartika Purnima",
+      "title": "Karthika Purnima",
       "startDate": "2026-11-23",
       "endDate": "2026-11-23",
-      "time": "06:00 PM",
-      "url": "/events/kartika-purnima",
+      "time": "05:30 PM",
+      "url": "/events/karthika-purnima",
       "source": "seva-json"
     },
     {
@@ -372,6 +292,16 @@
       "source": "gcal"
     },
     {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "ThanksGiving - Temple Hours - 9 AM -5 PM",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-26",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2528/-/thanksgiving-temple-hours-9-am-5-pm.html",
+      "source": "rss"
+    },
+    {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
       "title": "Sankatahara Chaturthi",
@@ -384,20 +314,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -544,21 +474,21 @@
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
       "city": "Milpitas",
-      "title": "Pradosham - Rudraabhishekam",
-      "startDate": "2026-12-05",
-      "endDate": "2026-12-05",
-      "time": "06:30 PM",
-      "url": "/events/pradosham",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
       "title": "Rathostavam & Annadanam",
       "startDate": "2026-12-05",
       "endDate": "2026-12-05",
       "time": "06:00 PM",
       "url": "/events/rathostavam",
+      "source": "seva-json"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Pradosham - Rudraabhishekam",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "time": "06:30 PM",
+      "url": "/events/pradosham",
       "source": "seva-json"
     },
     {
@@ -630,6 +560,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Sri Sharadamba Temple (SEVA)",
+      "city": "Milpitas",
+      "title": "Rathostavam & Annadanam",
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-12",
+      "time": "06:00 PM",
+      "url": "/events/rathostavam",
+      "source": "seva-json"
     },
     {
       "temple": "Hindu Temple & Community Center",
