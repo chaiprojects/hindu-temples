@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-22T18:29:49.743Z",
-  "windowStart": "2026-11-22",
-  "windowEnd": "2027-12-27",
+  "generatedAt": "2026-11-23T22:38:11.257Z",
+  "windowStart": "2026-11-23",
+  "windowEnd": "2027-12-28",
   "counts": {
-    "total": 77,
-    "fromFeeds": 73,
+    "total": 74,
+    "fromFeeds": 70,
     "curated": 4,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -75,7 +75,7 @@
       "temple": "Hindu Temple & Community Center",
       "feedType": "js-data",
       "ok": true,
-      "count": 25
+      "count": 21
     },
     {
       "temple": "Vallejo Hindu Temple (Hindu Community Temple)",
@@ -91,56 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Aandal Abhishekam",
-      "startDate": "2026-11-22",
-      "endDate": "2026-11-22",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Jagannath Panchuka Pooja",
-      "startDate": "2026-11-22",
-      "endDate": "2026-11-22",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Suna Vesha",
-      "startDate": "2026-11-22",
-      "endDate": "2026-11-22",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Hindu Temple & Community Center",
-      "city": "Sunnyvale",
-      "title": "Baba Balak Nath Chouki",
-      "startDate": "2026-11-22",
-      "endDate": "2026-11-22",
-      "time": null,
-      "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
-      "source": "js-data"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Bharani Deepam",
-      "startDate": "2026-11-22",
-      "endDate": "2026-11-22",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2524/-/bharani-deepam.html",
-      "source": "rss"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -350,6 +300,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Sankatahara Chaturthi",
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-27",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2529/-/sankatahara-chaturthi.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -850,6 +810,16 @@
       "time": "06:00 PM",
       "url": "/events/shashthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Donating 70 Cents A Day",
+      "startDate": "2027-01-01",
+      "endDate": "2027-01-01",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/donating-70-cents-a-day/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
