@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-24T21:10:24.651Z",
-  "windowStart": "2026-11-24",
-  "windowEnd": "2027-12-29",
+  "generatedAt": "2026-11-25T20:28:15.355Z",
+  "windowStart": "2026-11-25",
+  "windowEnd": "2027-12-30",
   "counts": {
-    "total": 66,
-    "fromFeeds": 63,
+    "total": 65,
+    "fromFeeds": 62,
     "curated": 3,
     "carriedForward": 0,
     "feedsOk": 13,
@@ -87,40 +87,10 @@
       "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
       "feedType": "gatsby-craft",
       "ok": true,
-      "count": 1
+      "count": 0
     }
   ],
   "events": [
-    {
-      "temple": "Sankat Mochan Hanuman Temple (Mount Madonna)",
-      "city": "Watsonville",
-      "title": "Sindoor Puja & Hanuman Chalisa Path 2026",
-      "startDate": "2026-11-24",
-      "endDate": "2026-11-24",
-      "time": "6:30 AM – 9:00 AM",
-      "url": "https://temple.mountmadonna.org/events/sindoor-puja-hanuman-chalisa-path",
-      "source": "gatsby-craft"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "Karthigai",
-      "startDate": "2026-11-24",
-      "endDate": "2026-11-24",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2526/-/karthigai.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
-      "city": "Livermore",
-      "title": "Sudarshana Homam",
-      "startDate": "2026-11-24",
-      "endDate": "2026-11-24",
-      "time": null,
-      "url": "https://livermoretemple.org/cms/specialevents/sudarshana-homam/",
-      "source": "wp-rest"
-    },
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
@@ -164,20 +134,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -240,6 +210,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Karthigai Deepam Celebrations, Krishna Sashti & Murugan Thirukalyanam",
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2531/-/karthigai-deepam-celebrations,-krishna-sashti-murugan-thirukalyanam.html",
+      "source": "rss"
     },
     {
       "temple": "Sri Sharadamba Temple (SEVA)",
@@ -530,6 +510,16 @@
       "time": null,
       "url": "https://www.sunnyvale-hindutemple.org/new-temple-site/festivals.php",
       "source": "js-data"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Margazhi Utsavam",
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/margazhi-utsavam/",
+      "source": "wp-rest"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
