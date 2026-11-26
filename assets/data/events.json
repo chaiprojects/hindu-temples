@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-25T20:28:15.355Z",
-  "windowStart": "2026-11-25",
-  "windowEnd": "2027-12-30",
+  "generatedAt": "2026-11-26T20:10:04.351Z",
+  "windowStart": "2026-11-26",
+  "windowEnd": "2027-12-31",
   "counts": {
     "total": 65,
     "fromFeeds": 62,
@@ -94,26 +94,6 @@
     {
       "temple": "Shiva Murugan Temple",
       "city": "Concord",
-      "title": "Shiva Murugan, Sundareshwarar & Meenakshi Abhishekam & Aarathi",
-      "startDate": "2026-11-25",
-      "endDate": "2026-11-25",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2527/-/shiva-murugan,-sundareshwarar-meenakshi-abhishekam-aarathi.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Yoga dharana",
-      "startDate": "2026-11-25",
-      "endDate": "2026-11-25",
-      "time": "7:30 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
       "title": "ThanksGiving - Temple Hours - 9 AM -5 PM",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
@@ -134,20 +114,20 @@
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
+      "title": "Narada Bhakti Sutra",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": null,
+      "time": "8:00 PM – 9:00 PM",
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
     {
       "temple": "Vedanta Society Berkeley",
       "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
+      "title": "Ramanama Sankirtanam",
       "startDate": "2026-11-26",
       "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
+      "time": null,
       "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
       "source": "gcal"
     },
@@ -230,6 +210,16 @@
       "time": "06:00 PM",
       "url": "/events/shashthi",
       "source": "seva-json"
+    },
+    {
+      "temple": "Shiva Murugan Temple",
+      "city": "Concord",
+      "title": "Krishna Ashtami, Karthigai Somavaram - 3",
+      "startDate": "2026-11-30",
+      "endDate": "2026-11-30",
+      "time": null,
+      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2532/-/krishna-ashtami,-karthigai-somavaram-3.html",
+      "source": "rss"
     },
     {
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
@@ -480,6 +470,16 @@
       "time": null,
       "url": "https://www.svcctemple.org/SVCCTempleFremont/Index/3",
       "source": "curated"
+    },
+    {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Yoga dharana",
+      "startDate": "2026-12-16",
+      "endDate": "2026-12-16",
+      "time": "7:30 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
     },
     {
       "temple": "Hindu Temple & Community Center",
