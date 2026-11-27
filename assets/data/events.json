@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-11-26T20:10:04.351Z",
-  "windowStart": "2026-11-26",
-  "windowEnd": "2027-12-31",
+  "generatedAt": "2026-11-27T19:56:28.498Z",
+  "windowStart": "2026-11-27",
+  "windowEnd": "2028-01-01",
   "counts": {
-    "total": 65,
-    "fromFeeds": 62,
+    "total": 63,
+    "fromFeeds": 56,
     "curated": 3,
-    "carriedForward": 0,
-    "feedsOk": 13,
-    "feedsFailed": 0
+    "carriedForward": 4,
+    "feedsOk": 11,
+    "feedsFailed": 2
   },
   "sources": [
     {
       "temple": "Vedanta Society Berkeley",
       "feedType": "gcal",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "temple": "Shiva Murugan Temple",
       "feedType": "rss",
-      "ok": true,
-      "count": 5
+      "ok": false,
+      "error": "HTTP 415"
     },
     {
       "temple": "Sri Ashta Lakshmi Temple",
       "feedType": "tribe",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "temple": "Vijay's Sherawali Temple (East Bay Hindu Community Center)",
@@ -39,7 +39,7 @@
       "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
       "feedType": "wp-rest",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "temple": "Shirdi Sai Parivaar",
@@ -57,7 +57,7 @@
       "temple": "Sri Sharadamba Temple (SEVA)",
       "feedType": "seva-json",
       "ok": true,
-      "count": 16
+      "count": 15
     },
     {
       "temple": "Sri Kamakshi Community Center (SKCC)",
@@ -91,46 +91,6 @@
     }
   ],
   "events": [
-    {
-      "temple": "Shiva Murugan Temple",
-      "city": "Concord",
-      "title": "ThanksGiving - Temple Hours - 9 AM -5 PM",
-      "startDate": "2026-11-26",
-      "endDate": "2026-11-26",
-      "time": null,
-      "url": "https://www.temple.org/information/temple/event-calendar/eventdetail/2528/-/thanksgiving-temple-hours-9-am-5-pm.html",
-      "source": "rss"
-    },
-    {
-      "temple": "Sri Sharadamba Temple (SEVA)",
-      "city": "Milpitas",
-      "title": "Sankatahara Chaturthi",
-      "startDate": "2026-11-26",
-      "endDate": "2026-11-26",
-      "time": "06:30 PM",
-      "url": "/events/sankatahara-chaturthi",
-      "source": "seva-json"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Narada Bhakti Sutra",
-      "startDate": "2026-11-26",
-      "endDate": "2026-11-26",
-      "time": "8:00 PM – 9:00 PM",
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
-    {
-      "temple": "Vedanta Society Berkeley",
-      "city": "Berkeley",
-      "title": "Ramanama Sankirtanam",
-      "startDate": "2026-11-26",
-      "endDate": "2026-11-26",
-      "time": null,
-      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
-      "source": "gcal"
-    },
     {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
@@ -482,6 +442,16 @@
       "source": "gcal"
     },
     {
+      "temple": "Vedanta Society Berkeley",
+      "city": "Berkeley",
+      "title": "Narada Bhakti Sutra",
+      "startDate": "2026-12-17",
+      "endDate": "2026-12-17",
+      "time": "8:00 PM – 9:00 PM",
+      "url": "https://www.vedantaberkeley.org/category/upcoming-events/",
+      "source": "gcal"
+    },
+    {
       "temple": "Hindu Temple & Community Center",
       "city": "Sunnyvale",
       "title": "Navagraha Abhishekam",
@@ -739,6 +709,16 @@
       "endDate": "2027-09-01",
       "time": null,
       "url": "https://livermoretemple.org/cms/specialevents/2027-new-year-day-annadana-program/",
+      "source": "wp-rest"
+    },
+    {
+      "temple": "Shiva Vishnu Temple (Hindu Community & Cultural Center)",
+      "city": "Livermore",
+      "title": "Vastra Samarpana",
+      "startDate": "2028-01-01",
+      "endDate": "2028-01-01",
+      "time": null,
+      "url": "https://livermoretemple.org/cms/specialevents/vastra-samarpana/",
       "source": "wp-rest"
     }
   ]
